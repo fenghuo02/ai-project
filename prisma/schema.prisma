@@ -6,9 +6,11 @@ generator client {
 }
 
 datasource db {
-  // Use env DATABASE_URL. Works with sqlite (dev) or postgres (prod).
-  // For Postgres, switch provider to "postgresql".
-  provider = "sqlite"
+  // DATABASE_URL is a postgres URL in production (Vercel Postgres / Neon /
+  // Supabase). For local dev you can point it at a local postgres or use
+  // `npx prisma db push` against a local sqlite by temporarily switching
+  // the provider back to "sqlite".
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
