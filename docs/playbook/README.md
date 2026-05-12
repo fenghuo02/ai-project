@@ -25,6 +25,12 @@
 |------|------|
 | [covers-design.md](./covers-design.md) | 9 宫格封面设计规范 + Canva 实操指南 |
 | [cover-ai-prompts.md](./cover-ai-prompts.md) | 9 宫格 AI 绘图提示词（免费工具方案，适合 Canva 额度用完时） |
+| [avatar-design.md](./avatar-design.md) | 小红书头像 6 个方案 + AI 提示词 + 免费工具推荐 |
+| [covers/avatar-text-logo.html](./covers/avatar-text-logo.html) | 头像模板：文字 Logo 风（浏览器打开直接截图） |
+| [covers/avatar-minimal-k.html](./covers/avatar-minimal-k.html) | 头像模板：极简大 K 风（浏览器打开直接截图） |
+| [covers/avatar-cartoon-yellow.html](./covers/avatar-cartoon-yellow.html) | 头像模板：卡通黄底风（浏览器打开直接截图） |
+| [covers/cover-01-main.html](./covers/cover-01-main.html) | 笔记封面模板：主封面（第 1 张） |
+| [covers/cover-02-kimi.html](./covers/cover-02-kimi.html) | 笔记封面模板：Kimi 介绍页（第 2 张） |
 
 ### 🎁 引流钩子
 
