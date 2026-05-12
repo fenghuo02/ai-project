@@ -24,6 +24,7 @@
 | 文件 | 内容 |
 |------|------|
 | [covers-design.md](./covers-design.md) | 9 宫格封面设计规范 + Canva 实操指南 |
+| [cover-ai-prompts.md](./cover-ai-prompts.md) | 9 宫格 AI 绘图提示词（免费工具方案，适合 Canva 额度用完时） |
 
 ### 🎁 引流钩子
 
