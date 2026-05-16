@@ -29,7 +29,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
+          # 不开 pip cache：仓库里没有 requirements.txt/pyproject.toml，
+          # setup-python 的内置缓存会因找不到锁文件而失败。
+          # 直接安装代价很低（仅 pyyaml ~ 5s），不值得引入额外配置。
 
       - name: Install lightweight deps
         run: pip install pyyaml
@@ -79,7 +81,6 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-          cache: pip
 
       - name: Install system dependencies (Pango / Cairo / Noto CJK)
         run: |
