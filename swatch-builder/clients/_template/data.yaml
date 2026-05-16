@@ -1,54 +1,71 @@
 # 客户色卡配置 · 模板
 # ============================================================
-# 每个客户复制一份此文件到 swatch-builder/clients/<客户ID>/data.yaml
-# 然后修改下方字段——颜色 ID 见 swatch-builder/palette/colors.yaml
+# 用法：
+#   1. cp -r clients/_template clients/<客户ID>
+#      建议 <客户ID> 形如：王晓-19920315 （姓名+生日）
+#   2. 把下方所有 <尖括号> 占位符替换成真实数据
+#   3. python3 build.py --validate <客户ID>     # 先验证字段齐不齐
+#   4. python3 build.py <客户ID>                # 没问题再正式生成
+#
+# 字段含义详见 swatch-builder/README.md
+# 颜色 ID 必须取自 swatch-builder/palette/colors.yaml 的 19 色之一：
+#   ─ 红     zhusha 朱砂 / fenxia 粉霞
+#   ─ 橘     zhuju  朱橘
+#   ─ 棕/驼  zheshi 赭石 / muhe 暮褐 / nuantuo 暖驼 ⭐
+#   ─ 金     zhuguangjin 烛光金 ⭐ / juhuang 菊黄
+#   ─ 浅黄白 mimai  米麦  / mibai 米白 / yueguangyin 月光银
+#   ─ 绿     cangcui 苍翠 / shenzhu 深竹 / nenlu 嫩绿 / qingcui 青翠
+#   ─ 蓝     moqing 墨青 / wulan 雾蓝
+#   ─ 银/紫  lengyin 冷银 / ziwu  紫雾
 # ============================================================
 
 meta:
-  client_id: "客户ID"               # 用作目录名，建议姓名+生日
-  client_name: "客户姓名"           # 印章上的姓氏
-  client_seal_char: "X"            # 朱砂烫金印章上的一个字
-  edition: "No.001 / 2026"
-  year_label: "丙午年仲春"
-  birth_solar: "1988-08-08 07:00"  # 阳历生日（不必精确，仅打印用）
-  bazi: "戊辰 庚申 壬午 甲辰"        # 来自 mingshu-builder/clients/.../data.yaml
+  client_id: "<客户ID>"            # 同目录名，如 王晓-19920315
+  client_name: "<客户姓名>"        # 中文全名（用于书名 / 致辞）
+  client_seal_char: "<姓>"         # 印章上一个字，常用姓氏首字
+  edition: "No.001 / 2026"         # 限量编号，每位客户递增
+  year_label: "丙午年仲春"         # 农历年份+季节，对外文案用
+  birth_solar: "<YYYY-MM-DD HH:MM>" # 阳历生日，仅打印时引用
+  bazi: "<年柱 月柱 日柱 时柱>"     # 八字（工作字段，不上印刷品）
 
 # 客户的本命色组合
 # ------------------------------------------------------------
+# primary：主色 1-2 个（最重要，A/C/D 档默认从这里取）
+# secondary：辅色 0-2 个（搭配用）
+# forbidden：避忌色 1 个（命书附录·二会标「忌」）
 signature:
-  primary:                          # 主色（1-2 个）
-    - "nuantuo"
-    - "zhuguangjin"
-  secondary:                        # 辅色（1-2 个）
-    - "mibai"
-  forbidden:                        # 避忌色（1 个）
-    - "lengyin"
+  primary:
+    - "<color_id>"                 # 例：nuantuo
+    # - "<color_id>"               # 第 2 个主色可选
+  secondary:
+    - "<color_id>"                 # 例：mibai
+  forbidden:
+    - "<color_id>"                 # 例：lengyin
 
-# 档 A · 单张钩子色卡
+# 档 A · 单张钩子色卡（¥9.9）
 # ------------------------------------------------------------
 tier_a:
   enabled: true
-  # 默认输出 1 张（主色第一个），可设置多张
-  cards:
-    - "nuantuo"
+  cards:                           # 默认 1 张主色，可加多张做组合套装
+    - "<color_id>"                 # 通常 == signature.primary[0]
 
-# 档 B · 八门标准色票套
+# 档 B · 八门标准色票套（¥299）
 # ------------------------------------------------------------
-# 注：八门所有客户都用全套（共 16 张 = 8 门 × 主色+辅色）
-# 客户专属内容只在解读小册子里——色票本身共享
+# 八门所有客户共用同一套 16 张色票（来自 palette/colors.yaml 的 ba_men 表），
+# 客户专属内容只在解读小册子里 —— 这里只需开关。
 tier_b:
   enabled: true
 
-# 档 C · 年度全色矿物色卡
+# 档 C · 年度全色矿物色卡（¥2,999）
 # ------------------------------------------------------------
 tier_c:
   enabled: true
-  edition_full: "No.001 / 2026 · 暖驼之书"
+  edition_full: "No.001 / 2026 · <主色名>之书"   # 与 mingshu-builder 书名同步
 
-# 档 D · B 端极致礼盒
+# 档 D · B 端极致礼盒（¥6,800+）
 # ------------------------------------------------------------
-# B 端客户才用此档——同色丝巾用本命主色第一个
+# 仅 B 端客户启用；scarf_color / wallpaper_color 通常 == 主色第一个
 tier_d:
   enabled: false
-  scarf_color: "nuantuo"
-  wallpaper_color: "nuantuo"
+  scarf_color: "<color_id>"
+  wallpaper_color: "<color_id>"

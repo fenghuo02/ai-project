@@ -48,9 +48,26 @@ python3 build.py 主理人-19880808
 
 ```bash
 cp -r clients/_template clients/客户ID
-$EDITOR clients/客户ID/data.yaml   # 改本命色组合
-python3 build.py 客户ID
+$EDITOR clients/客户ID/data.yaml          # 改本命色组合
+python3 build.py --validate 客户ID        # 验证字段齐不齐 + ID 是否在 19 色里
+python3 build.py 客户ID                   # 通过后再正式生成
 ```
+
+### 4. 校验模式
+
+```bash
+python3 build.py --validate <客户ID>
+```
+
+校验脚本会检查：
+
+- 顶层 `meta / signature / tier_a..d` 字段齐不齐
+- `signature.primary/secondary/forbidden` 中的 ID 是否都在 `palette/colors.yaml` 19 色里
+- `tier_a.cards`、`tier_d.scarf_color/wallpaper_color` 同样校验合法 ID
+- `data.yaml` 中没有未替换的 `<…>` 占位符
+- 至少启用一档（A/B/C/D）
+
+通过返回 `0`，失败返回 `1`，可接 CI。
 
 ---
 

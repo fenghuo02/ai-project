@@ -38,8 +38,11 @@ mingshu-builder/
 
 ```bash
 # 假设新客户：晓菁，1995-03-12 14:00
-cp -r clients/主理人-19880808 clients/晓菁-19950312
+cp -r clients/_template clients/晓菁-19950312
 ```
+
+> 也可以从 `clients/主理人-19880808` 复制（带完整 demo 文案，参考价值更高）；
+> `_template/` 是带占位符的"填空版"，配合下面的 `--validate` 用最方便。
 
 ### Step 2 改 `data.yaml`
 
@@ -72,7 +75,24 @@ cp -r clients/主理人-19880808 clients/晓菁-19950312
 
 **任何缺失的图都不会让脚本崩溃**——会自动 fallback 到 CSS 渐变 + 大字占位符。
 
-### Step 4 一键生成 PDF
+### Step 4 校验（推荐）
+
+```bash
+python3 build.py --validate 晓菁-19950312
+```
+
+校验脚本会检查：
+
+- **必填字段**齐不齐（meta / colors / personality / 八门 8 个 / 节日 7 个 / 节气 24 个 / afterword …）
+- **HEX 格式**对不对（必须 `#RRGGBB`）
+- **占位符**有没有忘了替换（任何 `<…>` 都会报错）
+- **客户面禁词**有没有漏（算命 / 用神 / 调候 / 八门 / 死门 / 惊门 …）
+- **本命色 HEX 是否在 19 色全集里**（不在的话附录·二无法标 ★ / 忌）
+- **图片**：扫 `images/` 目录，报告找到/缺失了哪些 key（缺图不阻塞，会自动 CSS fallback）
+
+校验通过返回 `0`，失败返回 `1`，可以直接接 CI。
+
+### Step 5 一键生成 PDF
 
 ```bash
 python3 build.py 晓菁-19950312
