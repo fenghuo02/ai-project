@@ -64,6 +64,9 @@ jobs:
             echo "✓ _template correctly fails validation"
           fi
 
+      - name: Check palette ↔ doc §5.2.1 consistency
+        run: python3 tools/check_palette_consistency.py
+
   # ──────────────────────────────────────────────────────────
   # 完整 PDF 构建：装 Pango/Cairo + Noto CJK，~3min
   #   - 两个 builder 都跑一遍

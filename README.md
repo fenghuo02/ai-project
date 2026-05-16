@@ -144,6 +144,10 @@ python3 build.py 主理人-19880808       # 生成 28 页（启用 ABC 档）/ 4
 **修改 19 色中任意一色** → 只改 `colors.yaml` →
 `swatch-builder` 与 `mingshu-builder` 重跑 → 全产品自动同步。
 
+> CI 会校验 `colors.yaml` 与业务计划书 §5.2.1 表格的一致性
+> （[`tools/check_palette_consistency.py`](./tools/check_palette_consistency.py)）——
+> 改了 yaml 忘改 doc，或反过来，PR 进不了 main。
+
 ---
 
 ## 📅 版本与里程碑
