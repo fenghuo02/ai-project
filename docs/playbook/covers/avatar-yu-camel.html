@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>渝山头像 · 暖驼底篆「渝」字（avatar-design.md 方案 2）</title>
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     色谱母本：swatch-builder/palette/colors.yaml
+       米白 mibai     #FAF7F2  背景 / 主字反白
+       米麦 mimai     #F5E6C8  辅助晕染
+       墨青 moqing    #2C3E50  主字 · 副文字
+       暖驼 nuantuo   #C9A66B  ★ 主理人本命色 / 底色
+       朱砂 zhusha    #C0392B  印章
+     调整 HEX 时请同步 colors.yaml，version + 1。
+  ───────────────────────────────────────────────────────────── */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #f5f5f5, #e8e6e1);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px;
+    font-family: 'STKaiti', 'KaiTi', 'PingFang SC', 'Microsoft YaHei', serif;
+  }
+  .tip {
+    color: #555; font-size: 14px; margin-bottom: 20px; text-align: center;
+    line-height: 1.6;
+  }
+  .tip strong { color: #C0392B; }
+  .avatar-wrap {
+    background: white; padding: 30px; border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .avatar {
+    width: 512px; height: 512px;
+    border-radius: 50%;
+    background: #C9A66B;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(44, 62, 80, 0.15);
+  }
+  /* 宣纸纹理（极淡，不抢戏） */
+  .grain {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 30% 20%, rgba(255,255,255,0.05) 0%, transparent 40%),
+      radial-gradient(circle at 70% 80%, rgba(44,62,80,0.05) 0%, transparent 40%);
+  }
+  /* 主字「渝」 */
+  .main {
+    font-size: 360px; font-weight: 900;
+    color: #2C3E50;
+    line-height: 1;
+    margin-top: -10px;
+    z-index: 2;
+    font-family: 'STKaiti', 'KaiTi', 'STSong', 'SimSun', serif;
+    text-shadow: 4px 4px 0 rgba(44, 62, 80, 0.08);
+  }
+  /* 副文字「东方美学」 */
+  .sub {
+    font-size: 32px; color: #2C3E50;
+    font-weight: 600; letter-spacing: 12px;
+    margin-top: 14px; z-index: 2;
+    opacity: 0.8;
+    font-family: 'STSong', 'SimSun', serif;
+    padding-left: 12px;  /* 抵消最后一个字的字间距 */
+  }
+  /* 右上角朱砂方印 */
+  .seal {
+    position: absolute;
+    top: 64px; right: 64px;
+    width: 78px; height: 78px;
+    background: #C0392B;
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(-4deg);
+    box-shadow: 0 4px 8px rgba(192, 57, 43, 0.25);
+    z-index: 3;
+  }
+  .seal-text {
+    color: #FAF7F2;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.05;
+    text-align: center;
+    font-family: 'STSong', 'SimSun', serif;
+  }
+</style>
+</head>
+<body>
+  <div class="tip">
+    💡 <strong>保存方式</strong>：右键点击头像 → 保存图片为 ... → 命名 <code>avatar-yu-camel.png</code><br>
+    对应 <code>avatar-design.md</code> 方案 2（暖驼底篆「渝」字）· 适合强化「色彩=我」的人设关联
+  </div>
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <div class="grain"></div>
+      <div class="seal"><div class="seal-text">渝山</div></div>
+      <div class="main">渝</div>
+      <div class="sub">东方美学</div>
+    </div>
+  </div>
+</body>
+</html>

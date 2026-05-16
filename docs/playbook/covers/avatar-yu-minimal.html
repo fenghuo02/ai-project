@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>渝山头像 · 墨青底大「渝」字（avatar-design.md 方案 6 · 商务 B 端）</title>
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     色谱母本：swatch-builder/palette/colors.yaml
+       米白 mibai          #FAF7F2  英文落款
+       墨青 moqing         #2C3E50  底色
+       暖驼 nuantuo        #C9A66B  ★ 主字
+       烛光金 zhuguangjin  #D4AF37  浮雕高光
+     调整 HEX 时请同步 colors.yaml，version + 1。
+  ───────────────────────────────────────────────────────────── */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #f5f5f5, #e8e6e1);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px;
+    font-family: 'STSong', 'PingFang SC', 'Microsoft YaHei', serif;
+  }
+  .tip {
+    color: #555; font-size: 14px; margin-bottom: 20px; text-align: center;
+    line-height: 1.6;
+  }
+  .tip strong { color: #C0392B; }
+  .avatar-wrap {
+    background: white; padding: 30px; border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .avatar {
+    width: 512px; height: 512px;
+    border-radius: 50%;
+    background: #2C3E50;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  /* 极淡的金色光晕，给商务感加点呼吸 */
+  .glow {
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 45%,
+      rgba(212, 175, 55, 0.10) 0%,
+      transparent 55%);
+  }
+  /* 主字「渝」 — 暖驼带烛光金浮雕高光 */
+  .main {
+    font-size: 380px; font-weight: 900;
+    color: #C9A66B;
+    line-height: 1;
+    margin-top: -20px;
+    z-index: 2;
+    font-family: 'STKaiti', 'KaiTi', 'STSong', 'SimSun', serif;
+    text-shadow:
+      2px 2px 0 #D4AF37,
+      4px 4px 0 rgba(212, 175, 55, 0.5),
+      0 0 40px rgba(201, 166, 107, 0.2);
+  }
+  /* 英文落款「YUSHAN · 东方美学」 */
+  .slogan {
+    font-size: 22px;
+    color: #FAF7F2;
+    font-weight: 500;
+    margin-top: 24px;
+    letter-spacing: 6px;
+    z-index: 2;
+    opacity: 0.85;
+    border-top: 1px solid rgba(201, 166, 107, 0.4);
+    padding-top: 14px;
+  }
+  .slogan .en {
+    font-family: 'Bodoni 72', 'Didot', 'STSong', serif;
+    color: #C9A66B;
+    letter-spacing: 4px;
+  }
+  /* 四角细装饰点 */
+  .corner-dot {
+    position: absolute;
+    width: 5px; height: 5px;
+    background: #C9A66B;
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  .c1 { top: 90px; right: 110px; }
+  .c2 { top: 160px; left: 90px; }
+  .c3 { bottom: 110px; right: 130px; }
+  .c4 { bottom: 140px; left: 100px; }
+</style>
+</head>
+<body>
+  <div class="tip">
+    💡 <strong>保存方式</strong>：右键点击头像 → 保存图片为 ... → 命名 <code>avatar-yu-minimal.png</code><br>
+    对应 <code>avatar-design.md</code> 方案 6（墨青底大「渝」字）· 商务 B 端 BD 用最稳
+  </div>
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <div class="glow"></div>
+      <div class="corner-dot c1"></div>
+      <div class="corner-dot c2"></div>
+      <div class="corner-dot c3"></div>
+      <div class="corner-dot c4"></div>
+      <div class="main">渝</div>
+      <div class="slogan"><span class="en">YUSHAN</span> · 东方美学</div>
+    </div>
+  </div>
+</body>
+</html>

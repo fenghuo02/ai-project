@@ -18,7 +18,6 @@
 >
 > | 文件 | 状态 | 计划 |
 > |---|---|---|
-> | `covers/*.html` × 5 个模板（颜色映射 + 文字易学化） | ⏳ 待写 | PR C3 |
 > | `lead-magnet-19-colors.md`（19 色本命色卡 PDF 钩子，对接 swatch-builder A 档） | ⏳ 待写 | PR D |
 
 ---
@@ -30,14 +29,15 @@
 | [covers-design.md](./covers-design.md) ⭐ | **9 宫格封面设计规范 v1.0**（黛青暖驼调，配色严格对齐 colors.yaml，含合规自查清单） | ✅ v1.0 |
 | [cover-ai-prompts.md](./cover-ai-prompts.md) ⭐ | **9 宫格 AI 绘图提示词 v1.0**（即梦 / Nano Banana / 国风母版，禁词清理） | ✅ v1.0 |
 | [avatar-design.md](./avatar-design.md) ⭐ | **头像 6 方案 v1.0**（朱砂印「渝山」、暖驼篆字、宋画团扇等） | ✅ v1.0 |
-| [covers/avatar-text-logo.html](./covers/avatar-text-logo.html) | 头像模板：文字 Logo 风（**当前是 AI 工具号"小K"版**，浏览器打开直接截图） | ⏳ 待 PR C3 |
-| [covers/avatar-minimal-k.html](./covers/avatar-minimal-k.html) | 头像模板：极简大 K 风 | ⏳ 待 PR C3 |
-| [covers/avatar-cartoon-yellow.html](./covers/avatar-cartoon-yellow.html) | 头像模板：卡通黄底风 | ⏳ 待 PR C3 |
-| [covers/cover-01-main.html](./covers/cover-01-main.html) | 笔记封面模板：主封面 | ⏳ 待 PR C3 |
-| [covers/cover-02-kimi.html](./covers/cover-02-kimi.html) | 笔记封面模板：Kimi 介绍页 | ⏳ 待 PR C3 |
+| [covers/](./covers/) ⭐ | **HTML 视觉模板 v1.0**（3 个头像 + 2 个笔记封面，含 covers/README.md 索引）| ✅ v1.0 |
+| [covers/avatar-yu-shan-seal.html](./covers/avatar-yu-shan-seal.html) ⭐ | 头像模板：朱砂印「渝山」（avatar-design.md 方案 1 · 最推荐） | ✅ v1.0 |
+| [covers/avatar-yu-camel.html](./covers/avatar-yu-camel.html) | 头像模板：暖驼底篆「渝」字（方案 2） | ✅ v1.0 |
+| [covers/avatar-yu-minimal.html](./covers/avatar-yu-minimal.html) | 头像模板：墨青底大「渝」字（方案 6 · 商务向） | ✅ v1.0 |
+| [covers/cover-01-main.html](./covers/cover-01-main.html) | 笔记封面模板：图 1 主封面（含 19 色实物缩略色块） | ✅ v1.0 |
+| [covers/cover-02-zhusha.html](./covers/cover-02-zhusha.html) | 笔记封面模板：图 2 朱砂介绍页（**单色介绍页通用模板**，复制改色做图 3-6）| ✅ v1.0 |
 
-> ⚠️ md 三件套（covers-design / cover-ai-prompts / avatar-design）已完成易学化（PR C1）。
-> HTML 模板的颜色映射 + 文字重写在 PR C3 中处理——届时会按上述 md 的色谱母本（黛青 #2C3E50 / 暖驼 #C9A66B / 朱砂 #C0392B / 米白 #FAF7F2）严格对齐。
+> ⚠️ 全部 5 个 HTML 模板已完成易学化（PR C3）。配色严格对齐 [`swatch-builder/palette/colors.yaml`](../../swatch-builder/palette/colors.yaml)。
+> 想做出 9 宫格剩余的图 3-6（暖驼 / 墨青 / 月白 / 嫩绿 介绍页），复制 `cover-02-zhusha.html` 后照 [`covers/README.md`](./covers/README.md) 的 5 字段对照表改即可。
 
 ---
 
