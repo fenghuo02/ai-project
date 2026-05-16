@@ -505,6 +505,45 @@
   </div>
 </div>
 
+{# ============ 附录·二·項目色譜全集 ============ #}
+{% if atlas %}
+<div class="page page-atlas">
+  <div class="content-header" style="margin-bottom: 4mm;">
+    <h2>項目色譜全集</h2>
+    <span class="juan-mark">附錄 · 二</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 3mm; font-size: 9.5pt; line-height: 1.6;">這是「渝山東方美學」項目全部 {{ atlas.total_colors }} 種用色。本命色 <span style="color: #C0392B;">★</span>、避忌色 <span style="color: #6B6B6B;">忌</span> 已標出。所有色卡、壁紙、命書，皆從此譜中選色。</div>
+
+  <div class="atlas-grid">
+    {% for c in atlas.colors %}
+    <div class="atlas-card{% if c.is_primary %} atlas-card-primary{% endif %}{% if c.is_forbidden %} atlas-card-forbidden{% endif %}">
+      <div class="atlas-swatch" style="background: {{ c.hex }};">
+        {% if c.is_primary %}<span class="atlas-mark atlas-mark-star">★</span>{% endif %}
+        {% if c.is_forbidden %}<span class="atlas-mark atlas-mark-ban">忌</span>{% endif %}
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">{{ c.name_cn }}</div>
+        <div class="atlas-hex">{{ c.hex }}</div>
+        <div class="atlas-en">{{ c.name_en }}</div>
+        <div class="atlas-family">{{ c.family }} · {{ c.family_hue }}</div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="atlas-legend">
+    <span><i class="atlas-dot" style="background: #C0392B;"></i>★ 本命色 · 你的調候用神</span>
+    <span><i class="atlas-dot" style="background: #6B6B6B;"></i>忌 避忌色 · 大面積慎用</span>
+    <span class="atlas-legend-version">色譜 v{{ atlas.version }} · {{ atlas.date }}</span>
+  </div>
+
+  <div class="huiwen" style="margin-top: 5mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 3mm; font-size: 12pt;">
+    「一個人有沒有修養，看他不穿什麼。」
+  </div>
+</div>
+{% endif %}
+
 {# ============ 尾页·版权 ============ #}
 <div class="page">
   <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">

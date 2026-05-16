@@ -535,6 +535,137 @@ html, body {
   font-size: 9pt; color: #6B6B6B;
   letter-spacing: 1pt;
 }
+
+
+/* ============ 附录·二 - 项目色谱全集 ============ */
+
+/* 整页紧凑布局 */
+.page-atlas {
+  padding: 18mm 22mm;
+}
+.page-atlas .content-header h2 {
+  font-size: 16pt;
+}
+.atlas-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.2mm;
+  margin: 3mm 0 3mm 0;
+}
+.atlas-card {
+  background: rgba(255,255,255,0.45);
+  border: 0.3mm solid #C9A66B;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  page-break-inside: avoid;
+}
+.atlas-swatch {
+  height: 14mm;
+  position: relative;
+  background-image: repeating-linear-gradient(
+    45deg, rgba(0,0,0,0.025) 0 1px, transparent 1px 4px);
+  border-bottom: 0.2mm solid rgba(139,115,85,0.3);
+}
+.atlas-mark {
+  position: absolute;
+  top: 1mm;
+  right: 1mm;
+  width: 5mm;
+  height: 5mm;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 5mm;
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold;
+  font-size: 7pt;
+}
+.atlas-mark-star {
+  background: #C0392B;
+  color: #F5E6C8;
+  border: 0.2mm solid #F5E6C8;
+}
+.atlas-mark-ban {
+  background: rgba(43,43,43,0.85);
+  color: #F5E6C8;
+  border: 0.2mm solid #F5E6C8;
+  font-size: 6pt;
+}
+.atlas-card-primary {
+  border: 0.5mm solid #C0392B;
+  box-shadow: 0 0 0 0.2mm rgba(192,57,43,0.15);
+}
+.atlas-card-forbidden .atlas-swatch {
+  opacity: 0.55;
+  filter: grayscale(0.35);
+}
+.atlas-meta {
+  padding: 1.5mm 1.8mm 1.8mm 1.8mm;
+  flex: 1;
+}
+.atlas-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold;
+  font-size: 9.5pt;
+  color: #2B2B2B;
+  letter-spacing: 1pt;
+  line-height: 1.2;
+}
+.atlas-card-primary .atlas-name { color: #C0392B; }
+.atlas-hex {
+  font-family: "Garamond", "Courier New", monospace;
+  font-size: 6.5pt;
+  color: #8B7355;
+  letter-spacing: 0.3pt;
+  margin-top: 0.3mm;
+}
+.atlas-en {
+  font-family: "Garamond", serif;
+  font-size: 6pt;
+  color: #8B7355;
+  font-style: italic;
+  letter-spacing: 0.3pt;
+  margin-top: 0.6mm;
+  line-height: 1.2;
+}
+.atlas-family {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 6.5pt;
+  color: #6B6B6B;
+  letter-spacing: 0.8pt;
+  margin-top: 0.8mm;
+  border-top: 0.2mm dotted rgba(201,166,107,0.5);
+  padding-top: 0.7mm;
+}
+
+.atlas-legend {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3mm 0 2mm 0;
+  padding: 2mm 3mm;
+  background: rgba(255,255,255,0.35);
+  border-top: 0.3mm solid #C9A66B;
+  border-bottom: 0.3mm solid #C9A66B;
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 8pt;
+  color: #6B6B6B;
+  letter-spacing: 0.8pt;
+}
+.atlas-legend .atlas-dot {
+  display: inline-block;
+  width: 2.5mm;
+  height: 2.5mm;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 1.2mm;
+}
+.atlas-legend-version {
+  font-family: "Garamond", serif;
+  font-style: italic;
+  font-size: 7.5pt;
+  color: #8B7355;
+}
 </style>
 </head>
 <body>
@@ -1843,6 +1974,279 @@ html, body {
     「色彩，是時間給人的暗號。」
   </div>
 </div>
+
+
+
+<div class="page page-atlas">
+  <div class="content-header" style="margin-bottom: 4mm;">
+    <h2>項目色譜全集</h2>
+    <span class="juan-mark">附錄 · 二</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 3mm; font-size: 9.5pt; line-height: 1.6;">這是「渝山東方美學」項目全部 19 種用色。本命色 <span style="color: #C0392B;">★</span>、避忌色 <span style="color: #6B6B6B;">忌</span> 已標出。所有色卡、壁紙、命書，皆從此譜中選色。</div>
+
+  <div class="atlas-grid">
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #C0392B;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">朱砂</div>
+        <div class="atlas-hex">#C0392B</div>
+        <div class="atlas-en">Vermillion</div>
+        <div class="atlas-family">火 · 红</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #F0A6A6;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">粉霞</div>
+        <div class="atlas-hex">#F0A6A6</div>
+        <div class="atlas-en">Rose Mist</div>
+        <div class="atlas-family">火 · 红淡</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #E67E22;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">朱橘</div>
+        <div class="atlas-hex">#E67E22</div>
+        <div class="atlas-en">Cinnabar Orange</div>
+        <div class="atlas-family">火 · 橘</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #A0522D;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">赭石</div>
+        <div class="atlas-hex">#A0522D</div>
+        <div class="atlas-en">Ochre</div>
+        <div class="atlas-family">土 · 棕</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #6B4423;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">暮褐</div>
+        <div class="atlas-hex">#6B4423</div>
+        <div class="atlas-en">Twilight Brown</div>
+        <div class="atlas-family">土 · 深棕</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card atlas-card-primary">
+      <div class="atlas-swatch" style="background: #C9A66B;">
+        <span class="atlas-mark atlas-mark-star">★</span>
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">暖驼</div>
+        <div class="atlas-hex">#C9A66B</div>
+        <div class="atlas-en">Warm Camel</div>
+        <div class="atlas-family">土 · 金驼</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card atlas-card-primary">
+      <div class="atlas-swatch" style="background: #D4AF37;">
+        <span class="atlas-mark atlas-mark-star">★</span>
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">烛光金</div>
+        <div class="atlas-hex">#D4AF37</div>
+        <div class="atlas-en">Candle Gold</div>
+        <div class="atlas-family">金 · 暖金</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #F4D03F;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">菊黄</div>
+        <div class="atlas-hex">#F4D03F</div>
+        <div class="atlas-en">Chrysanthemum Yellow</div>
+        <div class="atlas-family">金 · 亮金</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #F5E6C8;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">米麦</div>
+        <div class="atlas-hex">#F5E6C8</div>
+        <div class="atlas-en">Wheat Cream</div>
+        <div class="atlas-family">土 · 浅驼</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #FAF7F2;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">米白</div>
+        <div class="atlas-hex">#FAF7F2</div>
+        <div class="atlas-en">Cream White</div>
+        <div class="atlas-family">金 · 月白</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #E8E6E1;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">月光银</div>
+        <div class="atlas-hex">#E8E6E1</div>
+        <div class="atlas-en">Moonlight Silver</div>
+        <div class="atlas-family">金 · 银白</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #2D5F3F;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">苍翠</div>
+        <div class="atlas-hex">#2D5F3F</div>
+        <div class="atlas-en">Verdant Green</div>
+        <div class="atlas-family">木 · 深绿</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #4A6B4F;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">深竹</div>
+        <div class="atlas-hex">#4A6B4F</div>
+        <div class="atlas-en">Bamboo Shadow</div>
+        <div class="atlas-family">木 · 暗绿</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #8FB573;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">嫩绿</div>
+        <div class="atlas-hex">#8FB573</div>
+        <div class="atlas-en">Tender Green</div>
+        <div class="atlas-family">木 · 浅绿</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #6FA88A;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">青翠</div>
+        <div class="atlas-hex">#6FA88A</div>
+        <div class="atlas-en">Jade Green</div>
+        <div class="atlas-family">木 · 中绿</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #2C3E50;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">墨青</div>
+        <div class="atlas-hex">#2C3E50</div>
+        <div class="atlas-en">Indigo Black</div>
+        <div class="atlas-family">水 · 深蓝</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #5D7B91;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">雾蓝</div>
+        <div class="atlas-hex">#5D7B91</div>
+        <div class="atlas-en">Misty Blue</div>
+        <div class="atlas-family">水 · 中蓝</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card atlas-card-forbidden">
+      <div class="atlas-swatch" style="background: #A8B5C7;">
+        
+        <span class="atlas-mark atlas-mark-ban">忌</span>
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">冷银</div>
+        <div class="atlas-hex">#A8B5C7</div>
+        <div class="atlas-en">Cold Silver</div>
+        <div class="atlas-family">金 · 冷银</div>
+      </div>
+    </div>
+    
+    <div class="atlas-card">
+      <div class="atlas-swatch" style="background: #8B6F8E;">
+        
+        
+      </div>
+      <div class="atlas-meta">
+        <div class="atlas-name">紫雾</div>
+        <div class="atlas-hex">#8B6F8E</div>
+        <div class="atlas-en">Violet Mist</div>
+        <div class="atlas-family">火水 · 紫</div>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="atlas-legend">
+    <span><i class="atlas-dot" style="background: #C0392B;"></i>★ 本命色 · 你的調候用神</span>
+    <span><i class="atlas-dot" style="background: #6B6B6B;"></i>忌 避忌色 · 大面積慎用</span>
+    <span class="atlas-legend-version">色譜 v1.0 · 2026-04-01</span>
+  </div>
+
+  <div class="huiwen" style="margin-top: 5mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 3mm; font-size: 12pt;">
+    「一個人有沒有修養，看他不穿什麼。」
+  </div>
+</div>
+
 
 
 <div class="page">

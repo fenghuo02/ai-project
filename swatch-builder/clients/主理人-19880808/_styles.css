@@ -1,0 +1,544 @@
+/* ============================================================
+   东方美学色卡 · 视觉规范 v1.0
+   复用 mingshu-builder 的中式审美 + 矿物质感增强
+   ============================================================ */
+
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", "Songti SC", serif;
+  color: #2B2B2B;
+  background: #F5E6C8;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============ 通用页面 ============ */
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+}
+.page:last-child { page-break-after: auto; }
+
+.bg-rice {
+  background: #F5E6C8;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(160,130,90,0.03) 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(160,130,90,0.04) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(160,130,90,0.02) 1px, transparent 1px);
+  background-size: 6px 6px, 9px 9px, 11px 11px;
+}
+
+/* ============ 装饰元素 ============ */
+
+.huiwen-line {
+  height: 4mm;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #D4AF37 0, #D4AF37 1.6mm,
+    transparent 1.6mm, transparent 2.4mm,
+    #D4AF37 2.4mm, #D4AF37 3.2mm,
+    transparent 3.2mm, transparent 4.8mm
+  );
+  border-top: 0.3mm solid #D4AF37;
+  border-bottom: 0.3mm solid #D4AF37;
+  opacity: 0.85;
+}
+
+.gold-thread {
+  height: 0.4mm;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.seal {
+  display: inline-flex;
+  width: 14mm; height: 14mm;
+  background: #C0392B;
+  color: #F5E6C8;
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold;
+  font-size: 6.5mm;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.2mm;
+  box-shadow:
+    inset 0 0 0 0.7mm rgba(192,57,43,0.4),
+    inset 0.5mm 0.5mm 0.8mm rgba(0,0,0,0.15);
+}
+.seal-small { width: 8mm; height: 8mm; font-size: 4mm; border-radius: 0.8mm; }
+
+/* ============================================================
+   矿物颜料"色块"通用样式
+   ============================================================ */
+
+.color-block {
+  position: relative;
+  background-image:
+    /* 矿物颗粒纹理 */
+    radial-gradient(circle at 22% 35%, rgba(255,255,255,0.10) 0.6px, transparent 1px),
+    radial-gradient(circle at 67% 78%, rgba(0,0,0,0.08) 0.5px, transparent 1px),
+    radial-gradient(circle at 41% 60%, rgba(255,255,255,0.06) 0.4px, transparent 1px),
+    radial-gradient(circle at 80% 20%, rgba(0,0,0,0.06) 0.5px, transparent 1px);
+  background-size: 3px 3px, 5px 5px, 4px 4px, 6px 6px;
+}
+.color-block::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    /* 矿物刷涂的不均匀光泽 */
+    radial-gradient(ellipse at 30% 25%, rgba(255,255,255,0.12), transparent 60%),
+    radial-gradient(ellipse at 70% 80%, rgba(0,0,0,0.06), transparent 55%);
+  pointer-events: none;
+}
+
+/* 24K 金色块特殊处理（金属质感） */
+.color-block.metallic-gold {
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.25) 0%, transparent 35%, rgba(0,0,0,0.10) 70%, transparent 100%),
+    radial-gradient(circle at 50% 50%, rgba(255,247,210,0.35), transparent 50%);
+  background-blend-mode: overlay, normal;
+}
+.color-block.metallic-silver {
+  background-image:
+    linear-gradient(135deg, rgba(255,255,255,0.30) 0%, transparent 40%, rgba(0,0,0,0.08) 70%, transparent 100%),
+    radial-gradient(circle at 50% 50%, rgba(245,245,245,0.30), transparent 50%);
+  background-blend-mode: overlay, normal;
+}
+
+/* 烫金描边（A 档 / B 档） */
+.foil-border {
+  border: 0.4mm solid #D4AF37;
+  box-shadow:
+    inset 0 0 0 0.2mm rgba(245,230,200,0.6),
+    inset 0 0 0 0.6mm rgba(212,175,55,0.4);
+}
+
+/* ============================================================
+   档 A · 单张钩子色卡（100×70mm）
+   ============================================================ */
+
+.tier-a-page {
+  display: flex; align-items: center; justify-content: center;
+  height: 297mm;
+}
+.tier-a-card {
+  width: 100mm; height: 70mm;
+  display: flex;
+  background: #F5E6C8;
+  border: 0.3mm solid #D4AF37;
+  box-shadow: 0 0 8mm rgba(74,46,28,0.15);
+  position: relative;
+}
+.tier-a-card::after {
+  /* 烫金回字纹边框 */
+  content: '';
+  position: absolute; inset: 1mm;
+  border: 0.3mm dashed rgba(212,175,55,0.6);
+  pointer-events: none;
+}
+.tier-a-front-color {
+  width: 60mm; height: 65mm;
+  margin: 2.5mm 0 2.5mm 2.5mm;
+}
+.tier-a-info {
+  flex: 1;
+  padding: 4mm 4mm 4mm 5mm;
+  display: flex; flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.tier-a-name-cn {
+  font-size: 18pt; font-weight: bold;
+  letter-spacing: 2pt;
+}
+.tier-a-name-en {
+  font-family: "Garamond", serif;
+  font-size: 8pt; color: #8B7355;
+  letter-spacing: 1pt; font-style: italic;
+  margin-top: 1mm;
+}
+.tier-a-hex {
+  font-family: "Garamond", serif;
+  font-size: 7pt; color: #8B7355;
+  margin-top: 1mm;
+}
+.tier-a-foot {
+  display: flex; justify-content: space-between;
+  align-items: center;
+  font-family: "Garamond", serif;
+  font-size: 6.5pt; color: #8B7355;
+}
+.tier-a-back {
+  margin-top: 6mm;
+  width: 100mm; height: 70mm;
+  padding: 4mm 5mm;
+  background: #F5E6C8;
+  border: 0.3mm solid #D4AF37;
+  position: relative;
+}
+.tier-a-back .poem {
+  font-size: 9.5pt; line-height: 1.85;
+  color: #2B2B2B;
+}
+.tier-a-back .meta {
+  position: absolute;
+  bottom: 4mm; left: 5mm; right: 5mm;
+  display: flex; justify-content: space-between;
+  font-family: "Garamond", serif;
+  font-size: 6.5pt; color: #8B7355;
+}
+.tier-a-back .qr {
+  width: 12mm; height: 12mm;
+  position: absolute; bottom: 4mm; right: 5mm;
+  background: repeating-linear-gradient(
+    0deg, #2B2B2B 0 1px, transparent 1px 2px),
+    repeating-linear-gradient(
+    90deg, #2B2B2B 0 1px, transparent 1px 2px);
+  border: 0.3mm solid #2B2B2B;
+}
+
+/* ============================================================
+   档 B · 八门标准色票套（A6 = 105×148mm）
+   ============================================================ */
+
+.tier-b-grid {
+  padding: 18mm 14mm;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 6mm;
+}
+.tier-b-card {
+  position: relative;
+  background: #F5E6C8;
+  border: 0.3mm solid #D4AF37;
+  display: flex; flex-direction: column;
+  height: 110mm;
+  box-shadow: 0 0 4mm rgba(74,46,28,0.12);
+}
+.tier-b-color {
+  /* 双色拼接：左 60% 主色，右 40% 辅色，斜切渐变 */
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+.tier-b-color .main {
+  position: absolute; left: 0; top: 0;
+  width: 64%; height: 100%;
+}
+.tier-b-color .sub {
+  position: absolute; right: 0; top: 0;
+  width: 40%; height: 100%;
+  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+.tier-b-card .gate-name {
+  position: absolute;
+  top: 4mm; left: 4mm;
+  writing-mode: vertical-rl; text-orientation: upright;
+  font-size: 13pt; font-weight: bold;
+  color: #FFF7E8; letter-spacing: 4pt;
+  text-shadow: 0 0 1mm rgba(74,46,28,0.4);
+}
+.tier-b-card .gate-time {
+  position: absolute;
+  bottom: 14mm; right: 4mm;
+  font-size: 7pt; color: #FFF7E8;
+  font-style: italic; opacity: 0.85;
+}
+.tier-b-card .gate-keyword {
+  padding: 3mm 4mm;
+  background: #F5E6C8;
+  font-size: 9pt; color: #C0392B;
+  letter-spacing: 1pt;
+  border-top: 0.3mm solid #D4AF37;
+  display: flex; justify-content: space-between;
+  align-items: center;
+}
+.tier-b-card .gate-seal {
+  width: 6mm; height: 6mm;
+  background: #C0392B;
+  color: #F5E6C8;
+  font-size: 3.5pt;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 0.5mm;
+}
+
+/* ============================================================
+   档 C · 年度全色矿物色卡（90×130mm × 19 张）
+   ============================================================ */
+
+.tier-c-cover-page {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 297mm;
+  background: linear-gradient(135deg, #C9A66B 0%, #D4AF37 50%, #C9A66B 100%);
+  position: relative;
+}
+.tier-c-cover-page::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,247,232,0.25), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(74,46,28,0.12), transparent 50%);
+}
+.tier-c-cover-frame {
+  width: 160mm; height: 230mm;
+  border: 0.5mm solid rgba(245,230,200,0.5);
+  padding: 18mm 12mm;
+  display: flex; flex-direction: column;
+  justify-content: space-between; align-items: center;
+  position: relative; z-index: 1;
+}
+.tier-c-cover-title {
+  writing-mode: vertical-rl; text-orientation: upright;
+  font-weight: 900; font-size: 48pt;
+  color: #FFF7E8; letter-spacing: 12pt;
+  text-shadow: 0 0 2mm rgba(74,46,28,0.3);
+  margin: 30mm 0;
+}
+.tier-c-cover-subtitle {
+  font-size: 12pt; color: #FFF7E8;
+  letter-spacing: 4pt; text-align: center;
+  margin-top: 8mm; opacity: 0.95;
+}
+.tier-c-cover-eng {
+  font-family: "Garamond", serif;
+  font-size: 8pt; color: #FFF7E8;
+  letter-spacing: 3pt;
+  text-transform: uppercase;
+  font-style: italic; opacity: 0.85;
+}
+.tier-c-cover-edition {
+  font-family: "Garamond", serif;
+  font-size: 10pt; color: #FFF7E8;
+  letter-spacing: 2pt; opacity: 0.9;
+}
+
+/* C 档色卡正面：90×130mm 占 A4 中央 */
+.tier-c-card-front {
+  display: flex; align-items: center; justify-content: center;
+  height: 297mm;
+  position: relative;
+}
+.tier-c-card {
+  width: 90mm; height: 130mm;
+  background: #F5E6C8;
+  border: 0.5mm solid #D4AF37;
+  position: relative;
+  box-shadow:
+    0 0 8mm rgba(74,46,28,0.18),
+    inset 0 0 0 0.3mm rgba(245,230,200,0.6);
+}
+.tier-c-card::before {
+  /* 24K 金线滚边 */
+  content: '';
+  position: absolute; inset: 1mm;
+  border: 0.4mm solid #D4AF37;
+  background-image: linear-gradient(45deg, transparent 49%, rgba(212,175,55,0.3) 50%, transparent 51%);
+  background-size: 1mm 1mm;
+  pointer-events: none;
+}
+.tier-c-card-color {
+  /* 70×95mm 色块（80% 高度） */
+  width: 70mm; height: 95mm;
+  margin: 5mm auto 0 auto;
+  position: relative;
+}
+.tier-c-card-corner {
+  /* 925 银包角 */
+  position: absolute;
+  width: 5mm; height: 5mm;
+  background: linear-gradient(135deg, #E8E6E1, #C0C0C0);
+  border: 0.2mm solid #8B7355;
+}
+.tier-c-card-corner.tl { top: 0; left: 0; border-radius: 0 0 1mm 0; }
+.tier-c-card-corner.tr { top: 0; right: 0; border-radius: 0 0 0 1mm; }
+.tier-c-card-corner.bl { bottom: 0; left: 0; border-radius: 0 1mm 0 0; }
+.tier-c-card-corner.br { bottom: 0; right: 0; border-radius: 1mm 0 0 0; }
+.tier-c-card-foot {
+  width: 70mm;
+  margin: 4mm auto 0 auto;
+  text-align: center;
+}
+.tier-c-card-foot .name-cn {
+  font-size: 18pt; font-weight: bold;
+  color: #2B2B2B; letter-spacing: 4pt;
+  /* 模拟"手写体烫金" */
+  background: linear-gradient(180deg, #D4AF37 0%, #B8941F 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tier-c-card-foot .name-meta {
+  font-family: "Garamond", serif;
+  font-size: 7pt; color: #8B7355;
+  letter-spacing: 1pt;
+  margin-top: 1mm;
+}
+.tier-c-card-foot .star-mark {
+  font-size: 8pt; color: #C0392B;
+  margin-top: 1mm; letter-spacing: 1pt;
+}
+
+/* C 档色卡背面 */
+.tier-c-card-back-wrap {
+  display: flex; align-items: center; justify-content: center;
+  height: 297mm;
+}
+.tier-c-card-back {
+  width: 90mm; height: 130mm;
+  background: #F5E6C8;
+  border: 0.5mm solid #D4AF37;
+  padding: 6mm 7mm;
+  position: relative;
+  display: flex; flex-direction: column;
+}
+.tier-c-card-back::before {
+  content: '';
+  position: absolute; inset: 1mm;
+  border: 0.3mm solid #D4AF37;
+  pointer-events: none;
+}
+.tier-c-card-back .back-poem {
+  font-size: 9pt; line-height: 1.85;
+  color: #2B2B2B;
+  margin-bottom: 3mm;
+  flex: 0 0 auto;
+}
+.tier-c-card-back .back-recipe {
+  margin-top: 2mm;
+  padding: 2mm 3mm;
+  background: rgba(255,255,255,0.3);
+  border-left: 0.5mm solid #C9A66B;
+}
+.tier-c-card-back .back-recipe .label {
+  font-size: 7pt; color: #8B7355;
+  letter-spacing: 2pt;
+}
+.tier-c-card-back .back-recipe .formula {
+  font-size: 8.5pt; color: #2B2B2B;
+  margin-top: 0.5mm;
+}
+.tier-c-card-back .back-foot {
+  margin-top: auto;
+  display: flex; justify-content: space-between;
+  align-items: flex-end;
+  font-family: "Garamond", serif;
+  font-size: 6.5pt; color: #8B7355;
+}
+
+/* ============================================================
+   档 D · B 端极致礼盒（在 C 档基础上加封面页 + 配件清单页）
+   ============================================================ */
+
+.tier-d-cover-page {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  height: 297mm;
+  background:
+    radial-gradient(ellipse at 50% 50%, #C0392B, #8B0000);
+}
+.tier-d-cover-page::before {
+  /* 缂丝纹理模拟 */
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,247,232,0.06) 0 0.4mm, transparent 0.4mm 0.8mm),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.05) 0 0.5mm, transparent 0.5mm 1mm);
+  pointer-events: none;
+}
+.tier-d-cover-title {
+  font-size: 36pt; font-weight: 900;
+  color: #D4AF37; letter-spacing: 8pt;
+  text-shadow: 0 0 3mm rgba(74,46,28,0.4);
+  z-index: 1;
+}
+.tier-d-cover-sub {
+  font-size: 14pt; color: #F5E6C8;
+  letter-spacing: 4pt;
+  margin-top: 8mm;
+  z-index: 1;
+}
+
+.tier-d-accessories {
+  padding: 20mm 18mm;
+  height: 297mm;
+}
+.tier-d-accessories h2 {
+  font-size: 22pt; color: #C0392B;
+  letter-spacing: 4pt; text-align: center;
+  margin-bottom: 4mm;
+}
+.tier-d-accessory-card {
+  margin: 6mm 0;
+  padding: 5mm 6mm;
+  background: rgba(255,255,255,0.4);
+  border: 0.3mm solid #C9A66B;
+  border-left: 1.5mm solid #C0392B;
+  display: flex; align-items: center;
+  gap: 6mm;
+}
+.tier-d-accessory-swatch {
+  width: 18mm; height: 18mm;
+  border: 0.3mm solid #D4AF37;
+  flex-shrink: 0;
+}
+.tier-d-accessory-text h3 {
+  font-size: 13pt; color: #2B2B2B;
+  letter-spacing: 2pt; margin-bottom: 1mm;
+}
+.tier-d-accessory-text .desc {
+  font-size: 9pt; color: #6B6B6B;
+  line-height: 1.7;
+}
+
+/* ============================================================
+   通用·章节扉页
+   ============================================================ */
+
+.section-cover {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  height: 297mm; text-align: center;
+}
+.section-cover .num {
+  font-family: "Garamond", serif;
+  font-size: 14pt; color: #8B7355;
+  letter-spacing: 6pt;
+  text-transform: uppercase; font-style: italic;
+  margin-bottom: 6mm;
+}
+.section-cover .title {
+  font-size: 36pt; font-weight: bold;
+  color: #C9A66B; letter-spacing: 12pt;
+  margin: 4mm 0 8mm 0;
+}
+.section-cover .sub {
+  font-size: 12pt; color: #2B2B2B;
+  letter-spacing: 3pt;
+  max-width: 130mm; line-height: 2;
+}
+.section-cover .line {
+  width: 50mm; height: 0.4mm;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 8mm 0;
+}
+
+/* ============================================================
+   页脚
+   ============================================================ */
+
+.page-foot {
+  position: absolute;
+  bottom: 12mm; left: 0; right: 0;
+  display: flex; justify-content: space-between;
+  padding: 0 18mm;
+  font-family: "Garamond", serif;
+  font-size: 8pt; color: #8B7355;
+  letter-spacing: 1pt;
+}

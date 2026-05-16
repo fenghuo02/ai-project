@@ -19,6 +19,8 @@ from weasyprint import HTML
 ROOT = Path(__file__).parent.resolve()
 TEMPLATES_DIR = ROOT / "templates"
 CLIENTS_DIR = ROOT / "clients"
+# 共享色谱（项目 19 色单一真相来源）
+SHARED_PALETTE = ROOT.parent / "swatch-builder" / "palette" / "colors.yaml"
 
 
 def find_image(client_dir: Path, key: str) -> str:
@@ -52,6 +54,24 @@ def build(client_id: str):
 
     with open(data_file, "r", encoding="utf-8") as f:
         data = yaml.safe_load(f)
+
+    # 注入项目 19 色共享色谱（附录·二·项目色谱全集 用）
+    if SHARED_PALETTE.exists():
+        with open(SHARED_PALETTE, "r", encoding="utf-8") as f:
+            atlas = yaml.safe_load(f)
+        # 标记客户的本命色 / 避忌色（用 hex 匹配，鲁棒一些）
+        primary_hexes = {c["hex"].upper() for c in data.get("colors", {}).get("primary", [])}
+        forbidden = data.get("colors", {}).get("forbidden") or {}
+        forbidden_hex = (forbidden.get("hex") or "").upper()
+        for c in atlas.get("colors", []):
+            chex = c.get("hex", "").upper()
+            c["is_primary"] = chex in primary_hexes
+            c["is_forbidden"] = bool(forbidden_hex) and chex == forbidden_hex
+        data["atlas"] = atlas
+        print(f"[+] Loaded shared palette: {len(atlas.get('colors', []))} colors")
+    else:
+        data["atlas"] = None
+        print(f"[!] Shared palette not found at {SHARED_PALETTE} — skipping atlas page")
 
     # 注入图片 URI
     data["img"] = {}
