@@ -39,7 +39,14 @@ ai-project/
 | 文件 | 用途 |
 |------|------|
 | [`business-plan-chongqing-yixue-photo.md`](./docs/business-plan-chongqing-yixue-photo.md) ⭐ | **项目计划书 v1.3**（C 端 + B 端双轮战略 / 6 个月分阶段 / ¥30k 预算明细 / §5.1 服装形象 / §5.2 4 档色卡产品体系） |
-| [`playbook/`](./docs/playbook/) | **小红书 + 公众号双平台运营手册**（playbook + 7 套核心 Prompt + 30 天内容日历 + 9 宫格封面规范） |
+| [`playbook/`](./docs/playbook/) ⭐ | **渝山东方美学运营手册**（小红书 + 公众号双平台 · 14 个文件 · 详见 [playbook/README.md](./docs/playbook/README.md)）|
+| [`playbook/playbook-yixue.md`](./docs/playbook/playbook-yixue.md) ⭐ | 完整运营手册：定位 / 4 大栏目 / 30 天内容日历 / M1-M6 变现路径 / 平台禁词清单 |
+| [`playbook/prompts-content.md`](./docs/playbook/prompts-content.md) ⭐ | 双平台内容生产 Prompt（7 套：本命色笔记 → 公众号深度文 → 引流钩子 → 选题雷达 → 评论运营 → 数据复盘）|
+| [`playbook/lead-magnet-19-colors.md`](./docs/playbook/lead-magnet-19-colors.md) ⭐ | M1 主推钩子《19 色本命色卡 PDF · 38 页》大纲 |
+| [`playbook/wechat-onboarding.md`](./docs/playbook/wechat-onboarding.md) ⭐ | 公众号冷启动全套文案（欢迎语 / 7 个关键词 / 3×5 菜单） |
+| [`playbook/covers-design.md`](./docs/playbook/covers-design.md) + [`covers/`](./docs/playbook/covers/) | 9 宫格封面设计规范 + 5 个 HTML 模板（HEX 严格对齐 colors.yaml） |
+| [`playbook/avatar-design.md`](./docs/playbook/avatar-design.md) | 头像 6 方案（朱砂印「渝山」、暖驼篆字、宋画团扇等）|
+| [`playbook/m1-procurement-checklist.md`](./docs/playbook/m1-procurement-checklist.md) | M1 第 1-3 周形象采购 27 项 checklist（¥4,500） |
 | [`playbook/prompts-yixue-photo.md`](./docs/playbook/prompts-yixue-photo.md) | **易学摄影专属提示词工具包 v2.1.1**（八字推导 / 五行肖像 / 八门壁纸 / 节气节庆图 / 朋友圈话术） |
 | [`playbook/prompts-elderly-care.md`](./docs/playbook/prompts-elderly-care.md) | 银发关怀赛道提示词（B 端 BD 备用方向） |
 
@@ -102,15 +109,16 @@ python3 build.py 主理人-19880808       # 生成 28 页（启用 ABC 档）/ 4
 ### 我是**主理人 / 项目负责人**
 
 1. 先读 [`docs/business-plan-chongqing-yixue-photo.md`](./docs/business-plan-chongqing-yixue-photo.md) §1-4（30 分钟）
-2. 按 §5.1 在 M1 第 1-3 周完成形象采购（淘宝 + 朝天门 + 解放碑）
+2. 按 §5.1 + [`playbook/m1-procurement-checklist.md`](./docs/playbook/m1-procurement-checklist.md) 在 M1 第 1-3 周完成形象采购（¥4,500）
 3. 按 §5.2 联系印刷厂打 A 档样卡（用 swatch-builder 出的 PDF 当排版稿）
-4. 按 [`docs/playbook/playbook.md`](./docs/playbook/playbook.md) 跑小红书 + 公众号
+4. 按 [`docs/playbook/playbook-yixue.md`](./docs/playbook/playbook-yixue.md) 跑小红书 + 公众号双平台
 
 ### 我是**新接手的运营 / 实习生**
 
-1. 读 [`docs/playbook/README.md`](./docs/playbook/README.md)（5 分钟）
-2. 跟着 [`docs/playbook/first-post.md`](./docs/playbook/first-post.md) → `post-02` → `post-03` 发完前 3 篇
-3. 用 [`docs/playbook/prompts.md`](./docs/playbook/prompts.md) 的 7 套 Prompt 持续产出
+1. 读 [`docs/playbook/README.md`](./docs/playbook/README.md)（5 分钟，全部 14 个文件的索引和工作流）
+2. 按 [`playbook/wechat-onboarding.md`](./docs/playbook/wechat-onboarding.md) 配置公众号 7 个关键词 + 3×5 菜单
+3. 按 [`playbook/lead-magnet-19-colors.md`](./docs/playbook/lead-magnet-19-colors.md) 10 天计划做出 V0.1 钩子 PDF
+4. 用 [`playbook/prompts-content.md`](./docs/playbook/prompts-content.md) 的 7 套 Prompt 持续产出小红书笔记 + 公众号长文
 
 ### 我是**视觉 / 内容生产**
 
@@ -160,6 +168,7 @@ python3 build.py 主理人-19880808       # 生成 28 页（启用 ABC 档）/ 4
 | v1.2.1-2 | 2026-春 | §5.1.4-5.1.7 实操采购清单（淘宝店铺 + 朝天门走法） |
 | v1.3 | 2026-春 | §5.2 本命色卡 4 档产品体系（19 色全集） |
 | **v2.1.2** | **2026-04** | **mingshu-builder 引入 §5.2.1 共享色谱（PR #9）** |
+| **v1.3.1** | **2026-05** | **playbook 易学化重写完成（PR A→D · #16-#22）**：14 个 playbook 文件全部从 AI 工具号赛道改写为渝山东方美学命主肖像主理人赛道 |
 
 ---
 
