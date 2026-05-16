@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ meta.client_name }} · 本命色卡</title>
+  <link rel="stylesheet" href="_styles.css">
+</head>
+<body>
+
+{# ============================================================
+   章节 1 · 总封面
+   ============================================================ #}
+<div class="page tier-c-cover-page">
+  <div class="tier-c-cover-frame">
+    <div style="text-align:center;">
+      <div class="tier-c-cover-eng">{{ meta.client_name|default('Master') }} · Color Atlas</div>
+      <div class="tier-c-cover-edition">{{ meta.edition }}</div>
+    </div>
+
+    <div class="tier-c-cover-title">本命色卡</div>
+
+    <div style="text-align:center;">
+      <div class="tier-c-cover-subtitle">{{ meta.client_name }}{% if meta.client_seal_char %} · {{ meta.client_seal_char }}{% endif %}</div>
+      <div class="tier-c-cover-eng" style="margin-top:3mm;">岁次 · {{ meta.year_label|default('丙午年仲春') }}</div>
+    </div>
+  </div>
+</div>
+
+{# ============================================================
+   章节 2 · 客户本命色总览（1 页）
+   ============================================================ #}
+<div class="page bg-rice">
+  <div style="padding: 22mm 18mm;">
+    <h1 style="font-size:24pt; color:#C9A66B; letter-spacing:6pt; margin-bottom:2mm;">命主本命色谱</h1>
+    <div style="font-family:Garamond; font-size:9pt; color:#8B7355; letter-spacing:2pt; font-style:italic;">SIGNATURE PALETTE</div>
+    <div class="huiwen-line" style="margin: 4mm 0;"></div>
+
+    <div style="margin-top: 8mm;">
+      <h2 style="font-size:14pt; color:#C0392B; letter-spacing:3pt; margin-bottom:3mm;">主色</h2>
+      {% for color_id in signature.primary %}
+        {% set c = colors_by_id[color_id] %}
+        <div style="display:flex; align-items:center; gap:6mm; margin-bottom:4mm; padding:3mm; background:rgba(255,255,255,0.3); border:0.3mm solid #D4AF37;">
+          <div class="color-block{% if color_id in ['zhuguangjin','juhuang'] %} metallic-gold{% endif %}{% if color_id in ['yueguangyin','lengyin'] %} metallic-silver{% endif %}"
+               style="width:30mm; height:22mm; background-color: {{ c.hex }};"></div>
+          <div style="flex:1;">
+            <div style="font-size:18pt; font-weight:bold; letter-spacing:3pt;">{{ c.name_cn }}</div>
+            <div style="font-family:Garamond; font-size:9pt; color:#8B7355; font-style:italic;">{{ c.name_en }} · {{ c.hex }}</div>
+            <div style="font-size:10pt; line-height:1.7; margin-top:2mm;">{{ c.poem }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if signature.secondary %}
+    <div style="margin-top: 8mm;">
+      <h2 style="font-size:14pt; color:#C9A66B; letter-spacing:3pt; margin-bottom:3mm;">辅色</h2>
+      {% for color_id in signature.secondary %}
+        {% set c = colors_by_id[color_id] %}
+        <div style="display:flex; align-items:center; gap:6mm; margin-bottom:3mm;">
+          <div class="color-block" style="width:24mm; height:16mm; background-color: {{ c.hex }}; border:0.3mm solid #D4AF37;"></div>
+          <div style="flex:1;">
+            <div style="font-size:14pt; font-weight:bold; letter-spacing:2pt;">{{ c.name_cn }}</div>
+            <div style="font-size:9pt; color:#6B6B6B;">{{ c.poem }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if signature.forbidden %}
+    <div style="margin-top: 8mm;">
+      <h2 style="font-size:14pt; color:#8B6F8E; letter-spacing:3pt; margin-bottom:3mm;">避忌色</h2>
+      {% for color_id in signature.forbidden %}
+        {% set c = colors_by_id[color_id] %}
+        <div style="display:flex; align-items:center; gap:6mm; margin-bottom:3mm; opacity:0.6;">
+          <div style="width:24mm; height:16mm; background-color: {{ c.hex }}; border:0.3mm solid #8B6F8E; position:relative;">
+            <div style="position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-size:14pt; color:rgba(192,57,43,0.8); font-weight:bold;">忌</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:14pt; font-weight:bold; letter-spacing:2pt;">{{ c.name_cn }}</div>
+            <div style="font-size:9pt; color:#6B6B6B;">{{ c.poem }}</div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+
+{# ============================================================
+   档 A · 单张钩子色卡（1 张，正反面 1 页）
+   ============================================================ #}
+{% if tier_a.enabled %}
+<div class="page section-cover bg-rice">
+  <div class="num">Tier A · Hook Card</div>
+  <div class="title">单张本命色卡</div>
+  <div class="line"></div>
+  <div class="sub">¥9.9 引流款 · 100×70mm 双层裱合<br>纯棉本白卡 350gsm + 烫金回字纹</div>
+</div>
+
+{% for card_color_id in tier_a.cards %}
+  {% set c = colors_by_id[card_color_id] %}
+<div class="page bg-rice tier-a-page">
+  <div>
+    <div class="tier-a-card foil-border">
+      <div class="tier-a-front-color color-block{% if card_color_id in ['zhuguangjin','juhuang'] %} metallic-gold{% endif %}"
+           style="background-color: {{ c.hex }};"></div>
+      <div class="tier-a-info">
+        <div>
+          <div class="tier-a-name-cn">{{ c.name_cn }}</div>
+          <div class="tier-a-name-en">{{ c.name_en }}</div>
+          <div class="tier-a-hex">{{ c.hex }} · {{ c.pantone_match|default('') }}</div>
+        </div>
+        <div class="tier-a-foot">
+          <span>{{ c.family }} · {{ c.family_hue }}</span>
+          <span class="seal-small seal">{{ meta.client_seal_char|default('主') }}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="tier-a-back foil-border">
+      <div class="poem">{{ c.poem }}</div>
+      <div style="margin-top:3mm; font-size:8pt; color:#8B7355;">出现于：{% for app in c.appears_in %}{{ app }}{% if not loop.last %} / {% endif %}{% endfor %}</div>
+      <div class="qr"></div>
+      <div class="meta">
+        <span>{{ meta.edition }}</span>
+        <span style="margin-right:14mm;">{{ meta.year_label|default('') }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{# ============================================================
+   档 B · 八门标准色票套（4 页 × 4 张 = 16 张）
+   ============================================================ #}
+{% if tier_b.enabled %}
+<div class="page section-cover bg-rice">
+  <div class="num">Tier B · Eight Gates</div>
+  <div class="title">八门标准色票</div>
+  <div class="line"></div>
+  <div class="sub">¥299-499 拳头款 · A6 105×148mm × 16 张<br>日本竹尾棉麻 + 朱砂蜡封 + 不锈钢拉丝色金属环</div>
+</div>
+
+{% set ba_men_groups = [ba_men[0:4], ba_men[4:8]] %}
+{% for group in ba_men_groups %}
+<div class="page bg-rice tier-b-grid">
+  {% for gate in group %}
+    {% set main_c = colors_by_id[gate.color_main] %}
+    {% set sub_c = colors_by_id[gate.color_sub] %}
+    <div class="tier-b-card">
+      <div class="tier-b-color">
+        <div class="main color-block{% if gate.color_main in ['zhuguangjin','juhuang'] %} metallic-gold{% endif %}"
+             style="background-color: {{ main_c.hex }};"></div>
+        <div class="sub color-block{% if gate.color_sub in ['zhuguangjin','juhuang'] %} metallic-gold{% endif %}"
+             style="background-color: {{ sub_c.hex }};"></div>
+        <div class="gate-name">{{ gate.deco_char }}门 · {{ gate.name }}</div>
+        <div class="gate-time">{{ gate.label }}</div>
+      </div>
+      <div class="gate-keyword">
+        <span>{{ main_c.name_cn }} · {{ sub_c.name_cn }}</span>
+        <span class="gate-seal">{{ meta.client_seal_char|default('主') }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+{% endfor %}
+{% endif %}
+
+{# ============================================================
+   档 C · 年度全色矿物色卡（19 张正面 + 1 个总封面 = 20 页）
+   ============================================================ #}
+{% if tier_c.enabled %}
+<div class="page section-cover bg-rice">
+  <div class="num">Tier C · Annual Mineral Atlas</div>
+  <div class="title">年度全色矿物色卡</div>
+  <div class="line"></div>
+  <div class="sub">¥2,999 高定款 · 90×130mm × 19 张<br>真丝平纹绢本 + 矿物颜料手工刷涂<br>老榆木+楠木匣 / 24K 金线滚边 / 925 银包角</div>
+</div>
+
+{# 高定档封面 #}
+<div class="page tier-c-cover-page">
+  <div class="tier-c-cover-frame">
+    <div class="tier-c-cover-eng">Tier C · {{ meta.client_name|default('Master') }}</div>
+    <div class="tier-c-cover-title">{% if signature.primary %}{{ colors_by_id[signature.primary[0]].name_cn }}{% endif %}之书</div>
+    <div style="text-align:center;">
+      <div class="tier-c-cover-subtitle">{{ tier_c.edition_full|default(meta.edition) }}</div>
+      <div class="tier-c-cover-eng" style="margin-top:3mm;">十九色 · 矿物 · 绢本</div>
+    </div>
+  </div>
+</div>
+
+{# 19 色每色一页（正面 + 背面在同一页排列） #}
+{% for color in colors %}
+<div class="page bg-rice">
+  <div style="padding: 18mm 14mm; height: 100%;">
+
+    {# 上半页：色卡正面（缩放展示，标注实物 90×130mm） #}
+    <div style="display: flex; gap: 10mm; align-items: flex-start;">
+
+      <div class="tier-c-card" style="flex-shrink:0;">
+        <div class="tier-c-card-corner tl"></div>
+        <div class="tier-c-card-corner tr"></div>
+        <div class="tier-c-card-corner bl"></div>
+        <div class="tier-c-card-corner br"></div>
+        <div class="tier-c-card-color color-block{% if color.id in ['zhuguangjin','juhuang'] %} metallic-gold{% endif %}{% if color.id in ['yueguangyin','lengyin'] %} metallic-silver{% endif %}"
+             style="background-color: {{ color.hex }};"></div>
+        <div class="tier-c-card-foot">
+          <div class="name-cn">{{ color.name_cn }}</div>
+          <div class="name-meta">{{ color.name_en }} · {{ color.hex }} · {{ color.family }}</div>
+          {% if color.id in signature.primary %}
+            <div class="star-mark">★ 命主主色</div>
+          {% elif color.id in signature.secondary|default([]) %}
+            <div class="star-mark" style="color:#C9A66B;">○ 命主辅色</div>
+          {% elif color.id in signature.forbidden|default([]) %}
+            <div class="star-mark" style="color:#8B6F8E;">✕ 避忌</div>
+          {% endif %}
+        </div>
+      </div>
+
+      {# 右侧：诗化定义 + 配方 #}
+      <div style="flex: 1; padding-top: 4mm;">
+        <div style="font-family:Garamond; font-size:9pt; color:#8B7355; letter-spacing:2pt; font-style:italic; text-transform:uppercase;">No. {{ '%02d'|format(loop.index) }} / 19</div>
+        <div style="font-size:28pt; font-weight:bold; color:#2B2B2B; letter-spacing:4pt; margin: 2mm 0;">{{ color.name_cn }}</div>
+        <div class="gold-thread" style="width:50mm; margin-bottom:4mm;"></div>
+
+        <div style="font-size:11pt; line-height:1.9; color:#2B2B2B; margin-bottom:5mm;">{{ color.poem }}</div>
+
+        <div style="margin-top:4mm; padding:3mm 4mm; background:rgba(255,255,255,0.4); border-left:0.6mm solid #C9A66B;">
+          <div style="font-size:8pt; color:#8B7355; letter-spacing:2pt;">矿物配方</div>
+          <div style="font-size:10pt; color:#2B2B2B; margin-top:1mm; line-height:1.7;">
+            {{ color.mineral_recipe.main }}{% if color.mineral_recipe.additive %} + {{ color.mineral_recipe.additive }}{% endif %}<br>
+            <span style="color:#6B6B6B;">{{ color.mineral_recipe.binder }}</span>
+          </div>
+          {% if color.mineral_recipe.note %}
+            <div style="font-size:8pt; color:#8B7355; margin-top:2mm; font-style:italic;">{{ color.mineral_recipe.note }}</div>
+          {% endif %}
+        </div>
+
+        <div style="margin-top:4mm;">
+          <div style="font-size:8pt; color:#8B7355; letter-spacing:2pt;">出现于</div>
+          <ul style="margin-top:1mm; padding-left:5mm;">
+            {% for app in color.appears_in %}
+              <li style="font-size:9pt; line-height:1.6; color:#2B2B2B;">{{ app }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {# 下半页：背面预览（缩略） #}
+    <div style="margin-top: 12mm;">
+      <div style="font-family:Garamond; font-size:7pt; color:#8B7355; letter-spacing:2pt; font-style:italic;">CARD BACK</div>
+      <div class="gold-thread" style="width:30mm; margin: 1mm 0 3mm 0;"></div>
+
+      <div class="tier-c-card-back" style="margin-left: auto; margin-right: 0;">
+        <div class="back-poem">{{ color.poem }}</div>
+        <div class="back-recipe">
+          <div class="label">矿物配方</div>
+          <div class="formula">
+            {{ color.mineral_recipe.main }}{% if color.mineral_recipe.additive %} + {{ color.mineral_recipe.additive }}{% endif %}<br>
+            <span style="color:#6B6B6B; font-size:7.5pt;">{{ color.mineral_recipe.binder }}</span>
+          </div>
+        </div>
+        <div class="back-foot">
+          <span>{{ meta.edition }}</span>
+          <span class="seal-small seal">{{ meta.client_seal_char|default('主') }}</span>
+          <span>{{ '%02d'|format(loop.index) }} / 19</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-foot">
+      <span>{{ meta.client_name|default('Master') }} Color Atlas · Tier C</span>
+      <span>{{ '%02d'|format(loop.index) }} / 19</span>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+{# ============================================================
+   档 D · B 端极致礼盒（基于 C 档加配件展示）
+   ============================================================ #}
+{% if tier_d.enabled %}
+<div class="page section-cover bg-rice">
+  <div class="num">Tier D · B-End Ultimate</div>
+  <div class="title">B 端极致礼盒</div>
+  <div class="line"></div>
+  <div class="sub">¥6,800-30,000 · 银行 / 医美 VIP 专属<br>Tier C 完整套 + 缂丝外锦囊 + 同色丝巾 + 同色家居墙纸</div>
+</div>
+
+<div class="page tier-d-cover-page">
+  <div class="tier-d-cover-title">岁次礼匣</div>
+  <div class="tier-d-cover-sub">{{ tier_c.edition_full|default(meta.edition) }}</div>
+  <div style="margin-top:30mm; color:#F5E6C8; font-family:Garamond; font-size:9pt; letter-spacing:3pt; opacity:0.85; z-index:1;">
+    PRIVATE BANK / MEDICAL AESTHETICS GIFT BOX
+  </div>
+</div>
+
+<div class="page bg-rice tier-d-accessories">
+  <h2>礼匣配件清单</h2>
+  <div class="line gold-thread" style="width:60mm; margin: 3mm auto 8mm auto;"></div>
+
+  {# 缂丝外锦囊 #}
+  <div class="tier-d-accessory-card">
+    <div class="tier-d-accessory-swatch color-block" style="background-color: #C0392B;"></div>
+    <div class="tier-d-accessory-text">
+      <h3>缂丝外锦囊（30×40cm）</h3>
+      <div class="desc">苏州缂丝研究所手工织造 · 朱砂提花 + 银线勾边 · 1cm/小时慢工出细活 · 世界级非遗</div>
+    </div>
+  </div>
+
+  {# 配套丝巾 #}
+  {% set scarf_color_id = tier_d.scarf_color|default(signature.primary[0]) %}
+  {% set sc = colors_by_id[scarf_color_id] %}
+  <div class="tier-d-accessory-card">
+    <div class="tier-d-accessory-swatch color-block" style="background-color: {{ sc.hex }};"></div>
+    <div class="tier-d-accessory-text">
+      <h3>同色真丝丝巾（170×30cm）</h3>
+      <div class="desc">杭州万事利专供 · 桑蚕丝平纹 · 本命色「{{ sc.name_cn }} {{ sc.hex }}」 · ¥260/条</div>
+    </div>
+  </div>
+
+  {# 配套家居墙纸 #}
+  {% set wall_color_id = tier_d.wallpaper_color|default(signature.primary[0]) %}
+  {% set wc = colors_by_id[wall_color_id] %}
+  <div class="tier-d-accessory-card">
+    <div class="tier-d-accessory-swatch color-block" style="background-color: {{ wc.hex }};"></div>
+    <div class="tier-d-accessory-text">
+      <h3>同色家居墙纸样品（A4）</h3>
+      <div class="desc">广州壁纸厂定制 · 棉麻底质 + 矿物颜料 · 客户家装色彩参考 · ¥150/片</div>
+    </div>
+  </div>
+
+  {# 黄杨木印章 #}
+  <div class="tier-d-accessory-card">
+    <div class="tier-d-accessory-swatch" style="background: linear-gradient(135deg, #DAB876, #B8924C); border:0.3mm solid #8B7355;">
+      <div style="display:flex; align-items:center; justify-content:center; height:100%; font-size:11pt; font-weight:bold; color:#2B2B2B;">{{ meta.client_seal_char|default('主') }}</div>
+    </div>
+    <div class="tier-d-accessory-text">
+      <h3>客户姓氏黄杨木印章（30×30×60mm）</h3>
+      <div class="desc">浙江乐清黄杨木雕基地 · 配漳州八宝印泥（国家级非遗）30g 罐装 · 客户终身可用</div>
+    </div>
+  </div>
+
+  {# 老榆木+楠木主匣 #}
+  <div class="tier-d-accessory-card">
+    <div class="tier-d-accessory-swatch" style="background: linear-gradient(135deg, #8B6F47 0%, #5D4A2F 100%);"></div>
+    <div class="tier-d-accessory-text">
+      <h3>老榆木+楠木主匣（200×280×60mm）</h3>
+      <div class="desc">云南普洱木匠手作 · 燕尾榫无金属连接 · 黄铜搭扣（刻客户姓氏首字）· 缂丝内衬剪 19 槽位</div>
+    </div>
+  </div>
+
+  <div class="page-foot">
+    <span>{{ meta.client_name|default('Master') }} · Tier D Ultimate</span>
+    <span>Private Bank / Medical Aesthetics</span>
+  </div>
+</div>
+{% endif %}
+
+{# ============================================================
+   终页 · 工艺溯源
+   ============================================================ #}
+<div class="page bg-rice">
+  <div style="padding: 25mm 20mm; height: 100%; display:flex; flex-direction:column;">
+    <div style="text-align:center; margin-bottom: 8mm;">
+      <div style="font-family:Garamond; font-size:9pt; color:#8B7355; letter-spacing:3pt; font-style:italic;">CRAFTSMANSHIP</div>
+      <h1 style="font-size:24pt; color:#C9A66B; letter-spacing:6pt; margin-top:2mm;">工艺溯源</h1>
+      <div class="gold-thread" style="width:40mm; margin:3mm auto;"></div>
+    </div>
+
+    <div style="font-size:11pt; line-height:2; color:#2B2B2B;">
+      <p style="margin-bottom:4mm;">本套色卡所用矿物颜料，皆采自传统千年矿脉：</p>
+      <ul style="list-style:none; margin: 0 0 0 4mm;">
+        <li style="padding: 1mm 0;">— <b>辰州朱砂</b>：湖南怀化 · 国家地理标志</li>
+        <li style="padding: 1mm 0;">— <b>24K 金粉</b>：深圳金箔厂 · 单张色卡用量约 0.5g</li>
+        <li style="padding: 1mm 0;">— <b>石绿</b>：天然孔雀石研磨 · 二级矿料</li>
+        <li style="padding: 1mm 0;">— <b>石青</b>：天然蓝铜矿研磨 · 千年传统</li>
+        <li style="padding: 1mm 0;">— <b>蛤粉</b>：日本胡粉 · 海贝煅烧而成</li>
+        <li style="padding: 1mm 0;">— <b>松烟墨</b>：徽州胡开文 · 百年老号</li>
+      </ul>
+      <p style="margin-top:6mm;">每张色卡皆由专业装裱师傅手工刷涂，不掺现代化工染料。</p>
+      <p style="margin-top:2mm;">真丝平纹绢本采自苏州东吴丝绸，背裱蝉翼宣纸，厚 0.6mm。</p>
+      <p style="margin-top:2mm;">老榆木 + 楠木匣由云南普洱木匠以传统燕尾榫工艺制成，无金属连接。</p>
+    </div>
+
+    <div style="margin-top: auto; padding-top: 8mm; border-top: 0.3mm solid #D4AF37; display:flex; justify-content:space-between; align-items:flex-end;">
+      <div style="font-family:Garamond; font-size:8pt; color:#8B7355; letter-spacing:1pt; line-height:1.7;">
+        <div>渝山东方美学工作室</div>
+        <div>Yushan Oriental Aesthetics Studio</div>
+        <div style="margin-top:1mm;">Edition: {{ meta.edition }}</div>
+        <div>Year: {{ meta.year_label }}</div>
+      </div>
+      <div class="seal" style="width:18mm; height:18mm; font-size:8mm;">{{ meta.client_seal_char|default('主') }}</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

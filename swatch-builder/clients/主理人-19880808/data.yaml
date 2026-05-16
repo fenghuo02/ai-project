@@ -1,0 +1,41 @@
+# 客户色卡配置 · Demo（主理人 1988-08-08）
+# ============================================================
+# 八字：戊辰 庚申 壬午 甲辰
+# 调候用神：戊土 + 丁火
+# 命局：秋水待暖 · 堤岸黄昏
+# 本命色：暖驼 #C9A66B + 烛光金 #D4AF37
+# ============================================================
+
+meta:
+  client_id: "主理人-19880808"
+  client_name: "主理人"
+  client_seal_char: "主"
+  edition: "No.001 / 2026"
+  year_label: "丙午年仲春"
+  birth_solar: "1988-08-08 07:00"
+  bazi: "戊辰 庚申 壬午 甲辰"
+
+signature:
+  primary:
+    - "nuantuo"
+    - "zhuguangjin"
+  secondary:
+    - "mibai"
+  forbidden:
+    - "lengyin"
+
+tier_a:
+  enabled: true
+  cards:
+    - "nuantuo"      # 默认本命主色
+
+tier_b:
+  enabled: true
+
+tier_c:
+  enabled: true
+  edition_full: "No.001 / 2026 · 暖驼之书"
+
+# 主理人本人是 C 端，不需要 D 档
+tier_d:
+  enabled: false
