@@ -11,13 +11,13 @@
 | [playbook-yixue.md](./playbook-yixue.md) ⭐ | **完整运营手册**：定位 / 4 大栏目 / 30 天内容日历 / M1-M6 变现路径 / 平台禁词清单 | ✅ v1.0 |
 | [m1-procurement-checklist.md](./m1-procurement-checklist.md) | M1 第 1-3 周形象采购 27 项 checklist（¥4,500） | ✅ v1.0 |
 | [prompts-yixue-photo.md](./prompts-yixue-photo.md) | 易学摄影专属提示词工具包（Prompt 1 八字推导 → 13 节气壁纸 → 14 解读文案） | ✅ v2.1.1 |
+| [prompts-content.md](./prompts-content.md) ⭐ | **双平台内容生产 Prompt 工具包**（7 套：本命色笔记 → 东方美学日常 → 公众号深度文 → 引流钩子 → 选题雷达 → 评论运营 → 数据复盘） | ✅ v1.0 |
 | [prompts-elderly-care.md](./prompts-elderly-care.md) | 银发关怀赛道提示词（B 端 BD 备用方向） | ✅ |
 
 > 以下工具尚未易学化，待补：
 >
 > | 文件 | 状态 | 计划 |
 > |---|---|---|
-> | `prompts-content.md`（小红书/公众号 7 套生产 Prompt 易学版） | ⏳ 待写 | PR B |
 > | `covers-design-yixue.md` + `wechat-onboarding-yixue.md` | ⏳ 待写 | PR C |
 > | `lead-magnet-19-colors.md`（19 色本命色卡 PDF 钩子，对接 swatch-builder A 档） | ⏳ 待写 | PR D |
 
@@ -84,21 +84,23 @@
 
 ### Day 22+（持续运营）
 - 用 [`prompts-yixue-photo.md`](./prompts-yixue-photo.md) Prompt 1-13 持续产出图与文案
-- 每周五用复盘 Prompt（待 PR B 中补充）做数据复盘
-- 每周二/五把爆款笔记改写成公众号长文
+- 用 [`prompts-content.md`](./prompts-content.md) Prompt 1-7 写笔记 / 公众号长文 / 运营评论 / 数据复盘
+- 每周二/五把爆款笔记改写成公众号长文（用 `prompts-content.md` Prompt 3）
 
 ---
 
-## 工作流（v1.0，PR B 后会更具体）
+## 工作流（v1.0）
 
 ```
 M1 第 1-3 周：按 m1-procurement-checklist.md 完成形象采购（¥4,500）
 M1 第 4 周  ：拍第一组样片，发布第 1 周 5 篇笔记
-每周一      ：扫下周选题（看 playbook-yixue.md §三 30 天日历）
+每周一      ：用 prompts-content.md Prompt 5（选题雷达）扫下周选题
 每日        ：用 prompts-yixue-photo.md Prompt 5b/13 跑图
-周二/五     ：把爆款改公众号长文
-每晚        ：运营评论区
-周五晚      ：数据复盘 + 排下周
+              用 prompts-content.md Prompt 1/2 写笔记
+              用 prompts-content.md Prompt 6 运营评论区
+周二/五     ：用 prompts-content.md Prompt 3 把爆款改公众号长文
+周五晚      ：用 prompts-content.md Prompt 7 数据复盘 + 排下周
+每月 1 日   ：用 prompts-content.md Prompt 4 刷新引流钩子
 ```
 
 ---
