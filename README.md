@@ -1,5 +1,7 @@
 # 渝山东方美学 · 项目仓库
 
+[![CI](https://github.com/fenghuo02/ai-project/actions/workflows/ci.yml/badge.svg)](https://github.com/fenghuo02/ai-project/actions/workflows/ci.yml)
+
 > 重庆首家**东方美学命主肖像工作室**——用《四柱八字》的色彩美学 + AI 视觉技术，为本地客户做一本属于自己的《X 之书》。
 >
 > **版本**：v1.3 · 2026 春

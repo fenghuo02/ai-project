@@ -1,0 +1,135 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# 同一 PR 后续 push 自动取消旧的 run
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ──────────────────────────────────────────────────────────
+  # 快速校验：仅 pyyaml 依赖，~30s
+  #   - 真实客户必须通过校验
+  #   - _template/ 必须**校验失败**（防止占位符进 main）
+  # ──────────────────────────────────────────────────────────
+  validate:
+    name: Validate data.yaml
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install lightweight deps
+        run: pip install pyyaml
+
+      - name: Validate mingshu real client (must pass)
+        working-directory: mingshu-builder
+        run: python3 build.py --validate 主理人-19880808
+
+      - name: Validate swatch real client (must pass)
+        working-directory: swatch-builder
+        run: python3 build.py --validate 主理人-19880808
+
+      - name: Validate mingshu _template (must FAIL — regression net)
+        working-directory: mingshu-builder
+        run: |
+          if python3 build.py --validate _template; then
+            echo "::error::mingshu _template/data.yaml passed validation; placeholders may have leaked into the template"
+            exit 1
+          else
+            echo "✓ _template correctly fails validation"
+          fi
+
+      - name: Validate swatch _template (must FAIL — regression net)
+        working-directory: swatch-builder
+        run: |
+          if python3 build.py --validate _template; then
+            echo "::error::swatch _template/data.yaml passed validation; placeholders may have leaked into the template"
+            exit 1
+          else
+            echo "✓ _template correctly fails validation"
+          fi
+
+  # ──────────────────────────────────────────────────────────
+  # 完整 PDF 构建：装 Pango/Cairo + Noto CJK，~3min
+  #   - 两个 builder 都跑一遍
+  #   - 断言页数 + 文件大小下限（防止 weasyprint 升级悄悄改输出）
+  # ──────────────────────────────────────────────────────────
+  build:
+    name: Build PDFs
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install system dependencies (Pango / Cairo / Noto CJK)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends \
+            libpango-1.0-0 libpangoft2-1.0-0 libcairo2 \
+            poppler-utils \
+            fonts-noto-cjk fonts-noto-cjk-extra
+
+      - name: Install Python deps
+        run: pip install pyyaml jinja2 weasyprint
+
+      - name: Build mingshu PDF
+        working-directory: mingshu-builder
+        run: |
+          python3 build.py 主理人-19880808
+          PAGES=$(pdfinfo clients/主理人-19880808/output.pdf | awk '/^Pages:/ {print $2}')
+          SIZE=$(stat -c%s clients/主理人-19880808/output.pdf)
+          echo "mingshu PDF: $PAGES pages, $SIZE bytes"
+          if [ "$PAGES" != "39" ]; then
+            echo "::error::Expected 39 pages, got $PAGES"
+            exit 1
+          fi
+          if [ "$SIZE" -lt 100000 ]; then
+            echo "::error::PDF suspiciously small ($SIZE bytes); fonts may be missing"
+            exit 1
+          fi
+
+      - name: Build swatch PDF
+        working-directory: swatch-builder
+        run: |
+          python3 build.py 主理人-19880808
+          PAGES=$(pdfinfo clients/主理人-19880808/output.pdf | awk '/^Pages:/ {print $2}')
+          SIZE=$(stat -c%s clients/主理人-19880808/output.pdf)
+          echo "swatch PDF: $PAGES pages, $SIZE bytes"
+          if [ "$PAGES" != "48" ]; then
+            echo "::error::Expected 48 pages, got $PAGES"
+            exit 1
+          fi
+          if [ "$SIZE" -lt 100000 ]; then
+            echo "::error::PDF suspiciously small ($SIZE bytes); fonts may be missing"
+            exit 1
+          fi
+
+      - name: Upload PDFs as build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: ci-built-pdfs
+          path: |
+            mingshu-builder/clients/主理人-19880808/output.pdf
+            swatch-builder/clients/主理人-19880808/output.pdf
+          retention-days: 14
+          if-no-files-found: error
