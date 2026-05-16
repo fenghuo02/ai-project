@@ -2,91 +2,172 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<title>Cover 01 - 主封面</title>
+<title>9 宫格封面 · 图 1 主封面（covers-design.md §二 图 1）</title>
 <style>
+  /* ─────────────────────────────────────────────────────────────
+     色谱母本：swatch-builder/palette/colors.yaml
+       米白 mibai          #FAF7F2  背景
+       米麦 mimai          #F5E6C8  次底色
+       墨青 moqing         #2C3E50  主标题 / 大字
+       暖驼 nuantuo        #C9A66B  ★ 强调块
+       朱砂 zhusha         #C0392B  钩子 / 印章
+       烛光金 zhuguangjin  #D4AF37  高定点缀（限量用）
+
+     19 色色块预览：从 colors.yaml 取，按色相过渡
+     调整 HEX 时请同步 colors.yaml，version + 1。
+
+     画布：1242 × 1660 px (3:4 小红书首图)
+     这里用 621 × 828 (1:2 缩放) 适配桌面预览，导出时按需放大或截图后裁切。
+  ───────────────────────────────────────────────────────────── */
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { background: #f0f0f0; display: flex; justify-content: center; padding: 20px; font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+  body {
+    background: #e8e6e1;
+    display: flex; justify-content: center; padding: 24px;
+    font-family: 'STSong', 'PingFang SC', 'Microsoft YaHei', serif;
+  }
   .cover {
     width: 621px; height: 828px;
-    background: #FFF8E7;
+    background: #FAF7F2;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
-  .tag {
-    position: absolute; top: 40px; right: 40px;
-    background: #FF6B6B; color: white;
-    padding: 10px 24px; border-radius: 100px;
-    font-weight: 800; font-size: 22px;
-    transform: rotate(8deg);
-    box-shadow: 0 4px 12px rgba(255,107,107,0.3);
+  /* 宣纸纹理（极淡） */
+  .grain {
+    position: absolute; inset: 0;
+    background-image:
+      radial-gradient(circle at 20% 30%, rgba(201, 166, 107, 0.04) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(44, 62, 80, 0.04) 0%, transparent 40%);
+    pointer-events: none;
   }
+  /* 右上角小圆标「重庆 · 工作室」 */
+  .badge {
+    position: absolute; top: 32px; right: 32px;
+    background: #C0392B; color: #FAF7F2;
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 18px; font-weight: 600;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(192, 57, 43, 0.25);
+  }
+  /* 副标题「重庆姑娘」 */
   .small-title {
-    position: absolute; top: 90px; left: 60px;
-    font-size: 32px; color: #FF6B6B;
-    font-weight: 700;
+    position: absolute; top: 95px; left: 60px;
+    font-size: 30px; color: #2C3E50;
+    font-weight: 600; letter-spacing: 4px;
+    font-family: 'STSong', 'SimSun', serif;
   }
+  /* 主标题大色块（暖驼底） */
   .main-block {
-    position: absolute; top: 180px; left: 40px; right: 40px;
-    background: #FFD93D;
+    position: absolute; top: 165px; left: 40px; right: 40px;
+    background: #C9A66B;
     padding: 50px 30px;
-    border-radius: 24px;
-    box-shadow: 8px 8px 0 #2D2D2D;
+    box-shadow:
+      0 10px 30px rgba(201, 166, 107, 0.25),
+      6px 6px 0 #2C3E50;
   }
-  .main-title {
-    font-size: 120px; font-weight: 900;
-    color: #2D2D2D;
+  .main-title-1 {
+    font-size: 110px; font-weight: 900;
+    color: #2C3E50;
     line-height: 1; letter-spacing: -2px;
     text-align: center;
+    font-family: 'STSong', 'SimSun', serif;
   }
-  .main-sub {
-    font-size: 38px; color: #2D2D2D;
+  .main-title-2 {
+    font-size: 56px; font-weight: 800;
+    color: #2C3E50;
+    line-height: 1.2;
     text-align: center;
     margin-top: 16px;
-    font-weight: 700;
+    letter-spacing: 4px;
+    font-family: 'STSong', 'SimSun', serif;
   }
+  /* 中标 */
   .subtitle {
-    position: absolute; top: 520px; left: 60px; right: 60px;
-    font-size: 44px; font-weight: 800;
-    color: #2D2D2D;
-    line-height: 1.3;
+    position: absolute; top: 470px; left: 60px; right: 60px;
+    font-size: 32px; font-weight: 600;
+    color: #2C3E50;
+    line-height: 1.4;
+    text-align: center;
+    letter-spacing: 3px;
+    opacity: 0.85;
+    font-family: 'STSong', 'SimSun', serif;
   }
-  .fire { color: #FF6B6B; }
-  .emoji-row {
-    position: absolute; top: 640px; left: 60px; right: 60px;
-    display: flex; justify-content: space-around;
-    font-size: 56px;
+  /* 19 色实物缩略色块 */
+  .swatch-row {
+    position: absolute; top: 580px; left: 60px; right: 60px;
+    display: flex; flex-wrap: wrap; gap: 6px;
+    justify-content: center;
   }
-  .bottom-badge {
-    position: absolute; bottom: 40px; left: 50%;
+  .swatch {
+    width: 50px; height: 50px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+    border: 1px solid rgba(44, 62, 80, 0.06);
+  }
+  /* 钩子文字 */
+  .hook {
+    position: absolute; bottom: 80px; left: 50%;
     transform: translateX(-50%);
-    background: #2D2D2D; color: #FFD93D;
-    padding: 14px 32px; border-radius: 100px;
-    font-size: 24px; font-weight: 700;
-    letter-spacing: 2px;
+    font-size: 26px; font-weight: 700;
+    color: #C0392B;
+    letter-spacing: 4px;
+    font-family: 'STSong', 'SimSun', serif;
   }
-  .dot-1 { position:absolute; top: 150px; left: 30px; width: 20px; height:20px; background:#6BCF7E; border-radius:50%; }
-  .dot-2 { position:absolute; top: 60px; left: 40%; width: 14px; height:14px; background:#FF6B6B; border-radius:50%; }
-  .dot-3 { position:absolute; bottom: 130px; right: 40px; width: 24px; height:24px; background:#6BCF7E; border-radius:50%; }
+  /* 右下印章「渝山」 */
+  .seal {
+    position: absolute; bottom: 30px; right: 30px;
+    width: 60px; height: 60px;
+    background: #C0392B;
+    display: flex; align-items: center; justify-content: center;
+    transform: rotate(-3deg);
+    box-shadow: 0 3px 6px rgba(192, 57, 43, 0.3);
+  }
+  .seal-text {
+    color: #FAF7F2;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'STSong', 'SimSun', serif;
+  }
 </style>
 </head>
 <body>
 <div class="cover">
-  <div class="tag">干货!</div>
-  <div class="dot-1"></div>
-  <div class="dot-2"></div>
-  <div class="dot-3"></div>
-  <div class="small-title">⚡ 打工人必装</div>
+  <div class="grain"></div>
+  <div class="badge">重庆 · 工作室</div>
+  <div class="small-title">重庆姑娘</div>
   <div class="main-block">
-    <div class="main-title">5个</div>
-    <div class="main-title" style="font-size:80px;margin-top:10px;">AI 神器</div>
-    <div class="main-sub">用过真的回不去</div>
+    <div class="main-title-1">19 色</div>
+    <div class="main-title-2">本命色 · 全集</div>
   </div>
-  <div class="subtitle">准点下班的<br>秘密武器<span class="fire">🔥</span></div>
-  <div class="emoji-row">
-    <span>🤖</span><span>✍️</span><span>🎨</span><span>🎤</span><span>🔍</span>
+  <div class="subtitle">一张图找到你<br>天生最舒服的色彩调性</div>
+  <!-- 19 色按色相过渡（与 colors.yaml 顺序一致） -->
+  <div class="swatch-row">
+    <div class="swatch" style="background:#C0392B;" title="朱砂"></div>
+    <div class="swatch" style="background:#F0A6A6;" title="粉霞"></div>
+    <div class="swatch" style="background:#E67E22;" title="朱橘"></div>
+    <div class="swatch" style="background:#A0522D;" title="赭石"></div>
+    <div class="swatch" style="background:#6B4423;" title="暮褐"></div>
+    <div class="swatch" style="background:#C9A66B;" title="暖驼"></div>
+    <div class="swatch" style="background:#D4AF37;" title="烛光金"></div>
+    <div class="swatch" style="background:#F4D03F;" title="菊黄"></div>
+    <div class="swatch" style="background:#F5E6C8;" title="米麦"></div>
+    <div class="swatch" style="background:#FAF7F2;border:1px solid #ddd;" title="米白"></div>
+    <div class="swatch" style="background:#E8E6E1;" title="月光银"></div>
+    <div class="swatch" style="background:#8FB573;" title="嫩绿"></div>
+    <div class="swatch" style="background:#6FA88A;" title="青翠"></div>
+    <div class="swatch" style="background:#2D5F3F;" title="苍翠"></div>
+    <div class="swatch" style="background:#4A6B4F;" title="深竹"></div>
+    <div class="swatch" style="background:#5D7B91;" title="雾蓝"></div>
+    <div class="swatch" style="background:#2C3E50;" title="墨青"></div>
+    <div class="swatch" style="background:#A8B5C7;" title="冷银"></div>
+    <div class="swatch" style="background:#8B6F8E;" title="紫雾"></div>
   </div>
-  <div class="bottom-badge">#AI工具测评</div>
+  <div class="hook">主页领 PDF 🪶</div>
+  <div class="seal"><div class="seal-text">渝山</div></div>
 </div>
 </body>
 </html>

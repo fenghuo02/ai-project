@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>渝山头像 · 朱砂印「渝山」（avatar-design.md 方案 1 ⭐ 最推荐）</title>
+<style>
+  /* ─────────────────────────────────────────────────────────────
+     色谱母本：swatch-builder/palette/colors.yaml
+       米白 mibai     #FAF7F2  底色 / 印面反白字
+       米麦 mimai     #F5E6C8  水墨晕染
+       墨青 moqing    #2C3E50  外圈细描边
+       朱砂 zhusha    #C0392B  ★ 印章主色
+     调整 HEX 时请同步 colors.yaml，version + 1。
+
+     这是 avatar-design.md §二 方案 1，识别度天花板：
+     - 米白底 + 朱砂方印是新中式品牌头像最经典的配方
+     - 「渝山」二字直接打出 IP 名
+     - 缩到 40 px 仍能识别（小红书 / 公众号都能用同一张）
+  ───────────────────────────────────────────────────────────── */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #f5f5f5, #e8e6e1);
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px;
+    font-family: 'STSong', 'PingFang SC', 'Microsoft YaHei', serif;
+  }
+  .tip {
+    color: #555; font-size: 14px; margin-bottom: 20px; text-align: center;
+    line-height: 1.6;
+  }
+  .tip strong { color: #C0392B; }
+  .avatar-wrap {
+    background: white; padding: 30px; border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .avatar {
+    width: 512px; height: 512px;
+    border-radius: 50%;
+    background: #FAF7F2;
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #2C3E50;
+  }
+  /* 米麦水墨晕染（围绕印章的淡色光晕，留白克制） */
+  .ink-wash {
+    position: absolute;
+    width: 420px; height: 420px;
+    background: radial-gradient(circle,
+      rgba(245, 230, 200, 0.65) 0%,
+      rgba(245, 230, 200, 0.35) 30%,
+      rgba(245, 230, 200, 0.10) 55%,
+      transparent 75%);
+    z-index: 1;
+  }
+  /* 朱砂方印 — 占画面中央 ~60% */
+  .seal {
+    width: 300px; height: 300px;
+    background: #C0392B;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow:
+      0 8px 24px rgba(192, 57, 43, 0.35),
+      0 2px 4px rgba(0, 0, 0, 0.1);
+    transform: rotate(-2deg);
+    z-index: 2;
+    position: relative;
+  }
+  /* 印面纹理（极淡，模拟印泥不均匀感） */
+  .seal::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(circle at 25% 30%, rgba(255,255,255,0.06) 0%, transparent 35%),
+      radial-gradient(circle at 75% 70%, rgba(0,0,0,0.06) 0%, transparent 35%);
+    pointer-events: none;
+  }
+  /* 「渝山」阴文反白 */
+  .seal-text {
+    color: #FAF7F2;
+    font-size: 124px;
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -8px;
+    text-align: center;
+    font-family: 'STKaiti', 'KaiTi', 'STSong', 'SimSun', serif;
+    position: relative; z-index: 2;
+    /* 双字纵向排（「渝」上「山」下），印章感最强 */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    height: 240px;
+  }
+</style>
+</head>
+<body>
+  <div class="tip">
+    💡 <strong>保存方式</strong>：右键点击头像 → 保存图片为 ... → 命名 <code>avatar-yu-shan-seal.png</code><br>
+    对应 <code>avatar-design.md</code> 方案 1（朱砂印「渝山」）· ⭐ 第一次起号最推荐
+  </div>
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <div class="ink-wash"></div>
+      <div class="seal">
+        <div class="seal-text">渝山</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
