@@ -15,8 +15,8 @@ import sys
 from pathlib import Path
 
 import yaml
-from jinja2 import Environment, FileSystemLoader
-from weasyprint import HTML
+# jinja2 + weasyprint 是 build() 才需要的重依赖（weasyprint 拉 Pango/Cairo）；
+# --validate 模式只用 yaml，所以延迟导入到 build() 内部，让 CI 校验作业更快。
 
 ROOT = Path(__file__).parent.resolve()
 TEMPLATES_DIR = ROOT / "templates"
@@ -354,6 +354,9 @@ def validate_only(client_id: str) -> int:
 
 
 def build(client_id: str):
+    from jinja2 import Environment, FileSystemLoader
+    from weasyprint import HTML
+
     client_dir, data = load_client_data(client_id)
 
     # 注入项目 19 色共享色谱（附录·二·项目色谱全集 用）
