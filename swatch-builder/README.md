@@ -208,7 +208,8 @@ tier_d:
 ### 添加新颜色
 1. 编辑 `palette/colors.yaml`，按现有结构追加一条
 2. 同步更新 `mingshu-builder/templates/mingshu.html.j2` 的 12 月日历（如有改动）
-3. 同步更新业务计划书 §5.2.1 的 19 色总表
+3. **同步更新业务计划书 §5.2.1 的 19 色总表**
+4. 跑 `python3 tools/check_palette_consistency.py` 确认两边一致（CI 也会跑这步）
 
 ### 修改样式
 1. 编辑 `templates/_styles.css`
