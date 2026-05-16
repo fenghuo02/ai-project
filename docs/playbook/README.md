@@ -1,6 +1,26 @@
 # Xiaohongshu + WeChat Playbook
 
-小红书 + 公众号双平台运营方案（AI 工具 + 职场效率赛道）
+> ⚠️ **本目录混合两条赛道的资产**：
+>
+> 1. **AI 工具 + 职场效率赛道**（小K的AI工具箱）—— 见下方"AI 工具号"小节
+> 2. **渝山东方美学 / 易学摄影命书**（重庆主项目，对应 [`../business-plan-...md`](../business-plan-chongqing-yixue-photo.md)）—— 见下方"易学摄影"小节
+>
+> 两条赛道的关系尚待战略澄清（参考 [#15 PR description](https://github.com/fenghuo02/ai-project/pulls)）。
+> 推进项目时**先确认你做的是哪条**。
+
+---
+
+## 易学摄影 · M1 阶段实操（v1.3）
+
+| 文件 | 内容 | 状态 |
+|------|------|------|
+| [m1-procurement-checklist.md](./m1-procurement-checklist.md) ⭐ | **M1 第 1-3 周形象采购 27 项 checklist**（¥4,500 预算精确到任务级） | ✅ v1.0 |
+| [prompts-yixue-photo.md](./prompts-yixue-photo.md) | 易学摄影专属提示词工具包 v2.1.1 | ✅ |
+| [prompts-elderly-care.md](./prompts-elderly-care.md) | 银发关怀赛道提示词（B 端 BD 备用） | ✅ |
+
+---
+
+## AI 工具号
 
 ## 文件说明
 
