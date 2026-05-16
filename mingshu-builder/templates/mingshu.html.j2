@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>{{ meta.book_color_name }}之书 · {{ meta.client_name }}</title>
+<style>
+{% include "_styles.css" %}
+</style>
+</head>
+<body>
+
+{# ============ 第 1 页：封面 ============ #}
+<div class="page cover">
+  <div class="cover-frame">
+    <div class="cover-top-frame"></div>
+    <div class="cover-title-block">
+      <div class="cover-title">{{ meta.book_color_name }}之書</div>
+      <div style="display: flex; align-items: center; gap: 8mm; margin-top: 16mm;">
+        <div class="seal seal-yang seal-large">{{ meta.client_seal_char }}</div>
+      </div>
+      <div class="cover-subtitle">給{{ meta.client_name }}的東方美學命主圖鑑</div>
+      <div class="cover-eng">A Chromatic Self-Portrait of the East</div>
+      <div style="display: flex; align-items: center; gap: 8mm; margin-top: 8mm;">
+        <div class="cover-edition">{{ meta.edition }}</div>
+      </div>
+    </div>
+    <div class="cover-bottom-frame"></div>
+  </div>
+</div>
+
+{# ============ 第 2 页：序章·缘起 ============ #}
+<div class="page">
+  <div style="text-align:center; margin-top: 6mm;">
+    <div class="preface-title">緣起</div>
+    <div class="text-eng" style="margin-top: 2mm;">PREFACE</div>
+    <div class="line-gold"></div>
+  </div>
+  <div style="margin-top: 18mm; padding: 0 8mm;">
+    <div class="preface-call">{{ meta.client_name }} ——</div>
+    <div class="preface-body">{{ preface }}</div>
+    <div class="preface-signature">
+      —— 主理人 拜上 · {{ meta.year_label }}
+      <div style="margin-top: 4mm; display: inline-block;">
+        <span class="seal seal-small">印</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">壹</div>
+</div>
+
+{# ============ 第一卷扉页 ============ #}
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第一卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">命主畫像</div>
+    <div class="juan-eng">Vol. I &middot; Portrait</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal">{{ meta.client_seal_char }}</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+{# ============ 第一卷·命主四柱 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>命主四柱</h2>
+    <span class="juan-mark">第一卷 · 一</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm;">
+    凡論命，先觀四柱。年為根，月為苗，日為主，時為花。{{ meta.client_name }}的命局如下：
+  </div>
+  <table class="bazi-table">
+    <tr>
+      <th>年柱</th><th>月柱</th>
+      <th class="day-master">日柱（命主）</th>
+      <th>時柱</th>
+    </tr>
+    <tr>
+      <td>{{ bazi.pillars.nian }}</td>
+      <td>{{ bazi.pillars.yue }}</td>
+      <td class="day-master">{{ bazi.pillars.ri }}</td>
+      <td>{{ bazi.pillars.shi }}</td>
+    </tr>
+    <tr>
+      <th style="font-size:10pt;">{{ bazi.five_elements.nian }}</th>
+      <th style="font-size:10pt;">{{ bazi.five_elements.yue }}</th>
+      <th style="font-size:10pt;" class="day-master">{{ bazi.five_elements.ri }}</th>
+      <th style="font-size:10pt;">{{ bazi.five_elements.shi }}</th>
+    </tr>
+  </table>
+  <div class="huiwen"></div>
+  <div class="summary-quote">{{ personality.summary }}</div>
+  <div style="margin-top: 6mm; text-align: center;">
+    <span class="text-eng">命局類型 · </span>
+    <span style="font-family:'Noto Serif CJK SC',serif; font-size:14pt; color:#C9A66B; font-weight:bold; letter-spacing:3pt;">
+      {{ bazi.type_label }}
+    </span>
+  </div>
+  <div class="page-number">貳</div>
+</div>
+
+{# ============ 第一卷·命主性格 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>命主性格</h2>
+    <span class="juan-mark">第一卷 · 二</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 6mm;">
+    {{ meta.client_name }}的性格底色，不在天干地支裡，而在它們相互照應的氣息中。
+    五個關鍵字，畫出{{ meta.client_name }}的輪廓：
+  </div>
+  <div class="keyword-grid">
+    {% for kw in personality.keywords %}
+    <div class="keyword-circle">
+      <div class="kw-main">{{ kw.cn }}</div>
+      <div class="kw-sub">{{ kw.en }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="huiwen"></div>
+  <div style="margin-top: 5mm;">
+    <div class="text-quote" style="text-align:center; margin-bottom: 5mm;">
+      「像一杯涼茶，喝過的人都記得回甘。」
+    </div>
+    <p class="text-body">{{ personality.description }}</p>
+    <p class="text-body" style="margin-top: 4mm;">{{ personality.description_2 }}</p>
+  </div>
+  <div class="page-number">參</div>
+</div>
+
+{# ============ 第一卷·应景之物 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>應景之物</h2>
+    <span class="juan-mark">第一卷 · 三</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 5mm;">
+    為{{ meta.client_name }}挑選的，與命局相應的日常之物：
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 8mm;">
+    {% for k, v in [('xiang', lifestyle.xiang), ('cha', lifestyle.cha), ('se', lifestyle.se), ('shi', lifestyle.shi)] %}
+    <div>
+      <div class="scene-block-title">{{ v.title }}</div>
+      <p class="text-body" style="font-size:11pt;">
+        <strong>{{ v.item }}</strong><br>{{ v.text }}
+      </p>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="huiwen"></div>
+  <div class="scene-block-title">日常五件物 · 推薦</div>
+  <ul class="lifestyle-list">
+    {% for item in lifestyle.daily_items %}
+    <li>{{ item }}</li>
+    {% endfor %}
+  </ul>
+  <div class="page-number">肆</div>
+</div>
+
+{# ============ 第一卷·五行肖像（如有图） ============ #}
+{% if img.portrait %}
+<div class="page" style="padding: 0; background: #F5E6C8;">
+  <div style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+    <img src="{{ img.portrait }}"
+         style="width: 100%; height: 100%; object-fit: cover; display: block;">
+    <div style="position: absolute; bottom: 14mm; right: 24mm;
+                color: #FFF7E8; font-family: 'Noto Serif CJK SC', serif;
+                font-size: 11pt; letter-spacing: 3pt;
+                text-shadow: 0 0 2mm rgba(0,0,0,0.5);">
+      命主畫像 · 主理人繪
+    </div>
+    <div style="position: absolute; top: 14mm; left: 24mm;">
+      <div class="seal seal-small">{{ meta.client_seal_char }}</div>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{# ============ 第一卷·美学签名 ============ #}
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -10mm;">
+      <div class="quote-mega" style="font-size: 32pt; white-space: pre-wrap;">{{ aesthetic_signature }}</div>
+      <div style="margin-top: 16mm;">
+        <span class="text-eng" style="font-size:11pt;">— YOUR AESTHETIC SIGNATURE —</span>
+      </div>
+      <div style="margin-top: 10mm;">
+        <span class="seal seal-small seal-yang" style="font-size:4mm; line-height:13mm;">命主</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">伍</div>
+</div>
+
+{# ============ 第二卷扉页 ============ #}
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第二卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">本命色譜</div>
+    <div class="juan-eng">Vol. II &middot; Palette</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #C9A66B;">色</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+{# ============ 第二卷·主色（每个色一页） ============ #}
+{% for color in colors.primary %}
+<div class="page">
+  <div class="content-header">
+    <h2>主色 · {% if loop.index == 1 %}一{% else %}二{% endif %}</h2>
+    <span class="juan-mark">第二卷 · {{ loop.index }}</span>
+  </div>
+  <div class="color-card">
+    <div class="color-block" style="background: {{ color.hex }};"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: {{ color.hex }};">{{ color.name }}</div>
+      <div class="color-name-en">{{ color.en }} · {{ color.hex }}</div>
+      <div class="color-desc">{{ color.desc }}</div>
+      <div class="color-uses">
+        {% for u in color.uses %}<div><span>{{ u.tag }}</span>{{ u.text }}</div>{% endfor %}
+      </div>
+    </div>
+  </div>
+  <div class="text-body" style="margin-top: 6mm;">{{ color.meaning }}</div>
+  <div class="page-number">{% if loop.index == 1 %}陸{% else %}柒{% endif %}</div>
+</div>
+{% endfor %}
+
+{# ============ 第二卷·辅色+避忌 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>輔色 與 避忌</h2>
+    <span class="juan-mark">第二卷 · {{ colors.primary|length + 1 }}</span>
+  </div>
+  <div class="color-card" style="height: 55mm;">
+    <div class="color-block" style="background: {{ colors.secondary.hex }};"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #A89682; font-size: 24pt;">{{ colors.secondary.name }}</div>
+      <div class="color-name-en">{{ colors.secondary.en }} · {{ colors.secondary.hex }}</div>
+      <div class="color-desc" style="font-size: 11pt;">{{ colors.secondary.desc }}</div>
+    </div>
+  </div>
+  <div class="huiwen"></div>
+  <div class="color-card color-card-forbidden" style="height: 55mm;">
+    <div class="color-block" style="background: {{ colors.forbidden.hex }};"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #6B7785; font-size: 24pt;">{{ colors.forbidden.name }}</div>
+      <div class="color-name-en">{{ colors.forbidden.en }} · {{ colors.forbidden.hex }}</div>
+      <div class="color-desc" style="font-size: 11pt;">{{ colors.forbidden.desc }}</div>
+      <div class="color-uses" style="font-size: 9.5pt;">{{ colors.forbidden.note }}</div>
+    </div>
+  </div>
+  <div class="page-number">捌</div>
+</div>
+
+{# ============ 第二卷·穿搭红黑榜 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>穿搭紅黑榜</h2>
+    <span class="juan-mark">第二卷 · {{ colors.primary|length + 2 }}</span>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin-top: 4mm;">
+    <div>
+      <div style="background: rgba(192,57,43,0.08); padding: 4mm 6mm; border-left: 1mm solid #C0392B;">
+        <div style="font-family: 'Noto Serif CJK SC', serif; font-weight: bold; font-size: 14pt; color: #C0392B; letter-spacing: 2pt; margin-bottom: 3mm;">
+          紅榜 · 五件
+        </div>
+        <ol style="font-family: 'Noto Serif CJK SC', serif; font-size: 10pt; line-height: 2; padding-left: 5mm; color: #2B2B2B;">
+          {% for x in wardrobe.red_list %}<li>{{ x }}</li>{% endfor %}
+        </ol>
+      </div>
+    </div>
+    <div>
+      <div style="background: rgba(107,107,107,0.08); padding: 4mm 6mm; border-left: 1mm solid #6B6B6B;">
+        <div style="font-family: 'Noto Serif CJK SC', serif; font-weight: bold; font-size: 14pt; color: #6B6B6B; letter-spacing: 2pt; margin-bottom: 3mm;">
+          黑榜 · 五件
+        </div>
+        <ol style="font-family: 'Noto Serif CJK SC', serif; font-size: 10pt; line-height: 2; padding-left: 5mm; color: #2B2B2B;">
+          {% for x in wardrobe.black_list %}<li>{{ x }}</li>{% endfor %}
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="huiwen" style="margin-top: 10mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 6mm;">
+    「衣櫃裡每件衣服，都是一句你對自己的話。」
+  </div>
+  <div class="page-number">玖</div>
+</div>
+
+{# ============ 第三卷扉页 ============ #}
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第三卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">人生八境</div>
+    <div class="juan-eng">Vol. III &middot; Eight Scenes</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #2D5F3F;">境</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+{# ============ 第三卷·8 个场景（每个一页跨双栏） ============ #}
+{% for scene in ba_men %}
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · {{ loop.index }}{% if scene.is_best %} <span class="scene-best-mark">★ 你的最佳匹配</span>{% endif %}</h2>
+    <span class="juan-mark">第三卷 · {{ loop.index }}</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image {% if img[scene.id] %}has-img{% else %}no-img{% endif %}"
+         style="--scene-color-1: {{ scene.color_1 }}; --scene-color-2: {{ scene.color_2 }};
+                {% if img[scene.id] %}background-image: url('{{ img[scene.id] }}');{% endif %}">
+      {% if not img[scene.id] %}<div class="scene-image-deco">{{ scene.deco_char }}</div>{% endif %}
+      <div class="scene-image-label">{{ scene.name }} · {{ scene.label }}</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">{{ scene.name }}</div>
+      <div class="scene-tag">{{ scene.en }}</div>
+      <div class="scene-quote">「{{ scene.quote }}」</div>
+      {% if scene.egg %}
+      <div class="scene-block-title">{% if scene.is_best %}為甚麼這是你的最佳匹配{% else %}使用建議{% endif %}</div>
+      <p class="scene-egg">{{ scene.egg }}</p>
+      {% endif %}
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        {% for u in scene.uses %}<li>{{ u }}</li>{% endfor %}
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        {% for r in scene.rituals %}<li>{{ r }}</li>{% endfor %}
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「{{ scene.pengyouquan }}」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">{{ loop.index }}/八</div>
+</div>
+{% endfor %}
+
+{# ============ 第四卷扉页 ============ #}
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第四卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">四時流轉</div>
+    <div class="juan-eng">Vol. IV &middot; Festivals</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #C0392B;">節</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+{# ============ 第四卷·7 个节日 ============ #}
+{% for f in festivals %}
+<div class="page">
+  <div class="content-header">
+    <h2>{{ f.title }}</h2>
+    <span class="juan-mark">第四卷 · {{ f.name }}</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image {% if img[f.id] %}has-img{% else %}no-img{% endif %}"
+         style="--scene-color-1: {{ f.color_1 }}; --scene-color-2: {{ f.color_2 }};
+                {% if img[f.id] %}background-image: url('{{ img[f.id] }}');{% endif %}">
+      {% if not img[f.id] %}<div class="scene-image-deco">{{ f.deco_char }}</div>{% endif %}
+      <div class="scene-image-label">{{ f.name }} · {{ f.label }}</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">{{ f.name }}肖像</div>
+      <div class="scene-tag">{{ f.en }}</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">{{ f.origin }}</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">{{ f.color_text }}</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        {% for a in f.actions %}<li>{{ a }}</li>{% endfor %}
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「{{ f.pengyouquan }}」
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+{# ============ 第五卷扉页 ============ #}
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第五卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">歲時圖鑑</div>
+    <div class="juan-eng">Vol. V &middot; Solar Terms</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #4A6B4F;">時</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+{# ============ 第五卷·24 节气，每季一页 ============ #}
+{% for season_key in ['spring', 'summer', 'autumn', 'winter'] %}
+{% set season = solar_terms[season_key] %}
+<div class="page">
+  <div class="content-header">
+    <h2>{{ season.title }}</h2>
+    <span class="juan-mark">第五卷 · {% if season_key=='spring' %}春{% elif season_key=='summer' %}夏{% elif season_key=='autumn' %}秋{% else %}冬{% endif %}</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm; font-size: 10.5pt;">{{ season.intro }}</div>
+  <div class="solar-grid">
+    {% for st in season['items'] %}
+    <div class="solar-card">
+      <div class="solar-name">{{ st.name }} <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">{{ st.date }}</span></div>
+      <div class="solar-poem">「{{ st.poem }}」</div>
+      <div class="solar-action">{{ st.action }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endfor %}
+
+{# ============ 终章·命书后记 ============ #}
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -16mm;">
+      <div class="quote-mega" style="font-size: 30pt;">
+        {{ afterword.big_quote_1 }}<br>
+        {{ afterword.big_quote_2 }}
+      </div>
+      <div style="margin-top: 14mm;">
+        <span class="text-eng" style="font-size:11pt;">— AFTERWORD —</span>
+      </div>
+      <div style="margin-top: 12mm; max-width: 130mm; text-align: left;">
+        <p class="text-handwriting" style="font-size: 13pt;">{{ afterword.letter }}</p>
+        <div style="text-align: right; margin-top: 8mm; font-family: 'Noto Serif CJK SC', serif; font-size: 12pt; color: #6B6B6B;">
+          {{ afterword.signature }}
+        </div>
+        <div style="text-align: right; margin-top: 4mm;">
+          <span class="seal seal-small">{{ meta.client_seal_char }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ============ 终章·续约钩子 ============ #}
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -10mm;">
+      <div class="quote-mega" style="font-size: 26pt; line-height: 2.2; white-space: pre-wrap;">{{ afterword.next_year_hook }}</div>
+      <div style="margin-top: 16mm;">
+        <span class="text-eng">— TO BE CONTINUED —</span>
+      </div>
+      <div style="margin-top: 12mm;">
+        <span class="seal seal-small">續</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+{# ============ 附录·全年色卡日历 ============ #}
+<div class="page">
+  <div class="content-header">
+    <h2>全年應景色卡日曆</h2>
+    <span class="juan-mark">附錄 · 一</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 3mm; font-size: 10.5pt;">{{ appendix_intro }}</div>
+  <div class="calendar-grid">
+    {% set months = [
+      ('1月', '#D4AF37', '烛光金 · 旧年余温'),
+      ('2月', '#8FB573', '嫩绿 · 立春破冰'),
+      ('3月', '#6FA88A', '青翠 · 万物醒'),
+      ('4月', '#FAF7F2', '月白 · 清明烟雨'),
+      ('5月', '#E67E22', '朱橘 · 立夏初阳'),
+      ('6月', '#5D7B91', '雾蓝 · 芒种凉茶'),
+      ('7月', '#2C3E50', '墨青 · 大暑荷塘'),
+      ('8月', '#C9A66B', '暖驼 · 立秋之始'),
+      ('9月', '#D4AF37', '桂金 · 秋分丹桂'),
+      ('10月', '#A0522D', '赭石 · 寒露红叶'),
+      ('11月', '#FAF7F2', '月白 · 小雪初至'),
+      ('12月', '#C0392B', '朱砂 · 冬至阳生'),
+    ] %}
+    {% for m in months %}
+    <div class="calendar-month">
+      <div class="month-name">{{ m[0] }}</div>
+      <div class="month-color-block" style="background: {{ m[1] }};"></div>
+      <div class="month-color-name">{{ m[2] }}</div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="huiwen" style="margin-top: 6mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 4mm;">
+    「色彩，是時間給人的暗號。」
+  </div>
+</div>
+
+{# ============ 尾页·版权 ============ #}
+<div class="page">
+  <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+    <div style="text-align: center; margin-top: 20mm;">
+      <div class="huiwen"></div>
+      <div style="margin-top: 12mm; font-family: 'Noto Serif CJK SC', serif; font-size: 14pt; letter-spacing: 3pt; color: #2B2B2B;">
+        《{{ meta.book_color_name }}之書》
+      </div>
+      <div class="text-eng" style="margin-top: 3mm;">A CHROMATIC SELF-PORTRAIT</div>
+      <div style="margin-top: 18mm; font-family: 'Noto Serif CJK SC', serif; font-size: 11pt; line-height: 2; color: #6B6B6B;">
+        命主 · {{ meta.client_name }}<br>
+        命局 · {{ bazi.type_label }}<br>
+        本命色 · {{ colors.primary[0].name }} {{ colors.primary[0].hex }} / {{ colors.primary[1].name }} {{ colors.primary[1].hex }}<br>
+        編號 · {{ meta.edition }}
+      </div>
+      <div style="margin-top: 14mm;">
+        <span class="seal">命</span>
+        <span style="margin: 0 4mm;"></span>
+        <span class="seal seal-yang">{{ meta.client_seal_char }}</span>
+      </div>
+    </div>
+    <div style="text-align: center; margin-bottom: 10mm;">
+      <div class="line-gold"></div>
+      <p style="font-family: 'Noto Serif CJK SC', serif; font-size: 8pt; color: #8B7355; line-height: 1.8; max-width: 130mm; margin: 6mm auto 0; letter-spacing: 0.5pt;">
+        本書為東方美學藝術創作，非命理預測，僅作美學參考。<br>
+        客戶照片與生辰信息嚴格保密，案例分享必經授權與脫敏。<br>
+        © 2026 主理人工作室 · 保留所有權利
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

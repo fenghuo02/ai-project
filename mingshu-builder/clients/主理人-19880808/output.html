@@ -1,0 +1,1880 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<title>暖驼之书 · 主理人</title>
+<style>
+/* ============ 中式审美·命书排版规范 v2.1.1 ============ */
+
+@page { size: A4; margin: 0; }
+@page :first { margin: 0; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", "Songti SC", serif;
+  color: #2B2B2B;
+  background: #F5E6C8;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============ 通用页面 ============ */
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  padding: 26mm 24mm;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+  background-color: #F5E6C8;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(160,130,90,0.03) 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(160,130,90,0.04) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(160,130,90,0.02) 1px, transparent 1px);
+  background-size: 6px 6px, 9px 9px, 11px 11px;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ============ 装饰元素 ============ */
+
+.huiwen {
+  height: 5mm;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #D4AF37 0, #D4AF37 2mm,
+    transparent 2mm, transparent 3mm,
+    #D4AF37 3mm, #D4AF37 4mm,
+    transparent 4mm, transparent 6mm
+  );
+  border-top: 0.4mm solid #D4AF37;
+  border-bottom: 0.4mm solid #D4AF37;
+  margin: 4mm 0;
+  opacity: 0.85;
+}
+
+.line-gold {
+  width: 60mm;
+  height: 0.4mm;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 4mm auto;
+}
+
+.seal {
+  display: inline-block;
+  width: 18mm;
+  height: 18mm;
+  background: #C0392B;
+  color: #F5E6C8;
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: bold;
+  font-size: 8mm;
+  text-align: center;
+  line-height: 18mm;
+  border-radius: 1.5mm;
+  box-shadow:
+    inset 0 0 0 1mm rgba(192,57,43,0.4),
+    inset 0.6mm 0.6mm 1mm rgba(0,0,0,0.15);
+}
+.seal-large { width: 22mm; height: 22mm; font-size: 9mm; line-height: 22mm; }
+.seal-small { width: 13mm; height: 13mm; font-size: 5mm; line-height: 13mm; }
+.seal-yang { background: #F5E6C8; color: #C0392B; border: 1mm solid #C0392B; }
+
+.mountain {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 60mm;
+  background:
+    radial-gradient(ellipse at 30% 100%, rgba(74,107,79,0.15), transparent 60%),
+    radial-gradient(ellipse at 70% 100%, rgba(45,95,63,0.12), transparent 65%),
+    radial-gradient(ellipse at 50% 100%, rgba(43,43,43,0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* ============ 字体规范 ============ */
+
+.juan-name {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: bold;
+  font-size: 56pt;
+  color: #C9A66B;
+  letter-spacing: 12pt;
+  margin-bottom: 6mm;
+}
+.juan-eng {
+  font-family: "Garamond", serif;
+  font-size: 11pt;
+  color: #8B7355;
+  letter-spacing: 4pt;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: 6mm;
+}
+.juan-subname {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-size: 26pt;
+  color: #2B2B2B;
+  letter-spacing: 6pt;
+  margin: 2mm 0;
+}
+
+.text-eng {
+  font-family: "Garamond", serif;
+  font-size: 10pt;
+  letter-spacing: 1pt;
+  color: #8B7355;
+  font-style: italic;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 14mm;
+  right: 24mm;
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt;
+  color: #8B7355;
+  letter-spacing: 1pt;
+}
+
+/* ============ 封面 ============ */
+
+.cover {
+  background: linear-gradient(135deg, #C9A66B 0%, #D4AF37 50%, #C9A66B 100%);
+  display: flex; justify-content: center; align-items: center;
+  padding: 0;
+  position: relative;
+}
+.cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,247,232,0.25), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(74,46,28,0.12), transparent 50%);
+}
+.cover-frame {
+  width: 160mm; height: 230mm;
+  border: 0.5mm solid rgba(245,230,200,0.5);
+  padding: 18mm 12mm;
+  display: flex; flex-direction: column;
+  justify-content: space-between; align-items: center;
+  position: relative; z-index: 1;
+}
+.cover-top-frame, .cover-bottom-frame {
+  width: 100%; height: 8mm;
+  background-image: repeating-linear-gradient(
+    90deg, rgba(245,230,200,0.6) 0, rgba(245,230,200,0.6) 2mm,
+    transparent 2mm, transparent 3mm);
+  border-top: 0.3mm solid rgba(245,230,200,0.5);
+  border-bottom: 0.3mm solid rgba(245,230,200,0.5);
+}
+.cover-title-block {
+  display: flex; flex-direction: column; align-items: center;
+  margin: 30mm 0;
+}
+.cover-title {
+  writing-mode: vertical-rl; text-orientation: upright;
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: 900; font-size: 56pt;
+  color: #FFF7E8; letter-spacing: 12pt;
+  text-shadow: 0 0 2mm rgba(74,46,28,0.3);
+  margin-bottom: 8mm;
+}
+.cover-subtitle {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 13pt; color: #FFF7E8;
+  letter-spacing: 4pt; text-align: center;
+  margin-top: 18mm; opacity: 0.95;
+}
+.cover-eng {
+  font-family: "Garamond", serif;
+  font-size: 9pt; color: #FFF7E8;
+  letter-spacing: 3pt; margin-top: 4mm;
+  text-transform: uppercase; opacity: 0.85;
+  font-style: italic;
+}
+.cover-edition {
+  font-family: "Garamond", serif;
+  font-size: 11pt; color: #FFF7E8;
+  letter-spacing: 2pt; opacity: 0.9;
+}
+
+/* ============ 章节扉页 ============ */
+
+.chapter-cover {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+}
+
+/* ============ 序章 ============ */
+
+.preface-title {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 30pt;
+  color: #C9A66B; letter-spacing: 6pt;
+  text-align: center; margin-bottom: 4mm;
+}
+.preface-call {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 28pt; color: #C0392B;
+  letter-spacing: 2pt; margin: 14mm 0 8mm 0;
+}
+.preface-body {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 13pt; line-height: 2.2;
+  color: #2B2B2B; text-align: justify;
+  margin-bottom: 6mm; white-space: pre-wrap;
+}
+.preface-signature {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #6B6B6B;
+  text-align: right; margin-top: 8mm;
+}
+
+/* ============ 内容页 ============ */
+
+.content { height: 100%; display: flex; flex-direction: column; }
+.content-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 0.3mm solid #D4AF37;
+  padding-bottom: 3mm; margin-bottom: 8mm;
+}
+.content-header h2 {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 18pt;
+  color: #2B2B2B; letter-spacing: 3pt;
+}
+.content-header .juan-mark {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; color: #8B7355;
+  letter-spacing: 2pt;
+}
+.text-body {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; line-height: 2;
+  color: #2B2B2B; text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* ============ 命主画像 ============ */
+
+.bazi-table {
+  width: 100%; margin: 4mm 0 8mm 0;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.4);
+}
+.bazi-table th, .bazi-table td {
+  border: 0.3mm solid #C9A66B;
+  padding: 3mm 0; text-align: center;
+  font-family: "Noto Serif CJK SC", serif;
+}
+.bazi-table th {
+  background: rgba(212,175,55,0.18);
+  font-size: 10pt; color: #6B6B6B;
+  letter-spacing: 2pt; font-weight: normal;
+}
+.bazi-table td {
+  font-size: 22pt; font-weight: bold;
+  color: #2B2B2B; letter-spacing: 4pt;
+}
+.bazi-table .day-master {
+  background: rgba(192,57,43,0.08); color: #C0392B;
+}
+.summary-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 16pt; line-height: 1.9;
+  color: #2B2B2B; text-align: center;
+  margin: 8mm 0;
+  padding: 6mm 12mm;
+  border-left: 1mm solid #D4AF37;
+  border-right: 1mm solid #D4AF37;
+  white-space: pre-wrap;
+}
+.keyword-grid {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-around; gap: 4mm;
+  margin: 6mm 0;
+}
+.keyword-circle {
+  width: 28mm; height: 28mm; border-radius: 50%;
+  border: 0.3mm solid #C0392B;
+  background: rgba(192,57,43,0.05);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+}
+.keyword-circle .kw-main {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #C0392B; letter-spacing: 1pt;
+}
+.keyword-circle .kw-sub {
+  font-family: "Garamond", serif;
+  font-size: 7pt; color: #8B7355;
+  margin-top: 1mm; font-style: italic;
+}
+.text-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 14pt; color: #C0392B;
+  line-height: 1.8; font-weight: 500;
+}
+.lifestyle-list { list-style: none; margin: 4mm 0; }
+.lifestyle-list li {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; line-height: 2.2;
+  color: #2B2B2B; padding-left: 8mm; position: relative;
+}
+.lifestyle-list li::before {
+  content: '○'; position: absolute; left: 0;
+  color: #D4AF37; font-size: 10pt;
+}
+
+/* ============ 色卡 ============ */
+
+.color-card {
+  display: flex; align-items: stretch;
+  height: 75mm; margin: 6mm 0;
+}
+.color-block {
+  width: 60%; position: relative;
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 4px);
+}
+.color-info {
+  width: 40%; padding: 6mm 0 6mm 8mm;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.color-info .color-name-cn {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 28pt;
+  letter-spacing: 4pt; margin-bottom: 2mm;
+}
+.color-info .color-name-en {
+  font-family: "Garamond", serif;
+  font-size: 11pt; color: #8B7355;
+  letter-spacing: 1pt; font-style: italic; margin-bottom: 4mm;
+}
+.color-info .color-desc {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; line-height: 2;
+  color: #2B2B2B; margin-bottom: 4mm; white-space: pre-wrap;
+}
+.color-info .color-uses {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; line-height: 1.9;
+  color: #6B6B6B;
+}
+.color-info .color-uses span {
+  color: #C9A66B; margin-right: 1mm;
+}
+.color-card-forbidden .color-block {
+  opacity: 0.4; filter: grayscale(0.3); position: relative;
+}
+.color-card-forbidden .color-block::after {
+  content: '忌'; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 60pt;
+  color: rgba(192,57,43,0.7);
+}
+
+/* ============ 场景跨页 ============ */
+
+.scene-spread {
+  display: grid; grid-template-columns: 5fr 6fr;
+  gap: 8mm; height: 220mm;
+}
+.scene-image {
+  border: 0.3mm solid #C9A66B; position: relative; overflow: hidden;
+}
+/* 当 scene-image 用作 fallback 时，背景是渐变 */
+.scene-image.no-img {
+  background: linear-gradient(180deg, var(--scene-color-1, #C9A66B), var(--scene-color-2, #D4AF37));
+}
+/* 当有客户图时，作为背景 */
+.scene-image.has-img {
+  background-size: cover;
+  background-position: center;
+}
+.scene-image-label {
+  position: absolute; bottom: 5mm; left: 5mm;
+  color: #FFF7E8; font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; letter-spacing: 2pt; opacity: 0.9;
+  text-shadow: 0 0 2mm rgba(0,0,0,0.4);
+}
+.scene-image-deco {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 84pt;
+  color: rgba(255,247,232,0.25); letter-spacing: 8pt;
+}
+.scene-text { display: flex; flex-direction: column; gap: 4mm; }
+.scene-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 22pt;
+  color: #2B2B2B; letter-spacing: 4pt;
+  border-bottom: 0.4mm solid #D4AF37;
+  padding-bottom: 2mm;
+}
+.scene-tag {
+  font-family: "Garamond", serif; font-size: 9pt;
+  color: #8B7355; font-style: italic;
+  letter-spacing: 2pt; text-transform: uppercase;
+  margin-top: -2mm;
+}
+.scene-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #C0392B;
+  line-height: 1.9; padding-left: 4mm;
+  border-left: 0.6mm solid #C0392B;
+  margin: 2mm 0; white-space: pre-wrap;
+}
+.scene-block-title {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 10pt;
+  color: #C9A66B; letter-spacing: 2pt;
+  margin-top: 2mm; margin-bottom: 1mm;
+}
+.scene-list { list-style: none; }
+.scene-list li {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; line-height: 1.8;
+  color: #2B2B2B; padding-left: 4mm; position: relative;
+}
+.scene-list li::before {
+  content: '·'; position: absolute; left: 0;
+  color: #C9A66B; font-size: 14pt; line-height: 1.5;
+}
+.scene-pengyouquan {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #2B2B2B;
+  letter-spacing: 2pt; text-align: center;
+  margin-top: auto; padding: 3mm 0;
+  border-top: 0.3mm dotted #C9A66B; white-space: pre-wrap;
+}
+.scene-best-mark {
+  font-size: 10pt; color: #C0392B;
+  font-weight: normal; letter-spacing: 1pt;
+}
+.scene-egg {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9.5pt; line-height: 1.85;
+  color: #2B2B2B; white-space: pre-wrap;
+}
+
+/* ============ 终章 ============ */
+
+.final-quote {
+  text-align: center;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; height: 100%;
+}
+.final-quote .quote-mega {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 32pt;
+  line-height: 2; color: #C9A66B;
+  letter-spacing: 4pt; max-width: 140mm;
+}
+.text-handwriting {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; line-height: 2;
+  color: #2B2B2B; white-space: pre-wrap;
+}
+
+/* ============ 节气网格 ============ */
+
+.solar-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 4mm; margin-top: 4mm;
+}
+.solar-card {
+  border: 0.3mm solid #C9A66B;
+  padding: 3mm 4mm; background: rgba(255,255,255,0.3);
+}
+.solar-card .solar-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #2B2B2B; letter-spacing: 2pt;
+}
+.solar-card .solar-date {
+  font-family: "Garamond", serif; font-size: 9pt;
+  color: #8B7355; letter-spacing: 1pt;
+}
+.solar-card .solar-poem {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; color: #C0392B; margin: 2mm 0 1mm 0;
+}
+.solar-card .solar-action {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9pt; line-height: 1.7; color: #2B2B2B;
+}
+
+/* ============ 附录 - 全年色卡日历 ============ */
+
+.calendar-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 4mm; margin: 6mm 0;
+}
+.calendar-month {
+  background: rgba(255,255,255,0.4);
+  border: 0.3mm solid #C9A66B;
+  padding: 4mm;
+  text-align: center;
+}
+.calendar-month .month-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #2B2B2B; margin-bottom: 2mm;
+}
+.calendar-month .month-color-block {
+  height: 14mm; margin-bottom: 2mm;
+  border-radius: 1mm;
+}
+.calendar-month .month-color-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9pt; color: #6B6B6B;
+  letter-spacing: 1pt;
+}
+</style>
+</head>
+<body>
+
+
+<div class="page cover">
+  <div class="cover-frame">
+    <div class="cover-top-frame"></div>
+    <div class="cover-title-block">
+      <div class="cover-title">暖驼之書</div>
+      <div style="display: flex; align-items: center; gap: 8mm; margin-top: 16mm;">
+        <div class="seal seal-yang seal-large">主</div>
+      </div>
+      <div class="cover-subtitle">給主理人的東方美學命主圖鑑</div>
+      <div class="cover-eng">A Chromatic Self-Portrait of the East</div>
+      <div style="display: flex; align-items: center; gap: 8mm; margin-top: 8mm;">
+        <div class="cover-edition">No.001 / 2026</div>
+      </div>
+    </div>
+    <div class="cover-bottom-frame"></div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div style="text-align:center; margin-top: 6mm;">
+    <div class="preface-title">緣起</div>
+    <div class="text-eng" style="margin-top: 2mm;">PREFACE</div>
+    <div class="line-gold"></div>
+  </div>
+  <div style="margin-top: 18mm; padding: 0 8mm;">
+    <div class="preface-call">主理人 ——</div>
+    <div class="preface-body">这是写给你的一本书。
+
+你出生在 1988 年立秋后第二日的清晨，
+壬水生于申月，命局里有源、有岸、有光。
+你不缺水，缺的是一束晚霞——
+让清醒的人有温度，让流动的水有方向。
+
+接下来的几十页，不是命运的预测，
+也不是谁替你下的判词。
+它只是一面色彩的镜子——
+把你天生就在的那束光，描出来。
+
+愿你看完这本书时，
+认出画里的人，是你自己。
+</div>
+    <div class="preface-signature">
+      —— 主理人 拜上 · 丙午年仲春
+      <div style="margin-top: 4mm; display: inline-block;">
+        <span class="seal seal-small">印</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">壹</div>
+</div>
+
+
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第一卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">命主畫像</div>
+    <div class="juan-eng">Vol. I &middot; Portrait</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal">主</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>命主四柱</h2>
+    <span class="juan-mark">第一卷 · 一</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm;">
+    凡論命，先觀四柱。年為根，月為苗，日為主，時為花。主理人的命局如下：
+  </div>
+  <table class="bazi-table">
+    <tr>
+      <th>年柱</th><th>月柱</th>
+      <th class="day-master">日柱（命主）</th>
+      <th>時柱</th>
+    </tr>
+    <tr>
+      <td>戊辰</td>
+      <td>庚申</td>
+      <td class="day-master">壬午</td>
+      <td>甲辰</td>
+    </tr>
+    <tr>
+      <th style="font-size:10pt;">土土</th>
+      <th style="font-size:10pt;">金金</th>
+      <th style="font-size:10pt;" class="day-master">水火</th>
+      <th style="font-size:10pt;">木土</th>
+    </tr>
+  </table>
+  <div class="huiwen"></div>
+  <div class="summary-quote">你是初秋黄昏时分的一条江——
+水波澄澈，
+需要一段暖色的堤岸，让流动有方向；
+需要一束晚霞，让清醒有温度。
+</div>
+  <div style="margin-top: 6mm; text-align: center;">
+    <span class="text-eng">命局類型 · </span>
+    <span style="font-family:'Noto Serif CJK SC',serif; font-size:14pt; color:#C9A66B; font-weight:bold; letter-spacing:3pt;">
+      秋水待暖 · 堤岸黄昏
+    </span>
+  </div>
+  <div class="page-number">貳</div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>命主性格</h2>
+    <span class="juan-mark">第一卷 · 二</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 6mm;">
+    主理人的性格底色，不在天干地支裡，而在它們相互照應的氣息中。
+    五個關鍵字，畫出主理人的輪廓：
+  </div>
+  <div class="keyword-grid">
+    
+    <div class="keyword-circle">
+      <div class="kw-main">清醒</div>
+      <div class="kw-sub">CLEAR</div>
+    </div>
+    
+    <div class="keyword-circle">
+      <div class="kw-main">承载</div>
+      <div class="kw-sub">HOLDING</div>
+    </div>
+    
+    <div class="keyword-circle">
+      <div class="kw-main">温润</div>
+      <div class="kw-sub">GENTLE</div>
+    </div>
+    
+    <div class="keyword-circle">
+      <div class="kw-main">果决</div>
+      <div class="kw-sub">DECISIVE</div>
+    </div>
+    
+    <div class="keyword-circle">
+      <div class="kw-main">内秀</div>
+      <div class="kw-sub">INWARD</div>
+    </div>
+    
+  </div>
+  <div class="huiwen"></div>
+  <div style="margin-top: 5mm;">
+    <div class="text-quote" style="text-align:center; margin-bottom: 5mm;">
+      「像一杯涼茶，喝過的人都記得回甘。」
+    </div>
+    <p class="text-body">你对外清冷如水，内里却有一片厚实的土。
+你不擅长热烈表达，但你给别人的安心感
+是一种不容易被觉察、却一旦失去就会想念的存在。
+</p>
+    <p class="text-body" style="margin-top: 4mm;">你的火藏在午中，不炽烈，是烛光，是黄昏，
+是"该出手时稳稳地出，不该说话时静静地坐"的那种光。
+</p>
+  </div>
+  <div class="page-number">參</div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>應景之物</h2>
+    <span class="juan-mark">第一卷 · 三</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 5mm;">
+    為主理人挑選的，與命局相應的日常之物：
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5mm 8mm;">
+    
+    <div>
+      <div class="scene-block-title">应景之香</div>
+      <p class="text-body" style="font-size:11pt;">
+        <strong>沉香 · 老山</strong><br>不烈不甜，土沉合你的'堤岸'。书房一炉，静中见光。
+      </p>
+    </div>
+    
+    <div>
+      <div class="scene-block-title">应景之茶</div>
+      <p class="text-body" style="font-size:11pt;">
+        <strong>金骏眉 · 慢火</strong><br>暖金回甘，正是你的本命色。不喝红茶的水型人，今年试试。
+      </p>
+    </div>
+    
+    <div>
+      <div class="scene-block-title">应景之色</div>
+      <p class="text-body" style="font-size:11pt;">
+        <strong>家居主色</strong><br>客厅一面暖驼主墙，书房用烛金灯光，卧室留一抹墨青收尾。
+      </p>
+    </div>
+    
+    <div>
+      <div class="scene-block-title">应景之时</div>
+      <p class="text-body" style="font-size:11pt;">
+        <strong>未时 · 酉时</strong><br>13-15 点处事最准；17-19 点闲坐最美。子时宜眠，亥时宜思。
+      </p>
+    </div>
+    
+  </div>
+  <div class="huiwen"></div>
+  <div class="scene-block-title">日常五件物 · 推薦</div>
+  <ul class="lifestyle-list">
+    
+    <li>一盏暖驼色羊毛披肩，在会议室拿出，气场立刻不同</li>
+    
+    <li>一只老铜镇纸，书桌一物，便有'定'气</li>
+    
+    <li>一支墨青色钢笔，重要的决定用它落笔</li>
+    
+    <li>一枚自制姓氏小印章，盖在每一封正式邮件附件上</li>
+    
+    <li>一本麻面记事本，记下每天酉时的一句话</li>
+    
+  </ul>
+  <div class="page-number">肆</div>
+</div>
+
+
+
+
+
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -10mm;">
+      <div class="quote-mega" style="font-size: 32pt; white-space: pre-wrap;">水流不止
+因有岸
+
+光不孤独
+因有归处
+</div>
+      <div style="margin-top: 16mm;">
+        <span class="text-eng" style="font-size:11pt;">— YOUR AESTHETIC SIGNATURE —</span>
+      </div>
+      <div style="margin-top: 10mm;">
+        <span class="seal seal-small seal-yang" style="font-size:4mm; line-height:13mm;">命主</span>
+      </div>
+    </div>
+  </div>
+  <div class="page-number">伍</div>
+</div>
+
+
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第二卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">本命色譜</div>
+    <div class="juan-eng">Vol. II &middot; Palette</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #C9A66B;">色</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>主色 · 一</h2>
+    <span class="juan-mark">第二卷 · 1</span>
+  </div>
+  <div class="color-card">
+    <div class="color-block" style="background: #C9A66B;"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #C9A66B;">暖驼</div>
+      <div class="color-name-en">Warm Camel · #C9A66B</div>
+      <div class="color-desc">秋天傍晚七点，麦田被染上的颜色。</div>
+      <div class="color-uses">
+        <div><span>穿</span>羊绒毛衣 / 茶歇裙 / 麂皮包</div><div><span>居</span>客厅主墙 / 暖光台灯</div><div><span>器</span>陶罐 / 铜盏 / 麻布</div>
+      </div>
+    </div>
+  </div>
+  <div class="text-body" style="margin-top: 6mm;">暖驼是你最该穿在身上的颜色。
+它不张扬，不热烈，
+它只在你走近时，让人觉得"这人很稳"。
+对于壬水日主来说，
+水太多时最缺的就是岸——
+暖驼，就是你的岸。
+</div>
+  <div class="page-number">陸</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>主色 · 二</h2>
+    <span class="juan-mark">第二卷 · 2</span>
+  </div>
+  <div class="color-card">
+    <div class="color-block" style="background: #D4AF37;"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #D4AF37;">烛光金</div>
+      <div class="color-name-en">Candle Gold · #D4AF37</div>
+      <div class="color-desc">冬至清晨第一缕阳光穿过窗纸的颜色。</div>
+      <div class="color-uses">
+        <div><span>穿</span>丝巾 / 耳钉 / 西装钮扣</div><div><span>居</span>台灯 / 蜡烛 / 黄铜器</div><div><span>器</span>金线书衣 / 鎏金盏</div>
+      </div>
+    </div>
+  </div>
+  <div class="text-body" style="margin-top: 6mm;">烛金不是炫耀的金。
+它是黄昏的光，是冬日窗纸后的暖意，
+是壬水命局里那个"藏而不透"的丁火。
+画面有一点烛金，气场立刻活了——
+不必多，恰到好处的一点，
+就像你说话的方式。
+</div>
+  <div class="page-number">柒</div>
+</div>
+
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>輔色 與 避忌</h2>
+    <span class="juan-mark">第二卷 · 3</span>
+  </div>
+  <div class="color-card" style="height: 55mm;">
+    <div class="color-block" style="background: #FAF7F2;"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #A89682; font-size: 24pt;">米白</div>
+      <div class="color-name-en">Cream White · #FAF7F2</div>
+      <div class="color-desc" style="font-size: 11pt;">不是冷白，是有呼吸的白。作底色，让你的暖色都活过来。</div>
+    </div>
+  </div>
+  <div class="huiwen"></div>
+  <div class="color-card color-card-forbidden" style="height: 55mm;">
+    <div class="color-block" style="background: #A8B5C7;"></div>
+    <div class="color-info">
+      <div class="color-name-cn" style="color: #6B7785; font-size: 24pt;">冰银</div>
+      <div class="color-name-en">Cold Silver · #A8B5C7</div>
+      <div class="color-desc" style="font-size: 11pt;">不是这色不美，是它不是为你而来。</div>
+      <div class="color-uses" style="font-size: 9.5pt;">大面积冰蓝 / 纯黑 / 冷光银 穿上身，你会'失温'。</div>
+    </div>
+  </div>
+  <div class="page-number">捌</div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>穿搭紅黑榜</h2>
+    <span class="juan-mark">第二卷 · 4</span>
+  </div>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8mm; margin-top: 4mm;">
+    <div>
+      <div style="background: rgba(192,57,43,0.08); padding: 4mm 6mm; border-left: 1mm solid #C0392B;">
+        <div style="font-family: 'Noto Serif CJK SC', serif; font-weight: bold; font-size: 14pt; color: #C0392B; letter-spacing: 2pt; margin-bottom: 3mm;">
+          紅榜 · 五件
+        </div>
+        <ol style="font-family: 'Noto Serif CJK SC', serif; font-size: 10pt; line-height: 2; padding-left: 5mm; color: #2B2B2B;">
+          <li>米白棉麻衬衫 + 暖驼羊绒围巾</li><li>烛金色针织衫 + 麻面长裤</li><li>暖驼色西装外套 + 米白真丝内搭</li><li>朱砂点缀的暖色花衬衫</li><li>铜金色腕表 / 细金链</li>
+        </ol>
+      </div>
+    </div>
+    <div>
+      <div style="background: rgba(107,107,107,0.08); padding: 4mm 6mm; border-left: 1mm solid #6B6B6B;">
+        <div style="font-family: 'Noto Serif CJK SC', serif; font-weight: bold; font-size: 14pt; color: #6B6B6B; letter-spacing: 2pt; margin-bottom: 3mm;">
+          黑榜 · 五件
+        </div>
+        <ol style="font-family: 'Noto Serif CJK SC', serif; font-size: 10pt; line-height: 2; padding-left: 5mm; color: #2B2B2B;">
+          <li>大面积冰蓝针织</li><li>纯黑高领毛衣（会压住气场）</li><li>荧光绿 / 高饱和湖蓝</li><li>冷银色西装（会显得疏离）</li><li>纯白 + 纯黑的极端对比</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="huiwen" style="margin-top: 10mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 6mm;">
+    「衣櫃裡每件衣服，都是一句你對自己的話。」
+  </div>
+  <div class="page-number">玖</div>
+</div>
+
+
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第三卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">人生八境</div>
+    <div class="juan-eng">Vol. III &middot; Eight Scenes</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #2D5F3F;">境</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 1</h2>
+    <span class="juan-mark">第三卷 · 1</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #D4AF37; --scene-color-2: #C9A66B;
+                ">
+      <div class="scene-image-deco">开</div>
+      <div class="scene-image-label">事业开拓 · 卯时破晓</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">事业开拓</div>
+      <div class="scene-tag">Career · Dawn Light</div>
+      <div class="scene-quote">「有些光，是要主动去打开的。」</div>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>跳槽前夜，需要勇气</li><li>升职关键期，需要笃定</li><li>创业启动日，需要仪式</li><li>重要会议前，需要气场</li><li>新项目启动，需要破局之力</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 换上这张壁纸的当晚，给自己写一封'未来三个月'的信</li><li>② 信封口处盖一枚自己的姓氏小印</li><li>③ 第二天卯时起床，吃一顿暖色早餐再出门</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「2026 重启的第一道光。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">1/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 2</h2>
+    <span class="juan-mark">第三卷 · 2</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #2C3E50; --scene-color-2: #C9A66B;
+                ">
+      <div class="scene-image-deco">休</div>
+      <div class="scene-image-label">深夜疗愈 · 亥时月光</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">深夜疗愈</div>
+      <div class="scene-tag">Healing · Moonlight</div>
+      <div class="scene-quote">「今晚不焦虑，让月光帮我接住。」</div>
+      
+      <div class="scene-block-title">使用建議</div>
+      <p class="scene-egg">水多的人未必需要更多水。
+但偶尔失眠、心绪过载的夜，
+可以换上这张——
+墨青里藏了一束你的本命暖驼月光，
+在不安里留一个小小的暖。
+</p>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>焦虑期，需要被托住</li><li>失眠夜，需要一束暖光</li><li>复盘期，需要静水里的星光</li><li>高强度工作之后的一日歇</li><li>心绪过载，需要把自己'调小一档'</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 换上锁屏，把手机反扣</li><li>② 冲一杯不放糖的茶</li><li>③ 花十分钟，只是看着茶汤反射的光</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「静下来的时候，水才能照见星光。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">2/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 3 <span class="scene-best-mark">★ 你的最佳匹配</span></h2>
+    <span class="juan-mark">第三卷 · 3</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #C9A66B; --scene-color-2: #F5E6C8;
+                ">
+      <div class="scene-image-deco">生</div>
+      <div class="scene-image-label">生意兴隆 · 辰时麦田</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">生意兴隆</div>
+      <div class="scene-tag">Abundance · Morning Wheat</div>
+      <div class="scene-quote">「我的丰盛，从一束晨光里开始。」</div>
+      
+      <div class="scene-block-title">為甚麼這是你的最佳匹配</div>
+      <p class="scene-egg">戊土年透 + 辰土双库，本就是你命局的中轴。
+当你"岸足够宽"的时候，水自然清澈、自然有余。
+这张壁纸的暖驼麦田，
+就是把你命局里的"岸"可视化了。
+所以这是八张里属于你的"那一张"。
+</p>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>谈合作、谈合同、谈钱的日子</li><li>新店开张、产品上线</li><li>跑业务、跑客户的早晨</li><li>个人品牌账号发布日</li><li>需要被'看见'的关键时刻</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 早上 7 点起床，先在阳台晒 5 分钟太阳</li><li>② 出门前换上暖驼色围巾或西装</li><li>③ 第一次开口说话之前，深呼吸三次</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「我的丰盛，从一束晨光里开始。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">3/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 4</h2>
+    <span class="juan-mark">第三卷 · 4</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #2D5F3F; --scene-color-2: #C0392B;
+                ">
+      <div class="scene-image-deco">伤</div>
+      <div class="scene-image-label">勇敢出击 · 寅时启动</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">勇敢出击</div>
+      <div class="scene-tag">Decisive Action · Bamboo Arrow</div>
+      <div class="scene-quote">「该出手时，连风都为你让路。」</div>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>谈判前夜，需要有锋</li><li>比赛日，需要果决</li><li>维权时刻，需要不退</li><li>面对小人，需要一击即中</li><li>决定要做的事，今天就开始</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 把一件想做但拖延的事写在纸上</li><li>② 在最显眼的位置贴一周</li><li>③ 完成那一刻，把纸烧掉或撕成两半</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「该出手时，连风都为你让路。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">4/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 5</h2>
+    <span class="juan-mark">第三卷 · 5</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #4A6B4F; --scene-color-2: #F5E6C8;
+                ">
+      <div class="scene-image-deco">杜</div>
+      <div class="scene-image-label">专注沉浸 · 午后柔光</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">专注沉浸</div>
+      <div class="scene-tag">Quiet Focus · Reading Room</div>
+      <div class="scene-quote">「世界很吵，我只做我的事。」</div>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>写稿、深度工作、需要 3 小时不被打扰</li><li>学习、备考、做大型项目</li><li>闭关创作期</li><li>想真正读完一本书</li><li>从社交里抽身的那一天</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 把手机调成飞行模式 90 分钟</li><li>② 桌面只留一支笔、一本书、一杯茶</li><li>③ 出门前回头看一眼桌面，记住这种'空'</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「世界很吵，我只做我的事。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">5/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 6</h2>
+    <span class="juan-mark">第三卷 · 6</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #C0392B; --scene-color-2: #D4AF37;
+                ">
+      <div class="scene-image-deco">景</div>
+      <div class="scene-image-label">灵感表达 · 午时烈光</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">灵感表达</div>
+      <div class="scene-tag">Expression · Noon Flame</div>
+      <div class="scene-quote">「今天的我，有话要说。」</div>
+      
+      <div class="scene-block-title">使用建議</div>
+      <p class="scene-egg">甲木时透 = 食神当家。
+食神是命局里的"表达 · 才华 · 创作"之星。
+你天生有"把心里的事，化成形状"的能力。
+这张红梅烈火的壁纸，
+是让那束"藏在午中"的丁火真正烧起来。
+</p>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>写稿、做 PPT、做设计的日子</li><li>演讲、直播、公开课</li><li>需要'气势出来'的场合</li><li>面试、答辩、媒体采访</li><li>想发一条'真心话'的朋友圈</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 在动笔/开口之前，看一眼这张壁纸 30 秒</li><li>② 想象自己已经把话说完、并且效果很好</li><li>③ 再开始正式表达</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「该说的话，今天说完。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">6/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 7</h2>
+    <span class="juan-mark">第三卷 · 7</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #6B4423; --scene-color-2: #8B6F8E;
+                ">
+      <div class="scene-image-deco">断</div>
+      <div class="scene-image-label">断舍释怀 · 戌时暮色</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">断舍释怀</div>
+      <div class="scene-tag">Letting Go · Dusk Branch</div>
+      <div class="scene-quote">「告别从来不是结束，是腾出位置。」</div>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>分手、翻篇的日子</li><li>辞职、离开旧公司的最后一晚</li><li>搬离一个住了很久的地方</li><li>整理掉一段关系里的最后一件物</li><li>正式告别旧自我的'仪式日'</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 写下'我不再需要 ___ '三个填空</li><li>② 烧掉或封存这张纸</li><li>③ 上床前对自己说一句'谢谢你陪我到这里'</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「告别从来不是结束，是腾出位置。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">7/八</div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>場景 · 8</h2>
+    <span class="juan-mark">第三卷 · 8</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #A8B5C7; --scene-color-2: #5D7B91;
+                ">
+      <div class="scene-image-deco">清</div>
+      <div class="scene-image-label">清明心安 · 酉时黄昏</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">清明心安</div>
+      <div class="scene-tag">Clarity · Mirror Lake</div>
+      <div class="scene-quote">「心一静，世界就让路。」</div>
+      
+      <div class="scene-block-title">適用於</div>
+      <ul class="scene-list">
+        <li>防小人、维稳期</li><li>紧张谈判、博弈日</li><li>心乱如麻、思绪过多</li><li>需要做出冷静决定的关键时刻</li><li>那种'想发火但不能发'的时刻</li>
+      </ul>
+      <div class="scene-block-title">配套小儀式</div>
+      <ul class="scene-list">
+        <li>① 看着这张壁纸做 4-7-8 呼吸法 3 轮</li><li>② 把焦虑写在纸上，再揉成一团扔掉</li><li>③ 完成手头唯一一件最重要的事</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「心一静，世界就让路。」
+      </div>
+    </div>
+  </div>
+  <div class="page-number">8/八</div>
+</div>
+
+
+
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第四卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">四時流轉</div>
+    <div class="juan-eng">Vol. IV &middot; Festivals</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #C0392B;">節</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>除夕 · 万家灯火</h2>
+    <span class="juan-mark">第四卷 · 除夕</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #C0392B; --scene-color-2: #D4AF37;
+                ">
+      <div class="scene-image-deco">夕</div>
+      <div class="scene-image-label">除夕 · 守岁烛光</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">除夕肖像</div>
+      <div class="scene-tag">Lunar New Year's Eve · Lanterns Aglow</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">除夕的核心是"守"——守住一年的最后一束光，
+也守住自己一年里好的部分。
+你的命局里光本就稀少，
+所以这一夜的灯，对你格外温柔。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">暖红 #C0392B + 烛光金 #D4AF37 + 你的暖驼</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>把家里所有冷光灯换成暖光</li><li>给三个最重要的人发去一句不说节日吉祥的话</li><li>亥时之前，给自己沏最后一壶茶</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「守住的，从来不是岁，是自己。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>春节 · 红梅初绽</h2>
+    <span class="juan-mark">第四卷 · 春节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #C0392B; --scene-color-2: #F5E6C8;
+                ">
+      <div class="scene-image-deco">春</div>
+      <div class="scene-image-label">春节 · 红墙肖像</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">春节肖像</div>
+      <div class="scene-tag">Spring Festival · First Plum</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">春节的红，是一年之始的"火"。
+你不缺水，缺的就是这股火气。
+所以对你来说，春节穿红，
+不是随大流的吉庆，是真正的补益。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">朱砂 #C0392B + 米白 #F5E6C8 + 你的烛金</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>初一早上穿一件正红，哪怕只是一条围巾</li><li>初五前在书桌放一枝红梅</li><li>和家人吃饭时，主动多说三句话</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「冬天最怕的不是冷，是忘了给自己一束火。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>元宵 · 千灯祈愿</h2>
+    <span class="juan-mark">第四卷 · 元宵节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #E67E22; --scene-color-2: #FAF7F2;
+                ">
+      <div class="scene-image-deco">灯</div>
+      <div class="scene-image-label">元宵节 · 灯下肖像</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">元宵节肖像</div>
+      <div class="scene-tag">Lantern Festival · A Thousand Lights</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">元宵是新年第一个月圆。
+古人在这一夜把心愿写在灯笼上，让光把愿望带走。
+对水型的你来说，月光有特殊的意义——
+它不是要烧掉什么，而是要把愿望"慢慢温热"。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">暖红 #E67E22 + 月白 #FAF7F2</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>煮一碗甜汤圆，慢慢吃完</li><li>把今年最想做成的一件事写下来，折成小方</li><li>夜里看一眼窗外的月，再睡</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「新年第一轮月，是要被认真看见的。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>端午 · 艾草江畔</h2>
+    <span class="juan-mark">第四卷 · 端午节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #2D5F3F; --scene-color-2: #C0392B;
+                ">
+      <div class="scene-image-deco">艾</div>
+      <div class="scene-image-label">端午节 · 艾草晨光</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">端午节肖像</div>
+      <div class="scene-tag">Dragon Boat Festival · Mugwort & River</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">端午是夏至之前的"清正"之节。
+苍翠之木与朱砂之火相生，
+正合你命局里需要的'温润而有锋'。
+插一枝艾草，不是迷信，是对自己说：
+'我今年，不容易被冲昏头。'
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">苍翠 #2D5F3F + 朱砂 #C0392B</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>在门口或工位放一束艾草（鲜或干都行）</li><li>中午阳气最盛时晒 10 分钟太阳</li><li>吃一只咸蛋黄粽，慢慢嚼完</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「做一个温润但有锋的人。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>七夕 · 银河鹊桥</h2>
+    <span class="juan-mark">第四卷 · 七夕节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #F0A6A6; --scene-color-2: #D4AF37;
+                ">
+      <div class="scene-image-deco">桥</div>
+      <div class="scene-image-label">七夕节 · 戌时银河</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">七夕节肖像</div>
+      <div class="scene-tag">Qixi · Bridge of Stars</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">七夕是中国的"星宿之夜"。
+古人讲究的不是买花送礼，
+而是在银河两端，让两个人都看到同一片星光。
+对你来说，这一晚最适合写一封信——
+不是给别人，是给三年后的自己。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">粉霞 #F0A6A6 + 暖金 #D4AF37</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>给三年后的自己写一封信</li><li>封口处盖你的本命色印章</li><li>封存到明信片盒里，三年后才打开</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「最浪漫的事，是有人和你看同一片星空。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>中秋 · 月奉酒</h2>
+    <span class="juan-mark">第四卷 · 中秋节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #FAF7F2; --scene-color-2: #D4AF37;
+                ">
+      <div class="scene-image-deco">月</div>
+      <div class="scene-image-label">中秋节 · 月下举杯</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">中秋节肖像</div>
+      <div class="scene-tag">Mid-Autumn · Moonlit Toast</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">中秋始于上古祭月，唐宋时成为文人对"团圆"的祈愿。
+在你的命局里，月光本就稀少——
+所以这一天的月，对你格外珍贵。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">月白 #FAF7F2 + 桂金 #D4AF37 + 你的暖驼</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>阳台上煮一壶桂花茶</li><li>给三年后的自己写一封信，封口盖你的本命色印章</li><li>戌时推门出去，看一眼今晚的月</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「我们不缺月，缺的是抬头看月的那个瞬间。」
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+  <div class="content-header">
+    <h2>重阳 · 黄菊远山</h2>
+    <span class="juan-mark">第四卷 · 重阳节</span>
+  </div>
+  <div class="scene-spread">
+    <div class="scene-image no-img"
+         style="--scene-color-1: #C9A66B; --scene-color-2: #F4D03F;
+                ">
+      <div class="scene-image-deco">九</div>
+      <div class="scene-image-label">重阳节 · 山间登高</div>
+    </div>
+    <div class="scene-text">
+      <div class="scene-name">重阳节肖像</div>
+      <div class="scene-tag">Double Ninth · Chrysanthemum & Distant Hill</div>
+      <div class="scene-block-title">節日由來</div>
+      <p class="scene-egg">重阳是"九九"之日，古人在这一天登高、看菊花、喝菊酒，
+意思是站得高一点，看得远一点。
+你这一年走得快，今天不妨慢一慢。
+给一位长辈打个电话，比任何祈福都强。
+</p>
+      <div class="scene-block-title">應景之色</div>
+      <p class="text-body" style="font-size: 10pt;">暖驼 #C9A66B + 菊黄 #F4D03F</p>
+      <div class="scene-block-title">應景做的小事</div>
+      <ul class="scene-list">
+        <li>给一位长辈或导师打个电话</li><li>登一次高（不必很高，一座小山即可）</li><li>晚上煮一壶菊花茶</li>
+      </ul>
+      <div class="scene-pengyouquan">
+        ✦ 朋友圈金句 ✦<br>
+        「走得再快，也别忘了回头看看那束陪你长大的光。」
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page chapter-cover">
+  <div style="text-align: center; z-index: 2; margin-top: -20mm;">
+    <div class="juan-name">第五卷</div>
+    <div class="line-gold"></div>
+    <div class="juan-subname">歲時圖鑑</div>
+    <div class="juan-eng">Vol. V &middot; Solar Terms</div>
+    <div style="margin-top: 18mm;">
+      <span class="seal" style="background: #4A6B4F;">時</span>
+    </div>
+  </div>
+  <div class="mountain"></div>
+</div>
+
+
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>春之六节气</h2>
+    <span class="juan-mark">第五卷 · 春</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm; font-size: 10.5pt;">春属木，于你壬水而言，是泄秀的时候。少做躁进事，多做生发事。</div>
+  <div class="solar-grid">
+    
+    <div class="solar-card">
+      <div class="solar-name">立春 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">2/4</span></div>
+      <div class="solar-poem">「东风带春信，万物苏其魂。」</div>
+      <div class="solar-action">立春这天，给自己换一条嫩绿丝巾。嫩绿不是你的本命色，但这天，万物都在向新色彩致意。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">雨水 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">2/19</span></div>
+      <div class="solar-poem">「春雨润无声，新柳生细芽。」</div>
+      <div class="solar-action">泡一壶龙井。雨水时节饮水，水更清。对你尤其有益。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">惊蛰 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">3/5</span></div>
+      <div class="solar-poem">「春雷动九霄，蛰虫应时鸣。」</div>
+      <div class="solar-action">把上个月该说没说的话，今天说了。惊蛰宜动，动嘴最易。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">春分 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">3/20</span></div>
+      <div class="solar-poem">「燕子归故园，玉兰开窗前。」</div>
+      <div class="solar-action">春分昼夜均长，最宜衡。盘点一下今年的事，砍掉一半。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">清明 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">4/4</span></div>
+      <div class="solar-poem">「烟雨润青团，故人在心边。」</div>
+      <div class="solar-action">清明适合慎独。花一个下午，回想一个离开的人。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">谷雨 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">4/20</span></div>
+      <div class="solar-poem">「雨生百谷，麦苗如荫。」</div>
+      <div class="solar-action">在工位放一盆水养竹。谷雨后 30 天，看它怎么长。</div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>夏之六节气</h2>
+    <span class="juan-mark">第五卷 · 夏</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm; font-size: 10.5pt;">夏属火，水火相济。你这季节'被照见'最多，记得收一收。</div>
+  <div class="solar-grid">
+    
+    <div class="solar-card">
+      <div class="solar-name">立夏 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">5/5</span></div>
+      <div class="solar-poem">「樱桃枝头红，薄荷石上凉。」</div>
+      <div class="solar-action">换一个浅色的杯子，每天用它喝早水。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">小满 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">5/21</span></div>
+      <div class="solar-poem">「麦穗渐满仓，布谷催耕忙。」</div>
+      <div class="solar-action">小满不'盈'，留一分余地。今天不做满的事。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">芒种 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">6/5</span></div>
+      <div class="solar-poem">「麦熟谷新生，青梅落酒香。」</div>
+      <div class="solar-action">煮一壶青梅酒（无酒精也行），冰镇一夜。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">夏至 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">6/21</span></div>
+      <div class="solar-poem">「烈日当空照，莲花静自香。」</div>
+      <div class="solar-action">今天去看一片荷塘。不拍照，只看 10 分钟。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">小暑 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">7/7</span></div>
+      <div class="solar-poem">「蝉鸣午正酣，纸扇半开掩。」</div>
+      <div class="solar-action">睡一个舒服的午觉。这是夏天最该做的事。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">大暑 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">7/22</span></div>
+      <div class="solar-poem">「荷塘清茶冷，墨色入人心。」</div>
+      <div class="solar-action">今天只穿一身浅色，让眼睛先凉下来。</div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>秋之六节气</h2>
+    <span class="juan-mark">第五卷 · 秋</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm; font-size: 10.5pt;">秋属金，于你壬水是'根源'之季。秋天是你最好的状态。</div>
+  <div class="solar-grid">
+    
+    <div class="solar-card">
+      <div class="solar-name">立秋 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">8/7</span></div>
+      <div class="solar-poem">「桂花探初凉，金风渐入帘。」</div>
+      <div class="solar-action">立秋开始，可以重新穿你的暖驼了。它属于你的季节。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">处暑 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">8/23</span></div>
+      <div class="solar-poem">「残荷映晚风，余热终自收。」</div>
+      <div class="solar-action">把上半年没复盘的事，今天复盘完。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">白露 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">9/8</span></div>
+      <div class="solar-poem">「露珠凝草尖，芦苇白江畔。」</div>
+      <div class="solar-action">白露之后，开始喝一点温的东西。让胃先安顿下来。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">秋分 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">9/23</span></div>
+      <div class="solar-poem">「丹桂盛满枝，昼夜两相平。」</div>
+      <div class="solar-action">秋分日做'平衡'：写下今年的得失，各列五条。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">寒露 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">10/8</span></div>
+      <div class="solar-poem">「红叶渐染山，菊花初上盘。」</div>
+      <div class="solar-action">今天买一枝菊花，放在书桌。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name"> <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">10/23</span></div>
+      <div class="solar-poem">「霜叶红于二月花，柿子甜满枝头。」</div>
+      <div class="solar-action">煮一锅红色的甜汤——红枣、桂圆、红糖，给自己。</div>
+    </div>
+    
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>冬之六节气</h2>
+    <span class="juan-mark">第五卷 · 冬</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 4mm; font-size: 10.5pt;">冬属水，于你是'本元'之季。但水太多反而要收，要藏。</div>
+  <div class="solar-grid">
+    
+    <div class="solar-card">
+      <div class="solar-name">立冬 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">11/7</span></div>
+      <div class="solar-poem">「初雪覆青瓦，暖炉煮旧书。」</div>
+      <div class="solar-action">把家里最厚的那条围巾，从衣柜深处翻出来用。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">小雪 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">11/22</span></div>
+      <div class="solar-poem">「薄雪入夜下，围炉数旧梦。」</div>
+      <div class="solar-action">今天写一段'今年我做对的三件事'，简短即可。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">大雪 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">12/7</span></div>
+      <div class="solar-poem">「梅雪同时落，雪山映孤心。」</div>
+      <div class="solar-action">大雪日适合独处。看一部老电影。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">冬至 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">12/21</span></div>
+      <div class="solar-poem">「饺子热腾腾，阳光初回身。」</div>
+      <div class="solar-action">冬至吃饺子。这是一年里最'寒水待暖'的一天。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">小寒 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">1/5</span></div>
+      <div class="solar-poem">「暖炉香腊梅，冷夜寄长信。」</div>
+      <div class="solar-action">煮一壶酒，写一封信。给一个今年只见过一次的朋友。</div>
+    </div>
+    
+    <div class="solar-card">
+      <div class="solar-name">大寒 <span style="color: #C9A66B; font-size: 10pt; margin-left: 2mm;">1/20</span></div>
+      <div class="solar-poem">「红梅照雪开，暖光半山来。」</div>
+      <div class="solar-action">今天提前为来年的春节做一件小事，比如挑一副春联。</div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -16mm;">
+      <div class="quote-mega" style="font-size: 30pt;">
+        色彩从来不是装饰<br>
+        是一种自我宣告
+      </div>
+      <div style="margin-top: 14mm;">
+        <span class="text-eng" style="font-size:11pt;">— AFTERWORD —</span>
+      </div>
+      <div style="margin-top: 12mm; max-width: 130mm; text-align: left;">
+        <p class="text-handwriting" style="font-size: 13pt;">这本书诞生于四十二日的阅读、推演、配色与校对。
+每一页的暖驼，都是我亲手调的；
+每一枚印章，都因你的姓氏而刻。
+
+它不是命运的判词，
+是你的色彩自传。
+
+愿你看完之后，
+认出画里的人，
+是你自己。
+</p>
+        <div style="text-align: right; margin-top: 8mm; font-family: 'Noto Serif CJK SC', serif; font-size: 12pt; color: #6B6B6B;">
+          —— 主理人 拜
+        </div>
+        <div style="text-align: right; margin-top: 4mm;">
+          <span class="seal seal-small">主</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="final-quote">
+    <div style="margin-top: -10mm;">
+      <div class="quote-mega" style="font-size: 26pt; line-height: 2.2; white-space: pre-wrap;">明年这本书会更厚——
+因为你会有更多色彩。
+</div>
+      <div style="margin-top: 16mm;">
+        <span class="text-eng">— TO BE CONTINUED —</span>
+      </div>
+      <div style="margin-top: 12mm;">
+        <span class="seal seal-small">續</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="page">
+  <div class="content-header">
+    <h2>全年應景色卡日曆</h2>
+    <span class="juan-mark">附錄 · 一</span>
+  </div>
+  <div class="text-body" style="margin-bottom: 3mm; font-size: 10.5pt;">下页是你的全年应景色卡日历。
+打印贴在工位、书桌或衣柜内侧，
+让色彩成为你今年的一种'隐性提醒'。
+</div>
+  <div class="calendar-grid">
+    
+    
+    <div class="calendar-month">
+      <div class="month-name">1月</div>
+      <div class="month-color-block" style="background: #D4AF37;"></div>
+      <div class="month-color-name">烛光金 · 旧年余温</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">2月</div>
+      <div class="month-color-block" style="background: #8FB573;"></div>
+      <div class="month-color-name">嫩绿 · 立春破冰</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">3月</div>
+      <div class="month-color-block" style="background: #6FA88A;"></div>
+      <div class="month-color-name">青翠 · 万物醒</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">4月</div>
+      <div class="month-color-block" style="background: #FAF7F2;"></div>
+      <div class="month-color-name">月白 · 清明烟雨</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">5月</div>
+      <div class="month-color-block" style="background: #E67E22;"></div>
+      <div class="month-color-name">朱橘 · 立夏初阳</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">6月</div>
+      <div class="month-color-block" style="background: #5D7B91;"></div>
+      <div class="month-color-name">雾蓝 · 芒种凉茶</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">7月</div>
+      <div class="month-color-block" style="background: #2C3E50;"></div>
+      <div class="month-color-name">墨青 · 大暑荷塘</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">8月</div>
+      <div class="month-color-block" style="background: #C9A66B;"></div>
+      <div class="month-color-name">暖驼 · 立秋之始</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">9月</div>
+      <div class="month-color-block" style="background: #D4AF37;"></div>
+      <div class="month-color-name">桂金 · 秋分丹桂</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">10月</div>
+      <div class="month-color-block" style="background: #A0522D;"></div>
+      <div class="month-color-name">赭石 · 寒露红叶</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">11月</div>
+      <div class="month-color-block" style="background: #FAF7F2;"></div>
+      <div class="month-color-name">月白 · 小雪初至</div>
+    </div>
+    
+    <div class="calendar-month">
+      <div class="month-name">12月</div>
+      <div class="month-color-block" style="background: #C0392B;"></div>
+      <div class="month-color-name">朱砂 · 冬至阳生</div>
+    </div>
+    
+  </div>
+  <div class="huiwen" style="margin-top: 6mm;"></div>
+  <div class="text-quote" style="text-align: center; margin-top: 4mm;">
+    「色彩，是時間給人的暗號。」
+  </div>
+</div>
+
+
+<div class="page">
+  <div style="display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+    <div style="text-align: center; margin-top: 20mm;">
+      <div class="huiwen"></div>
+      <div style="margin-top: 12mm; font-family: 'Noto Serif CJK SC', serif; font-size: 14pt; letter-spacing: 3pt; color: #2B2B2B;">
+        《暖驼之書》
+      </div>
+      <div class="text-eng" style="margin-top: 3mm;">A CHROMATIC SELF-PORTRAIT</div>
+      <div style="margin-top: 18mm; font-family: 'Noto Serif CJK SC', serif; font-size: 11pt; line-height: 2; color: #6B6B6B;">
+        命主 · 主理人<br>
+        命局 · 秋水待暖 · 堤岸黄昏<br>
+        本命色 · 暖驼 #C9A66B / 烛光金 #D4AF37<br>
+        編號 · No.001 / 2026
+      </div>
+      <div style="margin-top: 14mm;">
+        <span class="seal">命</span>
+        <span style="margin: 0 4mm;"></span>
+        <span class="seal seal-yang">主</span>
+      </div>
+    </div>
+    <div style="text-align: center; margin-bottom: 10mm;">
+      <div class="line-gold"></div>
+      <p style="font-family: 'Noto Serif CJK SC', serif; font-size: 8pt; color: #8B7355; line-height: 1.8; max-width: 130mm; margin: 6mm auto 0; letter-spacing: 0.5pt;">
+        本書為東方美學藝術創作，非命理預測，僅作美學參考。<br>
+        客戶照片與生辰信息嚴格保密，案例分享必經授權與脫敏。<br>
+        © 2026 主理人工作室 · 保留所有權利
+      </p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
