@@ -18,26 +18,27 @@
 >
 > | 文件 | 状态 | 计划 |
 > |---|---|---|
-> | `covers-design-yixue.md` + `wechat-onboarding-yixue.md` | ⏳ 待写 | PR C |
+> | `wechat-onboarding.md`（公众号欢迎语 / 菜单 / 关键词回复） | ⏳ 待写 | PR C2 |
+> | `covers/*.html` × 5 个模板（颜色映射 + 文字易学化） | ⏳ 待写 | PR C3 |
 > | `lead-magnet-19-colors.md`（19 色本命色卡 PDF 钩子，对接 swatch-builder A 档） | ⏳ 待写 | PR D |
 
 ---
 
-## 🎨 视觉资产（待易学化）
+## 🎨 视觉资产
 
-> ⚠️ 以下文件**当前是 AI 工具号版本**，将在 PR C 中改写为易学版。
-> 在改写完成前，**只参考结构与方法论**（9 宫格规范、字号字距、Canva 操作流程），**不要直接照搬文案与配色**。
-
-| 文件 | 内容 | 改写状态 |
+| 文件 | 内容 | 状态 |
 |------|------|---------|
-| [covers-design.md](./covers-design.md) | 9 宫格封面设计规范 + Canva 实操指南 | ⏳ 待 PR C |
-| [cover-ai-prompts.md](./cover-ai-prompts.md) | 9 宫格 AI 绘图提示词（免费工具方案） | ⏳ 待 PR C |
-| [avatar-design.md](./avatar-design.md) | 小红书头像 6 个方案 + AI 提示词 | ⏳ 待 PR C |
-| [covers/avatar-text-logo.html](./covers/avatar-text-logo.html) | 头像模板：文字 Logo 风（浏览器打开直接截图） | ⏳ 待 PR C |
-| [covers/avatar-minimal-k.html](./covers/avatar-minimal-k.html) | 头像模板：极简大 K 风 | ⏳ 待 PR C |
-| [covers/avatar-cartoon-yellow.html](./covers/avatar-cartoon-yellow.html) | 头像模板：卡通黄底风 | ⏳ 待 PR C |
-| [covers/cover-01-main.html](./covers/cover-01-main.html) | 笔记封面模板：主封面 | ⏳ 待 PR C |
-| [covers/cover-02-kimi.html](./covers/cover-02-kimi.html) | 笔记封面模板：Kimi 介绍页 | ⏳ 待 PR C |
+| [covers-design.md](./covers-design.md) ⭐ | **9 宫格封面设计规范 v1.0**（黛青暖驼调，配色严格对齐 colors.yaml，含合规自查清单） | ✅ v1.0 |
+| [cover-ai-prompts.md](./cover-ai-prompts.md) ⭐ | **9 宫格 AI 绘图提示词 v1.0**（即梦 / Nano Banana / 国风母版，禁词清理） | ✅ v1.0 |
+| [avatar-design.md](./avatar-design.md) ⭐ | **头像 6 方案 v1.0**（朱砂印「渝山」、暖驼篆字、宋画团扇等） | ✅ v1.0 |
+| [covers/avatar-text-logo.html](./covers/avatar-text-logo.html) | 头像模板：文字 Logo 风（**当前是 AI 工具号"小K"版**，浏览器打开直接截图） | ⏳ 待 PR C3 |
+| [covers/avatar-minimal-k.html](./covers/avatar-minimal-k.html) | 头像模板：极简大 K 风 | ⏳ 待 PR C3 |
+| [covers/avatar-cartoon-yellow.html](./covers/avatar-cartoon-yellow.html) | 头像模板：卡通黄底风 | ⏳ 待 PR C3 |
+| [covers/cover-01-main.html](./covers/cover-01-main.html) | 笔记封面模板：主封面 | ⏳ 待 PR C3 |
+| [covers/cover-02-kimi.html](./covers/cover-02-kimi.html) | 笔记封面模板：Kimi 介绍页 | ⏳ 待 PR C3 |
+
+> ⚠️ md 三件套（covers-design / cover-ai-prompts / avatar-design）已完成易学化（PR C1）。
+> HTML 模板的颜色映射 + 文字重写在 PR C3 中处理——届时会按上述 md 的色谱母本（黛青 #2C3E50 / 暖驼 #C9A66B / 朱砂 #C0392B / 米白 #FAF7F2）严格对齐。
 
 ---
 
@@ -53,7 +54,7 @@
 
 | 文件 | 内容 | 改写状态 |
 |------|------|---------|
-| [wechat-onboarding.md](./wechat-onboarding.md) | 公众号欢迎语 / 菜单栏 / 关键词回复（**当前是 AI 工具号版**）| ⏳ 待 PR C |
+| [wechat-onboarding.md](./wechat-onboarding.md) | 公众号欢迎语 / 菜单栏 / 关键词回复（**当前是 AI 工具号版**）| ⏳ 待 PR C2 |
 
 ---
 
