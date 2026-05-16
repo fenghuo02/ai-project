@@ -1,0 +1,531 @@
+/* ============ 中式审美·命书排版规范 v2.1.1 ============ */
+
+@page { size: A4; margin: 0; }
+@page :first { margin: 0; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", "Songti SC", serif;
+  color: #2B2B2B;
+  background: #F5E6C8;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============ 通用页面 ============ */
+
+.page {
+  width: 210mm;
+  height: 297mm;
+  padding: 26mm 24mm;
+  position: relative;
+  page-break-after: always;
+  overflow: hidden;
+  background-color: #F5E6C8;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(160,130,90,0.03) 1px, transparent 1px),
+    radial-gradient(circle at 70% 60%, rgba(160,130,90,0.04) 1px, transparent 1px),
+    radial-gradient(circle at 40% 80%, rgba(160,130,90,0.02) 1px, transparent 1px);
+  background-size: 6px 6px, 9px 9px, 11px 11px;
+}
+.page:last-child { page-break-after: auto; }
+
+/* ============ 装饰元素 ============ */
+
+.huiwen {
+  height: 5mm;
+  background-image: repeating-linear-gradient(
+    90deg,
+    #D4AF37 0, #D4AF37 2mm,
+    transparent 2mm, transparent 3mm,
+    #D4AF37 3mm, #D4AF37 4mm,
+    transparent 4mm, transparent 6mm
+  );
+  border-top: 0.4mm solid #D4AF37;
+  border-bottom: 0.4mm solid #D4AF37;
+  margin: 4mm 0;
+  opacity: 0.85;
+}
+
+.line-gold {
+  width: 60mm;
+  height: 0.4mm;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  margin: 4mm auto;
+}
+
+.seal {
+  display: inline-block;
+  width: 18mm;
+  height: 18mm;
+  background: #C0392B;
+  color: #F5E6C8;
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: bold;
+  font-size: 8mm;
+  text-align: center;
+  line-height: 18mm;
+  border-radius: 1.5mm;
+  box-shadow:
+    inset 0 0 0 1mm rgba(192,57,43,0.4),
+    inset 0.6mm 0.6mm 1mm rgba(0,0,0,0.15);
+}
+.seal-large { width: 22mm; height: 22mm; font-size: 9mm; line-height: 22mm; }
+.seal-small { width: 13mm; height: 13mm; font-size: 5mm; line-height: 13mm; }
+.seal-yang { background: #F5E6C8; color: #C0392B; border: 1mm solid #C0392B; }
+
+.mountain {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 60mm;
+  background:
+    radial-gradient(ellipse at 30% 100%, rgba(74,107,79,0.15), transparent 60%),
+    radial-gradient(ellipse at 70% 100%, rgba(45,95,63,0.12), transparent 65%),
+    radial-gradient(ellipse at 50% 100%, rgba(43,43,43,0.08), transparent 70%);
+  pointer-events: none;
+}
+
+/* ============ 字体规范 ============ */
+
+.juan-name {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: bold;
+  font-size: 56pt;
+  color: #C9A66B;
+  letter-spacing: 12pt;
+  margin-bottom: 6mm;
+}
+.juan-eng {
+  font-family: "Garamond", serif;
+  font-size: 11pt;
+  color: #8B7355;
+  letter-spacing: 4pt;
+  font-style: italic;
+  text-transform: uppercase;
+  margin-top: 6mm;
+}
+.juan-subname {
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-size: 26pt;
+  color: #2B2B2B;
+  letter-spacing: 6pt;
+  margin: 2mm 0;
+}
+
+.text-eng {
+  font-family: "Garamond", serif;
+  font-size: 10pt;
+  letter-spacing: 1pt;
+  color: #8B7355;
+  font-style: italic;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 14mm;
+  right: 24mm;
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt;
+  color: #8B7355;
+  letter-spacing: 1pt;
+}
+
+/* ============ 封面 ============ */
+
+.cover {
+  background: linear-gradient(135deg, #C9A66B 0%, #D4AF37 50%, #C9A66B 100%);
+  display: flex; justify-content: center; align-items: center;
+  padding: 0;
+  position: relative;
+}
+.cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(circle at 50% 30%, rgba(255,247,232,0.25), transparent 60%),
+    radial-gradient(circle at 20% 80%, rgba(74,46,28,0.12), transparent 50%);
+}
+.cover-frame {
+  width: 160mm; height: 230mm;
+  border: 0.5mm solid rgba(245,230,200,0.5);
+  padding: 18mm 12mm;
+  display: flex; flex-direction: column;
+  justify-content: space-between; align-items: center;
+  position: relative; z-index: 1;
+}
+.cover-top-frame, .cover-bottom-frame {
+  width: 100%; height: 8mm;
+  background-image: repeating-linear-gradient(
+    90deg, rgba(245,230,200,0.6) 0, rgba(245,230,200,0.6) 2mm,
+    transparent 2mm, transparent 3mm);
+  border-top: 0.3mm solid rgba(245,230,200,0.5);
+  border-bottom: 0.3mm solid rgba(245,230,200,0.5);
+}
+.cover-title-block {
+  display: flex; flex-direction: column; align-items: center;
+  margin: 30mm 0;
+}
+.cover-title {
+  writing-mode: vertical-rl; text-orientation: upright;
+  font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
+  font-weight: 900; font-size: 56pt;
+  color: #FFF7E8; letter-spacing: 12pt;
+  text-shadow: 0 0 2mm rgba(74,46,28,0.3);
+  margin-bottom: 8mm;
+}
+.cover-subtitle {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 13pt; color: #FFF7E8;
+  letter-spacing: 4pt; text-align: center;
+  margin-top: 18mm; opacity: 0.95;
+}
+.cover-eng {
+  font-family: "Garamond", serif;
+  font-size: 9pt; color: #FFF7E8;
+  letter-spacing: 3pt; margin-top: 4mm;
+  text-transform: uppercase; opacity: 0.85;
+  font-style: italic;
+}
+.cover-edition {
+  font-family: "Garamond", serif;
+  font-size: 11pt; color: #FFF7E8;
+  letter-spacing: 2pt; opacity: 0.9;
+}
+
+/* ============ 章节扉页 ============ */
+
+.chapter-cover {
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; text-align: center;
+}
+
+/* ============ 序章 ============ */
+
+.preface-title {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 30pt;
+  color: #C9A66B; letter-spacing: 6pt;
+  text-align: center; margin-bottom: 4mm;
+}
+.preface-call {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 28pt; color: #C0392B;
+  letter-spacing: 2pt; margin: 14mm 0 8mm 0;
+}
+.preface-body {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 13pt; line-height: 2.2;
+  color: #2B2B2B; text-align: justify;
+  margin-bottom: 6mm; white-space: pre-wrap;
+}
+.preface-signature {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #6B6B6B;
+  text-align: right; margin-top: 8mm;
+}
+
+/* ============ 内容页 ============ */
+
+.content { height: 100%; display: flex; flex-direction: column; }
+.content-header {
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 0.3mm solid #D4AF37;
+  padding-bottom: 3mm; margin-bottom: 8mm;
+}
+.content-header h2 {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 18pt;
+  color: #2B2B2B; letter-spacing: 3pt;
+}
+.content-header .juan-mark {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; color: #8B7355;
+  letter-spacing: 2pt;
+}
+.text-body {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; line-height: 2;
+  color: #2B2B2B; text-align: justify;
+  white-space: pre-wrap;
+}
+
+/* ============ 命主画像 ============ */
+
+.bazi-table {
+  width: 100%; margin: 4mm 0 8mm 0;
+  border-collapse: collapse;
+  background: rgba(255,255,255,0.4);
+}
+.bazi-table th, .bazi-table td {
+  border: 0.3mm solid #C9A66B;
+  padding: 3mm 0; text-align: center;
+  font-family: "Noto Serif CJK SC", serif;
+}
+.bazi-table th {
+  background: rgba(212,175,55,0.18);
+  font-size: 10pt; color: #6B6B6B;
+  letter-spacing: 2pt; font-weight: normal;
+}
+.bazi-table td {
+  font-size: 22pt; font-weight: bold;
+  color: #2B2B2B; letter-spacing: 4pt;
+}
+.bazi-table .day-master {
+  background: rgba(192,57,43,0.08); color: #C0392B;
+}
+.summary-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 16pt; line-height: 1.9;
+  color: #2B2B2B; text-align: center;
+  margin: 8mm 0;
+  padding: 6mm 12mm;
+  border-left: 1mm solid #D4AF37;
+  border-right: 1mm solid #D4AF37;
+  white-space: pre-wrap;
+}
+.keyword-grid {
+  display: flex; flex-wrap: wrap;
+  justify-content: space-around; gap: 4mm;
+  margin: 6mm 0;
+}
+.keyword-circle {
+  width: 28mm; height: 28mm; border-radius: 50%;
+  border: 0.3mm solid #C0392B;
+  background: rgba(192,57,43,0.05);
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  text-align: center;
+}
+.keyword-circle .kw-main {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #C0392B; letter-spacing: 1pt;
+}
+.keyword-circle .kw-sub {
+  font-family: "Garamond", serif;
+  font-size: 7pt; color: #8B7355;
+  margin-top: 1mm; font-style: italic;
+}
+.text-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 14pt; color: #C0392B;
+  line-height: 1.8; font-weight: 500;
+}
+.lifestyle-list { list-style: none; margin: 4mm 0; }
+.lifestyle-list li {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; line-height: 2.2;
+  color: #2B2B2B; padding-left: 8mm; position: relative;
+}
+.lifestyle-list li::before {
+  content: '○'; position: absolute; left: 0;
+  color: #D4AF37; font-size: 10pt;
+}
+
+/* ============ 色卡 ============ */
+
+.color-card {
+  display: flex; align-items: stretch;
+  height: 75mm; margin: 6mm 0;
+}
+.color-block {
+  width: 60%; position: relative;
+  background-image: repeating-linear-gradient(45deg, rgba(0,0,0,0.02) 0 1px, transparent 1px 4px);
+}
+.color-info {
+  width: 40%; padding: 6mm 0 6mm 8mm;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.color-info .color-name-cn {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 28pt;
+  letter-spacing: 4pt; margin-bottom: 2mm;
+}
+.color-info .color-name-en {
+  font-family: "Garamond", serif;
+  font-size: 11pt; color: #8B7355;
+  letter-spacing: 1pt; font-style: italic; margin-bottom: 4mm;
+}
+.color-info .color-desc {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; line-height: 2;
+  color: #2B2B2B; margin-bottom: 4mm; white-space: pre-wrap;
+}
+.color-info .color-uses {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; line-height: 1.9;
+  color: #6B6B6B;
+}
+.color-info .color-uses span {
+  color: #C9A66B; margin-right: 1mm;
+}
+.color-card-forbidden .color-block {
+  opacity: 0.4; filter: grayscale(0.3); position: relative;
+}
+.color-card-forbidden .color-block::after {
+  content: '忌'; position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 60pt;
+  color: rgba(192,57,43,0.7);
+}
+
+/* ============ 场景跨页 ============ */
+
+.scene-spread {
+  display: grid; grid-template-columns: 5fr 6fr;
+  gap: 8mm; height: 220mm;
+}
+.scene-image {
+  border: 0.3mm solid #C9A66B; position: relative; overflow: hidden;
+}
+/* 当 scene-image 用作 fallback 时，背景是渐变 */
+.scene-image.no-img {
+  background: linear-gradient(180deg, var(--scene-color-1, #C9A66B), var(--scene-color-2, #D4AF37));
+}
+/* 当有客户图时，作为背景 */
+.scene-image.has-img {
+  background-size: cover;
+  background-position: center;
+}
+.scene-image-label {
+  position: absolute; bottom: 5mm; left: 5mm;
+  color: #FFF7E8; font-family: "Noto Serif CJK SC", serif;
+  font-size: 11pt; letter-spacing: 2pt; opacity: 0.9;
+  text-shadow: 0 0 2mm rgba(0,0,0,0.4);
+}
+.scene-image-deco {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 84pt;
+  color: rgba(255,247,232,0.25); letter-spacing: 8pt;
+}
+.scene-text { display: flex; flex-direction: column; gap: 4mm; }
+.scene-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 22pt;
+  color: #2B2B2B; letter-spacing: 4pt;
+  border-bottom: 0.4mm solid #D4AF37;
+  padding-bottom: 2mm;
+}
+.scene-tag {
+  font-family: "Garamond", serif; font-size: 9pt;
+  color: #8B7355; font-style: italic;
+  letter-spacing: 2pt; text-transform: uppercase;
+  margin-top: -2mm;
+}
+.scene-quote {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #C0392B;
+  line-height: 1.9; padding-left: 4mm;
+  border-left: 0.6mm solid #C0392B;
+  margin: 2mm 0; white-space: pre-wrap;
+}
+.scene-block-title {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 10pt;
+  color: #C9A66B; letter-spacing: 2pt;
+  margin-top: 2mm; margin-bottom: 1mm;
+}
+.scene-list { list-style: none; }
+.scene-list li {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; line-height: 1.8;
+  color: #2B2B2B; padding-left: 4mm; position: relative;
+}
+.scene-list li::before {
+  content: '·'; position: absolute; left: 0;
+  color: #C9A66B; font-size: 14pt; line-height: 1.5;
+}
+.scene-pengyouquan {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; color: #2B2B2B;
+  letter-spacing: 2pt; text-align: center;
+  margin-top: auto; padding: 3mm 0;
+  border-top: 0.3mm dotted #C9A66B; white-space: pre-wrap;
+}
+.scene-best-mark {
+  font-size: 10pt; color: #C0392B;
+  font-weight: normal; letter-spacing: 1pt;
+}
+.scene-egg {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9.5pt; line-height: 1.85;
+  color: #2B2B2B; white-space: pre-wrap;
+}
+
+/* ============ 终章 ============ */
+
+.final-quote {
+  text-align: center;
+  display: flex; flex-direction: column;
+  justify-content: center; align-items: center; height: 100%;
+}
+.final-quote .quote-mega {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 32pt;
+  line-height: 2; color: #C9A66B;
+  letter-spacing: 4pt; max-width: 140mm;
+}
+.text-handwriting {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 12pt; line-height: 2;
+  color: #2B2B2B; white-space: pre-wrap;
+}
+
+/* ============ 节气网格 ============ */
+
+.solar-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 4mm; margin-top: 4mm;
+}
+.solar-card {
+  border: 0.3mm solid #C9A66B;
+  padding: 3mm 4mm; background: rgba(255,255,255,0.3);
+}
+.solar-card .solar-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #2B2B2B; letter-spacing: 2pt;
+}
+.solar-card .solar-date {
+  font-family: "Garamond", serif; font-size: 9pt;
+  color: #8B7355; letter-spacing: 1pt;
+}
+.solar-card .solar-poem {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 10pt; color: #C0392B; margin: 2mm 0 1mm 0;
+}
+.solar-card .solar-action {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9pt; line-height: 1.7; color: #2B2B2B;
+}
+
+/* ============ 附录 - 全年色卡日历 ============ */
+
+.calendar-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 4mm; margin: 6mm 0;
+}
+.calendar-month {
+  background: rgba(255,255,255,0.4);
+  border: 0.3mm solid #C9A66B;
+  padding: 4mm;
+  text-align: center;
+}
+.calendar-month .month-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-weight: bold; font-size: 13pt;
+  color: #2B2B2B; margin-bottom: 2mm;
+}
+.calendar-month .month-color-block {
+  height: 14mm; margin-bottom: 2mm;
+  border-radius: 1mm;
+}
+.calendar-month .month-color-name {
+  font-family: "Noto Serif CJK SC", serif;
+  font-size: 9pt; color: #6B6B6B;
+  letter-spacing: 1pt;
+}
