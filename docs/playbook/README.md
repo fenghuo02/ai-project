@@ -18,7 +18,6 @@
 >
 > | 文件 | 状态 | 计划 |
 > |---|---|---|
-> | `wechat-onboarding.md`（公众号欢迎语 / 菜单 / 关键词回复） | ⏳ 待写 | PR C2 |
 > | `covers/*.html` × 5 个模板（颜色映射 + 文字易学化） | ⏳ 待写 | PR C3 |
 > | `lead-magnet-19-colors.md`（19 色本命色卡 PDF 钩子，对接 swatch-builder A 档） | ⏳ 待写 | PR D |
 
@@ -50,11 +49,11 @@
 
 ---
 
-## 📱 公众号运营（待易学化）
+## 📱 公众号运营
 
-| 文件 | 内容 | 改写状态 |
+| 文件 | 内容 | 状态 |
 |------|------|---------|
-| [wechat-onboarding.md](./wechat-onboarding.md) | 公众号欢迎语 / 菜单栏 / 关键词回复（**当前是 AI 工具号版**）| ⏳ 待 PR C2 |
+| [wechat-onboarding.md](./wechat-onboarding.md) ⭐ | **公众号冷启动全套文案 v1.0**（欢迎语 / 7 个关键词自动回复 / 3×5 菜单 / 群发跟进 / 合规自查 9 项）| ✅ v1.0 |
 
 ---
 
