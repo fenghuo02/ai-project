@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>渝山东方美学 · 易学老师合作路演 V0.1</title>
+<title>渝山东方美学 · 易学老师合作路演 V0.2</title>
 
 <!-- Reveal.js 4.6 单文件 CDN（无需联网构建，离线场景把它们下载放本地即可） -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
@@ -740,6 +740,210 @@
 .reveal .slides section.present {
   top: 0 !important;
 }
+
+/* ====== P.05 老师介绍 ====== */
+.teacher-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  height: calc(100% - 36px);
+}
+.teacher-photo {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.teacher-photo .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FAF7F2;
+  font-family: 'STSong', 'SimSun', serif;
+  text-align: center;
+  padding: 20px;
+}
+.teacher-photo .placeholder .ph-tag {
+  font-size: 13px;
+  letter-spacing: 5px;
+  opacity: 0.7;
+  border: 1px solid currentColor;
+  padding: 5px 14px;
+  margin-bottom: 26px;
+}
+.teacher-photo .placeholder .ph-poem {
+  font-size: 22px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+}
+.teacher-photo .placeholder .ph-spec {
+  position: absolute;
+  bottom: 18px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  opacity: 0.55;
+  font-family: 'Courier New', monospace;
+}
+.teacher-text {
+  display: flex;
+  flex-direction: column;
+}
+.teacher-bio-title {
+  font-size: 13px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+.teacher-bio {
+  font-size: 16px;
+  line-height: 2;
+  color: #2C3E50;
+  opacity: 0.85;
+  letter-spacing: 1.5px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+  background: #F5E6C8;
+  padding: 18px 22px;
+  border-left: 4px solid #C9A66B;
+  margin-bottom: 22px;
+}
+.teacher-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.teacher-stats .stat-card {
+  text-align: center;
+  padding: 14px 8px;
+  background: rgba(201, 166, 107, 0.13);
+  border-bottom: 3px solid #C9A66B;
+}
+.teacher-stats .stat-num {
+  font-size: 36px;
+  font-weight: 900;
+  color: #C0392B;
+  line-height: 1;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.teacher-stats .stat-label {
+  font-size: 12px;
+  color: #2C3E50;
+  letter-spacing: 3px;
+  margin-top: 8px;
+  opacity: 0.75;
+}
+.teacher-pillars {
+  background: #FAF7F2;
+  border: 1px dashed rgba(44, 62, 80, 0.2);
+  padding: 16px 20px;
+}
+.teacher-pillars .pillar-title {
+  font-size: 13px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+.teacher-pillars .pillar-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 24px;
+}
+.teacher-pillars .pillar-item {
+  font-size: 14px;
+  color: #2C3E50;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+}
+.teacher-pillars .pillar-item .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #C9A66B;
+  border-radius: 50%;
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+/* ====== P.14 退出条款 ====== */
+.exit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-top: 4px;
+}
+.exit-col {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.exit-card {
+  background: #F5E6C8;
+  border-left: 4px solid #C9A66B;
+  padding: 16px 22px;
+}
+.exit-card.hot {
+  background: rgba(192, 57, 43, 0.08);
+  border-left-color: #C0392B;
+}
+.exit-card.gold {
+  background: rgba(212, 175, 55, 0.13);
+  border-left-color: #D4AF37;
+}
+.exit-card-title {
+  font-size: 14px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 8px;
+}
+.exit-card.gold .exit-card-title {
+  color: #2C3E50;
+}
+.exit-card-body {
+  font-size: 14px;
+  line-height: 1.85;
+  color: #2C3E50;
+  letter-spacing: 1px;
+}
+.exit-card-body strong {
+  color: #C0392B;
+  font-weight: 700;
+}
+.exit-list {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+}
+.exit-list li {
+  margin-bottom: 4px;
+}
+.exit-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.exit-table td {
+  padding: 6px 8px;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+  vertical-align: top;
+  color: #2C3E50;
+}
+.exit-table td:first-child {
+  width: 56%;
+  letter-spacing: 0.5px;
+}
+.exit-table td.own-us  { color: #2C3E50; font-weight: 700; }
+.exit-table td.own-tea { color: #2D5F3F; font-weight: 700; }
+.exit-table td.own-cli { color: #C0392B; font-weight: 700; }
+.exit-table td.own-share { color: #C9A66B; font-weight: 700; }
+
 </style>
 </head>
 <body>
@@ -763,7 +967,7 @@
 
     <div class="subtitle">用色彩美学帮人认出自己<br>—— 给老师的 10 分钟</div>
 
-    <div class="footer">YUSHAN · DECK V0.1 · 2026</div>
+    <div class="footer">YUSHAN · DECK V0.2 · 2026</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -785,7 +989,7 @@
     </div>
     <div class="stamp">三件套 · 一段仪式 · 一次留存</div>
 
-    <div class="page-num">P.02 / 14</div>
+    <div class="page-num">P.02 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -839,7 +1043,7 @@
       </tbody>
     </table>
 
-    <div class="page-num">P.03 / 14</div>
+    <div class="page-num">P.03 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -886,7 +1090,68 @@
       </div>
     </div>
 
-    <div class="page-num">P.04 / 14</div>
+    <div class="page-num">P.04 / 16</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.05 易学老师介绍（信息留空，路演现场口述/合作签约后填）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.05 · 我们的合作老师</div>
+    <h2>易学老师 · ___</h2>
+    <div class="subhead">深耕东方传统色彩理论 · ___ 年</div>
+
+    <div class="teacher-grid">
+      <div class="teacher-photo ph-wood">
+        <div class="placeholder">
+          <div class="ph-tag">老师肖像位</div>
+          <div class="ph-poem">深竹之下<br>清茶一席</div>
+          <div class="ph-spec">PHOTO SLOT &middot; 360 &times; 480</div>
+        </div>
+      </div>
+
+      <div class="teacher-text">
+        <div class="teacher-bio-title">关于老师</div>
+        <div class="teacher-bio">
+          ____________________________________________<br>
+          ____________________________________________<br>
+          ____________________________________________
+        </div>
+
+        <div class="teacher-stats">
+          <div class="stat-card">
+            <div class="stat-num">__</div>
+            <div class="stat-label">从业年限</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">__+</div>
+            <div class="stat-label">服务客户</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">__</div>
+            <div class="stat-label">擅长领域</div>
+          </div>
+        </div>
+
+        <div class="teacher-pillars">
+          <div class="pillar-title">在本合作中</div>
+          <div class="pillar-list">
+            <div class="pillar-item"><span class="dot"></span>专业背书 &middot; 八字调候推导</div>
+            <div class="pillar-item"><span class="dot"></span>客户信任 &middot; 老客户激活引荐</div>
+            <div class="pillar-item"><span class="dot"></span>内容深度 &middot; 公众号长文 / 视频出镜</div>
+            <div class="pillar-item"><span class="dot"></span>B 端背书 &middot; 银行 / 医美 VIP 现场</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.05 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -899,7 +1164,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.05 · 五行其一</div>
+    <div class="no-label">No.06 · 五行其一</div>
     <h2>火 · 朱砂</h2>
     <div class="subhead">冬至清晨，第一缕阳光投在朱漆门上的颜色</div>
 
@@ -945,7 +1210,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.05 / 14</div>
+    <div class="page-num">P.06 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -958,7 +1223,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.06 · 五行其二</div>
+    <div class="no-label">No.07 · 五行其二</div>
     <h2>木 · 苍翠</h2>
     <div class="subhead">甲木栋梁，深山松柏经霜不凋的颜色</div>
 
@@ -1004,7 +1269,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.06 / 14</div>
+    <div class="page-num">P.07 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1017,7 +1282,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.07 · 五行其三 ⭐ 主理人本命</div>
+    <div class="no-label">No.08 · 五行其三 ⭐ 主理人本命</div>
     <h2>土 · 暖驼</h2>
     <div class="subhead">秋天傍晚七点，麦田被染上的颜色</div>
 
@@ -1063,7 +1328,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.07 / 14</div>
+    <div class="page-num">P.08 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1076,7 +1341,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.08 · 五行其四</div>
+    <div class="no-label">No.09 · 五行其四</div>
     <h2>水 · 墨青</h2>
     <div class="subhead">壬水申月，亥时月光照在静潭上的墨蓝</div>
 
@@ -1122,7 +1387,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.08 / 14</div>
+    <div class="page-num">P.09 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1135,7 +1400,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.09 · 五行其五</div>
+    <div class="no-label">No.10 · 五行其五</div>
     <h2>金 · 月白</h2>
     <div class="subhead">不是冷白，是有呼吸的白</div>
 
@@ -1181,7 +1446,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.09 / 14</div>
+    <div class="page-num">P.10 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1194,7 +1459,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.10</div>
+    <div class="no-label">No.11</div>
     <h2>新年节庆作品 · 朱砂主调</h2>
     <div class="subhead">M1 - M2 主推选题：除夕 / 春节 / 元宵 / 福字</div>
 
@@ -1233,7 +1498,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.10 / 14</div>
+    <div class="page-num">P.11 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1246,7 +1511,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.11</div>
+    <div class="no-label">No.12</div>
     <h2>节气作品 · 春分 / 立夏 / 秋分 / 冬至</h2>
     <div class="subhead">24 节气壁纸 · 全集每半月一更 · 客户每天打开手机看见我们</div>
 
@@ -1285,7 +1550,7 @@
       </div>
     </div>
 
-    <div class="page-num">P.11 / 14</div>
+    <div class="page-num">P.12 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1298,7 +1563,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.12 · ⭐ 核心</div>
+    <div class="no-label">No.13 · ⭐ 核心</div>
     <h2>合作分成模型</h2>
     <div class="subhead">老师出渠道 + 背书 · 主理人出全部生产力 + 100% 启动资金</div>
 
@@ -1369,7 +1634,87 @@
       <strong>核心约定</strong> 老师专注八字推导 + 出镜 + 老客户授权，主理人承担运营 / 拍摄 / 售后 / 投放
     </div>
 
-    <div class="page-num">P.12 / 14</div>
+    <div class="page-num">P.13 / 16</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.14 退出条款 + 知识产权（取自业务计划 §8.2 / 8.3 / 8.4）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.14 &middot; 合作的边界</div>
+    <h2>退出条款 &middot; 知识产权 &middot; 竞业</h2>
+    <div class="subhead">合作要长久 &middot; 边界要先讲清</div>
+
+    <div class="exit-grid">
+
+      <div class="exit-col">
+
+        <div class="exit-card">
+          <div class="exit-card-title">合作期限</div>
+          <div class="exit-card-body">
+            首期 <strong>6 个月</strong> &middot; 期满双方协商续约 12 个月
+          </div>
+        </div>
+
+        <div class="exit-card">
+          <div class="exit-card-title">退出条款</div>
+          <div class="exit-card-body">
+            任一方提前 <strong>30 天</strong>书面通知即可退出。<br>
+            退出时：
+            <ul class="exit-list">
+              <li>已成交订单尾款分成正常结算</li>
+              <li>未交付订单由主理人继续完成</li>
+              <li>客户名单按归属原则切分（见右列）</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="exit-card hot">
+          <div class="exit-card-title">竞业冷静期</div>
+          <div class="exit-card-body">
+            合作期内 &middot; 老师不与其他视觉 / 摄影项目合作<br>
+            合作期内 &middot; 主理人不与重庆其他易学老师合作<br>
+            退出后 &middot; 双方 <strong>6 个月</strong>内不带走对方核心客户<br>
+            B 端 &middot; 退出后 <strong>1 年</strong>内不单独服务曾合作过的银行 / 医美机构
+          </div>
+        </div>
+
+      </div>
+
+      <div class="exit-col">
+
+        <div class="exit-card gold">
+          <div class="exit-card-title">知识产权归属</div>
+          <table class="exit-table">
+            <tbody>
+              <tr><td>品牌 / 账号 / IP / PDF 模板 / 生成器代码</td><td class="own-us">主理人 100%</td></tr>
+              <tr><td>客户八字推导文档</td><td class="own-tea">老师</td></tr>
+              <tr><td>最终成品图 / PDF 命书</td><td class="own-cli">客户（双方均有展示权）</td></tr>
+              <tr><td>客户名单</td><td class="own-share">双方共享 &middot; 不外泄</td></tr>
+              <tr><td>B 端合作合同 / 案例</td><td class="own-us">主理人（老师享专家署名权）</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="exit-card">
+          <div class="exit-card-title">客户名单归属（退出时）</div>
+          <div class="exit-card-body">
+            自媒体新客 &rarr; 主理人 &middot; 老师老客 &rarr; 老师<br>
+            B 端客户 &rarr; BD 方 &middot; 争议客户 &rarr; 转介发起方
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="page-num">P.14 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1382,7 +1727,7 @@
     <div class="grain"></div>
     <div class="aigc-label">AI 辅助创作 · AIGC</div>
 
-    <div class="no-label">No.13</div>
+    <div class="no-label">No.15</div>
     <h2>6 个月时间线 · 老师老客是第一桶金</h2>
     <div class="subhead">M1 冷启动 · M2-3 流量培育 · M4-6 拳头产品 + B 端规模化</div>
 
@@ -1426,7 +1771,7 @@
 
     </div>
 
-    <div class="page-num">P.13 / 14</div>
+    <div class="page-num">P.15 / 16</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1461,11 +1806,11 @@
     </div>
 
     <div class="end-meta">
-      DECK V0.1 · 2026 · YUSHAN<br>
+      DECK V0.2 · 2026 · YUSHAN<br>
       路演 · 易学老师合作 · 10 分钟
     </div>
 
-    <div class="page-num">P.14 / 14</div>
+    <div class="page-num">P.16 / 16</div>
   </div>
 </section>
 
