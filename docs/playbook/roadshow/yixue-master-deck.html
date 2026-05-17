@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>渝山东方美学 · 易学老师合作路演 V0.2</title>
+<title>渝山东方美学 · 易学老师合作路演 V0.3</title>
 
 <!-- Reveal.js 4.6 单文件 CDN（无需联网构建，离线场景把它们下载放本地即可） -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
@@ -944,6 +944,62 @@
 .exit-table td.own-cli { color: #C0392B; font-weight: 700; }
 .exit-table td.own-share { color: #C9A66B; font-weight: 700; }
 
+
+/* ====== V0.3 真实图片接入 ====== */
+
+/* 五行肖像页：图片填满 .wuxing-photo 容器 */
+.wuxing-photo.has-img {
+  background: none;
+  border: none;
+}
+.wuxing-photo .real-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* P.11 / P.12 宫格：图片做底，文字叠加 */
+.grid-cell.has-img {
+  background: #2C3E50;  /* 兜底色 */
+  color: #FAF7F2;
+  position: relative;
+}
+.grid-cell.has-img .cell-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+/* 图片之上叠一层渐变遮罩，保证文字（尤其底部 meta）有对比度 */
+.grid-cell.has-img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.35) 0%,
+    rgba(0,0,0,0.15) 35%,
+    rgba(0,0,0,0.15) 60%,
+    rgba(0,0,0,0.65) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+.grid-cell.has-img > * {
+  position: relative;
+  z-index: 2;
+}
+.grid-cell.has-img .cell-no,
+.grid-cell.has-img .cell-poem,
+.grid-cell.has-img .cell-meta {
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+}
+
 </style>
 </head>
 <body>
@@ -967,7 +1023,7 @@
 
     <div class="subtitle">用色彩美学帮人认出自己<br>—— 给老师的 10 分钟</div>
 
-    <div class="footer">YUSHAN · DECK V0.2 · 2026</div>
+    <div class="footer">YUSHAN · DECK V0.3 · 2026</div>
     <div class="seal"><div class="seal-text">渝山</div></div>
   </div>
 </section>
@@ -1169,12 +1225,8 @@
     <div class="subhead">冬至清晨，第一缕阳光投在朱漆门上的颜色</div>
 
     <div class="wuxing-grid">
-      <div class="wuxing-photo ph-fire">
-        <div class="placeholder">
-          <div class="ph-tag">火 · 朱砂主调</div>
-          <div class="ph-poem">朱漆门上<br>第一缕阳光</div>
-          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
-        </div>
+      <div class="wuxing-photo has-img">
+        <img src="assets/p06-fire-zhusha.png" alt="P.06 火 · 朱砂" class="real-photo">
       </div>
       <div class="wuxing-text">
         <div class="meta-list">
@@ -1228,12 +1280,8 @@
     <div class="subhead">甲木栋梁，深山松柏经霜不凋的颜色</div>
 
     <div class="wuxing-grid">
-      <div class="wuxing-photo ph-wood">
-        <div class="placeholder">
-          <div class="ph-tag">木 · 苍翠主调</div>
-          <div class="ph-poem">深山松柏<br>经霜不凋</div>
-          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
-        </div>
+      <div class="wuxing-photo has-img">
+        <img src="assets/p07-wood-cangcui.png" alt="P.07 木 · 苍翠" class="real-photo">
       </div>
       <div class="wuxing-text">
         <div class="meta-list">
@@ -1287,12 +1335,8 @@
     <div class="subhead">秋天傍晚七点，麦田被染上的颜色</div>
 
     <div class="wuxing-grid">
-      <div class="wuxing-photo ph-earth">
-        <div class="placeholder">
-          <div class="ph-tag">土 · 暖驼主调 ⭐</div>
-          <div class="ph-poem">秋日傍晚<br>麦田金黄</div>
-          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
-        </div>
+      <div class="wuxing-photo has-img">
+        <img src="assets/p08-earth-nuantuo.png" alt="P.08 土 · 暖驼" class="real-photo">
       </div>
       <div class="wuxing-text">
         <div class="meta-list">
@@ -1346,12 +1390,8 @@
     <div class="subhead">壬水申月，亥时月光照在静潭上的墨蓝</div>
 
     <div class="wuxing-grid">
-      <div class="wuxing-photo ph-water">
-        <div class="placeholder">
-          <div class="ph-tag">水 · 墨青主调</div>
-          <div class="ph-poem">月光<br>静潭<br>墨蓝</div>
-          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
-        </div>
+      <div class="wuxing-photo has-img">
+        <img src="assets/p09-water-moqing.png" alt="P.09 水 · 墨青" class="real-photo">
       </div>
       <div class="wuxing-text">
         <div class="meta-list">
@@ -1405,12 +1445,8 @@
     <div class="subhead">不是冷白，是有呼吸的白</div>
 
     <div class="wuxing-grid">
-      <div class="wuxing-photo ph-metal">
-        <div class="placeholder">
-          <div class="ph-tag">金 · 月白主调</div>
-          <div class="ph-poem">不是冷白<br>是有呼吸的白</div>
-          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
-        </div>
+      <div class="wuxing-photo has-img">
+        <img src="assets/p10-metal-mibai.png" alt="P.10 金 · 月白" class="real-photo">
       </div>
       <div class="wuxing-text">
         <div class="meta-list">
@@ -1464,7 +1500,8 @@
     <div class="subhead">M1 - M2 主推选题：除夕 / 春节 / 元宵 / 福字</div>
 
     <div class="grid-2x2">
-      <div class="grid-cell cell-chunjie">
+      <div class="grid-cell cell-chunjie has-img">
+        <img src="assets/p11a-chunjie.png" alt="P.11-A 春节守岁" class="cell-bg">
         <div class="cell-no">No.10-A</div>
         <div class="cell-poem">朱漆门头<br>福字倒贴<br>除夕守岁</div>
         <div class="cell-meta">
@@ -1472,7 +1509,8 @@
           <span class="h">尺寸</span>9 宫格 1242 × 1660 px
         </div>
       </div>
-      <div class="grid-cell cell-yuanxiao">
+      <div class="grid-cell cell-yuanxiao has-img">
+        <img src="assets/p11b-yuanxiao.png" alt="P.11-B 元宵灯火" class="cell-bg">
         <div class="cell-no">No.10-B</div>
         <div class="cell-poem">元宵灯火<br>糖油裹圆<br>橘色街巷</div>
         <div class="cell-meta">
@@ -1480,7 +1518,8 @@
           <span class="h">尺寸</span>1242 × 1660 px
         </div>
       </div>
-      <div class="grid-cell cell-zhushao">
+      <div class="grid-cell cell-zhushao has-img">
+        <img src="assets/p11c-zhusha-zhuyin.png" alt="P.11-C 朱砂朱印" class="cell-bg">
         <div class="cell-no">No.10-C</div>
         <div class="cell-poem">朱砂朱印<br>红绳手腕<br>新岁第一祈</div>
         <div class="cell-meta">
@@ -1488,7 +1527,8 @@
           <span class="h">尺寸</span>1242 × 1660 px
         </div>
       </div>
-      <div class="grid-cell cell-jinshen">
+      <div class="grid-cell cell-jinshen has-img">
+        <img src="assets/p11d-jinshen-fu.png" alt="P.11-D 金身福字" class="cell-bg">
         <div class="cell-no">No.10-D</div>
         <div class="cell-poem">金身福字<br>泥金笺纸<br>烛影摇红</div>
         <div class="cell-meta">
@@ -1516,7 +1556,8 @@
     <div class="subhead">24 节气壁纸 · 全集每半月一更 · 客户每天打开手机看见我们</div>
 
     <div class="grid-2x2">
-      <div class="grid-cell cell-chunfen">
+      <div class="grid-cell cell-chunfen has-img">
+        <img src="assets/p12a-chunfen.png" alt="P.12-A 春分" class="cell-bg">
         <div class="cell-no">春分 · CHUN FEN</div>
         <div class="cell-poem">柳条初萌<br>水光草色<br>万物正醒</div>
         <div class="cell-meta">
@@ -1524,7 +1565,8 @@
           <span class="h">五行</span>木 · 浅绿 · 立春后 60 天
         </div>
       </div>
-      <div class="grid-cell cell-lixia">
+      <div class="grid-cell cell-lixia has-img">
+        <img src="assets/p12b-lixia.png" alt="P.12-B 立夏" class="cell-bg">
         <div class="cell-no">立夏 · LI XIA</div>
         <div class="cell-poem">立夏初阳<br>柿子刚熟<br>橙红渐起</div>
         <div class="cell-meta">
@@ -1532,7 +1574,8 @@
           <span class="h">五行</span>火 · 橘 · 5 月色卡
         </div>
       </div>
-      <div class="grid-cell cell-qiufen">
+      <div class="grid-cell cell-qiufen has-img">
+        <img src="assets/p12c-qiufen.png" alt="P.12-C 秋分" class="cell-bg">
         <div class="cell-no">秋分 · QIU FEN</div>
         <div class="cell-poem">桂金秋分<br>丹桂枝头<br>清香入夜</div>
         <div class="cell-meta">
@@ -1540,7 +1583,8 @@
           <span class="h">五行</span>金 / 土 · 9 月色卡
         </div>
       </div>
-      <div class="grid-cell cell-dongzhi">
+      <div class="grid-cell cell-dongzhi has-img">
+        <img src="assets/p12d-dongzhi.png" alt="P.12-D 冬至" class="cell-bg">
         <div class="cell-no">冬至 · DONG ZHI</div>
         <div class="cell-poem">冬至阳生<br>朱漆门上<br>第一缕光</div>
         <div class="cell-meta">
@@ -1806,7 +1850,7 @@
     </div>
 
     <div class="end-meta">
-      DECK V0.2 · 2026 · YUSHAN<br>
+      DECK V0.3 · 2026 · YUSHAN<br>
       路演 · 易学老师合作 · 10 分钟
     </div>
 
