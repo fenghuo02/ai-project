@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>渝山东方美学 · 易学老师合作路演 V0.1</title>
+
+<!-- Reveal.js 4.6 单文件 CDN（无需联网构建，离线场景把它们下载放本地即可） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/theme/white.css" id="theme">
+
+<style>
+/* ================================================================
+   渝山东方美学 · 路演视觉系统 V0.1
+   色谱母本：swatch-builder/palette/colors.yaml
+     米白    mibai          #FAF7F2  ⭐ 主背景
+     米麦    mimai          #F5E6C8  poem 卡片底
+     墨青    moqing         #2C3E50  ⭐ 主标题 / 大字
+     暖驼    nuantuo        #C9A66B  ⭐ 强调（主理人本命色）
+     朱砂    zhusha         #C0392B  ⭐ 钩子 / 印章 / No.序号
+     烛光金  zhuguangjin    #D4AF37  高定点缀
+     苍翠    cangcui        #2D5F3F  木 · 老师主出镜色
+     嫩绿    nenlu          #8FB573  木 · 浅
+     朱橘    zhuju          #E67E22  火 · 橘
+     月白    mibai-2        #FAF7F2  金
+     月光银  yueguangyin    #E8E6E1  金
+   字体：思源宋体 / 楷体 / 宋体（系统回退链兼顾 mac/win）
+   尺寸：1280x720（16:9 宽屏，演示模式自适应）
+   ================================================================ */
+
+/* ====== 全局基础 ====== */
+.reveal {
+  font-family: 'STSong', 'PingFang SC', 'Microsoft YaHei', 'SimSun', serif;
+  font-weight: 400;
+  color: #2C3E50;
+}
+
+.reveal .slides {
+  text-align: left;
+}
+
+/* 背景 */
+.reveal .slide-background-content {
+  background: #FAF7F2;
+}
+
+/* 全局禁止 reveal 默认大写转换 + 阴影 */
+.reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+  text-transform: none !important;
+  text-shadow: none !important;
+  font-family: 'STSong', 'SimSun', 'PingFang SC', serif;
+  color: #2C3E50;
+  font-weight: 700;
+}
+
+/* ====== 通用：宣纸纹理 + 印章 ====== */
+.grain {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(circle at 18% 28%, rgba(201, 166, 107, 0.05) 0%, transparent 42%),
+    radial-gradient(circle at 82% 72%, rgba(44, 62, 80, 0.05) 0%, transparent 42%),
+    radial-gradient(circle at 50% 50%, rgba(192, 57, 43, 0.02) 0%, transparent 60%);
+}
+.seal {
+  position: absolute;
+  bottom: 28px;
+  right: 36px;
+  width: 64px;
+  height: 64px;
+  background: #C0392B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-3deg);
+  box-shadow: 0 4px 8px rgba(192, 57, 43, 0.28);
+  z-index: 10;
+}
+.seal-text {
+  color: #FAF7F2;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  text-align: center;
+  font-family: 'STSong', 'SimSun', serif;
+}
+
+/* 页码 */
+.page-num {
+  position: absolute;
+  bottom: 32px;
+  left: 36px;
+  font-size: 14px;
+  color: #2C3E50;
+  opacity: 0.45;
+  letter-spacing: 4px;
+  font-family: 'Courier New', monospace;
+  z-index: 10;
+}
+
+/* 版权水印 */
+.aigc-label {
+  position: absolute;
+  top: 14px;
+  right: 36px;
+  font-size: 11px;
+  color: #2C3E50;
+  opacity: 0.35;
+  letter-spacing: 2px;
+  font-family: 'Courier New', monospace;
+  z-index: 10;
+}
+
+/* ====== P.01 封面 ====== */
+.slide-cover {
+  height: 100%;
+  position: relative;
+  background: #FAF7F2;
+}
+.slide-cover .badge {
+  position: absolute;
+  top: 60px;
+  right: 60px;
+  background: #C0392B;
+  color: #FAF7F2;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.slide-cover .small-title {
+  position: absolute;
+  top: 130px;
+  left: 80px;
+  font-size: 26px;
+  color: #2C3E50;
+  font-weight: 600;
+  letter-spacing: 6px;
+}
+.slide-cover .main-block {
+  position: absolute;
+  top: 200px;
+  left: 60px;
+  right: 60px;
+  background: #C9A66B;
+  padding: 60px 40px;
+  box-shadow: 6px 6px 0 #2C3E50, 0 12px 30px rgba(201, 166, 107, 0.25);
+}
+.slide-cover .main-1 {
+  font-size: 110px;
+  font-weight: 900;
+  color: #2C3E50;
+  line-height: 1;
+  text-align: center;
+  letter-spacing: -2px;
+}
+.slide-cover .main-2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #2C3E50;
+  text-align: center;
+  margin-top: 18px;
+  letter-spacing: 8px;
+}
+.slide-cover .subtitle {
+  position: absolute;
+  bottom: 130px;
+  left: 80px;
+  right: 80px;
+  text-align: center;
+  font-size: 22px;
+  color: #2C3E50;
+  letter-spacing: 4px;
+  opacity: 0.85;
+}
+.slide-cover .footer {
+  position: absolute;
+  bottom: 56px;
+  left: 80px;
+  font-size: 14px;
+  color: #2C3E50;
+  letter-spacing: 3px;
+  opacity: 0.6;
+  font-family: 'Courier New', monospace;
+}
+
+/* ====== 通用页：标题区 ====== */
+.slide-page {
+  height: 100%;
+  position: relative;
+  background: #FAF7F2;
+  padding: 70px 80px 70px;
+}
+.slide-page .no-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #C0392B;
+  letter-spacing: 6px;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.slide-page .no-label::before {
+  content: "—— ";
+  color: #C0392B;
+}
+.slide-page h2 {
+  font-size: 52px;
+  font-weight: 900;
+  color: #2C3E50;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  letter-spacing: 2px;
+  line-height: 1.15;
+}
+.slide-page .subhead {
+  font-size: 22px;
+  color: #2C3E50;
+  opacity: 0.7;
+  margin-bottom: 36px;
+  letter-spacing: 3px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+  font-style: italic;
+}
+
+/* ====== P.02 一句话 ====== */
+.slide-pitch {
+  height: 100%;
+  position: relative;
+  background: #FAF7F2;
+  padding: 90px 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-pitch .lead {
+  font-size: 38px;
+  color: #2C3E50;
+  line-height: 1.7;
+  letter-spacing: 4px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+  text-align: center;
+}
+.slide-pitch .lead .hl {
+  background: linear-gradient(180deg, transparent 60%, #C9A66B 60%, #C9A66B 92%, transparent 92%);
+  padding: 0 4px;
+  color: #2C3E50;
+  font-weight: 700;
+}
+.slide-pitch .lead .zhu {
+  color: #C0392B;
+  font-weight: 700;
+}
+.slide-pitch .stamp {
+  margin-top: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #2C3E50;
+  opacity: 0.6;
+  letter-spacing: 6px;
+}
+
+/* ====== P.03 vs 表 ====== */
+.vs-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 16px;
+  font-size: 19px;
+}
+.vs-table thead th {
+  background: #2C3E50;
+  color: #FAF7F2;
+  padding: 18px 16px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: left;
+}
+.vs-table thead th:first-child { width: 28%; background: #1f2d3d; }
+.vs-table tbody td {
+  padding: 16px 16px;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.08);
+  vertical-align: top;
+  line-height: 1.55;
+}
+.vs-table tbody tr td:first-child {
+  background: #F5E6C8;
+  font-weight: 700;
+  color: #2C3E50;
+}
+.vs-table tbody tr td.us {
+  background: rgba(201, 166, 107, 0.13);
+  color: #2C3E50;
+  font-weight: 600;
+}
+.vs-table tbody tr td.them {
+  background: transparent;
+  color: #2C3E50;
+  opacity: 0.8;
+}
+
+/* ====== P.04 三件套 ====== */
+.tri-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 28px;
+  margin-top: 12px;
+}
+.tri-card {
+  background: #F5E6C8;
+  border-left: 6px solid #C0392B;
+  padding: 30px 26px;
+  position: relative;
+}
+.tri-card .order {
+  font-size: 14px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+}
+.tri-card h3 {
+  font-size: 30px;
+  font-weight: 900;
+  color: #2C3E50;
+  margin: 0 0 12px 0;
+  letter-spacing: 2px;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.tri-card .desc {
+  font-size: 15px;
+  color: #2C3E50;
+  line-height: 1.65;
+  opacity: 0.85;
+  margin-bottom: 16px;
+}
+.tri-card .price {
+  font-size: 13px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-top: 1px dashed rgba(192, 57, 43, 0.3);
+  padding-top: 10px;
+}
+.tri-card.gold {
+  background: #C9A66B;
+  border-left-color: #2C3E50;
+}
+.tri-card.gold .order { color: #2C3E50; }
+
+/* ====== 五行特色页（通用） ====== */
+.wuxing-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 40px;
+  height: calc(100% - 36px);
+}
+.wuxing-photo {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+.wuxing-photo .placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FAF7F2;
+  font-family: 'STSong', 'SimSun', serif;
+  text-align: center;
+  padding: 20px;
+}
+.wuxing-photo .placeholder .ph-tag {
+  font-size: 13px;
+  letter-spacing: 5px;
+  opacity: 0.7;
+  border: 1px solid currentColor;
+  padding: 5px 14px;
+  margin-bottom: 26px;
+}
+.wuxing-photo .placeholder .ph-poem {
+  font-size: 22px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+}
+.wuxing-photo .placeholder .ph-spec {
+  position: absolute;
+  bottom: 18px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  opacity: 0.55;
+  font-family: 'Courier New', monospace;
+}
+
+.wuxing-text {
+  display: flex;
+  flex-direction: column;
+}
+.wuxing-text .meta-list {
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.85;
+}
+.wuxing-text .meta-list .row {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: 12px;
+}
+.wuxing-text .meta-list .label {
+  color: #C0392B;
+  font-weight: 700;
+  width: 78px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
+}
+.wuxing-text .meta-list .val {
+  color: #2C3E50;
+  flex: 1;
+}
+.wuxing-text .swatches {
+  display: flex;
+  gap: 14px;
+  margin-top: 22px;
+}
+.wuxing-text .swatch-card {
+  width: 90px;
+}
+.wuxing-text .swatch-card .chip {
+  height: 90px;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  margin-bottom: 8px;
+  border: 1px solid rgba(44, 62, 80, 0.08);
+}
+.wuxing-text .swatch-card .name {
+  font-size: 14px;
+  color: #2C3E50;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.wuxing-text .swatch-card .hex {
+  font-size: 11px;
+  color: #2C3E50;
+  opacity: 0.6;
+  font-family: 'Courier New', monospace;
+}
+.wuxing-text .scene-card {
+  margin-top: 26px;
+  background: #F5E6C8;
+  padding: 18px 22px;
+  border-left: 4px solid #C0392B;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #2C3E50;
+}
+.wuxing-text .scene-card .title {
+  font-weight: 700;
+  color: #C0392B;
+  letter-spacing: 2px;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+/* 五行各自的占位主色 */
+.ph-fire   { background: linear-gradient(135deg, #C0392B 0%, #E67E22 100%); color: #FAF7F2; }
+.ph-wood   { background: linear-gradient(135deg, #2D5F3F 0%, #8FB573 100%); color: #FAF7F2; }
+.ph-earth  { background: linear-gradient(135deg, #C9A66B 0%, #F5E6C8 100%); color: #2C3E50; }
+.ph-water  { background: linear-gradient(135deg, #2C3E50 0%, #5D7B91 100%); color: #FAF7F2; }
+.ph-metal  { background: linear-gradient(135deg, #FAF7F2 0%, #E8E6E1 100%); color: #2C3E50; border: 1px solid rgba(44,62,80,0.15); }
+.ph-spring { background: linear-gradient(135deg, #C0392B 0%, #C9A66B 100%); color: #FAF7F2; }
+.ph-jieqi  { background: linear-gradient(135deg, #C9A66B 0%, #2C3E50 100%); color: #FAF7F2; }
+
+/* ====== P.10 / P.11：四宫格 ====== */
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 24px;
+  height: calc(100% - 36px);
+}
+.grid-cell {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.grid-cell .cell-no {
+  font-size: 12px;
+  letter-spacing: 4px;
+  opacity: 0.7;
+  border: 1px solid currentColor;
+  padding: 4px 10px;
+  align-self: flex-start;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.grid-cell .cell-poem {
+  font-size: 19px;
+  line-height: 1.7;
+  letter-spacing: 3px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+}
+.grid-cell .cell-meta {
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.85;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.grid-cell .cell-meta .h {
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+/* 节庆 / 节气专用底色 */
+.cell-chunjie  { background: linear-gradient(135deg, #C0392B 0%, #6B4423 100%); color: #FAF7F2; }
+.cell-yuanxiao { background: linear-gradient(135deg, #E67E22 0%, #FAF7F2 100%); color: #2C3E50; }
+.cell-zhushao  { background: #C0392B; color: #FAF7F2; }
+.cell-jinshen  { background: linear-gradient(135deg, #D4AF37 0%, #C9A66B 100%); color: #2C3E50; }
+.cell-chunfen  { background: linear-gradient(135deg, #8FB573 0%, #6FA88A 100%); color: #FAF7F2; }
+.cell-lixia    { background: linear-gradient(135deg, #E67E22 0%, #C9A66B 100%); color: #2C3E50; }
+.cell-qiufen   { background: linear-gradient(135deg, #D4AF37 0%, #A0522D 100%); color: #FAF7F2; }
+.cell-dongzhi  { background: linear-gradient(135deg, #2C3E50 0%, #C0392B 100%); color: #FAF7F2; }
+
+/* ====== P.12 合作分成 ====== */
+.deal-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 18px;
+  margin-top: 8px;
+}
+.deal-table thead th {
+  background: #C9A66B;
+  color: #2C3E50;
+  padding: 14px 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  border-bottom: 3px solid #2C3E50;
+  text-align: left;
+}
+.deal-table tbody td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+  font-size: 18px;
+}
+.deal-table tbody td.amt {
+  font-family: 'STSong', 'SimSun', serif;
+  font-weight: 700;
+  color: #2C3E50;
+}
+.deal-table tbody td.tea {
+  color: #C0392B;
+  font-weight: 700;
+}
+.deal-table tbody td.us-share {
+  color: #2C3E50;
+  opacity: 0.7;
+}
+.deal-table tbody tr.hot td {
+  background: rgba(201, 166, 107, 0.18);
+}
+
+.deal-section-title {
+  display: inline-block;
+  background: #2C3E50;
+  color: #FAF7F2;
+  padding: 6px 16px;
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin: 24px 0 10px 0;
+  font-weight: 700;
+}
+.deal-foot {
+  margin-top: 24px;
+  font-size: 15px;
+  color: #2C3E50;
+  line-height: 1.8;
+  background: #F5E6C8;
+  padding: 16px 20px;
+  border-left: 4px solid #C0392B;
+}
+.deal-foot strong {
+  color: #C0392B;
+  letter-spacing: 1px;
+}
+
+/* ====== P.13 时间线 ====== */
+.timeline {
+  margin-top: 16px;
+  position: relative;
+  padding-left: 36px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 12px;
+  bottom: 12px;
+  width: 2px;
+  background: #C9A66B;
+}
+.timeline .tl-item {
+  position: relative;
+  margin-bottom: 26px;
+  padding-bottom: 6px;
+}
+.timeline .tl-item::before {
+  content: "";
+  position: absolute;
+  left: -28px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #C0392B;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #FAF7F2, 0 0 0 5px #C0392B;
+}
+.timeline .tl-month {
+  font-size: 22px;
+  font-weight: 900;
+  color: #2C3E50;
+  letter-spacing: 4px;
+  margin-bottom: 4px;
+}
+.timeline .tl-target {
+  font-size: 14px;
+  color: #C0392B;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 6px;
+}
+.timeline .tl-detail {
+  font-size: 15px;
+  color: #2C3E50;
+  line-height: 1.65;
+  opacity: 0.85;
+}
+.timeline .tl-detail .num {
+  color: #C0392B;
+  font-weight: 700;
+}
+
+/* ====== P.14 落款 ====== */
+.slide-end {
+  height: 100%;
+  position: relative;
+  background: #FAF7F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.slide-end .end-line {
+  font-size: 30px;
+  color: #2C3E50;
+  letter-spacing: 8px;
+  font-family: 'STKaiti', 'KaiTi', 'STSong', serif;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.slide-end .end-line strong { color: #C0392B; }
+.slide-end .end-meta {
+  font-size: 16px;
+  color: #2C3E50;
+  opacity: 0.65;
+  letter-spacing: 4px;
+  margin-top: 40px;
+  text-align: center;
+}
+.slide-end .big-seal {
+  width: 160px;
+  height: 160px;
+  background: #C0392B;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-3deg);
+  box-shadow: 0 8px 24px rgba(192, 57, 43, 0.32);
+  margin: 30px auto;
+}
+.slide-end .big-seal-text {
+  color: #FAF7F2;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 4px;
+  font-family: 'STSong', 'SimSun', serif;
+}
+.slide-end .qr-slot {
+  margin-top: 20px;
+  display: flex;
+  gap: 36px;
+  justify-content: center;
+}
+.slide-end .qr-box {
+  width: 110px;
+  height: 110px;
+  background: #F5E6C8;
+  border: 2px dashed rgba(44, 62, 80, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #2C3E50;
+  letter-spacing: 2px;
+  opacity: 0.55;
+}
+.slide-end .qr-cap {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+  letter-spacing: 3px;
+  opacity: 0.7;
+}
+
+/* ====== 公共：上半 / 下半结构 ====== */
+.row-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 8px;
+}
+
+/* 控制 reveal 居中默认行为 */
+.reveal .slides > section {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+/* 让 section 内容铺满（reveal 默认 vertical-align: middle 会破坏布局） */
+.reveal .slides section.present {
+  top: 0 !important;
+}
+</style>
+</head>
+<body>
+
+<div class="reveal">
+<div class="slides">
+
+<!-- ============================================================
+     P.01 封面
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-cover">
+    <div class="grain"></div>
+    <div class="badge">重庆 · 工作室</div>
+    <div class="small-title">渝山东方美学</div>
+
+    <div class="main-block">
+      <div class="main-1">命主画像</div>
+      <div class="main-2">易学老师合作路演</div>
+    </div>
+
+    <div class="subtitle">用色彩美学帮人认出自己<br>—— 给老师的 10 分钟</div>
+
+    <div class="footer">YUSHAN · DECK V0.1 · 2026</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.02 一句话
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-pitch">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="lead">
+      我们做的事很简单——<br><br>
+      用<span class="hl">摄影</span>＋<span class="hl">东方色彩美学</span>，<br>
+      给客户拍一组<span class="zhu">命主画像</span>，<br>
+      送一套<span class="zhu">节气壁纸</span>，<br>
+      装订一本属于他自己的<span class="zhu">命书</span>。
+    </div>
+    <div class="stamp">三件套 · 一段仪式 · 一次留存</div>
+
+    <div class="page-num">P.02 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.03 我们怎么不一样
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.03</div>
+    <h2>我们怎么不一样</h2>
+    <div class="subhead">vs 普通摄影店 · vs 街头测字 · vs 美学博主</div>
+
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>维度</th>
+          <th>渝山东方美学</th>
+          <th>同类竞品</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>核心载体</td>
+          <td class="us">摄影 + 色彩美学 + 装帧仪式</td>
+          <td class="them">单点服务（拍照 / 推命 / 配色）</td>
+        </tr>
+        <tr>
+          <td>专业背书</td>
+          <td class="us">易学老师驻场 · 调候推导背书</td>
+          <td class="them">无背书 / 仅美学 / 仅命理</td>
+        </tr>
+        <tr>
+          <td>视觉系统</td>
+          <td class="us">19 色矿物色谱 · 24 节气延展</td>
+          <td class="them">网红风 · 滤镜化 · 同质化</td>
+        </tr>
+        <tr>
+          <td>客户留存</td>
+          <td class="us">实物色卡 + 节气壁纸长期触达</td>
+          <td class="them">一次成交 / 复购难</td>
+        </tr>
+        <tr>
+          <td>客单价段</td>
+          <td class="us">¥9.9 钩子 → ¥30,000 高定 ⭐</td>
+          <td class="them">¥199-1,999 单段集中</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="page-num">P.03 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.04 三件套
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.04</div>
+    <h2>三件套 · 一次拍摄 · 三重留存</h2>
+    <div class="subhead">把"找到自己的颜色"做成可触摸的产品</div>
+
+    <div class="tri-row">
+      <div class="tri-card">
+        <div class="order">壹 · 视觉</div>
+        <h3>命主画像</h3>
+        <div class="desc">
+          以客户本命色为主调，工作室一日拍摄。<br>
+          含五行肖像 6 套 + 修图 + 装裱。
+        </div>
+        <div class="price">¥1,800 - ¥6,800</div>
+      </div>
+      <div class="tri-card gold">
+        <div class="order">贰 · 长期触达</div>
+        <h3>节气壁纸</h3>
+        <div class="desc">
+          24 节气全集手机壁纸订阅。<br>
+          每半月一更 · 一年 24 张 · 客户每天打开手机都看见我们。
+        </div>
+        <div class="price">¥299 - ¥499 / 年</div>
+      </div>
+      <div class="tri-card">
+        <div class="order">叁 · 仪式留存</div>
+        <h3>命书</h3>
+        <div class="desc">
+          39 页装帧手册 · 含本命色 / 五行调候 / 八种生活场景配色 / 节气日历。<br>
+          老师调候推导背书。
+        </div>
+        <div class="price">¥3,800 - ¥30,000</div>
+      </div>
+    </div>
+
+    <div class="page-num">P.04 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.05 五行 · 火（朱砂）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.05 · 五行其一</div>
+    <h2>火 · 朱砂</h2>
+    <div class="subhead">冬至清晨，第一缕阳光投在朱漆门上的颜色</div>
+
+    <div class="wuxing-grid">
+      <div class="wuxing-photo ph-fire">
+        <div class="placeholder">
+          <div class="ph-tag">火 · 朱砂主调</div>
+          <div class="ph-poem">朱漆门上<br>第一缕阳光</div>
+          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
+        </div>
+      </div>
+      <div class="wuxing-text">
+        <div class="meta-list">
+          <div class="row"><span class="label">本命</span><span class="val">12 月生 · 红调 / 丁火日主</span></div>
+          <div class="row"><span class="label">应景</span><span class="val">除夕 · 春节 · 端午 · 重要仪式</span></div>
+          <div class="row"><span class="label">气质</span><span class="val">强情绪 · 热烈 · 直接表达</span></div>
+          <div class="row"><span class="label">出片</span><span class="val">深色调汉服 / 朱漆门头 / 暖光烛影</span></div>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch-card">
+            <div class="chip" style="background:#C0392B;"></div>
+            <div class="name">朱砂</div>
+            <div class="hex">#C0392B</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#E67E22;"></div>
+            <div class="name">朱橘</div>
+            <div class="hex">#E67E22</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#F0A6A6;"></div>
+            <div class="name">粉霞</div>
+            <div class="hex">#F0A6A6</div>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <div class="title">代表客户场景</div>
+          重庆秋冬季的成交主力：年终拍摄、节庆礼物、自媒体人/创业者本命色拍摄。<br>
+          高情绪强度 → 易出大片 → 易传播。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.05 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.06 五行 · 木（苍翠）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.06 · 五行其二</div>
+    <h2>木 · 苍翠</h2>
+    <div class="subhead">甲木栋梁，深山松柏经霜不凋的颜色</div>
+
+    <div class="wuxing-grid">
+      <div class="wuxing-photo ph-wood">
+        <div class="placeholder">
+          <div class="ph-tag">木 · 苍翠主调</div>
+          <div class="ph-poem">深山松柏<br>经霜不凋</div>
+          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
+        </div>
+      </div>
+      <div class="wuxing-text">
+        <div class="meta-list">
+          <div class="row"><span class="label">本命</span><span class="val">2-3 月生 · 绿调 / 甲乙木日主</span></div>
+          <div class="row"><span class="label">应景</span><span class="val">立春 · 清明 · 端午 · 春日出行</span></div>
+          <div class="row"><span class="label">气质</span><span class="val">沉静 · 坚韧 · 长期主义</span></div>
+          <div class="row"><span class="label">出片</span><span class="val">竹林 / 茶席 / 老师讲堂 / 长衫深绿</span></div>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch-card">
+            <div class="chip" style="background:#2D5F3F;"></div>
+            <div class="name">苍翠</div>
+            <div class="hex">#2D5F3F</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#6FA88A;"></div>
+            <div class="name">青翠</div>
+            <div class="hex">#6FA88A</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#8FB573;"></div>
+            <div class="name">嫩绿</div>
+            <div class="hex">#8FB573</div>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <div class="title">代表客户场景</div>
+          老师讲堂主出镜色 · 易学老师官方形象。<br>
+          稳重不浮 → 适合 B 端 / 文化机构合作 / 高知客户。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.06 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.07 五行 · 土（暖驼）⭐ 主理人本命
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.07 · 五行其三 ⭐ 主理人本命</div>
+    <h2>土 · 暖驼</h2>
+    <div class="subhead">秋天傍晚七点，麦田被染上的颜色</div>
+
+    <div class="wuxing-grid">
+      <div class="wuxing-photo ph-earth">
+        <div class="placeholder">
+          <div class="ph-tag">土 · 暖驼主调 ⭐</div>
+          <div class="ph-poem">秋日傍晚<br>麦田金黄</div>
+          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
+        </div>
+      </div>
+      <div class="wuxing-text">
+        <div class="meta-list">
+          <div class="row"><span class="label">本命</span><span class="val">8 月生 · 金驼调 / 戊己土日主</span></div>
+          <div class="row"><span class="label">应景</span><span class="val">立秋 · 重阳 · 中秋 · 生意场合</span></div>
+          <div class="row"><span class="label">气质</span><span class="val">温润 · 包容 · 通用百搭</span></div>
+          <div class="row"><span class="label">出片</span><span class="val">秋日麦田 / 木质茶席 / 暖光内景</span></div>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch-card">
+            <div class="chip" style="background:#C9A66B;"></div>
+            <div class="name">暖驼</div>
+            <div class="hex">#C9A66B</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#D4AF37;"></div>
+            <div class="name">烛光金</div>
+            <div class="hex">#D4AF37</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#A0522D;"></div>
+            <div class="name">赭石</div>
+            <div class="hex">#A0522D</div>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <div class="title">代表客户场景</div>
+          ⭐ 主理人 1988-08-08 本命色，全平台高频。<br>
+          客户接受度最高的"安全色"，B 端银行/医美 VIP 礼盒主推。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.07 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.08 五行 · 水（墨青）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.08 · 五行其四</div>
+    <h2>水 · 墨青</h2>
+    <div class="subhead">壬水申月，亥时月光照在静潭上的墨蓝</div>
+
+    <div class="wuxing-grid">
+      <div class="wuxing-photo ph-water">
+        <div class="placeholder">
+          <div class="ph-tag">水 · 墨青主调</div>
+          <div class="ph-poem">月光<br>静潭<br>墨蓝</div>
+          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
+        </div>
+      </div>
+      <div class="wuxing-text">
+        <div class="meta-list">
+          <div class="row"><span class="label">本命</span><span class="val">7 月生 · 深蓝调 / 壬癸水日主</span></div>
+          <div class="row"><span class="label">应景</span><span class="val">大暑 · 立秋之夜 · 深夜独处场景</span></div>
+          <div class="row"><span class="label">气质</span><span class="val">沉静 · 内敛 · 思考型</span></div>
+          <div class="row"><span class="label">出片</span><span class="val">夜景水边 / 书房 / 墨色长袍 / 月下</span></div>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch-card">
+            <div class="chip" style="background:#2C3E50;"></div>
+            <div class="name">墨青</div>
+            <div class="hex">#2C3E50</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#5D7B91;"></div>
+            <div class="name">雾蓝</div>
+            <div class="hex">#5D7B91</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#A8B5C7;"></div>
+            <div class="name">冷银</div>
+            <div class="hex">#A8B5C7</div>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <div class="title">代表客户场景</div>
+          老师本人的主出镜色（深色长袍 / 茶席背景）。<br>
+          深夜疗愈系内容选题最易传播 → 公众号长文场景化主图。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.08 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.09 五行 · 金（月白 / 烛光金）
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.09 · 五行其五</div>
+    <h2>金 · 月白</h2>
+    <div class="subhead">不是冷白，是有呼吸的白</div>
+
+    <div class="wuxing-grid">
+      <div class="wuxing-photo ph-metal">
+        <div class="placeholder">
+          <div class="ph-tag">金 · 月白主调</div>
+          <div class="ph-poem">不是冷白<br>是有呼吸的白</div>
+          <div class="ph-spec">PHOTO SLOT · 360 × 540</div>
+        </div>
+      </div>
+      <div class="wuxing-text">
+        <div class="meta-list">
+          <div class="row"><span class="label">本命</span><span class="val">4 月 / 11 月生 · 月白调 / 庚辛金日主</span></div>
+          <div class="row"><span class="label">应景</span><span class="val">清明 · 中秋 · 小雪 · B 端高定场合</span></div>
+          <div class="row"><span class="label">气质</span><span class="val">克制 · 优雅 · 商务高级感</span></div>
+          <div class="row"><span class="label">出片</span><span class="val">米白长袍 / 工作室自然光 / 银箔点缀</span></div>
+        </div>
+
+        <div class="swatches">
+          <div class="swatch-card">
+            <div class="chip" style="background:#FAF7F2;border:1px solid #ccc;"></div>
+            <div class="name">米白</div>
+            <div class="hex">#FAF7F2</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#E8E6E1;"></div>
+            <div class="name">月光银</div>
+            <div class="hex">#E8E6E1</div>
+          </div>
+          <div class="swatch-card">
+            <div class="chip" style="background:#D4AF37;"></div>
+            <div class="name">烛光金</div>
+            <div class="hex">#D4AF37</div>
+          </div>
+        </div>
+
+        <div class="scene-card">
+          <div class="title">代表客户场景</div>
+          B 端银行私行 / 医美 VIP 高定礼盒主用色。<br>
+          单 SKU 客单价段 ¥6,800-30,000 ⭐ 我们最高利润段。
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.09 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.10 新年节庆作品 · 4 宫格
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.10</div>
+    <h2>新年节庆作品 · 朱砂主调</h2>
+    <div class="subhead">M1 - M2 主推选题：除夕 / 春节 / 元宵 / 福字</div>
+
+    <div class="grid-2x2">
+      <div class="grid-cell cell-chunjie">
+        <div class="cell-no">No.10-A</div>
+        <div class="cell-poem">朱漆门头<br>福字倒贴<br>除夕守岁</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>朱砂 #C0392B + 烛光金 #D4AF37<br>
+          <span class="h">尺寸</span>9 宫格 1242 × 1660 px
+        </div>
+      </div>
+      <div class="grid-cell cell-yuanxiao">
+        <div class="cell-no">No.10-B</div>
+        <div class="cell-poem">元宵灯火<br>糖油裹圆<br>橘色街巷</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>朱橘 #E67E22 + 米麦 #F5E6C8<br>
+          <span class="h">尺寸</span>1242 × 1660 px
+        </div>
+      </div>
+      <div class="grid-cell cell-zhushao">
+        <div class="cell-no">No.10-C</div>
+        <div class="cell-poem">朱砂朱印<br>红绳手腕<br>新岁第一祈</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>朱砂 #C0392B 单色铺<br>
+          <span class="h">尺寸</span>1242 × 1660 px
+        </div>
+      </div>
+      <div class="grid-cell cell-jinshen">
+        <div class="cell-no">No.10-D</div>
+        <div class="cell-poem">金身福字<br>泥金笺纸<br>烛影摇红</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>烛光金 #D4AF37 + 暖驼 #C9A66B<br>
+          <span class="h">尺寸</span>1242 × 1660 px
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.10 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.11 节气作品 · 4 宫格
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.11</div>
+    <h2>节气作品 · 春分 / 立夏 / 秋分 / 冬至</h2>
+    <div class="subhead">24 节气壁纸 · 全集每半月一更 · 客户每天打开手机看见我们</div>
+
+    <div class="grid-2x2">
+      <div class="grid-cell cell-chunfen">
+        <div class="cell-no">春分 · CHUN FEN</div>
+        <div class="cell-poem">柳条初萌<br>水光草色<br>万物正醒</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>嫩绿 #8FB573 + 青翠 #6FA88A<br>
+          <span class="h">五行</span>木 · 浅绿 · 立春后 60 天
+        </div>
+      </div>
+      <div class="grid-cell cell-lixia">
+        <div class="cell-no">立夏 · LI XIA</div>
+        <div class="cell-poem">立夏初阳<br>柿子刚熟<br>橙红渐起</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>朱橘 #E67E22 + 暖驼 #C9A66B<br>
+          <span class="h">五行</span>火 · 橘 · 5 月色卡
+        </div>
+      </div>
+      <div class="grid-cell cell-qiufen">
+        <div class="cell-no">秋分 · QIU FEN</div>
+        <div class="cell-poem">桂金秋分<br>丹桂枝头<br>清香入夜</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>桂金 / 烛光金 #D4AF37 + 赭石 #A0522D<br>
+          <span class="h">五行</span>金 / 土 · 9 月色卡
+        </div>
+      </div>
+      <div class="grid-cell cell-dongzhi">
+        <div class="cell-no">冬至 · DONG ZHI</div>
+        <div class="cell-poem">冬至阳生<br>朱漆门上<br>第一缕光</div>
+        <div class="cell-meta">
+          <span class="h">主色</span>墨青 #2C3E50 → 朱砂 #C0392B<br>
+          <span class="h">五行</span>水 / 火 · 12 月色卡
+        </div>
+      </div>
+    </div>
+
+    <div class="page-num">P.11 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.12 合作分成模型 ⭐ 核心
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.12 · ⭐ 核心</div>
+    <h2>合作分成模型</h2>
+    <div class="subhead">老师出渠道 + 背书 · 主理人出全部生产力 + 100% 启动资金</div>
+
+    <div class="deal-section-title">A1 · 老师存量客户成交</div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th style="width:38%">单笔毛收入</th>
+          <th style="width:31%">老师分成</th>
+          <th style="width:31%">主理人分成</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="amt">¥9.9 - 99</td>
+          <td class="tea">30 %</td>
+          <td class="us-share">70 %</td>
+        </tr>
+        <tr>
+          <td class="amt">¥100 - 499</td>
+          <td class="tea">40 %</td>
+          <td class="us-share">60 %</td>
+        </tr>
+        <tr>
+          <td class="amt">¥500 - 1,999</td>
+          <td class="tea">50 %</td>
+          <td class="us-share">50 %</td>
+        </tr>
+        <tr class="hot">
+          <td class="amt">¥2,000 +</td>
+          <td class="tea">55 %</td>
+          <td class="us-share">45 %</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="deal-section-title">A2 · 自媒体新客成交（按专家工时）</div>
+    <table class="deal-table">
+      <thead>
+        <tr>
+          <th style="width:38%">单笔毛收入</th>
+          <th style="width:31%">老师分成</th>
+          <th style="width:31%">说明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="amt">¥9.9 - 499</td>
+          <td class="tea">0 - 10 %</td>
+          <td class="us-share">不参与推导</td>
+        </tr>
+        <tr>
+          <td class="amt">¥500 - 1,999</td>
+          <td class="tea">15 %</td>
+          <td class="us-share">含八字推导</td>
+        </tr>
+        <tr>
+          <td class="amt">¥2,000 +</td>
+          <td class="tea">20 %</td>
+          <td class="us-share">含推导 + 出镜</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="deal-foot">
+      <strong>工作室场地</strong> 不另收租金 · 每月使用 ≤ 12 个工作日，每日 ≤ 4 小时<br>
+      <strong>B 端订单</strong>（银行 / 医美）独立分成：老师介绍 30 / 主理人 BD 10（按工时）<br>
+      <strong>核心约定</strong> 老师专注八字推导 + 出镜 + 老客户授权，主理人承担运营 / 拍摄 / 售后 / 投放
+    </div>
+
+    <div class="page-num">P.12 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.13 时间线
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-page">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="no-label">No.13</div>
+    <h2>6 个月时间线 · 老师老客是第一桶金</h2>
+    <div class="subhead">M1 冷启动 · M2-3 流量培育 · M4-6 拳头产品 + B 端规模化</div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-month">M1 · 冷启动（地基期）</div>
+        <div class="tl-target">主目标 · 跑通拍摄 SOP · 出第一批样品 · 老客户激活 5 单</div>
+        <div class="tl-detail">
+          老师贡献：<span class="num">5-10 个</span> 老客户名单 + <span class="num">2 次</span> 工作室出镜 + <span class="num">1 篇</span> 公众号背书<br>
+          主理人贡献：四平台账号开通 / 19 色色卡产出 / 30 张节气壁纸 / 5 个 B 端 BD 联系人池
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-month">M2-3 · 流量培育期</div>
+        <div class="tl-target">主目标 · 短视频三平台同发 · 老师老客激活 → 月 15-20 单</div>
+        <div class="tl-detail">
+          老师贡献：每月 <span class="num">2 次</span> 短视频出镜 + <span class="num">3-5 单</span> 八字推导 / 周<br>
+          主理人贡献：月度 <span class="num">12 条</span> 三平台短视频 + <span class="num">8 篇</span> 公众号长文 + <span class="num">8 篇</span> 小红书图文搬运
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-month">M4 · 拳头产品冲量 + B 端首单</div>
+        <div class="tl-target">主目标 · 命书 ¥3,800 档稳定出货 · B 端首单试合作落地</div>
+        <div class="tl-detail">
+          老师贡献：<span class="num">1-2 次</span> B 端现场出镜（银行 / 医美 VIP 沙龙）<br>
+          主理人贡献：4 档 SKU 全线产能 · 矿物颜料供应链稳定 · 2 个 B 端意向客户
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-month">M5-6 · 高定档上线 + B 端规模化</div>
+        <div class="tl-target">主目标 · ¥6,800-30,000 高定档放量 · 月营收冲 ¥30,000+</div>
+        <div class="tl-detail">
+          老师贡献：高定档客户出镜 + <span class="num">8-12 单</span> 推导 / 月<br>
+          主理人贡献：B 端 4-6 单签约 · 缂丝高定供应链 · M3 KPI 复盘
+        </div>
+      </div>
+
+    </div>
+
+    <div class="page-num">P.13 / 14</div>
+    <div class="seal"><div class="seal-text">渝山</div></div>
+  </div>
+</section>
+
+<!-- ============================================================
+     P.14 落款
+     ============================================================ -->
+<section data-background-color="#FAF7F2">
+  <div class="slide-end">
+    <div class="grain"></div>
+    <div class="aigc-label">AI 辅助创作 · AIGC</div>
+
+    <div class="end-line">
+      我们不下结论<br>
+      我们不做预测<br>
+      我们只<strong>把光留下</strong>
+    </div>
+
+    <div class="big-seal">
+      <div class="big-seal-text">渝山</div>
+    </div>
+
+    <div class="qr-slot">
+      <div>
+        <div class="qr-box">公众号<br>二维码</div>
+        <div class="qr-cap">公众号 · 渝山东方美学</div>
+      </div>
+      <div>
+        <div class="qr-box">工作室<br>预约</div>
+        <div class="qr-cap">工作室 · 重庆</div>
+      </div>
+    </div>
+
+    <div class="end-meta">
+      DECK V0.1 · 2026 · YUSHAN<br>
+      路演 · 易学老师合作 · 10 分钟
+    </div>
+
+    <div class="page-num">P.14 / 14</div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<!-- Reveal.js script -->
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@4.6.1/dist/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1280,
+    height: 720,
+    margin: 0.04,
+    minScale: 0.2,
+    maxScale: 2.0,
+    controls: true,
+    progress: true,
+    slideNumber: false,
+    hash: true,
+    transition: 'fade',  // 中式美学不追求花哨切换
+    backgroundTransition: 'fade',
+    pdfSeparateFragments: false,
+    // 按 P 一键打印为 PDF（Chrome / Edge）：
+    // 1) 浏览器打开 → 2) ?print-pdf 加到 URL 末尾 → 3) Ctrl/Cmd + P → 4) 保存为 PDF
+  });
+</script>
+</body>
+</html>
