@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  渝山东方美学 · 印章版（极简水印 / 落款 / 视频右下水印 / 封蜡贴）
+  Seal Only · v1.0 · 2026-05-17
+
+  使用场景：
+  - 短视频右下水印（不带圆形外框，更克制）
+  - 命书 PDF 末页落款
+  - 包装封蜡贴
+  - 朋友圈分享图右下角
+  - 名片背面中央
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+
+  <defs>
+    <filter id="s-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#C0392B" flood-opacity="0.30"/>
+    </filter>
+    <radialGradient id="s-grain-1" cx="25%" cy="30%" r="60%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.07"/>
+      <stop offset="35%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="s-grain-2" cx="75%" cy="70%" r="60%">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.07"/>
+      <stop offset="35%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 透明背景，纯印章 -->
+  <g transform="translate(100 100) rotate(-3)" filter="url(#s-shadow)">
+    <rect x="-80" y="-80" width="160" height="160" fill="#C0392B"/>
+    <rect x="-80" y="-80" width="160" height="160" fill="url(#s-grain-1)"/>
+    <rect x="-80" y="-80" width="160" height="160" fill="url(#s-grain-2)"/>
+    <!-- 「渝山」纵向双字 -->
+    <text x="0" y="-18"
+          fill="#FAF7F2"
+          font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+          font-size="66"
+          font-weight="900"
+          text-anchor="middle"
+          dominant-baseline="middle">渝</text>
+    <text x="0" y="48"
+          fill="#FAF7F2"
+          font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+          font-size="66"
+          font-weight="900"
+          text-anchor="middle"
+          dominant-baseline="middle">山</text>
+  </g>
+
+</svg>

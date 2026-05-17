@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  渝山东方美学 · 单字版（最小化 IP · 视频水印 / favicon / 极简包装）
+  Monogram · v1.0 · 2026-05-17
+
+  使用场景：
+  - 浏览器 favicon 32×32（缩到极小仍能识别）
+  - 视频右上角小水印（不抢戏）
+  - 包装侧边纤细装饰
+  - 客户编号印章（命书 PDF 内嵌客户专属水印）
+
+  设计：单字「渝」 + 暖驼底 + 烛光金浮雕高光
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+
+  <defs>
+    <filter id="m-emboss" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="2" dy="2" stdDeviation="0" flood-color="#D4AF37" flood-opacity="1"/>
+    </filter>
+    <radialGradient id="m-glow" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#D4AF37" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#D4AF37" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 暖驼底圆 -->
+  <circle cx="128" cy="128" r="126" fill="#C9A66B"/>
+  <circle cx="128" cy="128" r="126" fill="url(#m-glow)"/>
+  <circle cx="128" cy="128" r="126" fill="none" stroke="#2C3E50" stroke-width="1.5" opacity="0.18"/>
+
+  <!-- 主字「渝」墨青色，带烛光金浮雕 -->
+  <text x="128" y="148"
+        fill="#2C3E50"
+        font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+        font-size="180"
+        font-weight="900"
+        text-anchor="middle"
+        dominant-baseline="middle">渝</text>
+
+  <!-- 浮雕高光层（烛光金错位） -->
+  <text x="130" y="150"
+        fill="#D4AF37"
+        font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+        font-size="180"
+        font-weight="900"
+        text-anchor="middle"
+        dominant-baseline="middle"
+        opacity="0.30">渝</text>
+
+  <!-- 主字（覆盖在金色之上） -->
+  <text x="128" y="148"
+        fill="#2C3E50"
+        font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+        font-size="180"
+        font-weight="900"
+        text-anchor="middle"
+        dominant-baseline="middle">渝</text>
+
+</svg>

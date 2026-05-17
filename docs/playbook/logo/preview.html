@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>渝山东方美学 · LOGO 系统预览 v1.0</title>
+<style>
+  /* ============================================================
+     色谱母本：swatch-builder/palette/colors.yaml
+       米白 mibai          #FAF7F2  主背景
+       米麦 mimai          #F5E6C8  卡片底
+       墨青 moqing         #2C3E50  正文 / 表头
+       暖驼 nuantuo        #C9A66B  装饰金
+       朱砂 zhusha         #C0392B  钩子色
+       烛光金 zhuguangjin  #D4AF37  高定点缀
+     ============================================================ */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: linear-gradient(135deg, #FAF7F2 0%, #F5E6C8 100%);
+    min-height: 100vh;
+    font-family: 'STSong', 'PingFang SC', 'Microsoft YaHei', serif;
+    color: #2C3E50;
+    padding: 60px 40px;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  h1 {
+    font-family: 'STKaiti', 'KaiTi', serif;
+    font-size: 52px;
+    font-weight: 900;
+    color: #2C3E50;
+    letter-spacing: 12px;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: #8B7355;
+    letter-spacing: 6px;
+    font-style: italic;
+  }
+  .gold-line {
+    width: 100px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+    margin: 24px auto;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    gap: 40px;
+  }
+  .logo-card {
+    background: white;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+  .logo-card.full {
+    grid-template-columns: 1fr;
+  }
+  .logo-display {
+    background: #F5F5F5;
+    border-radius: 8px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+  }
+  .logo-display img {
+    max-width: 100%;
+    max-height: 320px;
+  }
+  .logo-info h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 6px;
+    letter-spacing: 2px;
+  }
+  .logo-info .en {
+    font-family: 'Garamond', serif;
+    font-size: 13px;
+    color: #C0392B;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .logo-info .desc {
+    font-size: 14px;
+    color: #5B5B5B;
+    line-height: 2;
+    margin-bottom: 20px;
+  }
+  .use-cases {
+    background: rgba(201, 166, 107, 0.10);
+    border-left: 3px solid #C9A66B;
+    padding: 14px 18px;
+    margin-bottom: 16px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: #2C3E50;
+  }
+  .use-cases strong {
+    color: #C0392B;
+    letter-spacing: 1px;
+  }
+  .download-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .btn {
+    padding: 10px 18px;
+    border-radius: 4px;
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.2s;
+  }
+  .btn-primary {
+    background: #C0392B;
+    color: white;
+  }
+  .btn-primary:hover {
+    background: #A93226;
+  }
+  .btn-secondary {
+    background: white;
+    color: #2C3E50;
+    border: 1.5px solid #2C3E50;
+  }
+  .btn-secondary:hover {
+    background: #2C3E50;
+    color: white;
+  }
+  .meta {
+    margin-top: 12px;
+    font-size: 11px;
+    color: #8B7355;
+    font-family: 'Courier New', monospace;
+    letter-spacing: 1px;
+  }
+  /* 横版/竖版需要的特殊布局 */
+  .logo-card.horizontal .logo-display img {
+    width: 100%;
+  }
+  .logo-card.vertical .logo-display {
+    min-height: 600px;
+  }
+  .logo-card.vertical .logo-display img {
+    max-height: 560px;
+  }
+  /* 顶部介绍卡 */
+  .intro {
+    background: white;
+    border-radius: 16px;
+    padding: 32px 40px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
+    margin-bottom: 40px;
+  }
+  .intro p {
+    font-size: 15px;
+    line-height: 2;
+    color: #2B2B2B;
+    margin-bottom: 12px;
+  }
+  .palette {
+    display: flex;
+    gap: 8px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+  }
+  .swatch {
+    flex: 1;
+    min-width: 100px;
+    text-align: center;
+  }
+  .swatch-block {
+    height: 60px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  }
+  .swatch-name {
+    font-size: 12px;
+    color: #2C3E50;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .swatch-hex {
+    font-size: 10px;
+    color: #8B7355;
+    font-family: 'Courier New', monospace;
+  }
+  footer {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid rgba(201, 166, 107, 0.3);
+    color: #8B7355;
+    font-size: 13px;
+    line-height: 2;
+  }
+  /* 印章效果 */
+  .footer-seal {
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #C0392B;
+    color: #FAF7F2;
+    line-height: 48px;
+    text-align: center;
+    font-family: 'STKaiti', serif;
+    font-size: 22px;
+    font-weight: 900;
+    transform: rotate(-3deg);
+    margin: 12px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>渝山东方美学</h1>
+  <div class="subtitle">YUSHAN · LOGO SYSTEM v1.0</div>
+  <div class="gold-line"></div>
+</header>
+
+<div class="container">
+
+  <!-- 介绍 -->
+  <div class="intro">
+    <p>这是渝山东方美学的完整 LOGO 系统，包含 <strong>5 种应用场景</strong>。</p>
+    <p>所有 LOGO 严格使用项目 19 色色谱母本（<code>swatch-builder/palette/colors.yaml</code>）。</p>
+    <p>全部 SVG 矢量格式 · 任意缩放不糊 · 印刷品质保证。</p>
+
+    <div class="palette">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FAF7F2; border:1px solid #ddd;"></div>
+        <div class="swatch-name">米白</div>
+        <div class="swatch-hex">#FAF7F2</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#F5E6C8;"></div>
+        <div class="swatch-name">米麦</div>
+        <div class="swatch-hex">#F5E6C8</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#C9A66B;"></div>
+        <div class="swatch-name">暖驼 ⭐</div>
+        <div class="swatch-hex">#C9A66B</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#D4AF37;"></div>
+        <div class="swatch-name">烛光金</div>
+        <div class="swatch-hex">#D4AF37</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#C0392B;"></div>
+        <div class="swatch-name">朱砂 ⭐</div>
+        <div class="swatch-hex">#C0392B</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#2C3E50;"></div>
+        <div class="swatch-name">墨青</div>
+        <div class="swatch-hex">#2C3E50</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGO 1 · 主标识 -->
+  <div class="logo-card">
+    <div class="logo-display">
+      <img src="01-master-mark.svg" alt="主标识 LOGO">
+    </div>
+    <div class="logo-info">
+      <h2>① 主标识</h2>
+      <div class="en">MASTER MARK · 512×512</div>
+      <div class="desc">
+        渝山东方美学的核心 IP。米白底 + 朱砂方印「渝山」纵向双字 + 米麦水墨晕染 + 墨青细描边。
+        <br><br>
+        识别度天花板，缩到 40 px 仍然能认出。
+      </div>
+      <div class="use-cases">
+        <strong>用在哪：</strong>
+        微信公众号头像 / 小红书头像 / 视频号头像 / 抖音头像 / B 站头像 / 第一次起号必用 / 名片正面中央
+      </div>
+      <div class="download-row">
+        <a href="01-master-mark.svg" class="btn btn-primary" download>下载 SVG</a>
+        <a href="01-master-mark.svg" target="_blank" class="btn btn-secondary">浏览器打开</a>
+      </div>
+      <div class="meta">file: 01-master-mark.svg · v1.0 · 2026-05-17</div>
+    </div>
+  </div>
+
+  <!-- LOGO 2 · 横版 -->
+  <div class="logo-card horizontal full">
+    <div class="logo-display">
+      <img src="02-horizontal-lockup.svg" alt="横版 LOGO">
+    </div>
+    <div class="logo-info" style="text-align: center;">
+      <h2>② 横版 · 主标识 + 文字组合</h2>
+      <div class="en">HORIZONTAL LOCKUP · 900×200</div>
+      <div class="desc">
+        朱砂方印 + 中文「渝山东方美学」+ 英文「YUSHAN · ORIENTAL AESTHETICS」+ 装饰金线 · 横向布局。
+      </div>
+      <div class="use-cases" style="text-align: left;">
+        <strong>用在哪：</strong>
+        公众号文章头部 banner（900×144 缩放）/ 名片正面顶部抬头 / PPT 模板顶部 / 合同抬头 / 信纸顶部 / 纸袋抬头
+      </div>
+      <div class="download-row" style="justify-content: center;">
+        <a href="02-horizontal-lockup.svg" class="btn btn-primary" download>下载 SVG</a>
+        <a href="02-horizontal-lockup.svg" target="_blank" class="btn btn-secondary">浏览器打开</a>
+      </div>
+      <div class="meta">file: 02-horizontal-lockup.svg · v1.0 · 2026-05-17</div>
+    </div>
+  </div>
+
+  <!-- LOGO 3 · 印章版 -->
+  <div class="logo-card">
+    <div class="logo-display" style="background: #FAF7F2;">
+      <img src="03-seal-only.svg" alt="印章版 LOGO" style="max-height: 200px;">
+    </div>
+    <div class="logo-info">
+      <h2>③ 印章版（透明背景）</h2>
+      <div class="en">SEAL ONLY · 200×200 · TRANSPARENT</div>
+      <div class="desc">
+        纯朱砂方印「渝山」（去掉外框圆环），可叠加在任何照片或场景上，作"落款"用。
+        <br><br>
+        透明背景，不破坏底图。
+      </div>
+      <div class="use-cases">
+        <strong>用在哪：</strong>
+        短视频右下角水印 / 命书 PDF 末页落款 / 包装封蜡贴 / 朋友圈分享图角标 / 名片背面中央 / 礼物盒内页签名位
+      </div>
+      <div class="download-row">
+        <a href="03-seal-only.svg" class="btn btn-primary" download>下载 SVG</a>
+        <a href="03-seal-only.svg" target="_blank" class="btn btn-secondary">浏览器打开</a>
+      </div>
+      <div class="meta">file: 03-seal-only.svg · v1.0 · 2026-05-17</div>
+    </div>
+  </div>
+
+  <!-- LOGO 4 · 单字版 -->
+  <div class="logo-card">
+    <div class="logo-display">
+      <img src="04-monogram.svg" alt="单字版 LOGO">
+    </div>
+    <div class="logo-info">
+      <h2>④ 单字版（极简水印）</h2>
+      <div class="en">MONOGRAM · 256×256</div>
+      <div class="desc">
+        圆形暖驼底 + 墨青大「渝」字 + 烛光金浮雕高光。商务高级感，缩到 16 px 仍能识别。
+      </div>
+      <div class="use-cases">
+        <strong>用在哪：</strong>
+        浏览器 favicon / 视频右上小水印（不抢戏）/ B 端正式礼盒包装侧边贴 / 合同骑缝印 / 命书 PDF 客户专属水印（每页右下）
+      </div>
+      <div class="download-row">
+        <a href="04-monogram.svg" class="btn btn-primary" download>下载 SVG</a>
+        <a href="04-monogram.svg" target="_blank" class="btn btn-secondary">浏览器打开</a>
+      </div>
+      <div class="meta">file: 04-monogram.svg · v1.0 · 2026-05-17</div>
+    </div>
+  </div>
+
+  <!-- LOGO 5 · 竖版 banner -->
+  <div class="logo-card vertical">
+    <div class="logo-display">
+      <img src="05-vertical-banner.svg" alt="竖版条幅">
+    </div>
+    <div class="logo-info">
+      <h2>⑤ 竖版条幅</h2>
+      <div class="en">VERTICAL BANNER · 300×800</div>
+      <div class="desc">
+        从上到下：装饰金线 → 朱砂方印 → 中文主名 → 英文副名 → 19 色色谱缩影 → 装饰金线。
+        <br><br>
+        包含完整品牌叙事，最适合大尺寸展示。
+      </div>
+      <div class="use-cases">
+        <strong>用在哪：</strong>
+        工作室门口立牌（500×1500 mm 印刷）/ 朋友圈竖图分享（1080×1920）/ 产品海报顶部底部条 / 礼品包装侧边贴 / 路演展板
+      </div>
+      <div class="download-row">
+        <a href="05-vertical-banner.svg" class="btn btn-primary" download>下载 SVG</a>
+        <a href="05-vertical-banner.svg" target="_blank" class="btn btn-secondary">浏览器打开</a>
+      </div>
+      <div class="meta">file: 05-vertical-banner.svg · v1.0 · 2026-05-17</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>渝山东方美学 · LOGO 系统 v1.0</p>
+  <div class="footer-seal">渝</div>
+  <p>© 2026 主理人工作室 · 所有视觉资产严格使用 19 色色谱母本</p>
+  <p style="margin-top: 8px; font-size: 11px;">
+    色谱来源：<code>swatch-builder/palette/colors.yaml</code><br>
+    设计标准：<code>docs/playbook/logo/README.md</code>
+  </p>
+</footer>
+
+</body>
+</html>

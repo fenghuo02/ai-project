@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  渝山东方美学 · 横版 LOGO（公众号 banner / 名片 / B 端合同抬头）
+  Horizontal Lockup · v1.0 · 2026-05-17
+
+  使用场景：
+  - 公众号文章头部 banner：900×144 px → 缩放到原比例 6.25:1
+  - 名片正面顶部抬头
+  - PPT 模板顶部
+  - 印刷物（合同 / 信纸 / 纸袋）抬头
+
+  布局：朱砂方印 + 中文主名 + 英文副名 + 装饰横线
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200" width="900" height="200">
+
+  <defs>
+    <filter id="h-seal-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#C0392B" flood-opacity="0.30"/>
+    </filter>
+  </defs>
+
+  <!-- 米白底（横版可贴在任何浅色背景上） -->
+  <rect x="0" y="0" width="900" height="200" fill="#FAF7F2"/>
+
+  <!-- 左侧：朱砂方印 -->
+  <g transform="translate(100 100) rotate(-2)" filter="url(#h-seal-shadow)">
+    <rect x="-60" y="-60" width="120" height="120" fill="#C0392B"/>
+    <text x="0" y="-12"
+          fill="#FAF7F2"
+          font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+          font-size="50"
+          font-weight="900"
+          text-anchor="middle"
+          dominant-baseline="middle">渝</text>
+    <text x="0" y="36"
+          fill="#FAF7F2"
+          font-family="STKaiti, KaiTi, STSong, SimSun, serif"
+          font-size="50"
+          font-weight="900"
+          text-anchor="middle"
+          dominant-baseline="middle">山</text>
+  </g>
+
+  <!-- 装饰竖线（朱砂 + 烛光金 双色） -->
+  <line x1="200" y1="55" x2="200" y2="145" stroke="#C9A66B" stroke-width="1"/>
+  <line x1="204" y1="60" x2="204" y2="140" stroke="#D4AF37" stroke-width="0.5" opacity="0.6"/>
+
+  <!-- 右侧：中文主名 -->
+  <text x="240" y="98"
+        fill="#2C3E50"
+        font-family="STSong, SimSun, serif"
+        font-size="56"
+        font-weight="700"
+        letter-spacing="8">渝山东方美学</text>
+
+  <!-- 右侧：英文副名 -->
+  <text x="244" y="138"
+        fill="#8B7355"
+        font-family="Garamond, 'Times New Roman', serif"
+        font-size="20"
+        font-weight="500"
+        letter-spacing="6"
+        font-style="italic">YUSHAN · ORIENTAL AESTHETICS</text>
+
+  <!-- 装饰金线（最右） -->
+  <line x1="780" y1="100" x2="850" y2="100" stroke="#D4AF37" stroke-width="1" opacity="0.7"/>
+  <circle cx="855" cy="100" r="2.5" fill="#D4AF37"/>
+
+</svg>
