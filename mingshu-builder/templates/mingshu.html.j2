@@ -5,12 +5,17 @@
 <title>{{ meta.book_color_name }}之书 · {{ meta.client_name }}</title>
 <style>
 {% include "_styles.css" %}
+/* ============ 客户级主色变量覆盖（按八字定制，整本书生效）============ */
+:root {
+  --main-color: {{ colors.primary[0].hex }};
+  --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};
+}
 </style>
 </head>
 <body>
 
 {# ============ 第 1 页：封面 ============ #}
-<div class="page cover">
+<div class="page cover" style="--cover-c1: {{ colors.primary[0].hex }}; --cover-c2: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div class="cover-frame">
     <div class="cover-top-frame"></div>
     <div class="cover-title-block">
@@ -49,7 +54,7 @@
 </div>
 
 {# ============ 第一卷扉页 ============ #}
-<div class="page chapter-cover">
+<div class="page chapter-cover" style="--main-color: {{ colors.primary[0].hex }}; --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div style="text-align: center; z-index: 2; margin-top: -20mm;">
     <div class="juan-name">第一卷</div>
     <div class="line-gold"></div>
@@ -195,7 +200,7 @@
 </div>
 
 {# ============ 第二卷扉页 ============ #}
-<div class="page chapter-cover">
+<div class="page chapter-cover" style="--main-color: {{ colors.primary[0].hex }}; --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div style="text-align: center; z-index: 2; margin-top: -20mm;">
     <div class="juan-name">第二卷</div>
     <div class="line-gold"></div>
@@ -294,7 +299,7 @@
 </div>
 
 {# ============ 第三卷扉页 ============ #}
-<div class="page chapter-cover">
+<div class="page chapter-cover" style="--main-color: {{ colors.primary[0].hex }}; --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div style="text-align: center; z-index: 2; margin-top: -20mm;">
     <div class="juan-name">第三卷</div>
     <div class="line-gold"></div>
@@ -348,7 +353,7 @@
 {% endfor %}
 
 {# ============ 第四卷扉页 ============ #}
-<div class="page chapter-cover">
+<div class="page chapter-cover" style="--main-color: {{ colors.primary[0].hex }}; --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div style="text-align: center; z-index: 2; margin-top: -20mm;">
     <div class="juan-name">第四卷</div>
     <div class="line-gold"></div>
@@ -396,7 +401,7 @@
 {% endfor %}
 
 {# ============ 第五卷扉页 ============ #}
-<div class="page chapter-cover">
+<div class="page chapter-cover" style="--main-color: {{ colors.primary[0].hex }}; --accent-color: {{ colors.primary[1].hex if colors.primary|length > 1 else colors.primary[0].hex }};">
   <div style="text-align: center; z-index: 2; margin-top: -20mm;">
     <div class="juan-name">第五卷</div>
     <div class="line-gold"></div>
