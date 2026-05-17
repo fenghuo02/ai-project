@@ -5,6 +5,18 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+/* ============================================================
+   命书主色 CSS 变量（按客户八字驱动）
+   --main-color  = 客户本命主色（colors.primary[0].hex）
+   --accent-color = 客户辅助主色（colors.primary[1].hex / 没有则同主色）
+   注入位置：mingshu.html.j2 封面 div + 后续每个 chapter-cover
+   未注入时回退到 暖驼/烛光金（默认主理人本命色，不影响 _template demo）
+   ============================================================ */
+:root {
+  --main-color: #C9A66B;
+  --accent-color: #D4AF37;
+}
+
 html, body {
   font-family: "Noto Serif CJK SC", "AR PL UMing CN", "Songti SC", serif;
   color: #2B2B2B;
@@ -92,7 +104,7 @@ html, body {
   font-family: "Noto Serif CJK SC", "AR PL UMing CN", serif;
   font-weight: bold;
   font-size: 56pt;
-  color: #C9A66B;
+  color: var(--main-color);
   letter-spacing: 12pt;
   margin-bottom: 6mm;
 }
@@ -134,7 +146,7 @@ html, body {
 /* ============ 封面 ============ */
 
 .cover {
-  background: linear-gradient(135deg, #C9A66B 0%, #D4AF37 50%, #C9A66B 100%);
+  background: linear-gradient(135deg, var(--cover-c1, #C9A66B) 0%, var(--cover-c2, #D4AF37) 50%, var(--cover-c1, #C9A66B) 100%);
   display: flex; justify-content: center; align-items: center;
   padding: 0;
   position: relative;
@@ -205,7 +217,7 @@ html, body {
 .preface-title {
   font-family: "Noto Serif CJK SC", serif;
   font-weight: bold; font-size: 30pt;
-  color: #C9A66B; letter-spacing: 6pt;
+  color: var(--main-color); letter-spacing: 6pt;
   text-align: center; margin-bottom: 4mm;
 }
 .preface-call {
@@ -258,7 +270,7 @@ html, body {
   background: rgba(255,255,255,0.4);
 }
 .bazi-table th, .bazi-table td {
-  border: 0.3mm solid #C9A66B;
+  border: 0.3mm solid var(--main-color);
   padding: 3mm 0; text-align: center;
   font-family: "Noto Serif CJK SC", serif;
 }
@@ -426,7 +438,7 @@ html, body {
 .scene-block-title {
   font-family: "Noto Serif CJK SC", serif;
   font-weight: bold; font-size: 10pt;
-  color: #C9A66B; letter-spacing: 2pt;
+  color: var(--main-color); letter-spacing: 2pt;
   margin-top: 2mm; margin-bottom: 1mm;
 }
 .scene-list { list-style: none; }
@@ -437,14 +449,14 @@ html, body {
 }
 .scene-list li::before {
   content: '·'; position: absolute; left: 0;
-  color: #C9A66B; font-size: 14pt; line-height: 1.5;
+  color: var(--main-color); font-size: 14pt; line-height: 1.5;
 }
 .scene-pengyouquan {
   font-family: "Noto Serif CJK SC", serif;
   font-size: 12pt; color: #2B2B2B;
   letter-spacing: 2pt; text-align: center;
   margin-top: auto; padding: 3mm 0;
-  border-top: 0.3mm dotted #C9A66B; white-space: pre-wrap;
+  border-top: 0.3mm dotted var(--main-color); white-space: pre-wrap;
 }
 .scene-best-mark {
   font-size: 10pt; color: #C0392B;
@@ -466,7 +478,7 @@ html, body {
 .final-quote .quote-mega {
   font-family: "Noto Serif CJK SC", serif;
   font-weight: bold; font-size: 32pt;
-  line-height: 2; color: #C9A66B;
+  line-height: 2; color: var(--main-color);
   letter-spacing: 4pt; max-width: 140mm;
 }
 .text-handwriting {
