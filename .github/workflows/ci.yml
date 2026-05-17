@@ -40,6 +40,10 @@ jobs:
         working-directory: mingshu-builder
         run: python3 build.py --validate 主理人-19880808
 
+      - name: Validate mingshu W女士-1986 (demo client, must pass)
+        working-directory: mingshu-builder
+        run: python3 build.py --validate W女士-1986
+
       - name: Validate swatch real client (must pass)
         working-directory: swatch-builder
         run: python3 build.py --validate 主理人-19880808
@@ -112,6 +116,23 @@ jobs:
             exit 1
           fi
 
+      - name: Build mingshu W女士-1986 PDF (demo client for roadshow)
+        working-directory: mingshu-builder
+        run: |
+          python3 build.py W女士-1986
+          PAGES=$(pdfinfo clients/W女士-1986/output.pdf | awk '/^Pages:/ {print $2}')
+          SIZE=$(stat -c%s clients/W女士-1986/output.pdf)
+          echo "W女士-1986 mingshu PDF: $PAGES pages, $SIZE bytes"
+          # demo 客户用同一份模板，页数应也是 39
+          if [ "$PAGES" != "39" ]; then
+            echo "::error::Expected 39 pages, got $PAGES"
+            exit 1
+          fi
+          if [ "$SIZE" -lt 100000 ]; then
+            echo "::error::PDF suspiciously small ($SIZE bytes); fonts may be missing"
+            exit 1
+          fi
+
       - name: Build swatch PDF
         working-directory: swatch-builder
         run: |
@@ -134,6 +155,7 @@ jobs:
           name: ci-built-pdfs
           path: |
             mingshu-builder/clients/主理人-19880808/output.pdf
+            mingshu-builder/clients/W女士-1986/output.pdf
             swatch-builder/clients/主理人-19880808/output.pdf
           retention-days: 14
           if-no-files-found: error
