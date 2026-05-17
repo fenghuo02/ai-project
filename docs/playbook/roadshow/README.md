@@ -7,7 +7,8 @@
 
 | 文件 | 用途 | 长度 | 受众 |
 |---|---|---|---|
-| `yixue-master-deck.html` | ⭐ 易学老师合作路演 | 16 页 / 10-12 分钟 | 易学老师 |
+| `yixue-master-deck.html` | ⭐ 路演演示版（Reveal.js 全屏播放） | 16 页 / 10-12 分钟 | 易学老师 |
+| `yixue-master-deck-print.html` | 📄 PDF 导出版（浏览器 Cmd+P 直接出 PDF） | 16 页 A4 横版 | 离线分发 |
 
 ## 怎么用
 
@@ -21,15 +22,26 @@
 
 ### 导出 PDF
 
-1. 浏览器打开后，URL 末尾加 `?print-pdf` 重新加载（例：`yixue-master-deck.html?print-pdf`）
-2. `Cmd + P`（Mac）/ `Ctrl + P`（Win）
-3. 目标改成"另存为 PDF"
-4. 纸张大小：横向 A4，边距：无，背景图形：✓ 勾选
+**方案 A · 用打印友好版**（推荐 ⭐ 最简单）
+
+1. 浏览器（Chrome / Edge / Safari）打开 `yixue-master-deck-print.html`
+2. 屏幕上会看到 16 页一张张排开（每页 1280×720 16:9 卡片）
+3. `Cmd + P`（Mac）/ `Ctrl + P`（Win）
+4. 设置：
+   - **目的地**：另存为 PDF
+   - **纸张大小**：A4
+   - **方向**：横向（landscape）
+   - **边距**：无
+   - **背景图形**：✅ 必须勾选（否则朱砂印 / 米白底 / 渐变全消失）
 5. 保存得到 16 页 PDF
 
-> ⚠️ 导出 PDF 需要联网（Reveal.js CSS/JS 走 jsdelivr CDN）。
-> 离线场景：把 reveal.js 4.6.1 的 dist 目录下载到 `vendor/reveal/`，再把 HTML
-> 头部 3 处 CDN 链接改成 `vendor/reveal/...` 相对路径即可。
+> 该版本无任何 CDN 依赖，断网也能用，每页强制独立分页。
+
+**方案 B · 用演示版**（适合一边讲一边导）
+
+1. 打开演示版 URL 末尾加 `?print-pdf`
+2. 等 5 秒让 reveal.js 切换打印模式
+3. 同方案 A 步骤 3-5
 
 ### 转 PPTX
 
