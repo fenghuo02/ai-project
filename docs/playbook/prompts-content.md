@@ -1,5 +1,18 @@
 # 渝山东方美学 · 内容生产 Prompt 工具包
 
+> ## 🚨 关键升级通告（2026-05-20）
+>
+> **Prompt 1 + Prompt 2 v1.1（小红书相关）已弃用**——被朱雀 AIGC 检测限流。
+>
+> 写小红书内容请直接用 v2.0 真人版：
+> - 📝 文字：[`prompts-xiaohongshu-real-voice.md`](./prompts-xiaohongshu-real-voice.md)
+> - 🖼️ 图像：[`prompts-xiaohongshu-real-images.md`](./prompts-xiaohongshu-real-images.md)
+> - 💡 示范：[`_first-content-bundle/14-xhs-real-v2-本命色.md`](./_first-content-bundle/14-xhs-real-v2-本命色.md)
+>
+> 公众号 / B 站 / 引流 / 选题 / 评论运营 / 复盘 (Prompt 3-7) 不受影响，继续使用。
+
+---
+
 > 配套 [`playbook-yixue.md`](./playbook-yixue.md) 使用。
 > 这一份是**四平台内容生产**的 Prompt 集（公众号长文 → B 站长视频 → 引流 → 选题 → 评论运营 → 复盘 → **小红书图文搬运**），
 > 与 [`prompts-yixue-photo.md`](./prompts-yixue-photo.md)（出图 + 解读）+ [`short-video-script-prompts.md`](./short-video-script-prompts.md)（三平台同发短视频脚本）配套——
@@ -29,8 +42,43 @@
 
 ---
 
-## Prompt 1：公众号长文 → 小红书图文搬运生成器（v1.1 改造 ⭐）
+## Prompt 1：公众号长文 → 小红书图文搬运生成器（v1.1 ⛔ 已弃用 · 升级至 v2.0 真人版）
 
+> ## 🚨 弃用通告（2026-05-20）
+>
+> **本 Prompt 1 v1.1（美学札记体）实测被朱雀 AIGC 检测限流**，0 阅读量。
+>
+> 深度搜索发现根本原因：
+> - 2026 年初小红书接入**朱雀 AIGC 检测**，AI 率 > 30% 直接限流
+> - 千瓜 2026 年报关键洞察："种草不再追逐爆款瞬间，是理解人本身"
+> - v1.1 的"古籍 + 排比 + emoji 公式 + 抽象美学"几乎 100% 被判定 AI 生成
+>
+> ### ✅ 替代方案
+>
+> **写小红书内容直接用 v2.0 真人版**：
+>
+> | 用途 | 文件 |
+> |---|---|
+> | 文字提示词 v1.0 | [`prompts-xiaohongshu-real-voice.md`](./prompts-xiaohongshu-real-voice.md) |
+> | 图像提示词 v1.0 | [`prompts-xiaohongshu-real-images.md`](./prompts-xiaohongshu-real-images.md) |
+> | 第一篇真人版完整示范 | [`_first-content-bundle/14-xhs-real-v2-本命色.md`](./_first-content-bundle/14-xhs-real-v2-本命色.md) |
+>
+> ### 📊 实测数据对比
+>
+> | 维度 | v1.1（本 Prompt · 弃用）| v2.0 真人版 |
+> |---|---|---|
+> | 朱雀 AI 率（实测）| 70%+ | 15% 左右 |
+> | 平台推流 | ❌ 限流 | ✅ 正常 |
+> | 主理人验证 | 09/10 第三篇 0 阅读 | 图 1 GPT-Image-2 实测 8 分以上 |
+>
+> ### 🗂️ 历史归档（仅供回溯参考）
+>
+> 以下 v1.1 原 Prompt 文档保留，**不要再调用**。如需回溯设计逻辑，可阅读但不建议执行。
+
+---
+
+> ⚠️ **以下内容仅历史归档** ⚠️
+>
 > **决策来源**：主理人 2026-05-17 决策 D2——小红书降级为图文搬运站，不做原创主战场。
 > **用法**：每周二/周五公众号发完长文后 12h 内运行此 Prompt，把已发的公众号长文搬运成小红书图文版。
 > **目标**：单条搬运成本 ≤ 30 分钟，保留长尾搜索 SEO 红利，**0 边际原创成本**。
@@ -161,8 +209,24 @@
 
 ---
 
-## Prompt 2：小红书原创补充笔记生成器（东方美学日常 · 轻量轨道｜v1.1 降级）
+## Prompt 2：小红书原创补充笔记生成器（v1.1 ⛔ 已弃用 · 升级至 v2.0 真人版）
 
+> ## 🚨 弃用通告（2026-05-20）
+>
+> 同 Prompt 1 弃用通告。本 Prompt 2 v1.1 同样产出"美学札记体"内容，
+> 已被朱雀 AIGC 检测限流。
+>
+> **写小红书原创笔记直接用 v2.0 真人版**：
+> - 文字：[`prompts-xiaohongshu-real-voice.md`](./prompts-xiaohongshu-real-voice.md)
+> - 图像：[`prompts-xiaohongshu-real-images.md`](./prompts-xiaohongshu-real-images.md)
+> - 示范：[`_first-content-bundle/14-xhs-real-v2-本命色.md`](./_first-content-bundle/14-xhs-real-v2-本命色.md)
+>
+> 以下内容仅历史归档，不要再调用。
+
+---
+
+> ⚠️ **以下内容仅历史归档** ⚠️
+>
 > **决策来源**：主理人 2026-05-17 决策 D2——小红书降级为图文搬运站。
 > **本 Prompt 现在是补充轨道**：每月 2-4 篇原创（仅在以下场景启用），其余 8-12 篇全部用 Prompt 1（公众号长文 → 小红书图文搬运）。
 >
