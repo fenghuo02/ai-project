@@ -2,424 +2,459 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Musk Empire 2026 Cheat Sheet · Week 21</title>
+  <title>Musk Empire 2026 Cheat Sheet · Week 22 · v0.2</title>
   <style>
-    @page {
-      size: letter portrait;
-      margin: 0.5in;
-    }
-
+    @page { size: letter portrait; margin: 0.45in; }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html, body {
       font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
-      font-size: 9pt;
-      line-height: 1.4;
-      color: #111;
-      background: #fff;
+      font-size: 8.5pt; line-height: 1.4; color: #111; background: #fff;
       -webkit-font-smoothing: antialiased;
     }
-
-    .page {
-      max-width: 7.5in;
-      margin: 0 auto;
-      padding: 0.2in 0;
-    }
+    .page { max-width: 7.5in; margin: 0 auto; padding: 0.1in 0; }
+    .page-break { page-break-after: always; }
 
     /* HEADER */
     header {
-      border-bottom: 2px solid #111;
-      padding-bottom: 12pt;
-      margin-bottom: 14pt;
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
+      border-bottom: 2px solid #111; padding-bottom: 10pt; margin-bottom: 12pt;
+      display: flex; justify-content: space-between; align-items: flex-end;
     }
+    header h1 { font-size: 18pt; font-weight: 800; letter-spacing: -0.5pt; line-height: 1; }
+    header .meta { text-align: right; font-size: 7pt; color: #666; line-height: 1.3; }
+    header .meta strong { color: #111; font-weight: 600; }
+    .subtitle { font-size: 8pt; color: #555; margin-top: 4pt; }
 
-    header h1 {
-      font-size: 18pt;
-      font-weight: 800;
-      letter-spacing: -0.5pt;
-      line-height: 1;
+    /* STRUCTURE NOTE */
+    .structure {
+      background: #f8f8f8; border-left: 3pt solid #111;
+      padding: 6pt 10pt; margin-bottom: 12pt; font-size: 8pt; line-height: 1.5;
     }
+    .structure strong { font-weight: 700; }
 
-    header .meta {
-      text-align: right;
-      font-size: 7.5pt;
-      color: #666;
-      line-height: 1.3;
-    }
-
-    header .meta strong {
-      color: #111;
-      font-weight: 600;
-    }
-
-    .subtitle {
-      font-size: 8.5pt;
-      color: #555;
-      margin-top: 4pt;
-    }
-
-    /* GRID OF COMPANIES */
+    /* BRAND CARDS */
     .grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10pt;
-      margin-bottom: 14pt;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 8pt;
+      margin-bottom: 12pt;
     }
-
     .card {
-      border: 1px solid #ddd;
-      border-radius: 3pt;
-      padding: 9pt 11pt;
+      border: 1px solid #ddd; border-radius: 3pt; padding: 7pt 9pt;
       page-break-inside: avoid;
     }
-
     .card-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: 4pt;
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-bottom: 3pt;
     }
-
-    .card h2 {
-      font-size: 12pt;
-      font-weight: 800;
-      letter-spacing: -0.3pt;
+    .card h2 { font-size: 11pt; font-weight: 800; letter-spacing: -0.3pt; }
+    .card .parent {
+      font-size: 6pt; color: #999; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 0.5pt;
     }
-
-    .card .num {
-      font-size: 7pt;
-      color: #999;
-      font-weight: 500;
-    }
-
     .card .liner {
-      font-size: 8pt;
-      color: #444;
-      font-style: italic;
-      margin-bottom: 6pt;
-      line-height: 1.3;
+      font-size: 7.5pt; color: #444; font-style: italic;
+      margin-bottom: 4pt; line-height: 1.3;
     }
-
     .card .metric {
-      font-size: 8.5pt;
-      font-weight: 700;
-      color: #111;
-      background: #f5f5f5;
-      padding: 4pt 6pt;
-      border-radius: 2pt;
-      margin-bottom: 6pt;
+      font-size: 7.8pt; font-weight: 700; color: #111;
+      background: #f3f3f3; padding: 3pt 5pt; border-radius: 2pt;
+      margin-bottom: 4pt; line-height: 1.4;
     }
-
-    .card dl {
-      font-size: 7.5pt;
-      line-height: 1.5;
-    }
-
-    .card dl div {
-      display: flex;
-      gap: 4pt;
-      margin-bottom: 2pt;
-    }
-
+    .card dl { font-size: 7pt; line-height: 1.5; }
+    .card dl div { display: flex; gap: 4pt; margin-bottom: 1pt; }
     .card dt {
-      font-weight: 700;
-      color: #888;
-      text-transform: uppercase;
-      font-size: 6.5pt;
-      letter-spacing: 0.4pt;
-      flex-shrink: 0;
-      width: 38pt;
-      padding-top: 1pt;
+      font-weight: 700; color: #888; text-transform: uppercase;
+      font-size: 6pt; letter-spacing: 0.4pt; flex-shrink: 0;
+      width: 32pt; padding-top: 1pt;
     }
-
-    .card dd {
-      flex: 1;
-      color: #222;
-    }
-
+    .card dd { flex: 1; color: #222; }
     .card .watch {
-      margin-top: 6pt;
-      padding-top: 5pt;
-      border-top: 1px dashed #ddd;
-      font-size: 7.5pt;
-      color: #b00;
-      font-weight: 600;
+      margin-top: 5pt; padding-top: 4pt; border-top: 1px dashed #ddd;
+      font-size: 7pt; color: #b00; font-weight: 600;
     }
 
-    /* AI RACE TABLE */
-    .ai-race {
-      margin-bottom: 14pt;
-      page-break-inside: avoid;
-    }
-
-    .ai-race h3 {
-      font-size: 11pt;
-      font-weight: 800;
-      margin-bottom: 6pt;
+    /* SECTION TITLES */
+    h3 {
+      font-size: 11pt; font-weight: 800; margin-bottom: 6pt;
       letter-spacing: -0.2pt;
     }
+    section { margin-bottom: 12pt; page-break-inside: avoid; }
 
-    .ai-race table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 7.5pt;
-    }
-
-    .ai-race th {
-      text-align: left;
-      padding: 4pt 6pt;
-      background: #111;
-      color: #fff;
-      font-weight: 600;
-      letter-spacing: 0.3pt;
-      font-size: 7pt;
+    /* TABLES */
+    table { width: 100%; border-collapse: collapse; font-size: 7.5pt; }
+    th {
+      text-align: left; padding: 3.5pt 5pt; background: #111; color: #fff;
+      font-weight: 600; letter-spacing: 0.3pt; font-size: 6.5pt;
       text-transform: uppercase;
     }
+    td {
+      padding: 3.5pt 5pt; border-bottom: 1px solid #eee; vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    td:first-child { font-weight: 700; width: 18%; }
 
-    .ai-race td {
-      padding: 4pt 6pt;
-      border-bottom: 1px solid #eee;
-      vertical-align: top;
+    /* VALUATION TABLE specific */
+    .valuation td:nth-child(2) {
+      font-weight: 700; font-size: 8.5pt; width: 16%; color: #111;
+    }
+    .valuation td:nth-child(3) { width: 12%; color: #666; font-size: 7pt; }
+    .valuation tr.parent-row td {
+      background: #f5f5f5; font-weight: 700;
     }
 
-    .ai-race tr:last-child td { border-bottom: none; }
-
-    .ai-race td:first-child {
-      font-weight: 700;
-      width: 22%;
+    /* DECODER table */
+    .decoder td { font-size: 7pt; }
+    .decoder td:first-child {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      width: 14%; color: #c00; font-weight: 700;
+    }
+    .decoder td:nth-child(2) { width: 22%; }
+    .decoder td:nth-child(3) { width: 30%; }
+    .decoder td:nth-child(4) {
+      font-size: 6.5pt; color: #888; font-style: italic;
     }
 
-    .ai-race .verdict {
-      margin-top: 6pt;
-      padding: 6pt 9pt;
-      background: #fff8e1;
-      border-left: 3pt solid #f0a000;
-      font-size: 8pt;
-      font-style: italic;
+    .verdict {
+      margin-top: 6pt; padding: 6pt 9pt;
+      background: #fff8e1; border-left: 3pt solid #f0a000;
+      font-size: 8pt; font-style: italic;
     }
 
     /* WATCH LIST */
-    .watchlist {
-      margin-bottom: 14pt;
-      page-break-inside: avoid;
-    }
-
-    .watchlist h3 {
-      font-size: 11pt;
-      font-weight: 800;
-      margin-bottom: 6pt;
-      letter-spacing: -0.2pt;
-    }
-
     .watchlist ul {
-      list-style: none;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3pt 12pt;
-      font-size: 7.5pt;
+      list-style: none; display: grid; grid-template-columns: 1fr 1fr;
+      gap: 3pt 12pt; font-size: 7.5pt;
     }
-
     .watchlist li {
-      padding-left: 12pt;
-      position: relative;
-      line-height: 1.4;
+      padding-left: 12pt; position: relative; line-height: 1.4;
     }
-
     .watchlist li::before {
-      content: "→";
-      position: absolute;
-      left: 0;
-      color: #888;
-      font-weight: 700;
+      content: "→"; position: absolute; left: 0; color: #888; font-weight: 700;
     }
 
     /* FOOTER */
     footer {
-      border-top: 2px solid #111;
-      padding-top: 8pt;
-      display: flex;
-      justify-content: space-between;
-      font-size: 7pt;
-      color: #666;
+      border-top: 2px solid #111; padding-top: 7pt;
+      display: flex; justify-content: space-between;
+      font-size: 6.5pt; color: #666;
     }
+    footer .signature { font-weight: 700; color: #111; font-size: 7.5pt; }
 
-    footer .signature {
-      font-weight: 700;
-      color: #111;
-      font-size: 8pt;
-    }
-
-    /* PRINT TWEAKS */
     @media print {
-      body { font-size: 9pt; }
-      .card { break-inside: avoid; }
-      .ai-race, .watchlist { break-inside: avoid; }
+      body { font-size: 8.5pt; }
+      .card, section { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
 
-    <!-- HEADER -->
-    <header>
-      <div>
-        <h1>Musk Empire 2026 Cheat Sheet</h1>
-        <p class="subtitle">6 companies + AI race · decoded weekly</p>
-      </div>
-      <div class="meta">
-        <div><strong>Edition:</strong> Week 21 · 2026</div>
-        <div><strong>Updated:</strong> 2026-05-22</div>
-        <div><strong>By:</strong> @Skub0k</div>
-      </div>
-    </header>
+<!-- ========== PAGE 1 ========== -->
+<div class="page">
 
-    <!-- COMPANIES GRID -->
-    <section class="grid">
+  <header>
+    <div>
+      <h1>Musk Empire 2026 Cheat Sheet</h1>
+      <p class="subtitle">6 brands · 4 corporate entities · decoded weekly</p>
+    </div>
+    <div class="meta">
+      <div><strong>Edition:</strong> Week 22 · 2026</div>
+      <div><strong>Updated:</strong> 2026-05-25</div>
+      <div><strong>By:</strong> @Skub0k</div>
+      <div><strong>Version:</strong> v0.2</div>
+    </div>
+  </header>
 
-      <!-- Tesla -->
-      <article class="card">
-        <div class="card-head">
-          <h2>Tesla</h2>
-          <span class="num">01 / 06</span>
-        </div>
-        <p class="liner">EV maker that became an AI company in 2025.</p>
-        <div class="metric">FSD take rate: <strong>30%</strong> (first crossover) · Q1 deliveries: <strong>401k</strong> (+8% yoy)</div>
-        <dl>
-          <div><dt>Recent</dt><dd>FSD v13 shipped. Intervention rate 0.3/100mi.</dd></div>
-          <div><dt>Next</dt><dd>FSD v14 (end-to-end neural net v2). Optimus gen 3 demo. Robotaxi pilot.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: take rate over 35% triggers re-rating.</p>
-      </article>
-
-      <!-- SpaceX -->
-      <article class="card">
-        <div class="card-head">
-          <h2>SpaceX</h2>
-          <span class="num">02 / 06</span>
-        </div>
-        <p class="liner">Only fully reusable rocket co in active development.</p>
-        <div class="metric">Starlink: <strong>6.8k</strong> active sats · Dragon: <strong>28d</strong> turnaround (Shuttle was 90)</div>
-        <dl>
-          <div><dt>Recent</dt><dd>3 starship flights. Booster catch ×2 succeeded.</dd></div>
-          <div><dt>Next</dt><dd>Starship flight 12. In-orbit refuel test. Starlink v2 batch.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: starship per-kg cost vs falcon 9 crossover.</p>
-      </article>
-
-      <!-- xAI -->
-      <article class="card">
-        <div class="card-head">
-          <h2>xAI</h2>
-          <span class="num">03 / 06</span>
-        </div>
-        <p class="liner">AI lab with real-time X training data + 200k H100.</p>
-        <div class="metric">Valuation: <strong>$200B</strong> · Colossus 2 building · Grok 3 in production</div>
-        <dl>
-          <div><dt>Recent</dt><dd>Colossus 1 hit 100k H100. Grok 3 release.</dd></div>
-          <div><dt>Next</dt><dd>Grok 4. Colossus 2 online. Native image gen.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: grok 4 vs gpt-5 vs claude on coding + reasoning.</p>
-      </article>
-
-      <!-- Neuralink -->
-      <article class="card">
-        <div class="card-head">
-          <h2>Neuralink</h2>
-          <span class="num">04 / 06</span>
-        </div>
-        <p class="liner">Brain-AI bandwidth bet via N1 implant.</p>
-        <div class="metric">Participant 1 typing: <strong>8 wpm</strong> · trajectory exponential not linear</div>
-        <dl>
-          <div><dt>Recent</dt><dd>3 participants implanted. Decoder bps improving monthly.</dd></div>
-          <div><dt>Next</dt><dd>Participant 4. 2nd clinical site. Bps doubling milestone.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: bps trajectory + FDA breakthrough device acceleration.</p>
-      </article>
-
-      <!-- X -->
-      <article class="card">
-        <div class="card-head">
-          <h2>X (platform)</h2>
-          <span class="num">05 / 06</span>
-        </div>
-        <p class="liner">AI lab with the world's largest real-time reasoning data.</p>
-        <div class="metric">@grok summons: <strong>#1</strong> shipped feature in 2 years</div>
-        <dl>
-          <div><dt>Recent</dt><dd>Algorithm transparency commits. Community notes scaling.</dd></div>
-          <div><dt>Next</dt><dd>Native creator scheduling. Deeper @grok integration.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: ad share payout cadence + creator subscription growth.</p>
-      </article>
-
-      <!-- Boring Co -->
-      <article class="card">
-        <div class="card-head">
-          <h2>Boring Co</h2>
-          <span class="num">06 / 06</span>
-        </div>
-        <p class="liner">Smallest valuation, biggest "shovel in the ground" leverage.</p>
-        <div class="metric">Vegas loop: <strong>150k</strong> passenger-trips/mo · Prufrock-3: <strong>~0.4mi/wk</strong></div>
-        <dl>
-          <div><dt>Recent</dt><dd>Vegas loop expansion. New contract negotiations.</dd></div>
-          <div><dt>Next</dt><dd>2nd city contract. Prufrock-4 unveil.</dd></div>
-        </dl>
-        <p class="watch">⚑ Watch: any new city contract = re-rating event.</p>
-      </article>
-
-    </section>
-
-    <!-- AI RACE -->
-    <section class="ai-race">
-      <h3>AI Race · State of Play</h3>
-      <table>
-        <thead>
-          <tr>
-            <th>Lab</th>
-            <th>Wins on</th>
-            <th>Loses on</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>OpenAI · GPT-5</td><td>coding, multimodal</td><td>open weights, real-time data</td></tr>
-          <tr><td>Anthropic · Claude</td><td>reasoning, nuance, long context</td><td>speed, multimodal</td></tr>
-          <tr><td>xAI · Grok</td><td>real-time data, personality, weights</td><td>benchmark scores</td></tr>
-          <tr><td>Google · Gemini</td><td>infrastructure, vertical integration</td><td>hype</td></tr>
-          <tr><td>Meta · Llama</td><td>open source ecosystem</td><td>frontier capability</td></tr>
-        </tbody>
-      </table>
-      <div class="verdict">
-        <strong>Bottom line:</strong> 3-horse race for the first time in 2 years. Diversity is the win — 1-horse AI was the bad ending.
-      </div>
-    </section>
-
-    <!-- WATCH LIST -->
-    <section class="watchlist">
-      <h3>Watch List · Next 90 Days</h3>
-      <ul>
-        <li>Starship flight 12 reusable demo</li>
-        <li>Optimus gen 3 hand dexterity demo</li>
-        <li>Grok 4 release + benchmark wars</li>
-        <li>FSD v14 (end-to-end neural net v2)</li>
-        <li>Neuralink participant 4 implant</li>
-        <li>xAI Colossus 2 online milestone</li>
-        <li>Tesla Q2 deliveries (June report)</li>
-        <li>Cybercab production reveal</li>
-      </ul>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div>
-        <span class="signature">@Skub0k</span> · musk empire decoder weekly · sundays via beehiiv
-      </div>
-      <div>
-        Updated every monday. This edition: Week 21 / 2026.
-      </div>
-    </footer>
-
+  <!-- STRUCTURE NOTE -->
+  <div class="structure">
+    <strong>Empire structure note (Feb 2026 reset):</strong>
+    SpaceX acquired xAI in Feb 2026 ($1.25T combined). The combined entity is now <strong>SpaceXAI</strong>, contains SpaceX (rockets) + Starlink + xAI/Grok + X (platform). Targeting <strong>$1.75T-$2T IPO in June 2026</strong>. Tesla, Neuralink, Boring remain separate.
   </div>
+
+  <!-- 6 BRAND CARDS -->
+  <section class="grid">
+
+    <!-- Tesla -->
+    <article class="card">
+      <div class="card-head">
+        <h2>Tesla</h2>
+        <span class="parent">Public · $TSLA</span>
+      </div>
+      <p class="liner">EV-maker pivoting to robotics + autonomy company.</p>
+      <div class="metric">Q1 2026: <strong>358k</strong> deliveries (missed by 7.6k) · FSD subs <strong>1.28M</strong> (+51% YoY)</div>
+      <dl>
+        <div><dt>Recent</dt><dd>FSD v14.3.3 shipped. Cybercab pilot fleet at 29 cars in Texas. Stock under $400.</dd></div>
+        <div><dt>Next</dt><dd>FSD v14.4. Cybercab volume scale (70+ at Giga Texas). Optimus consumer launch end-2027.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: Q2 deliveries (June). FSD take rate over 18% triggers re-rating.</p>
+    </article>
+
+    <!-- SpaceX -->
+    <article class="card">
+      <div class="card-head">
+        <h2>SpaceX</h2>
+        <span class="parent">Part of SpaceXAI · IPO June</span>
+      </div>
+      <p class="liner">Only fully reusable rocket co at scale.</p>
+      <div class="metric">Starship V3: <strong>408ft, 100t payload</strong> · 2025 EBITDA <strong>$6.6B</strong></div>
+      <dl>
+        <div><dt>Recent</dt><dd>Starship V3 first flight (May 22). 33× Raptor 3, 18M lbs thrust. S-1 filed May 20.</dd></div>
+        <div><dt>Next</dt><dd>IPO June 2026 ($75B raise target). In-orbit refuel test. Booster catch cadence.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: IPO pricing range. Starship reuse cadence.</p>
+    </article>
+
+    <!-- Starlink -->
+    <article class="card">
+      <div class="card-head">
+        <h2>Starlink</h2>
+        <span class="parent">Part of SpaceXAI</span>
+      </div>
+      <p class="liner">Fastest-growing internet service ever.</p>
+      <div class="metric">Subs: <strong>10M</strong> (Feb 2026) · Active sats: <strong>~10,370</strong> of 42,000 target</div>
+      <dl>
+        <div><dt>Recent</dt><dd>10M sub milestone Feb 2026 (4M Sep 2024 → 9M Dec 2025 → 10M).</dd></div>
+        <div><dt>Next</dt><dd>v2 batch deployment. Direct-to-cell expansion. Enterprise + maritime.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: Amazon Kuiper rollout. Starlink ARPU trajectory.</p>
+    </article>
+
+    <!-- xAI -->
+    <article class="card">
+      <div class="card-head">
+        <h2>xAI</h2>
+        <span class="parent">Part of SpaceXAI · pre-merger $250B</span>
+      </div>
+      <p class="liner">AI lab betting on compute scale + X data.</p>
+      <div class="metric">Colossus: <strong>555k GPUs, 2GW</strong> · Grok V9-Medium: <strong>1.5T params</strong> (May 25)</div>
+      <dl>
+        <div><dt>Recent</dt><dd>Grok V9-Medium training done. Grok Build (autonomous coding) shipped May.</dd></div>
+        <div><dt>Next</dt><dd>V9-Medium public release in 2-3 weeks. Grok 4.2 open-source by EOY. Orbital compute by 2028.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: $6.4B 2025 op loss vs $3.2B revenue. Talent retention post-merger.</p>
+    </article>
+
+    <!-- X platform -->
+    <article class="card">
+      <div class="card-head">
+        <h2>X (platform)</h2>
+        <span class="parent">Part of SpaceXAI · ~$44B</span>
+      </div>
+      <p class="liner">Real-time data layer for the empire's AI.</p>
+      <div class="metric">2025 ad rev: <strong>$1.8B</strong> (+7% YoY, -59% from peak) · US ad share <strong>~1%</strong></div>
+      <dl>
+        <div><dt>Recent</dt><dd>Valuation back to $44B (acquisition price). @grok summons fully integrated.</dd></div>
+        <div><dt>Next</dt><dd>Native creator scheduling. Deeper xAI training pipeline integration.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: ad share trajectory. Creator subscription growth.</p>
+    </article>
+
+    <!-- Neuralink -->
+    <article class="card">
+      <div class="card-head">
+        <h2>Neuralink</h2>
+        <span class="parent">Private · ~$9.7B</span>
+      </div>
+      <p class="liner">Brain-computer interface via N1 implant.</p>
+      <div class="metric">Participants: <strong>21</strong> enrolled · Latest round: <strong>$650M</strong> (May 6, 2026)</div>
+      <dl>
+        <div><dt>Recent</dt><dd>Series E-II May 2026. 21 participants milestone announced January.</dd></div>
+        <div><dt>Next</dt><dd>2nd clinical site approval. BPS decoder doubling. Speech decoding milestone.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: Synchron / BlackRock progress. FDA expanded indication.</p>
+    </article>
+
+  </section>
+
+  <!-- BORING fits as 7th card or in compact row -->
+  <section class="grid" style="grid-template-columns: 1fr; margin-bottom: 0;">
+    <article class="card">
+      <div class="card-head">
+        <h2>Boring Company</h2>
+        <span class="parent">Private · ~$5.7B (down from $8.6B 2023 peak)</span>
+      </div>
+      <p class="liner">Tunneling startup with biggest "shovel in the ground" leverage of the empire.</p>
+      <div class="metric">Vegas Loop: <strong>3M+</strong> total passengers · Nashville Music City Loop: <strong>$34M</strong> deal + 40-yr license</div>
+      <dl>
+        <div><dt>Recent</dt><dd>3 cities picked March 2026. Nevada safety/environmental violations probe.</dd></div>
+        <div><dt>Next</dt><dd>Nashville BNA Loop construction start. Prufrock-4 unveil. 2nd-city contract finalization.</dd></div>
+      </dl>
+      <p class="watch">⚑ Watch: Any new city contract. Nevada legislative outcome.</p>
+    </article>
+  </section>
+
+</div>
+
+<div class="page-break"></div>
+
+<!-- ========== PAGE 2 ========== -->
+<div class="page">
+
+  <!-- VALUATION SNAPSHOT -->
+  <section class="valuation">
+    <h3>Valuation Snapshot · May 2026</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Entity</th>
+          <th>Valuation</th>
+          <th>Type</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="parent-row">
+          <td>SpaceXAI</td>
+          <td>$1.25T → $1.75-2T</td>
+          <td>private→IPO</td>
+          <td>Feb 2026 merger of SpaceX + xAI. IPO target June 2026, ~$75B raise.</td>
+        </tr>
+        <tr>
+          <td>↳ SpaceX (rockets)</td>
+          <td>~$1T pre-merger</td>
+          <td>private</td>
+          <td>2025 EBITDA $6.6B. Starship V3 just flew.</td>
+        </tr>
+        <tr>
+          <td>↳ Starlink</td>
+          <td>(within SpaceX)</td>
+          <td>private</td>
+          <td>10M subs. Major IPO contributor.</td>
+        </tr>
+        <tr>
+          <td>↳ xAI</td>
+          <td>$250B pre-merger</td>
+          <td>private</td>
+          <td>Series E Jan 2026 at $230B. $20B raise.</td>
+        </tr>
+        <tr>
+          <td>↳ X (platform)</td>
+          <td>~$44B</td>
+          <td>private</td>
+          <td>Back to acquisition price. 2025 ad rev $1.8B.</td>
+        </tr>
+        <tr>
+          <td>Tesla</td>
+          <td>~$1.4T</td>
+          <td>public</td>
+          <td>Stock under $400 May 2026. FSD subs $1.28M.</td>
+        </tr>
+        <tr>
+          <td>Neuralink</td>
+          <td>~$9.7B</td>
+          <td>private</td>
+          <td>Series E-II May 2026. $650M raise. 21 patients.</td>
+        </tr>
+        <tr>
+          <td>Boring Co</td>
+          <td>~$5.7B</td>
+          <td>private</td>
+          <td>Down from $8.6B 2023 peak. Nashville $34M deal.</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- BULL VS BEAR -->
+  <section>
+    <h3>Bull vs Bear · One Line Each</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Brand</th>
+          <th>Bull case</th>
+          <th>Bear case</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Tesla</td><td>FSD subs +51% YoY at 1.28M; Cybercab production live; robotics moat.</td><td>Q1 deliveries miss; 50k inventory build; Cybertruck collapse (-45% YoY).</td></tr>
+        <tr><td>SpaceX</td><td>Starship V3 flew; only fully reusable rocket; $6.6B EBITDA; June IPO.</td><td>Pre-revenue at scale for Starship; China launch cadence rising; reuse not yet airline-grade.</td></tr>
+        <tr><td>Starlink</td><td>10M subs (fastest ever); v2 sats coming; direct-to-cell upside.</td><td>Amazon Kuiper rollout; ARPU pressure; regulatory risk in key markets.</td></tr>
+        <tr><td>xAI</td><td>555k GPU Colossus; Grok V9-Medium 1.5T params; X data flywheel.</td><td>$6.4B 2025 op loss; talent bleeding post-merger; Grok behind Claude/GPT on benchmarks.</td></tr>
+        <tr><td>X</td><td>Valuation recovered to $44B; @grok integration; community notes.</td><td>1% US ad share (10x less than 2016); ad rev still 59% below peak.</td></tr>
+        <tr><td>Neuralink</td><td>21 patients; FDA breakthrough device path; bps trajectory exponential.</td><td>Phase-1 only; Synchron less invasive; 5+ year IPO horizon.</td></tr>
+        <tr><td>Boring</td><td>Nashville $34M + 40-yr license; 3 cities picked.</td><td>Valuation declining; Nevada violations probe; small TAM vs other Musk co's.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- MUSK TWEET DECODER -->
+  <section class="decoder">
+    <h3>Musk Tweet Decoder Dictionary · How to Read His Posts</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Phrase / Pattern</th>
+          <th>Surface meaning</th>
+          <th>Real meaning</th>
+          <th>Reliability</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>!! / !!!</td><td>excited</td><td>announcement coming in 1-14 days; he's seen demo</td><td>high</td></tr>
+        <tr><td>"Wow"</td><td>impressed</td><td>genuine reaction; high-trust validation of post above</td><td>high</td></tr>
+        <tr><td>"Interesting"</td><td>curious</td><td>skeptical or dismissive; rarely commits</td><td>noise</td></tr>
+        <tr><td>"Concerning"</td><td>worried</td><td>real problem; track follow-up within 72h</td><td>high</td></tr>
+        <tr><td>"Soon" / "Coming soon"</td><td>imminent</td><td>6-18 months out; runs 2-3x late on production</td><td>directional</td></tr>
+        <tr><td>"End of year"</td><td>by Dec</td><td>usually slips to Q2 next year</td><td>directional</td></tr>
+        <tr><td>"Yes" / "Yeah"</td><td>agreement</td><td>confirms rumor or report; effectively a quote</td><td>high</td></tr>
+        <tr><td>Single 🤣</td><td>finds funny</td><td>doesn't always mean disagreement; just absurd</td><td>low signal</td></tr>
+        <tr><td>"Will look into it"</td><td>engaged</td><td>dismissive; rarely follows up</td><td>low</td></tr>
+        <tr><td>"Fake news"</td><td>denial</td><td>aggressive denial; expect lawsuit threat</td><td>directional</td></tr>
+        <tr><td>Quoted post + nothing</td><td>endorsement</td><td>full agreement, equivalent to "yes"</td><td>high</td></tr>
+        <tr><td>Random rocket 🚀</td><td>enthusiasm</td><td>vibes only; no commitment to timeline</td><td>low</td></tr>
+        <tr><td>"Definitely"</td><td>certain</td><td>confidence high but production may slip</td><td>medium</td></tr>
+        <tr><td>"Hmm"</td><td>thinking</td><td>considering; may take action 24-72h</td><td>medium</td></tr>
+        <tr><td>Specific number</td><td>data</td><td>usually accurate; verify against filings</td><td>high</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- AI RACE -->
+  <section>
+    <h3>AI Race · State of Play · May 2026</h3>
+    <table>
+      <thead>
+        <tr><th>Lab</th><th>Latest model</th><th>Wins on</th><th>Loses on</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>OpenAI</td><td>GPT-5</td><td>coding, multimodal</td><td>open weights, real-time data</td></tr>
+        <tr><td>Anthropic</td><td>Claude 4 Opus</td><td>reasoning, nuance, long context</td><td>speed, multimodal</td></tr>
+        <tr><td>xAI</td><td>Grok V9-Medium (1.5T)</td><td>real-time X data, personality, planned open-weights</td><td>benchmark scores vs frontier</td></tr>
+        <tr><td>Google</td><td>Gemini 3</td><td>infrastructure, multimodal, integration</td><td>narrative momentum</td></tr>
+        <tr><td>Meta</td><td>Llama 4</td><td>open source ecosystem</td><td>frontier capability</td></tr>
+      </tbody>
+    </table>
+    <div class="verdict">
+      <strong>Bottom line:</strong> 5-horse race for the first time ever. xAI's bet: compute scale (555k GPU Colossus) + the only real-time human data corpus on Earth. Whether that beats benchmark-tuned frontier work is the open question of 2026.
+    </div>
+  </section>
+
+  <!-- WATCH LIST -->
+  <section class="watchlist">
+    <h3>Watch List · Next 90 Days</h3>
+    <ul>
+      <li>SpaceXAI IPO pricing (June 2026)</li>
+      <li>Tesla Q2 deliveries report (early July)</li>
+      <li>Grok V9-Medium public release (2-3 wks)</li>
+      <li>FSD v14.4 rollout</li>
+      <li>Cybercab pilot expansion beyond Texas</li>
+      <li>Starship reuse cadence milestones</li>
+      <li>Starlink v2 batch deployment</li>
+      <li>Neuralink 2nd clinical site approval</li>
+      <li>Boring Co Nashville construction start</li>
+      <li>Optimus gen 3 hand demo</li>
+      <li>Nevada Boring Co probe outcome</li>
+      <li>xAI talent retention numbers</li>
+    </ul>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <span class="signature">@Skub0k</span> · musk empire decoder weekly · sundays via beehiiv
+    </div>
+    <div>v0.2 · Updated weekly · Sources: SpaceX S-1, Tesla Q1 filings, xAI blog, Reuters, CNBC, Bloomberg.</div>
+  </footer>
+
+</div>
+
 </body>
 </html>
