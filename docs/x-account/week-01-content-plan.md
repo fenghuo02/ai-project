@@ -321,5 +321,145 @@ genuine question: which of the 6 companies are you most underweight on the watch
 
 ---
 
-**版本**：v1.0 · 2026-05-22 草案
-**配套**：[strategy](./x-strategy.md) · [decoder thread #01](./decoder-threads/01-week21-empire-overview.md) · [newsletter issue 01](./newsletter/issue-01-2026-05-25.md) · [empire cheat sheet](./empire-cheat-sheet/cheat-sheet.html)
+## 七、截图发布工作流 + Tally 邮箱沉淀（v1.1 补丁 · 2026-05-25）
+
+> Issue 01 实际发布走了截图路径，因 Beehiiv 国内访问不稳。
+> 这套工作流在切到 Mailchimp / EmailOctopus 之前都通用。
+
+### 7.1 为什么用截图
+
+| 维度 | Beehiiv 邮件 | 截图发 X |
+|---|---|---|
+| 国内访问 | ❌ 不稳 | ✅ 流畅 |
+| 算法可见度 | 邮箱内私域 | X 推荐池公域 |
+| 视觉冲击 | 中等 | 高（图片推文加权 30-50%） |
+| 邮箱沉淀 | ✅ 自动 | ❌ 需 Tally 配合 |
+| 数据反馈 | open / click / reply | impression / bookmark |
+
+**结论**：截图能拿到流量，但邮箱沉淀要靠 Tally 补上。
+
+### 7.2 截图发布 SOP（每周一 newsletter 用）
+
+#### Step 1 · 把 markdown 渲染成可截图的样式
+
+3 选 1：
+
+- **A. GitHub 页面**（最快）：直接在 GitHub 打开 `docs/x-account/newsletter/issue-XX.md`，浏览器自带的 markdown 渲染就行
+- **B. Notion 粘贴**：新建 page，粘 markdown，自动渲染
+- **C. 自建 HTML**（最美）：照 [cheat-sheet.html](./empire-cheat-sheet/cheat-sheet.html) 的风格搭一个 newsletter.html
+
+#### Step 2 · 截图（反 X 压缩 3 个技巧）
+
+1. **PNG 不要 JPG**，X 对 PNG 压缩弱
+2. **分辨率至少 1500px 宽**：浏览器缩放 200% 后再截屏
+3. **背景纯净**：白底黑字最稳，不要花哨配色
+
+#### Step 3 · 4 图分割策略（X 单推最多 4 图）
+
+| 图 | 内容 |
+|---|---|
+| 图 1 | Title + TL;DR + Empire Structure |
+| 图 2 | Tesla + SpaceX + Starlink |
+| 图 3 | xAI + X + Neuralink + Boring |
+| 图 4 | Number of the Week + AI Race + Watching Next 90d |
+
+#### Step 4 · X 推文结构（主推 + 2 条 reply）
+
+**主推（带 4 图）**：
+
+```
+issue 01 of musk empire decoder weekly.
+
+spacexai merger, grok V9 1.5T params, fsd subs +51% YoY,
+21 neuralink patients, 5-horse AI race.
+
+monday morning, decoded ↓
+```
+
+**Reply 1（紧跟，文字版 TL;DR · 喂算法的关键步骤）**：
+
+```
+quick text version for the algorithm + screen readers:
+
+- spacexai officially merged feb 2026 ($1.25T, IPO june target $1.75-2T)
+- starship V3 flew may 22 (408ft, 100t payload, 33× raptor 3)
+- starlink hit 10M subs (fastest internet service ever)
+- tesla fsd subs at 1.28M, +51% YoY
+- grok V9-Medium 1.5T params training done sunday
+- neuralink at 21 patients, $9.7B valuation
+- 5-horse AI race for the first time ever
+```
+
+**Reply 2（CTA 钩子）**：
+
+```
+subscribe for next monday: <tally-link>
+dm 'empire' for the pdf v0.2
+```
+
+> ⚠️ 没有 Reply 1 的话，X 算法只能看到主推那短短几十字 + 4 张它读不懂的图，搜索完全找不到这条。Reply 1 不能省。
+
+### 7.3 Tally 邮箱沉淀 SOP（5 分钟搞定）
+
+1. 注册 [tally.so](https://tally.so)（邮箱即可，国内可访问）
+2. New form，2 个字段：
+   - **Email**（必填）
+   - **Most curious about?**（下拉单选：Tesla / SpaceX / xAI / Neuralink / X / Boring / AI race / All — 用于后续按兴趣分群发不同内容）
+3. Form 标题：`Subscribe · Musk Empire Decoder Weekly`
+4. 描述：`every monday. 5-min read. 6 brands + AI race + the musk decoder dictionary. free.`
+5. Submit 后跳转：感谢页 + 一句 `your first issue lands next monday morning`
+6. Publish → 复制公开链接
+
+### 7.4 Bio link 调整
+
+- ~~Was: `empire cheat sheet pdf launching this week`~~
+- **Now**: Tally subscription form 公开链接
+- Future: Mailchimp / EmailOctopus signup form（订阅 100+ 后再切）
+
+### 7.5 24h 数据复盘表
+
+每次截图发后第 24 小时填这个：
+
+| 指标 | 优秀 | 及格 | 危险 | 实际 |
+|---|---|---|---|---|
+| Impression | > 30K | > 8K | < 2K | ___ |
+| Image taps | > 5% | > 2% | < 1% | ___ |
+| Bookmark | > 50 | > 15 | < 5 | ___ |
+| DM "empire" | > 10 | > 3 | 0 | ___ |
+| Tally 订阅 | > 10 | > 3 | 0 | ___ |
+
+> 💡 **Bookmark 数是最强信号** — 它意味着"我要回头再读一遍"。Bookmark 高但 follow 低 = 内容好但 profile 没接住，要回头优化 profile 文案。
+
+### 7.6 Issue 02 prep checklist（每周日做）
+
+发完 Issue 01 后，下周日做这些为 Issue 02 备料：
+
+- [ ] 用 Grok / Kimi 联网刷新 6 brand 当周关键数据
+- [ ] 更新 [cheat-sheet-source.md](./empire-cheat-sheet/cheat-sheet-source.md)
+- [ ] 重新渲染 cheat-sheet.html → PDF v0.3
+- [ ] 写 Issue 02 markdown（用 Issue 01 为模板，修数字）
+- [ ] 截图前预览：4 图分割是否清晰、字体是否清晰
+- [ ] 起草 Issue 02 X 配文（caption + reply 1 + reply 2）
+- [ ] 看 Tally 后台新增邮箱，做用户分群（哪个 brand 关注度最高）
+- [ ] 时间锁定：周日晚 8pm 美东 = 周一早 8am 北京时间
+
+### 7.7 长期迁移路径（什么时候停用截图流）
+
+| 阶段 | 手段 | 触发条件 |
+|---|---|---|
+| **现在** | 截图 + Tally 手工收 | Beehiiv 不可访问，订阅 < 100 |
+| **M2 切换** | Mailchimp / EmailOctopus / Brevo（国内可访问） | Tally 收到 100+ 邮箱，需要群发 |
+| **M4 升级** | 自建落地页 + 完整分析 | 月收入 > $500，可投资工具栈 |
+
+**Mailchimp 切换步骤**（到时再做，约 30 分钟）：
+
+1. Tally 后台导出 CSV
+2. Mailchimp 注册 → 导入 CSV
+3. 用 Issue 01 markdown 当模板，发 Issue 02
+4. Bio link 改成 Mailchimp 订阅页
+5. Tally form 保留作为备用入口（或停用）
+
+---
+
+**版本**：v1.1 · 2026-05-25 补丁（加截图工作流 + Tally）
+**配套**：[strategy](./x-strategy.md) · [decoder thread #01](./decoder-threads/01-week21-empire-overview.md) · [newsletter issue 01](./newsletter/issue-01-2026-05-25.md) · [empire cheat sheet v0.2](./empire-cheat-sheet/cheat-sheet.html) · [handoff prompt](./_handoff-prompt.md)
