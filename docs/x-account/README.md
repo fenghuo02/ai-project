@@ -1,64 +1,95 @@
-# X 英文账号 · Musk 帝国轨道运营手册
+# X 英文账号 · @Skub0k · Observer & Investor
 
 > 触发事件：**2026-05-22，@elonmusk 给我的一条回复点了赞**。
-> 这是一次稀有的算法红利窗口（48-72h 内该 reply 会被推到大量"musk likes"派生流量里）。
+> 这一刻成为账号 launch 的算法窗口期。launch 后 6 周，账号品牌从"Musk Empire Decoder"演化为更通用的 **"Observer & Investor"** —— Musk 是其中一面镜子，不是唯一频道。
 >
 > **本目录是一个独立单元，不与本仓库其他内容（摄影、四柱八字、东方美学）发生交集。**
-> **所有内容只围绕一个主题：马斯克 + 马斯克帝国（Tesla / SpaceX / xAI / Neuralink / X / Boring）+ AI 竞赛。**
+> **所有内容围绕一组主题：tech / markets / IPOs / AI race / 6 musk brands / cultural observation。**
 >
-> 状态：v0.2 草案 · 待审阅
+> 状态：**v3.0 草案 · big-V upgrade pack 待部署**
 
 ---
 
-## 一句话定位
+## 一句话定位 v3.0
 
-> **Musk's empire, decoded daily.**
-> tracking tesla / spacex / xai / neuralink / x / boring co + the AI race elon is running inside it.
+> **decoding tech, markets, and the empires being built around them.**
+> musk / openai / anthropic / nvidia / apple / starlink, plus the macro behind it.
 >
-> （翻译：每日解码马斯克帝国 —— 跟踪 Tesla / SpaceX / xAI / Neuralink / X / Boring，以及 Elon 在其中跑的 AI 竞赛。）
+> （翻译：解码科技、市场，以及围绕它们正在被建造的各个帝国 —— Musk / OpenAI / Anthropic / Nvidia / Apple / Starlink，以及这些背后的宏观。）
 
-### 为什么这个定位能赢
+### 为什么这个定位能赢 v3.0
 
-1. **唯一焦点**：账号信号干净，算法和受众一眼知道你是谁、为什么要关注你
-2. **马斯克本人会注意**：他经常翻看自己被 reply 多的话题，集中打 Musk 帝国 = 集中收 Musk 算法红利
-3. **粉丝池超大**：@elonmusk 2 亿 + 粉，@Tesla / @SpaceX / @xai / @neuralink 加起来再有几千万，溢出流量惊人
-4. **变现路径清晰**：Musk-watcher 受众 = 高净值科技/投资人群，X 广告分成 + Newsletter + 数字产品 + sponsorship 全部跑得通
-5. **不被政治拖入**：聚焦"商业 + 工程 + AI"，绕开美国大选、争议立场、个人生活，账号不容易被限流
+1. **独立性**：Musk 出事 / 转向 / 受众疲劳，账号还在
+2. **天花板高**：可以扩到 500K-1M+ 通用 tech / investor 受众，不被锁在 Musk-watcher 200K 上限
+3. **信任深**：受众讨论 markets / 工具 / 书 / 生活，是真朋友不是粉丝
+4. **变现宽**：从 EV 工具到 Notion / 投资课程 / 书 / coffee shop 赞助都能接
+5. **不被政治拖入**：聚焦"商业 + 工程 + AI + 市场"，绕开美国大选、争议立场，账号不容易被限流
+6. **声音独特**：[positive voice DNA](./signature-voice.md) 让我跟其他 observer 账号区分开 —— dry / deadpan / specific / observational / self-aware
 
 ### 不是什么
 
 - ❌ 不是泛 AI 评论员（那个赛道已饱和：scaling01 / kimmonismus / nearcyan…）
 - ❌ 不是 thread bro（"21 lessons from elon musk's life"那种）
+- ❌ 不是 Musk 唯一频道（Musk 是话题之一，不是品牌）
 - ❌ 不是 Musk 个人崇拜账号（不舔 Musk，是分析他的帝国）
 - ❌ 不是 Musk 黑账号（不跟空头大军混，但允许 data-driven 的批评）
 - ❌ 不是政治评论员（绝不碰 Trump / 大选 / 言论自由口水仗 / 中美博弈）
-- ❌ 不是搬运工（不是把别处的 Musk 新闻抄过来）
+- ❌ 不是搬运工（不是把别处的新闻抄过来）
 
 ---
 
 ## 文件索引
 
-### 自助运营核心（每天 / 每周 / 每月用）
+### 自助运营核心（每天 / 每周 / 每月用）⭐
 
-| # | 文件 | 用途 |
+| 角色 | 文件 | 用途 |
 |---|------|------|
-| ⭐ | [_self-operation-handbook.md](./_self-operation-handbook.md) | **自助运营手册** · 3 件事就够了：每日 / 每周日 / 每月 SOP + 13 条自检 + Crisis Playbook + 6 个月路线图 |
-| ⭐ | [_prompts-pack.md](./_prompts-pack.md) | **AI 提示词工具包合集** · 10 个 paste-ready prompts（Daily / Weekly / Monthly / Newsletter / Cheat Sheet / Crisis / Major Event / 自检 / Profile / 变现）|
-| | [_handoff-prompt.md](./_handoff-prompt.md) | 跨 AI 万能接力提示词（Grok / DeepSeek / Kimi 通用）|
-| | [humor-pillars.md](./humor-pillars.md) | 5 大幽默支柱（H1-H5）+ 段子生成提示词 |
+| 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 3 件事就够了：每日 / 每周日 / 每月 SOP + 13 自检 + Crisis Playbook + 6 个月路线图 |
+| 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 22 个 paste-ready AI prompts（覆盖日常 / 长内容 / 数据图 / Spaces / 危机 / 变现）|
+| 🎯 战略 | [observer-brand-pivot.md](./observer-brand-pivot.md) | v2 品牌升级源文档：6 内容支柱 / 4 周软迁移 / 风险管理 |
+| 🚀 部署 | [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) | v1→v2 切换 runbook（bio / pinned / handles 全套）|
+| 🎨 视觉 | [visual-identity.md](./visual-identity.md) | 视觉系统 · 完整设计 token + 5 个模板（header / avatar / 数据图）|
+| 📅 栏目 | [signature-series.md](./signature-series.md) | 5 个命名固定栏目（Mon / Wed / Fri / Sun / 月末）|
+| 📝 长文 | [x-articles-playbook.md](./x-articles-playbook.md) | X Article 长文系统（Sunday Long Read 槽 + 月度深度）|
+| 🎙️ 留存 | [spaces-and-community.md](./spaces-and-community.md) | Friday Spaces + X Community + Paid Tier 结构性权益 |
+| 🤝 同行 | [peer-collab-playbook.md](./peer-collab-playbook.md) | 10 collab targets + 6 协议 + 5 DM 模板 |
+| 🗣️ 声音 | [signature-voice.md](./signature-voice.md) | Positive voice DNA + 招牌句式 + 词汇指纹 |
+| 😄 段子 | [humor-pillars.md](./humor-pillars.md) | 13 段子支柱（H1-H13）+ 4 受众组 G1-G4 |
+| 🌐 扩流 | [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) | 5 扩展策略 E1-E5（frontier AI / counterintuitive / live event / cross-CEO / data viz）|
+
+### 视觉资产（[visual/](./visual/)）
+
+| 文件 | 用途 |
+|---|---|
+| [visual/header.html](./visual/header.html) | X header 1500×500 模板 |
+| [visual/avatar.svg](./visual/avatar.svg) | 头像 400×400 monogram "S/" |
+| [visual/template-quote-overlay.html](./visual/template-quote-overlay.html) | E5-a · 媒体引用 + 观点叠加（1600×900）|
+| [visual/template-comparison-table.html](./visual/template-comparison-table.html) | E5-b · 横向对比表（1200×900）|
+| [visual/template-timeline.html](./visual/template-timeline.html) | E5-c · 时间线（1080×1350）|
+| [visual/template-decoder-frame.html](./visual/template-decoder-frame.html) | 5 个栏目通用封面模板（1600×900）|
+| [visual/README.md](./visual/README.md) | 渲染指南 |
 
 ### 战略 + 模板（参考性）
 
 | # | 文件 | 内容 |
 |---|------|------|
-| 0 | [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) | 72h 算法红利窗口期紧急行动清单 |
-| 1 | [x-strategy.md](./x-strategy.md) | 4 大内容支柱 / 30 天日历 / M1-M6 变现路线 |
-| 2 | [x-prompts.md](./x-prompts.md) | 早期 10 个 Musk 主题 Prompt（已被 _prompts-pack.md 升级覆盖）|
-| 3 | [x-reply-scripts.md](./x-reply-scripts.md) | Reply 话术库（@elonmusk 8 大子话题 / @Tesla / @SpaceX / @xai / @neuralink / @sama / Tesla bulls）|
+| 0 | [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) | 72h 算法红利窗口期紧急行动清单（历史阶段产物）|
+| 1 | [x-strategy.md](./x-strategy.md) | 4 大内容支柱 v1（已被 observer-brand-pivot 6 支柱替代）/ 30 天日历 / M1-M6 变现路线 |
+| 2 | [x-prompts.md](./x-prompts.md) | 早期 10 个 Musk 主题 Prompt（已被 _prompts-pack.md v2 升级覆盖）|
+| 3 | [x-reply-scripts.md](./x-reply-scripts.md) | Reply 话术库（@elonmusk 8 子话题 / @Tesla / @SpaceX / @xai / @neuralink / @sama / Tesla bulls）|
 | 4 | [week-01-content-plan.md](./week-01-content-plan.md) | 第 1 周内容计划 + 截图发布工作流（Tally 邮箱沉淀）|
 | 5 | [empire-cheat-sheet/cheat-sheet.html](./empire-cheat-sheet/cheat-sheet.html) | Lead Magnet PDF v0.2（每周日刷新）|
 | 6 | [newsletter/issue-01-2026-05-25.md](./newsletter/issue-01-2026-05-25.md) | Newsletter Issue 01 模板 |
-| 7 | [decoder-threads/](./decoder-threads/) | Decoder Thread 历史归档 |
+| 7 | [decoder-threads/](./decoder-threads/) | Decoder Thread 历史归档（v3 后归入 Monday Empire Map series）|
+
+### 历史归档
+
+下列文件是 launch / Musk-only 阶段产物，已被 v3.0 系统替代但保留作为历史参考：
+
+- [_today-2026-05-22-launch-pack.md](./_today-2026-05-22-launch-pack.md) → 被 [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) 替代
+- [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) → launch 单次事件，不再适用
+- [decoder-threads/01-week21-empire-overview.md](./decoder-threads/01-week21-empire-overview.md) → 被 [signature-series.md](./signature-series.md) Monday Empire Map 系列化替代
+- [_handoff-prompt.md](./_handoff-prompt.md) → 跨 AI 接力，作为辅助保留
 
 ---
 
@@ -73,12 +104,12 @@
 | 3 | "Absolutely / Indeed / Furthermore / In conclusion" | 删，要么不说，要么 "yeah / fwiw / ngl / tbh" |
 | 4 | 三段式 / 三个 bullet | 一句话甩观点 → 一个数字 → 一个反问 |
 | 5 | 普世正确的废话（"AI is transforming everything"）| 具体到本周某个产品某个数字某个事件 |
-| 6 | 礼貌过头（"Great point!" "Thanks for sharing!"）| 直接进入分歧 / 补充 / 反问 / 玩笑 |
+| 6 | 礼貌过头（"Great point!" / "Thanks for sharing!"）| 直接进入分歧 / 补充 / 反问 / 玩笑 |
 | 7 | 感叹号超过 1 个 | 0 个感叹号是默认值 |
 | 8 | 完整、没有错别字、没有语气词 | 偶尔留一个 typo 不改，留 "lol" "fr" "+1" |
 
 > 反 AI 味的本质不是写错字，是**有具体性 + 有立场 + 有时间**。
-> Musk 帝国话题天然提供大量具体性（"starship 12" "fsd v13" "shanghai gigafactory" "optimus gen 3"），用足这些。
+> 完整 voice DNA（招牌句式 / 词汇指纹 / drift 检测）见 [signature-voice.md](./signature-voice.md)。
 
 ---
 
@@ -86,26 +117,74 @@
 
 - [x] 0.0 收到 @elonmusk 的赞（2026-05-22）
 - [x] 0.1 完成 72h 算法红利窗口运营
-- [x] 0.2 Profile 已改成 Musk Empire Decoder
+- [x] 0.2 Profile 已改成 Musk Empire Decoder（v1）
 - [x] 0.3 Decoder Thread #01 + Newsletter Issue 01 已发
-- [x] 0.4 humor-pillars 5 支柱策略已落地
-- [x] 0.5 自助运营手册 + Prompts Pack 入库（本次提交）
-- [ ] 1.0 切到自助运营模式，按 [_self-operation-handbook.md](./_self-operation-handbook.md) 跑
+- [x] 0.4 humor-pillars 5 支柱 → 13 支柱策略已落地
+- [x] 0.5 自助运营手册 + Prompts Pack 入库
+- [x] 0.6 Observer brand v2.0 设计完成（[observer-brand-pivot.md](./observer-brand-pivot.md)）
+- [x] 0.7 §14 v2.0 daily prompt translated to English
+- [x] **1.0 Big-V upgrade pack v3.0 入库（本 PR）** ← **NOW**
+- [ ] 1.1 按 [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) 部署到 X 账号
+- [ ] 1.2 Week 1（6/1-6/7）数据观察
+- [ ] 1.3 Week 2 bio 升级 → conservative observer 版（如 Week 1 数据满足条件）
+- [ ] 1.4 Week 3 Pin 推 → Observer Manifesto Thread + 视觉资产部署
+- [ ] 1.5 Week 4 数据复盘 → 决定 bio 是否升 balanced 版
+- [ ] 1.6 Week 4+ 启动 Friday Spaces
 
-**接下来**：每天早上 06:30 跑 [_prompts-pack.md §1 Daily Content Pack](./_prompts-pack.md#1-daily-content-pack-generator) 即可。
+---
+
+## v3.0 改了什么（vs v0.2）
+
+```
+v0.2 (Musk-only)              →  v3.0 (Observer & Investor)
+─────────────────────────────────────────────────────────────────
+1 句话定位                       Musk decoder              →  Observer & investor
+内容比例                         70% Musk + 25% AI race    →  25% Musk + 25% AI + 20% mkts +
+                                + 5% other                    15% cultural + 10% build + 5% misc
+日推                            1 main + 5 humor          →  1 main + 5 humor + 1 expansion = 7
+段子支柱                         5 (H1-H5)                 →  13 (H1-H13)
+扩展策略                         无                         →  E1-E5 + 30 天 combat calendar
+栏目                            Decoder Thread #1 only    →  5 named series (Mon/Wed/Fri/Sun/Last-day)
+长内容                           N/A                       →  Sunday Long Read X Article (1/wk)
+留存层                          N/A                       →  Friday Spaces + X Community + Paid Tier
+同行 collab                      N/A                       →  10 targets + 6 协议 + 5 DM 模板
+视觉系统                         "黑底白字"占位             →  完整 design tokens + 5 模板 + alt-text
+声音 DNA                         13 条避免铁律              →  + 5 正向描述 + 招牌句式 + 词汇指纹 + drift 检测
+```
 
 ---
 
 ## 风险红线（一次违规可能毁号）
 
 1. ❌ **不要**为了蹭 Musk 频繁 @ 他或刷屏在他评论区（X 算法会判 spam，封 reply 权限 24-72h）
-2. ❌ **不要**伪造 Tesla / SpaceX / xAI 内部消息（X 现在对"impersonation / misinformation"零容忍，可永封）
+2. ❌ **不要**伪造 Tesla / SpaceX / xAI / Anthropic / OpenAI 内部消息（X 现在对"impersonation / misinformation"零容忍，可永封）
 3. ❌ **不要**买粉 / 买互动（500 粉门槛和 5M impression 门槛被 X 反作弊系统盯得很死）
 4. ❌ **不要**碰 Musk 政治话题：Trump / 美国大选 / 言论自由口水仗 / Musk 个人生活 / Musk 与人骂战站队
 5. ❌ **不要**站 Musk 黑账号大军（@DemocracyDocket / @ElonMuskAOC 等高互动账号）—— 可以批评但不能跟队形
+6. ❌ **不要**在 v2 转期发 Musk 私生活 / OpenAI vs Musk 八卦（observer 立场要求中立观察，不站队）
+7. ❌ **不要**因为加了 Markets/Cultural 支柱就给投资建议（"3 takes. all could be wrong" 是底线声明，不能省）
 
 ---
 
-**版本**：v0.2 · 2026-05-22 草案
+## 起源故事（1 段版）
+
+> i've been on this app since 2024, mostly replying to elon and the musk-orbit accounts. on may 22, 2026, elon liked one of my replies (it was 4 laughing emojis, not my finest work).
+>
+> i took the algorithm bump as a signal. started writing more deliberately. the account became "musk's empire decoded daily" for 6 weeks.
+>
+> then i noticed something: the audience that signed up for musk wanted the broader picture too. tech race. markets. ipo wall. how the empires being built right now connect to each other.
+>
+> so the brand evolved. observer & investor. musk is one chapter. the book is bigger.
+>
+> what i actually do: read filings, watch markets, write down what's happening. one perspective from outside silicon valley. no shilling, no doom, just numbers.
+>
+> 3 takes. all could be wrong. that's why i write them down.
+
+完整起源故事（短 / 中 / 长 3 版）见 [signature-voice.md §四](./signature-voice.md)。
+
+---
+
+**版本**：v3.0 · 2026-05-30 草案
 **所属**：独立单元，与本仓库其他业务线无交集
-**核心主题**：Musk 帝国 + AI 竞赛，**仅此而已**
+**核心主题**：tech · markets · IPOs · AI race · 6 musk brands · cultural observation
+**签名**：3 takes. all could be wrong. that's why i write them down.
