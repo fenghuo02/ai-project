@@ -67,13 +67,17 @@
 
 ---
 
-## 当前阶段（M1 · 第 0 周）
+## 当前阶段（M1 · 第 1 周末，2026-05-30）
 
 - [x] 0.0 收到 @elonmusk 的赞（2026-05-22）
-- [ ] 0.1 跑完 [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) 8 步行动清单
-- [ ] 0.2 把那条被赞的回复**置顶 / Pin**，profile 改成 Musk-watcher 定位
-- [ ] 0.3 第 0 周末复盘：粉丝增量 / impression 增量 / Musk 圈大 V 关注
-- [ ] 0.4 第 1 周开始按 [x-strategy.md](./x-strategy.md) §三 30 天日历排期
+- [x] 0.1 完成 72h 算法红利窗口运营
+- [x] 0.2 Profile 已改成 Musk Empire Decoder
+- [x] 0.3 Decoder Thread #01 + Newsletter Issue 01 已发
+- [x] 0.4 humor-pillars 5 支柱策略已落地
+- [x] 0.5 自助运营手册 + Prompts Pack 入库（本次提交）
+- [ ] 1.0 切到自助运营模式，按 [_self-operation-handbook.md](./_self-operation-handbook.md) 跑
+
+**接下来**：每天早上 06:30 跑 [_prompts-pack.md §1 Daily Content Pack](./_prompts-pack.md#1-daily-content-pack-generator) 即可。
 
 ---
 
