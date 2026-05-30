@@ -3,10 +3,12 @@
 > 触发事件：**2026-05-22，@elonmusk 给我的一条回复点了赞**。
 > 这一刻成为账号 launch 的算法窗口期。launch 后 6 周，账号品牌从"Musk Empire Decoder"演化为更通用的 **"Observer & Investor"** —— Musk 是其中一面镜子，不是唯一频道。
 >
+> v4.0：**根据 2026-05 X 最新算法现实校准**。Long-form > thread / 主推无外链 / First 60-min SOP / Saturday Video / Communities 公开化 / X Articles $1M Contest / 跨平台漏斗。
+>
 > **本目录是一个独立单元，不与本仓库其他内容（摄影、四柱八字、东方美学）发生交集。**
 > **所有内容围绕一组主题：tech / markets / IPOs / AI race / 6 musk brands / cultural observation。**
 >
-> 状态：**v3.0 草案 · big-V upgrade pack 待部署**
+> 状态：**v4.0 草案 · 2026 algorithm reality 升级 · 待部署**
 
 ---
 
@@ -44,15 +46,19 @@
 
 | 角色 | 文件 | 用途 |
 |---|------|------|
-| 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 3 件事就够了：每日 / 每周日 / 每月 SOP + 13 自检 + Crisis Playbook + 6 个月路线图 |
-| 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 22 个 paste-ready AI prompts（覆盖日常 / 长内容 / 数据图 / Spaces / 危机 / 变现）|
+| 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 5 件事就够了：每日 / 每周六 / 每周五 / 每周日 / 每月 SOP + First 60-min SOP + 13 自检 + Crisis Playbook + 6 个月路线图 |
+| 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 24 个 paste-ready AI prompts（覆盖日常 / 长内容 / 数据图 / Spaces / 视频 / 首 60 分钟 / 危机 / 变现）|
+| 🔬 算法 v4 ⭐ | [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) | 2026 X 算法 source of truth（long-form > thread / 链接放 reply / Heavy Ranker 权重 / not_dwelled / 月度 GitHub review）|
+| 🚀 增长 v4 ⭐ | [growth-mechanics-2026.md](./growth-mechanics-2026.md) | 6 大新机制实操（首 60 分钟 / stop-scroll / bookmark / quote-engineering / quote-attribution / boost window / $1M Contest）|
+| 🎬 视频 v4 ⭐ | [vertical-video-pillar.md](./vertical-video-pillar.md) | Saturday vertical video pillar（4 格式 V1-V4 / CapCut workflow / 跨平台分发）|
+| 🌐 跨平台 v4 ⭐ | [cross-platform-funnel.md](./cross-platform-funnel.md) | Beehiiv Boost / Substack Notes / LinkedIn / Bluesky / YT Shorts / IG Reels / TikTok / 小红书 / Bilibili 全套漏斗 |
 | 🎯 战略 | [observer-brand-pivot.md](./observer-brand-pivot.md) | v2 品牌升级源文档：6 内容支柱 / 4 周软迁移 / 风险管理 |
 | 🚀 部署 | [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) | v1→v2 切换 runbook（bio / pinned / handles 全套）|
 | 🎨 视觉 | [visual-identity.md](./visual-identity.md) | 视觉系统 · 完整设计 token + 5 个模板（header / avatar / 数据图）|
-| 📅 栏目 | [signature-series.md](./signature-series.md) | 5 个命名固定栏目（Mon / Wed / Fri / Sun / 月末）|
-| 📝 长文 | [x-articles-playbook.md](./x-articles-playbook.md) | X Article 长文系统（Sunday Long Read 槽 + 月度深度）|
-| 🎙️ 留存 | [spaces-and-community.md](./spaces-and-community.md) | Friday Spaces + X Community + Paid Tier 结构性权益 |
-| 🤝 同行 | [peer-collab-playbook.md](./peer-collab-playbook.md) | 10 collab targets + 6 协议 + 5 DM 模板 |
+| 📅 栏目 | [signature-series.md](./signature-series.md) | 5 个命名固定栏目（Mon / Wed / Fri / Sat 🆕 / Sun / 月末）· v4 long-form pivot |
+| 📝 长文 | [x-articles-playbook.md](./x-articles-playbook.md) | X Article 长文系统 + $1M Contest 投递路径 |
+| 🎙️ 留存 | [spaces-and-community.md](./spaces-and-community.md) | Friday Spaces + X Community（v4 Day-1 加入 niche communities）+ Paid Tier |
+| 🤝 同行 | [peer-collab-playbook.md](./peer-collab-playbook.md) | 10 collab targets + 7 协议（含 v4 协议 7 quote-engineering）+ 5 DM 模板 |
 | 🗣️ 声音 | [signature-voice.md](./signature-voice.md) | Positive voice DNA + 招牌句式 + 词汇指纹 |
 | 😄 段子 | [humor-pillars.md](./humor-pillars.md) | 13 段子支柱（H1-H13）+ 4 受众组 G1-G4 |
 | 🌐 扩流 | [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) | 5 扩展策略 E1-E5（frontier AI / counterintuitive / live event / cross-CEO / data viz）|
@@ -123,13 +129,69 @@
 - [x] 0.5 自助运营手册 + Prompts Pack 入库
 - [x] 0.6 Observer brand v2.0 设计完成（[observer-brand-pivot.md](./observer-brand-pivot.md)）
 - [x] 0.7 §14 v2.0 daily prompt translated to English
-- [x] **1.0 Big-V upgrade pack v3.0 入库（本 PR）** ← **NOW**
-- [ ] 1.1 按 [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) 部署到 X 账号
-- [ ] 1.2 Week 1（6/1-6/7）数据观察
-- [ ] 1.3 Week 2 bio 升级 → conservative observer 版（如 Week 1 数据满足条件）
-- [ ] 1.4 Week 3 Pin 推 → Observer Manifesto Thread + 视觉资产部署
-- [ ] 1.5 Week 4 数据复盘 → 决定 bio 是否升 balanced 版
-- [ ] 1.6 Week 4+ 启动 Friday Spaces
+- [x] 1.0 Big-V upgrade pack v3.0 入库（PR #58 已 merge）
+- [x] **2.0 2026 Algorithm Reality v4.0 入库（本 PR）** ← **NOW**
+- [ ] 2.1 按 [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) + v4 关键改动部署到 X 账号：
+  - [ ] 主推全部去链接 / 链接放 reply
+  - [ ] Monday Empire Map / Friday Reading List / Last-Day Monthly Map 改为 long-form
+  - [ ] M1 Day 1 加入 2-3 个 niche X Community
+  - [ ] 注册 Beehiiv + 启用 Boost
+  - [ ] 第 1 条 Saturday vertical video（V1 / V4 推荐）
+- [ ] 2.2 Week 1（6/1-6/7）数据观察 · 跑 First 60-min SOP
+- [ ] 2.3 Week 2 bio 升级 → conservative observer 版（如 Week 1 数据满足条件）
+- [ ] 2.4 Week 3 Pin 推 → Observer Manifesto Thread + 视觉资产部署
+- [ ] 2.5 Week 4 数据复盘 → 决定 bio 是否升 balanced 版
+- [ ] 2.6 Week 4+ 启动 Friday Spaces
+- [ ] 2.7 月末第一次跑 GitHub algorithm changelog review
+
+---
+
+## v4.0 改了什么（vs v3.0）⭐
+
+```
+v3.0 (top-tier creator toolkit)         →  v4.0 (2026 algorithm reality)
+─────────────────────────────────────────────────────────────────────────
+日推格式
+  Mon Empire Map = 9-tweet thread           →  long-form 4000-char single post
+  Fri Reading List = 6-tweet thread          →  long-form + Quote-tweet attribution
+  Last-Day Monthly Map = 12-tweet thread    →  long-form 4000-char single post
+
+链接位置
+  主推可带 newsletter / PDF link             →  主推绝对不带链接
+                                              链接全在 reply 1 / 2
+
+首小时分发
+  发完推 → 等定时器                         →  First 60-min SOP（6 步动作）
+
+视频
+  Saturday 槽空着                            →  Vertical 9:16 Saturday video pillar
+
+Communities
+  5K+ 才启动 X Community（留存层）          →  M1 Day 1 加入 2-3 个 niche Community
+
+跨平台
+  X-only                                    →  Beehiiv（Boost）+ Substack Notes +
+                                              LinkedIn + Bluesky + YT Shorts +
+                                              IG Reels + TikTok + 小红书 + Bilibili
+
+Reading List 归因
+  @ + URL                                   →  Quote-tweet（X 平台内容）
+
+Quote-tweet 工程
+  仅讲怎么 quote 别人                       →  + 协议 7 让别人 quote 你
+
+Bookmark / Stop-scroll 工程
+  泛泛提到                                  →  完整 SOP（5 模式各自）
+
+Articles 货币化
+  Newsletter sub 转化                       →  + $1M Contest 投递路径
+                                              + Verified-only 收入预期下调 40-50%
+
+提示词                                     22 prompts → 24 prompts (+§23 §24)
+通用前缀                                   + V4 ALGORITHM REALITY block
+节奏                                       4 件事 → 5 件事 (+ Saturday Video)
+月度                                       + GitHub algo changelog review
+```
 
 ---
 
@@ -184,7 +246,7 @@ v0.2 (Musk-only)              →  v3.0 (Observer & Investor)
 
 ---
 
-**版本**：v3.0 · 2026-05-30 草案
+**版本**：v4.0 · 2026-05-30 草案
 **所属**：独立单元，与本仓库其他业务线无交集
 **核心主题**：tech · markets · IPOs · AI race · 6 musk brands · cultural observation
 **签名**：3 takes. all could be wrong. that's why i write them down.

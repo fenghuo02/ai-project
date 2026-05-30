@@ -508,15 +508,46 @@ Thu: "midweek read: sunday's long read is the deeper version of monday's empire 
 
 ## 十、Article 货币化路径（M3+）
 
+### 10.1 v4 关键调整 · Verified-Only Home Timeline 收入
+
+[2026-05 X 官方公告](https://business.x.com/en/blog/creator-updates-and-article-contest-replacement)：Revenue Sharing 现仅按 **Verified（Premium）用户的 Home Timeline impressions** 计算。
+
+**对 v3 收入预测的影响**：
+
+```
+v3 假设 100K total impressions = 100K 计入 revenue
+v4 现实 100K total impressions, 80% 来自 non-Premium = 仅 20K 计入 revenue
+
+v3 → v4 收入预期：调到 0.4-0.6×
+```
+
+| 阶段 | v3 收入预期 | v4 现实预期 |
+|---|---|---|
+| M1 (现在) | $0 | $0 |
+| M2 (5K-12K) | $800-2,500 | **$300-1,500** |
+| M3 (12K-30K) | $1,500-5,000 | **$600-3,000** |
+| M4-M6 (30K+) | $12K-60K | **$5K-30K** |
+
+**主战场转移**：
+
+- ad share 不再是主收入路径
+- **付费产品 + Articles $1M Contest**（见 §十二）补 ad share 的窟窿
+- Beehiiv paid newsletter $10/月 是更稳定的现金流
+
+详见 [algorithm-2026-playbook.md §一.3](./algorithm-2026-playbook.md)。
+
+### 10.2 Article 货币化阶段表
+
 | 阶段 | Article 货币化 |
 |---|---|
-| M1 (现在) | 全部免费 |
-| M2 (5K-12K 粉) | Article 全免费 + Newsletter $10/月（含 Article 早 24h）|
-| M3 (12K-30K) | Article 50% 免费 + 50% 付费墙（每月深度 1 篇 + 季度 1 篇付费）|
-| M4 (30K+) | Article 月度免费 + 季度 / 年度付费（$49 / $99）|
-| M5 (100K+) | Tiered: 免费 / $10/月 / $99/年 / $499/年 / 1:1 brief |
+| M1 (现在) | 全部免费 + 投递 $1M Contest（见 §十二）|
+| M2 (5K-12K 粉) | Article 全免费 + Newsletter $10/月（含 Article 早 24h）+ Contest |
+| M3 (12K-30K) | Article 50% 免费 + 50% 付费墙（每月深度 1 篇 + 季度 1 篇付费）+ Contest |
+| M4 (30K+) | Article 月度免费 + 季度 / 年度付费（$49 / $99）+ Contest |
+| M5 (100K+) | Tiered: 免费 / $10/月 / $99/年 / $499/年 / 1:1 brief + Contest |
 
 > Article 不是流量产品，是**信任产品**。M2-M4 阶段应该尽量保持免费 + 高质量。M5 之后再考虑付费墙。
+> Contest 是从 M1 开始的并行路径，不依赖粉丝数。
 
 ---
 
@@ -532,7 +563,88 @@ Thu: "midweek read: sunday's long read is the deeper version of monday's empire 
 
 ---
 
-## 十二、本文档维护
+## 十二、X Articles $1M Contest（v4 新机制）⭐
+
+### 12.1 事实
+
+[X 2026-05 官方公告](https://business.x.com/en/blog/creator-updates-and-article-contest-replacement)：X Articles 推出 **$1M / 月**奖金池，按 Article impressions / engagement / reads 综合排名前 N 名分奖金。
+
+[2026-05](https://help.x.com/en/using-x/articles)：X Articles 仅 Premium / Premium+ / Premium Businesses / Premium Organizations 可发布。**你已经 Premium+，资格自动具备**。
+
+### 12.2 投递流程（每周日 21:00 BJ 顺手做）
+
+```
+Step 1: 在 X 上点 "Articles" 入口（Premium+ 才有，左侧导航 / Compose 菜单）
+Step 2: 写完 Article（按 §三模板）
+Step 3: 发布前勾选 "Submit to monthly contest"
+Step 4: 发布
+Step 5: 在 X 后台 Earnings 看 contest 排名 / 奖金（每月结算）
+```
+
+### 12.3 提高获奖概率的 5 个动作
+
+| # | 做什么 | 为什么 |
+|---|---|---|
+| 1 | 标题 60-80 字符 + 数字 + 反常识 | X Articles 搜索 + Discover 板块抓取标题 |
+| 2 | 头图用 [visual/template-decoder-frame.html](./visual/template-decoder-frame.html) | 视觉一致 = 受众识别 = 持续阅读时间 |
+| 3 | 文章 1500-3000 字（不是 5000+）| 完读率高的文章排名更靠前 |
+| 4 | 发布后跑 [growth-mechanics-2026.md §二 First 60-min SOP](./growth-mechanics-2026.md) | Article 也吃首小时 engagement |
+| 5 | 在 Substack / Bluesky / LinkedIn 同步推荐 | 跨平台流量回灌（[cross-platform-funnel.md](./cross-platform-funnel.md)）|
+
+### 12.4 现实预期收入（保守估计）
+
+```
+M1 (< 1K 粉): 几乎不可能进 contest 排名
+              · 投递规则：仍投，作为长期数据 baseline
+              · 预期：$0-50 / 月
+
+M2 (1K-5K): 可能 occasional 入榜
+            · 预期：$50-500 / 月
+
+M3 (5K-15K): 每月 1-2 篇有机会
+             · 预期：$100-1,000 / 月
+
+M4 (15K-50K): 主力收入路径之一
+              · 预期：$500-3,000 / 月
+
+M5+ (50K+): 进入稳定 contest 头部
+            · 预期：$1,000-5,000 / 月
+```
+
+> 实际数字 X 官方未公开（每月奖金分布私密）。上述基于行业估计 + 类似 contest 数据外推。月度 review 时持续校准。
+
+### 12.5 Contest vs Ad Share 主战场切换
+
+| 阶段 | 主收入 | 次收入 |
+|---|---|---|
+| M1 | $0 | $0 |
+| M2 | Beehiiv paid newsletter | Contest（追赶 ad share）|
+| M3 | Beehiiv paid + 1:1 + Contest | Ad share（仍计入但比例下降）|
+| M4 | Beehiiv paid + Tracker Pro + Contest + 1:1 | Ad share + Sponsorship |
+| M5+ | Founding Member + 1:1 + Annual + Contest | 其余 |
+
+Contest 在 M2-M5 都是稳定的"额外现金流"路径，不依赖粉丝数（理论上 1K 粉的精彩 Article 也能拿 contest 奖金）。
+
+### 12.6 不投递的情况
+
+- ❌ Article 内容含投资建议（违规）
+- ❌ Article 引用未授权第三方数据（合规风险）
+- ❌ Article 是别人内容的改写（X 反 aggregator 严打）
+- ❌ Article 是 AI 生成 unedited（X 5/2026 起标记 AI generated content）
+
+### 12.7 维护节奏
+
+| 频率 | 动作 |
+|---|---|
+| 每周日 21:00 BJ 发布 | 勾选 "Submit to monthly contest" |
+| 每月最后一天 retro | 看 X Earnings dashboard contest 排名 + 奖金 |
+| 每季度 | 评估 contest 收入 ROI vs 时间投入（如果某季度 < $200，考虑减少 contest 优化优先级）|
+
+详见 [algorithm-2026-playbook.md §十 X Articles $1M Contest](./algorithm-2026-playbook.md) + [growth-mechanics-2026.md §八](./growth-mechanics-2026.md)。
+
+---
+
+## 十三、本文档维护
 
 `x-articles-playbook.md` 会随实战修订。每次月 retro 之后回头读一遍，问：
 
@@ -543,5 +655,5 @@ Thu: "midweek read: sunday's long read is the deeper version of monday's empire 
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[signature-series.md](./signature-series.md) · [_prompts-pack.md](./_prompts-pack.md) (§19 X Article generator) · [visual-identity.md](./visual-identity.md)
+**版本**：v2.0 · 2026-05-30（v4 升级：§十 Verified-only impressions 收入预期下调 / 新增 §十二 X Articles $1M Contest playbook）
+**配套**：[signature-series.md](./signature-series.md) · [_prompts-pack.md](./_prompts-pack.md) (§19 X Article generator) · [visual-identity.md](./visual-identity.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)

@@ -100,6 +100,17 @@ Sun 21:00  Sunday Long Read (X Article)
 - 站队 Musk vs OpenAI / Musk 黑账号大军
 
 apply this voice DNA + brand v2.0 + 13 rules to whatever follows.
+
+【v4.0 ALGORITHM REALITY · 2026-05-30 · 必须遵守】
+- ✅ Long-form 单推（4000 char）> thread（2026-05 算法）
+- ✅ 主推**禁止任何 https / .com / 外链**（Premium 链接 reach -50%, Free 链接 ~0×）
+- ✅ 链接全部进 reply 1 / 2
+- ✅ Stop-scroll hook 第 1 行必须有数字 + 立场（反 not_dwelled）
+- ✅ Bookmark engineering（数字密度 ≥ 3 + 结构化 + 我的立场）
+- ✅ 每周 1-2 条主推用 quote-engineering 收尾（"3 takes. all could be wrong."）
+- ✅ Reading List 引用 X 平台内容时用 Quote tweet（不是 @ + URL）
+
+详见 [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) + [growth-mechanics-2026.md](./growth-mechanics-2026.md)。
 ```
 
 ---
@@ -1275,7 +1286,151 @@ Sun 21:30  newsletter 发 + 嵌入 Spaces 录音 link
 
 ---
 
-## 使用频率速查表 v3.0
+## §23 · First 60-min Engagement Scripts ⭐ v4 新
+
+> ⏰ **何时用**：每条主推发布后立刻（T+0 到 T+60min）
+> 📥 **输入**：刚发出去的主推内容 + 当前 imp 数（T+30 / T+60 检查时填）
+> 📤 **输出**：3 条 reply 草稿 + 1 条自我 reply + 5 个 reply guy 战场建议 + T+30/T+60 应对决策
+> 🔗 **来源**：[growth-mechanics-2026.md §二](./growth-mechanics-2026.md) · [algorithm-2026-playbook.md §二.4](./algorithm-2026-playbook.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【今天任务 · First 60-min Engagement】
+
+刚发的主推内容（粘进来）：
+[填主推内容]
+
+主推时间：[T+0 时间，如 07:30 BJ]
+
+【任务】
+帮我立刻生成接下来 60 分钟的 6 步动作。
+
+Step 1 (T+15s) · Reply 1 必须 · text TL;DR + 链接
+要求：
+- 5-bullet text version of 主推（algo + screen-readers 友好）
+- 每 bullet 含 1 个具体数字
+- 末尾 Beehiiv newsletter link / Article link / data source link
+
+Step 2 (T+5min) · Reply 2 · CTA + 钩子
+要求：
+- 1 句话 CTA（不要 "follow + like" cringe）
+- 自然衔接的 hook（"more in [link]" / "monthly retro coming"）
+- newsletter link / cheat sheet link
+
+Step 3 (T+10min) · 自我 reply · 实质性补充
+要求：
+- 必须有 1 个新的数字 / 视角 / 反差
+- 不是 "thoughts?" / "agree?" / 空 CTA
+- 30-60 字符
+- 例："the part i kept thinking about: [反差点]"
+
+Step 4 (T+15min) · 5 个 reply guy 战场建议
+列出现在最值得去 reply 的 5 个 Tier A 账号 + 当前他们最热的推 + 我的 reply 草稿。
+
+Step 5 (T+30min check) · 决策树
+如果 imp < 500 → ____
+如果 imp 500-2K → ____
+如果 imp > 2K → ____
+
+Step 6 (T+60min check) · 决策树
+如果 imp < 500 → ____ (这条死了)
+如果 imp 1K-5K → ____ (中等表现，等长尾)
+如果 imp > 5K → ____ (起飞，加倍维护)
+
+【输出格式】
+
+A. Reply 1 草稿（直接粘可发）
+B. Reply 2 草稿
+C. 自我 reply 草稿
+D. 5 个 reply guy 战场（账号 + 推 + reply 草稿）
+E. T+30 决策树（3 个分支）
+F. T+60 决策树（3 个分支）
+
+【硬规则】
+- 全小写，不用破折号
+- 数字必须真实（不要编）
+- 招牌句式（noting that / read [source] / etc）轮换
+- Reply 1 链接放最末
+- 不放在主推（v4 链接规则）
+```
+
+---
+
+## §24 · Vertical Video Script Generator ⭐ v4 新
+
+> ⏰ **何时用**：每周六 09:00-09:30 BJ（11:30 BJ 发前 2 小时）
+> 📥 **输入**：本周关键事件 + 选定格式 V1-V4
+> 📤 **输出**：60-second 脚本 + stop-scroll hook + 字幕版本 + 跨平台 caption + alt-text
+> 🔗 **来源**：[vertical-video-pillar.md](./vertical-video-pillar.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【今天任务 · Saturday Video Script】
+
+日期：[填，如 2026-06-06]
+本周 ISO week：[填]
+本周关键事件 / 主题：[填]
+
+【格式选择（4 选 1）】
+[ ] V1 · Terminal Screen Recording（最低门槛）
+[ ] V2 · Phone Stand-up（自拍）
+[ ] V3 · Data Visualization Video（最强 bookmark）
+[ ] V4 · "I read X so you don't have to"（最强 collab 杠杆）
+
+【先做的事 · 必须】
+联网搜确认数据：
+- 当周关键数据 / 公司 / 产品
+- 任何 primary source（filings / blog / earnings）
+
+【输出格式】
+
+A. Stop-Scroll Hook · 前 3 秒（视觉 + 听觉）
+   - 第 1 秒视觉：[描述]
+   - 第 1-3 秒文字：[一句话钩子]
+   - 必须有：具体数字 + 反常识 / 强对比 / 物品 prop
+
+B. 60-second 脚本（5-6 段 talking points，每段 8-10 秒）
+   1. [Hook 段，10 秒]
+   2. [Setup 段，10 秒]
+   3. [核心 take 1，10 秒]
+   4. [核心 take 2，10 秒]
+   5. [反共识 / contrarian，10 秒]
+   6. [Takeaway + 招牌结尾，10 秒]
+
+C. 字幕版本（CapCut 自动生成 + 校对）
+   每行 ≤ 30 字符，每段对应 1 行
+
+D. X 主推 caption（≤ 280 字符，无链接）
+   - 一句话 take 钩子
+   - "bookmark this if [实用场景]"
+
+E. Reply 1（T+15s）· 文字版 TL;DR + 链接
+F. Reply 2（T+5min）· CTA · weekly digest link
+
+G. YouTube Shorts title（60 字符内）+ description
+
+H. Alt-text（喂 X 搜索 + 无障碍）
+
+【硬规则 · 视频版 voice DNA】
+- 全程 dry / deadpan / specific / observational / self-aware
+- 1-2 次自然 "uh / um / let me think" 真实感
+- 1 次自我修正（"actually that was q1 not q2"）
+- 重点句话慢，数字句快（节奏变化）
+- 招牌结尾："3 takes. all could be wrong." / "more next saturday." / "bookmark this if useful."
+
+【绝不做】
+- ❌ "in this video i will..."
+- ❌ "today's topic is..."
+- ❌ "follow + like for more"
+- ❌ generic intro music
+- ❌ 任何 https:// 链接
+```
+
+---
+
+## 使用频率速查表 v4.0
 
 | Prompt | 频率 | 何时用 |
 |---|---|---|
@@ -1297,10 +1452,12 @@ Sun 21:30  newsletter 发 + 嵌入 Spaces 录音 link
 | §16 H9 Adulting | 按需 | 周一 / 周五 / 工作日下午 |
 | §17 H10/H11/H12 三合一 | 按需 | 晚间 / 周末 |
 | §18 H13 Generational | 按需 | 周末 / 文化热点 |
-| **§19 Sunday Long Read X Article** ⭐ v3.0 | **每周** | **周日 19:00-20:30 草稿 → 21:00 发** |
-| **§20 Wednesday AI Race Card** ⭐ v3.0 | **每周** | **周三 11:00（11:30 发前 30 min）** |
-| **§21 Friday Reading List** ⭐ v3.0 | **每周** | **周五 18:00-19:00（19:30 发前 30 min）** |
-| **§22 Friday Spaces Prep** ⭐ v3.0 | **每周** | **周五 20:30-20:55（21:00 开 Space 前）** |
+| §19 Sunday Long Read X Article ⭐ v3 | 每周 | 周日 19:00-20:30 草稿 → 21:00 发 |
+| §20 Wednesday AI Race Card ⭐ v3 | 每周 | 周三 11:00（11:30 发前 30 min）|
+| §21 Friday Reading List ⭐ v3 | 每周 | 周五 18:00-19:00（19:30 发前 30 min）|
+| §22 Friday Spaces Prep ⭐ v3 | 每周 | 周五 20:30-20:55（21:00 开 Space 前）|
+| **§23 First 60-min Engagement Scripts** ⭐ v4 | **每条主推后** | **T+0 立刻** |
+| **§24 Vertical Video Script Generator** ⭐ v4 | **每周** | **周六 09:00-09:30 BJ（11:30 发前 2h）** |
 
 ---
 
@@ -1317,5 +1474,5 @@ Sun 21:30  newsletter 发 + 嵌入 Spaces 录音 link
 
 ---
 
-**版本**：v3.0 · 2026-05-30（big-V upgrade pack · 通用前缀注入 Voice DNA + observer brand v2.0 + 5 named series · 新增 §19-§22 共 4 个 prompts: Sunday Long Read X Article / Wednesday AI Race Card / Friday Reading List / Friday Spaces Prep · 现在共 22 个 prompts，覆盖日常 / 长内容 / 数据图 / Spaces / 危机 / 变现 全场景）
-**配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [signature-voice.md](./signature-voice.md) · [signature-series.md](./signature-series.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [humor-pillars](./humor-pillars.md) · [traffic-expansion-pillars](./traffic-expansion-pillars.md) · [x-strategy](./x-strategy.md)
+**版本**：v4.0 · 2026-05-30（2026 算法现实升级 · 通用前缀加 long-form 默认 + 链接放 reply 规则 · 新增 §23 First 60-min Engagement Scripts + §24 Vertical Video Script Generator · 现 24 prompts）
+**配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [signature-voice.md](./signature-voice.md) · [signature-series.md](./signature-series.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [humor-pillars](./humor-pillars.md) · [traffic-expansion-pillars](./traffic-expansion-pillars.md) · [x-strategy](./x-strategy.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)
