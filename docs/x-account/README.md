@@ -3,13 +3,14 @@
 > 触发事件：**2026-05-22，@elonmusk 给我的一条回复点了赞**。
 > 这一刻成为账号 launch 的算法窗口期。launch 后 6 周，账号品牌从"Musk Empire Decoder"演化为更通用的 **"Observer & Investor"** —— Musk 是其中一面镜子，不是唯一频道。
 >
-> v4.0：根据 2026-05 X 最新算法现实校准。
-> v5.0：**运营可持续性升级**——单人不可持续 → 加 VA 委托路径 + 业务基础（税务/LLC/支付）+ 账号安全 + 突发新闻 SOP + Personal CRM + 全栈 revenue + 受众研究 + 法律合规。
+> v4：根据 2026-05 X 最新算法现实校准。
+> v5：运营可持续性 + 业务基础 + 安全 + Newsjacking + CRM + Revenue + Research + Legal。
+> v6：**未来防御** —— GEO（AI 搜索引用）+ Reputation Crisis（cancel culture 应对）+ Second Brain（idea capture）+ Long-term Flywheel（M7-M24 规划）。
 >
 > **本目录是一个独立单元，不与本仓库其他内容（摄影、四柱八字、东方美学）发生交集。**
 > **所有内容围绕一组主题：tech / markets / IPOs / AI race / 6 musk brands / cultural observation。**
 >
-> 状态：**v5.0 草案 · operational sustainability + business foundation 升级 · 待部署**
+> 状态：**v6.0 草案 · future-proofing 升级 · 待部署**
 
 ---
 
@@ -47,8 +48,12 @@
 
 | 角色 | 文件 | 用途 |
 |---|------|------|
-| 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 6 件事就够了：每日 / 每周六 / 每周五 / 每周日 / 每月 / 每季度 SOP + First 60-min SOP + 13 自检 + Crisis Playbook + 6 个月路线图 |
-| 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 28 个 paste-ready AI prompts |
+| 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 6 件事就够了：每日 / 每周六 / 每周五 / 每周日 / 每月 / 每季度 SOP + Idea capture + GEO audit + Crisis Playbook（含 Type K 公关危机）|
+| 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 30 个 paste-ready AI prompts |
+| 🔍 GEO v6 ⭐ | [geo-playbook.md](./geo-playbook.md) | Generative Engine Optimization · ChatGPT / Perplexity / Claude / Gemini citation 工程 + 月度 audit |
+| ⚠️ 公关危机 v6 ⭐ | [reputation-crisis-playbook.md](./reputation-crisis-playbook.md) | 6 类危机情景（Type A-F）+ Apology 4 步公式 + Pre-crisis prevention |
+| 🧠 知识系统 v6 ⭐ | [second-brain-system.md](./second-brain-system.md) | Capture → Organize → Distill → Express · Karpathy 模式 |
+| 🎯 长期路线 v6 ⭐ | [long-term-flywheel-roadmap.md](./long-term-flywheel-roadmap.md) | M7-M24 规划 + IP portfolio + Acquisition 准备 |
 | 🔬 算法 v4 | [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) | 2026 X 算法 source of truth |
 | 🚀 增长 v4 | [growth-mechanics-2026.md](./growth-mechanics-2026.md) | 6 大新机制实操 |
 | 🎬 视频 v4 | [vertical-video-pillar.md](./vertical-video-pillar.md) | Saturday vertical video pillar |
@@ -140,73 +145,80 @@
 - [x] 0.7 §14 v2.0 daily prompt translated to English
 - [x] 1.0 Big-V upgrade pack v3.0 入库（PR #58 已 merge）
 - [x] 2.0 2026 Algorithm Reality v4.0 入库（PR #59 已 merge）
-- [x] **3.0 Operational Sustainability v5.0 入库（本 PR）** ← **NOW**
-- [ ] 3.1 v5 Day-0 关键动作（每个 5-10 min 完成）：
-  - [ ] 启用 X Passkey + Authenticator（替代 SMS 2FA）
-  - [ ] 启用 Email Passkey + Authenticator
-  - [ ] 注册 1Password / Bitwarden vault
-  - [ ] 联系运营商开通业务办理密码（防 SIM swap）
-  - [ ] 建立 Personal CRM（Notion 表 50-100 人）
-  - [ ] 注册 Tier 1 affiliate（X Premium / Beehiiv / CapCut / Notion）
-  - [ ] 准备 W-8BEN（M2 第 1 笔收入前）
-- [ ] 3.2 M1 Week 2 起：第 1 次 Reader Survey（M1 简化版 5 题）
-- [ ] 3.3 M2 触发：注册 Beehiiv + Mercury + Wise + 1 次会计师咨询
-- [ ] 3.4 M3 触发：注册 Wyoming LLC + EIN + VA 招聘
-- [ ] 3.5 月末 retro 加入 Personal CRM + Revenue + Bookkeeping + Security + Legal review
-- [ ] 3.6 季度末 retro 加入 Reader Survey + Sustainability check
-- [ ] 3.7 Newsjacking 监控（早 05:30 + 晚 22:00 each 5 min push 检查）
+- [x] 3.0 Operational Sustainability v5.0 入库（PR #60 已 merge）
+- [x] **4.0 Future-proofing v6.0 入库（本 PR）** ← **NOW**
+- [ ] 4.1 v6 Day-0 关键动作：
+  - [ ] 创建 Beehiiv About page（GEO anchor，30 min · [geo-playbook.md §九](./geo-playbook.md)）
+  - [ ] 设置 Notion second brain（Inbox / Topic / Atoms 三库 · [second-brain-system.md §七](./second-brain-system.md)）
+  - [ ] 加入 daily 5 min × 2 idea capture 习惯
+  - [ ] 第 1 次月度 GEO audit（看 baseline）
+  - [ ] Pre-print reputation crisis 模板（[reputation-crisis-playbook §十二](./reputation-crisis-playbook.md)）
+- [ ] 4.2 v3-v5 Day-0 关键动作（如还没做）
+  - [ ] 全部 v3 brand pivot 部署
+  - [ ] 全部 v4 long-form / link-in-reply / Saturday video / Communities Day-1
+  - [ ] 全部 v5 Passkey / Personal CRM / W-8BEN / affiliate
+- [ ] 4.3 后续按 [_self-operation-handbook §一](./_self-operation-handbook.md) 6 件事节奏跑
 
 ---
 
-## v5.0 改了什么（vs v4.0）⭐
+## v6.0 改了什么（vs v5.0）⭐
+
+```
+v5.0 (operational sustainability)     →  v6.0 (future-proofing)
+─────────────────────────────────────────────────────────────────────────
+AI 搜索可见性
+  完全空白                            →  GEO playbook · ChatGPT / Perplexity /
+                                         Claude / Gemini citation 工程
+                                         · About page · FAQ structure
+                                         · 月度 5 query audit
+                                       新文档 geo-playbook.md
+
+公关危机 / Cancel Culture
+  v3 软件层 + v5 法务层               →  Type K 公关危机 6 类应对
+                                         · 4 步 apology framework
+                                         · Pre-crisis prevention 7 习惯
+                                         · Track record 公开化
+                                       新文档 reputation-crisis-playbook.md
+
+Idea capture / 知识系统
+  Personal CRM 有，idea pipeline 无   →  CODE 框架（Capture/Organize/Distill/Express）
+                                         · Daily 5 min × 2 capture
+                                         · Sunday 30 min organize+distill
+                                         · Atom pool · Karpathy 模式
+                                       新文档 second-brain-system.md
+
+长期路线
+  M7 (2027/1) 后没规划               →  M7-M24 4-phase 路径
+                                         · IP portfolio (book/course/GPT)
+                                         · LLC → C-Corp → 退出策略
+                                         · Acquisition 准备（M12+）
+                                       新文档 long-term-flywheel-roadmap.md
+
+提示词                                28 → 30 (+§29 GEO + §30 Crisis)
+节奏                                  6 件事保持 + idea capture daily + atom Sunday
+Crisis Playbook                       10 类 → 11 类 (+ K 公关危机)
+月度 retro                            + GEO audit + atom pool clean
+季度 retro                            + Long-term Flywheel review
+```
+
+---
+
+## v5.0 改了什么（vs v4.0）
 
 ```
 v4.0 (algorithm reality)              →  v5.0 (operational sustainability)
 ─────────────────────────────────────────────────────────────────────────
-工作量 / 委托
-  v3+v4 总 30-40 hr/周               →  M3 委托 → 18-22 hr/周
-                                         M5 团队 → 12-15 hr/周
-                                       新文档 sustainability-and-delegation.md
-
-业务基础
-  完全空白                            →  W-8BEN + Wyoming LLC + Mercury / Wise
-                                       新文档 creator-business-foundation.md
-
-账号安全
-  v3 仅软件层 crisis playbook         →  Passkey + 2FA + SIM swap 防御 + 24h
-                                         hacked recovery SOP
-                                       新文档 account-security-playbook.md
-
-突发新闻
-  无 SOP                              →  24h trending hijack 7 类反应模板
-                                         (IPO / earnings / M&A / Musk / AI / 监管 / 地缘)
-                                       新文档 newsjacking-playbook.md
-
-顶级粉丝
-  无追踪                              →  Personal CRM 100-500 fans + 7-state 梯度
-                                         + Founding 50-cap 池 + 1:1 漏斗
-                                       新文档 personal-crm.md
-
-收入栈
-  6 路全主动                          →  9 路 (主动 50% / 半被动 30% / 被动 20%)
-                                         + 30+ affiliate + Custom GPT M5+
-                                       新文档 revenue-stack-2026.md
-
-受众研究
-  无 feedback loop                    →  季度 survey + 月度 5 个 1:1 + cohort
-                                       新文档 audience-research.md
-
-法律合规
-  无 disclaimer / FTC / SEC 防御      →  Markets / IPO / FTC / Copyright /
-                                         Defamation 全套合规
-                                       新文档 legal-compliance.md
-
-提示词                                24 → 28 (+§25 §26 §27 §28)
+工作量 / 委托                         无委托 → VA 招聘 SOP + Burnout 防御
+业务基础                              空白 → W-8BEN + LLC + Mercury / Wise
+账号安全                              软件层 → Passkey + 2FA + SIM swap + 24h hacked SOP
+突发新闻                              无 SOP → 24h 7 类反应模板
+顶级粉丝                              无追踪 → Personal CRM 7-state + Founding 50-cap
+收入栈                                6 路全主动 → 9 路（主动50/半被动30/被动20）
+受众研究                              无 feedback loop → 季度 survey + 月度 1:1
+法律合规                              无 → SEC / FTC / Copyright / Defamation 全套
+提示词                                22 → 28 (+§25-§28)
 节奏                                  5 件事 → 6 件事 (+ quarterly)
-Crisis Playbook                       7 类 → 10 类 (+ H 黑客 + I 突发新闻 + J 法务)
-工具栈                                + password mgr + 2FA + lawyer + insurance + VA
-收入预测                              基于 v4 调整 + v5 加 affiliate / GPT 复利
-                                       (M3: $4.6K-14K vs v3 $1.5K-5K · 因 G+D 半被动)
+Crisis Playbook                       7 类 → 10 类 (+ H/I/J)
 ```
 
 ---
@@ -335,7 +347,7 @@ v0.2 (Musk-only)              →  v3.0 (Observer & Investor)
 
 ---
 
-**版本**：v5.0 · 2026-05-30 草案
+**版本**：v6.0 · 2026-05-30 草案
 **所属**：独立单元，与本仓库其他业务线无交集
 **核心主题**：tech · markets · IPOs · AI race · 6 musk brands · cultural observation
 **签名**：3 takes. all could be wrong. that's why i write them down.
