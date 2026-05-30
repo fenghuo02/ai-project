@@ -1,21 +1,22 @@
 # X 英文账号 · 自助运营手册（Self-Operation Handbook）
 
-> 账号：@Skub0k · Observer & Investor（v4.0）
-> 状态：v4.0 · 2026-05-30 · 2026 算法现实升级 + Saturday Video + First 60-min SOP
+> 账号：@Skub0k · Observer & Investor（v5.0）
+> 状态：v5.0 · 2026-05-30 · 运营可持续性升级 + 业务基础 + 安全 + Newsjacking + Personal CRM + Revenue Stack + Research + Legal
 > 触发：Kiro 额度即将到期，本手册让账号在没有 AI 助手介入的情况下也可以稳跑 6+ 个月
-> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)
+> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [sustainability-and-delegation.md](./sustainability-and-delegation.md) · [creator-business-foundation.md](./creator-business-foundation.md) · [account-security-playbook.md](./account-security-playbook.md) · [newsjacking-playbook.md](./newsjacking-playbook.md) · [personal-crm.md](./personal-crm.md) · [revenue-stack-2026.md](./revenue-stack-2026.md) · [audience-research.md](./audience-research.md) · [legal-compliance.md](./legal-compliance.md)
 
 ---
 
-## 一、5 件事就够了 v4.0
+## 一、6 件事就够了 v5.0
 
 | 频率 | 时间 | 做什么 | 用什么 |
 |---|---|---|---|
-| **每天** | 06:30-09:00（北京）| 1 main + 5 humor (13 池子选 5) + 1 expansion (E1-E5) = 7 推生成 + 时段排发 + **首 60 分钟 SOP** | [§14 Daily Humor Pool v2.0](./_prompts-pack.md#14--daily-humor-pool-generator-v20-replaces-1-use-daily-at-0630) + [§23 First 60-min](./_prompts-pack.md) |
-| **每周六** 🆕 | 09:00-12:00（北京）| Vertical 9:16 video（4 格式 V1-V4）+ 11:30 BJ 发 X + YT Shorts | [§24 Video Script Generator](./_prompts-pack.md) + [vertical-video-pillar.md](./vertical-video-pillar.md) |
-| **每周五** | 20:30-21:30（北京）| 30 min Friday Spaces + 21:35 follow-up 推 | [spaces-and-community.md §二](./spaces-and-community.md) + [_prompts-pack.md §22](./_prompts-pack.md) |
-| **每周日** | 19:00-22:30（北京）| Sunday Long Read X Article + Newsletter + Cheat Sheet 刷新 + 周复盘 | [§19 Article](./_prompts-pack.md) + §2-5 |
-| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + Migration triggers 检查 + Last-Day Monthly Map (long-form) + **algo GitHub review** | [§3 Monthly](./_prompts-pack.md#3-monthly-retro-generator) + [signature-series §六](./signature-series.md) + [algorithm-2026-playbook §十一](./algorithm-2026-playbook.md) |
+| **每天** | 06:30-09:00（北京）| 1 main + 5 humor + 1 expansion = 7 推 + **首 60 分钟 SOP** + **早晚 push 监控（newsjacking）** | [§14](./_prompts-pack.md) + [§23](./_prompts-pack.md) + [newsjacking-playbook §四](./newsjacking-playbook.md) |
+| **每周六** | 09:00-12:00（北京）| Vertical 9:16 video V1-V4 + 11:30 BJ 发 X + YT Shorts | [§24](./_prompts-pack.md) + [vertical-video-pillar.md](./vertical-video-pillar.md) |
+| **每周五** | 20:30-21:30（北京）| 30 min Friday Spaces + follow-up | [spaces-and-community §二](./spaces-and-community.md) + [§22](./_prompts-pack.md) |
+| **每周日** | 19:00-22:30（北京）| Sunday Long Read Article + Newsletter + Cheat Sheet + 周复盘 + **Personal CRM weekly** | [§19](./_prompts-pack.md) + §2-5 + [personal-crm §四](./personal-crm.md) |
+| **每月最后一天** 🆕 | 19:00-22:00（北京）| 月度复盘 + Migration triggers + Monthly Map + algo review + **Personal CRM monthly + Revenue review + Bookkeeping + Security review + Legal compliance + 5 个 1:1 interviews** | [§3](./_prompts-pack.md) + [全部 v5 docs] |
+| **每季度最后一天** 🆕 | 加 1-2 hr | **Reader Survey + Annual Audience Map（年度）+ Sustainability check** | [audience-research §三](./audience-research.md) + [sustainability-and-delegation §8.2](./sustainability-and-delegation.md) |
 
 > 💡 其他时间正常生活。**不要把账号当 24/7 工作**，会烧坏。
 >
@@ -273,6 +274,13 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ## 八、Crisis Playbook · 突发情况怎么办
 
+> v5 加入 H / I / J 三类（账号被黑 / 突发新闻 / 法律事件），详见各自专属 playbook：
+> - Type H · 账号被 hack / 怀疑被 hack → [account-security-playbook.md §三](./account-security-playbook.md)
+> - Type I · 突发新闻反应（newsjacking）→ [newsjacking-playbook.md §三](./newsjacking-playbook.md)
+> - Type J · 法律事件（cease-and-desist / lawsuit / SEC inquiry）→ [legal-compliance.md §五](./legal-compliance.md)
+
+
+
 ### 类型 A：账号被限流警告 / 触发审核
 
 **症状**：突然某条推 impression 暴跌 / X 推送通知"内容受限"。
@@ -335,6 +343,22 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 ---
 
 ## 九、推荐工具栈
+
+> v5 加入: password manager · 2FA app · personal CRM · bookkeeping · 跨国 creator 会计师 · securities lawyer · media liability insurance。详细配置见各自专属 playbook。
+
+| 类别 | 工具 | 启动阶段 |
+|---|---|---|
+| **Password / 安全** | 1Password / Bitwarden + Authy / Yubikey | M1 Day 1 ([account-security-playbook.md §二](./account-security-playbook.md)) |
+| **Personal CRM** | Notion / Airtable / Folk | M1 Day 1 ([personal-crm.md §三](./personal-crm.md)) |
+| **业务基础** | Mercury / Wise / Stripe / Wyoming registered agent | M2 起 ([creator-business-foundation.md §四](./creator-business-foundation.md)) |
+| **Bookkeeping** | Wave / QuickBooks Self-Employed / Notion | M3 起每月 1 hr |
+| **Audience research** | Tally / Google Forms / SparkToro | 季度 1 次 ([audience-research.md §三](./audience-research.md)) |
+| **跨国 creator 会计师** | $100-500 1 次咨询 | M2 第 1 笔收入前 |
+| **Securities lawyer** | $300-500/hr · M4+ retainer | M4+ ([legal-compliance.md §十](./legal-compliance.md)) |
+| **Media liability insurance** | Hiscox / Travelers / Embroker · $500-2K/年 | M5+ |
+| **VA** | Onlinejobs.ph / Upwork / Wishup · $10-15/hr | M3+ ([sustainability-and-delegation.md §三](./sustainability-and-delegation.md)) |
+
+
 
 ### AI 助手（按场景选）
 
@@ -481,5 +505,5 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-**版本**：v4.0 · 2026-05-30（v4 升级：4 件事 → 5 件事加 Saturday Video / Daily SOP 加首 60 分钟 engagement SOP / 主推无链接规则 / Long-form 单推优先 / Communities Day-1 加入 / 月度 X algo GitHub review）
+**版本**：v5.0 · 2026-05-30（v5 升级：5 件事 → 6 件事加 quarterly · Crisis Playbook 加 H/I/J 三类 · monthly retro 加 Personal CRM + Revenue review + Bookkeeping + Security review + Legal compliance + 5 个 1:1 interviews · Daily SOP 加 newsjacking push 监控 · 工具栈加 password manager + 2FA + securities lawyer · 8 个新 v5 docs 引用）
 **配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [humor-pillars.md](./humor-pillars.md) · [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)

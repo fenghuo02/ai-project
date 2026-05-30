@@ -1430,7 +1430,242 @@ H. Alt-text（喂 X 搜索 + 无障碍）
 
 ---
 
-## 使用频率速查表 v4.0
+## §25 · Newsjacking Generator ⭐ v5 新
+
+> ⏰ **何时用**：突发新闻发生 30-60 分钟内（IPO 上市 / 财报 surprise / 大公司收购 / Musk 重大推 / AI 模型大发布 / 监管 / 地缘）
+> 📥 **输入**：事件类型（A-G）+ 当前事实数据
+> 📤 **输出**：60 min 主推 + reply 1/2/3 + alt-text + 24h follow-up 草稿
+> 🔗 **来源**：[newsjacking-playbook.md](./newsjacking-playbook.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【Newsjacking Generator】
+
+事件类型（7 选 1）：
+[ ] A · IPO 上市 / S-1 / 定价
+[ ] B · 财报 surprise（beat / miss）
+[ ] C · 大公司收购 / 合并
+[ ] D · Musk 重大推 / 重大事件
+[ ] E · AI 模型大发布
+[ ] F · 监管 / 政策事件
+[ ] G · 地缘 / 宏观事件
+
+事件具体内容（粘进来）：
+[填事件 100-300 字描述 + primary source link]
+
+发生时间：[填时间]
+我对此的初步立场（如有）：[填一句话]
+
+【任务】
+按 [newsjacking-playbook.md §三 7 类反应模板](./newsjacking-playbook.md) 生成完整 60-min 反应包。
+
+要求：
+- 主推 long-form 4000-char（v4 默认）
+- 主推第 1 行 stop-scroll（数字 + 反常识）
+- 1 个反常识 take + 1 个具体数字 + 1 个 framework / decoder
+- 招牌结尾（"3 takes / observation, not advice / revisiting in 30 days"）
+
+【输出格式】
+
+A. 主推（≤ 4000 char，无链接）
+
+B. Reply 1（T+15s · 文字版 5-bullet TL;DR + primary source links）
+
+C. Reply 2（T+5min · 数据来源 / context links）
+
+D. Reply 3（T+10min · 实质性自我补充）
+
+E. Alt-text（如带图）
+
+F. 24h follow-up 主推草稿（次日同时段）
+
+【硬规则 · §五 5 大铁律】
+- 速度 > 完美（80% 完成 60-min 内 > 100% 完成 24-h 后）
+- 视角 > 信息（不能只 paraphrase 新闻 = aggregator）
+- 永远不预测 < 90 天短期价格
+- 引用 primary source（不 paraphrase）
+- 24h 后必发 follow-up（建立 track record）
+
+【红线（v3 红线 + 类型特定）】
+- 类型 A-C: 不预测 short-term price / 不直接 buy/sell 推荐
+- 类型 D: 不评论 Musk 私生活
+- 类型 F: 不预测案件结果 / 不嘲讽监管员
+- 类型 G: 不碰美国政治 / 不碰中美博弈
+- 所有类型: 必须 (observation, not advice)
+```
+
+---
+
+## §26 · Quarterly Reader Survey Generator ⭐ v5 新
+
+> ⏰ **何时用**：每季度第 1 周一（1/4/7/10 月初）
+> 📥 **输入**：当前 stage（M1 简化版 / M3+ 完整版）
+> 📤 **输出**：Tally form 题目 + 公告推 + 1 周后 results post 模板
+> 🔗 **来源**：[audience-research.md §三](./audience-research.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【Quarterly Reader Survey Generator】
+
+当前阶段：
+[ ] M1 简化版（5 题 · Beehiiv subs < 200）
+[ ] M3+ 完整版（15 题）
+
+当前关注点（要 survey 验证什么）：
+[填 1-3 个问题，例如：v2 brand pivot 后受众是否更喜欢 / 哪个 series ROI 最高 / paid newsletter 价格弹性]
+
+【任务】
+1. 生成 Tally / Google Forms 题目（按 [audience-research.md §三](./audience-research.md) 模板）
+2. 生成 X 公告推 + Beehiiv subscribe email
+3. 生成 1 周后的 results post 模板
+
+【输出格式】
+
+A. Survey 题目（直接粘到 Tally）
+
+B. X 公告主推（≤ 280 char，无链接）
+   + Reply 1（链接到 survey）
+   + Reply 2（incentive · "lucky 1:1 / cheat sheet" reward）
+
+C. Beehiiv newsletter mini-issue（survey 邀请，简短）
+
+D. 1 周后 results post 模板（提前写好，结果出来填空）
+
+【硬规则】
+- 题目 ≤ 题数限（M1 5 / M3+ 15），太多 → 完成率掉
+- 全部 5 min 内能答完
+- 至少 1 个 open-text 题（捕获 surprising insights）
+- 必须有"willingness to pay"题（M3+）
+- Privacy disclaimer 必填
+```
+
+---
+
+## §27 · VA Brief Generator ⭐ v5 新
+
+> ⏰ **何时用**：M3+ 招聘 VA 时（粉丝 ≥ 5K + 月收入 ≥ $500）
+> 📥 **输入**：要委托的任务列表
+> 📤 **输出**：VA 招聘描述 + 测试任务 + 第 1 周 onboarding 计划
+> 🔗 **来源**：[sustainability-and-delegation.md §三](./sustainability-and-delegation.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【VA Brief Generator】
+
+要委托的任务（按优先级排）：
+1. [task 1, 例：跨平台 video 同步分发]
+2. [task 2, 例：weekly data tracking]
+3. [task 3, 例：newsletter Beehiiv 排版]
+（建议起步 3-5 任务，不超过 10 hr/周）
+
+预算：$[每月]/月（推荐 $50-150 起步）
+
+【任务】
+1. 写招聘描述（一句话 + 详细要求）
+2. 设计测试任务（招聘前付 $20 测试）
+3. 第 1 周 onboarding plan
+4. SOP outline 1-3 份（按所选任务）
+
+【输出格式】
+
+A. 招聘描述
+   一句话：
+   详细要求：
+   时区：
+   工具：
+   薪资：
+
+B. 测试任务（pre-hire $20）
+   3 个具体任务 + 评分标准
+
+C. 第 1 周 onboarding 计划
+   Day 1: ...
+   Day 2: ...
+   ...
+
+D. SOP outline（每任务 1 份 markdown 1-2 页）
+   · Step-by-step
+   · 失败处理
+   · review 频率
+
+【硬规则】
+- 测试任务必须 < 1 hr 完成
+- 招聘描述明确 timezone（GMT+0 ~ GMT+8）
+- 不要 over-specify（VA 应该有自主权）
+- SOP 包括 "what NOT to do"
+- 不要 micromanage（每周 review 1 次）
+```
+
+---
+
+## §28 · Disclaimer Generator ⭐ v5 新
+
+> ⏰ **何时用**：发布关于 markets / IPO / earnings / 公司估值 内容前
+> 📥 **输入**：内容类型 + 主题
+> 📤 **输出**：合规 disclaimer 文本 + 检查清单
+> 🔗 **来源**：[legal-compliance.md §三](./legal-compliance.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【Disclaimer Generator】
+
+内容类型（多选）：
+[ ] X 主推（markets / IPO 主题）
+[ ] X Article (Sunday Long Read)
+[ ] Newsletter issue
+[ ] Sponsored content（指定 brand）
+[ ] Affiliate link 提及
+[ ] 1:1 Briefing booking page
+[ ] Reading List（含 affiliate）
+
+具体主题：[一句话]
+
+涉及的公司 / stock / IPO：[列出]
+
+是否 sponsored：[Y/N]
+是否 affiliate：[Y/N]
+
+【任务】
+按 [legal-compliance.md §三 Disclaimer Cheat Sheet](./legal-compliance.md) 生成合规 disclaimer。
+
+【输出格式】
+
+A. 主推 / X content disclaimer
+   位置：reply 1 末尾 / 主推末尾 / 第 1 行
+   文本：[一句话]
+
+B. Article / Newsletter disclaimer
+   开头位置（如 markets-heavy）：[完整段]
+   末尾位置（每篇都加）：[完整段]
+
+C. Affiliate disclosure（如适用）
+   位置：bio / footer / 内容内
+   文本：[FTC 合规标准]
+
+D. 检查清单（发布前）
+   □ #ad 标记（如 sponsored）
+   □ "observation, not advice" 在 markets / IPO 主题
+   □ Primary source 引用（不 paraphrase）
+   □ 不 buy/sell 推荐
+   □ 不预测 < 90 天 短期价格
+   □ 不评论 individual private 事
+   □ Quote-tweet 不截图（X 平台内容）
+   □ Affiliate link 有 disclosure
+
+【硬规则】
+- FTC：sponsored / affiliate 必须 clear, conspicuous, in same medium
+- SEC：禁用语 "buy" / "sell" / "guaranteed" / "will" + 数字
+- Defamation：避免 attributing motive / 用观察性语言
+- Copyright：Quote-tweet 不截图
+```
+
+---
+
+## 使用频率速查表 v5.0
 
 | Prompt | 频率 | 何时用 |
 |---|---|---|
@@ -1456,8 +1691,12 @@ H. Alt-text（喂 X 搜索 + 无障碍）
 | §20 Wednesday AI Race Card ⭐ v3 | 每周 | 周三 11:00（11:30 发前 30 min）|
 | §21 Friday Reading List ⭐ v3 | 每周 | 周五 18:00-19:00（19:30 发前 30 min）|
 | §22 Friday Spaces Prep ⭐ v3 | 每周 | 周五 20:30-20:55（21:00 开 Space 前）|
-| **§23 First 60-min Engagement Scripts** ⭐ v4 | **每条主推后** | **T+0 立刻** |
-| **§24 Vertical Video Script Generator** ⭐ v4 | **每周** | **周六 09:00-09:30 BJ（11:30 发前 2h）** |
+| §23 First 60-min Engagement Scripts ⭐ v4 | 每条主推后 | T+0 立刻 |
+| §24 Vertical Video Script Generator ⭐ v4 | 每周 | 周六 09:00-09:30 BJ |
+| **§25 Newsjacking Generator** ⭐ v5 | **突发新闻** | **30-60 min 内反应** |
+| **§26 Quarterly Reader Survey** ⭐ v5 | **每季度** | **季度第 1 周一** |
+| **§27 VA Brief Generator** ⭐ v5 | **M3+ 招聘 VA 时** | **触发后 1 次** |
+| **§28 Disclaimer Generator** ⭐ v5 | **markets 内容前** | **每次需要时** |
 
 ---
 
@@ -1474,5 +1713,5 @@ H. Alt-text（喂 X 搜索 + 无障碍）
 
 ---
 
-**版本**：v4.0 · 2026-05-30（2026 算法现实升级 · 通用前缀加 long-form 默认 + 链接放 reply 规则 · 新增 §23 First 60-min Engagement Scripts + §24 Vertical Video Script Generator · 现 24 prompts）
+**版本**：v5.0 · 2026-05-30（v5 新增 §25-§28：Newsjacking Generator / Quarterly Reader Survey / VA Brief Generator / Disclaimer Generator · 现 28 prompts 覆盖日常 / 长内容 / 数据图 / Spaces / 视频 / 首 60 分钟 / 突发新闻 / 受众研究 / 委托 / 法务 全场景）
 **配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [signature-voice.md](./signature-voice.md) · [signature-series.md](./signature-series.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [humor-pillars](./humor-pillars.md) · [traffic-expansion-pillars](./traffic-expansion-pillars.md) · [x-strategy](./x-strategy.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)
