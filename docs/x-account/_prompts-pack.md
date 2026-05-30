@@ -717,63 +717,66 @@ E. 后备 plan B：如果事件失败 / 取消 / 推迟，怎么 pivot
 
 ---
 
-## §14 · Daily Humor Pool Generator v2.0 ⭐（取代 §1，每日 06:30 用）
+## §14 · Daily Humor Pool Generator v2.0 ⭐ (replaces §1, use daily at 06:30)
 
-> ⏰ **何时用**：每天早上 06:30-06:40（Observer 品牌时代的主力 prompt）
-> 📥 **输入**：今天日期 + 今天主推话题
-> 📤 **输出**：13 类段子池里选 5 条 + G1-G4 平衡分布
-> 🔗 **来源**：observer-brand-pivot.md §七 §A
+> ⏰ **When to use**: Every morning 06:30-06:40 (primary daily prompt for the Observer brand era)
+> 📥 **Input**: Today's date + today's main tweet topic
+> 📤 **Output**: 5 jokes selected from the 13-pillar pool, balanced across G1-G4
+> 🔗 **Source**: observer-brand-pivot.md §七 §A
 
 ```
-（粘通用前缀）
+(paste the universal prefix above)
 
-【账号定位升级 v2.0】
+[Account positioning v2.0]
 an independent observer & investor watching tech, markets, and the world.
 musk empire is ONE topic, not the brand identity.
 
-【今天日期】[填]
+[Today's date]: [fill in, e.g., 2026-06-01]
 
-【今天的"主推"是什么内容】[填，比如 Anthropic 解读 / Tesla 周更 / 个股观察 / WWDC 预热]
+[Today's main tweet topic]: [fill in, e.g., Anthropic decode / Tesla weekly update / single-stock observation / WWDC preview]
 
-【任务】
-帮我从以下 13 个段子支柱里选 5 条（早 9:30 / 中午 12:30 / 下午 14:30 / 17:30 / 19:30 / 22:30 选 5 个时段发）：
+[Task]
+Pick 5 jokes from the 13 humor pillars below, slotted into 5 of these Beijing-time windows: 09:30 / 12:30 / 14:30 / 17:30 / 19:30 / 22:30.
 
-【13 支柱池】
-G1 Tech / AI / X：
+[13-Pillar Pool]
+
+G1 Tech / AI / X:
 - H1 Tech Industry Observation
 - H2 X Meta Joke
 - H6 AI Lab Cross-Lab Humor
 - H7 Engineer Watching Drama
 - H10 Internet/Phone Era
 
-G2 Investor / Markets：
+G2 Investor / Markets:
 - H8 Investor Life Observations
 
-G3 Adulting / Working：
+G3 Adulting / Working:
 - H9 Working Life / Adulting
 - H11 Productivity Theater
 - H12 Reading / Learning Habits
 
-G4 Self-Aware / Cultural：
+G4 Self-Aware / Cultural:
 - H3 Before/After Contrast (general)
 - H4 Numbered List Punchline (general)
 - H5 Self-Aware Build / Confession
 - H13 Generational / Cultural
 
-【硬规则】
-- 5 条不能重复同一支柱
-- G2 必有 1 条（投资者人设锁定）
-- G1 选 1-2 / G3 选 1 / G4 选 1-2
-- 周末 G3 比例提高 / 财报季 G2 提高 / AI 大事件 G1 提高
-- 每条 ≤ 280 字符
-- 全小写，无破折号，无 "Furthermore / Indeed / Absolutely"
-- punchline 在第 2 行落地
-- 1-2 条可以跟今天主推话题相关，3-4 条独立
+[Hard Rules]
+- 5 jokes must not repeat the same pillar
+- G2 is mandatory (locks in the investor identity)
+- G1 pick 1-2 / G3 pick 1 / G4 pick 1-2
+- Weekends: shift weight to G3 / earnings season: shift to G2 / major AI events: shift to G1
+- Each joke ≤ 280 characters
+- All lowercase, no em-dashes, no "Furthermore / Indeed / Absolutely"
+- Punchline must land by line 2
+- 1-2 jokes may relate to today's main tweet topic; the other 3-4 should stand independently
 
-【输出格式】
-1. 段子 1（建议时段：xx:30）· 支柱 [Hx] · vibe [xxx]
-   [内容]
-... (5 条)
+[Output Format]
+1. Joke 1 (suggested slot: xx:30) · pillar [Hx] · vibe [xxx]
+   [content]
+... (5 jokes total)
+
+Each joke must pass the 13 anti-AI-tone rules from the universal prefix. Self-check before returning.
 ```
 
 ---
