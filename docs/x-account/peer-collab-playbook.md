@@ -125,17 +125,32 @@
 
 **频率**：每天 5-10 条 reply 里 2-3 条投给 Tier A / B。
 
-### 协议 2 · Reading List 引用（M1 起 · Friday 系统化）
+### 协议 2 · Reading List 引用（M1 起 · Friday 系统化）· v4 quote-attribution 升级
 
 **做法**：每周 Friday Reading List 5 槽里，**永远留 1-2 槽给 Tier B / C 的内容**。
+
+### v4 关键改动
+
+[2026-05-23 起 X 严打 aggregator](https://www.forbes.com/sites/conormurray/2026/05/29/x-cracks-down-on-stolen-content-demonetizes-major-account-for-gaming-monetization-system/)：判定为内容窃取 = 减 60% 收入分成 + 下个周期再减 20%。
+
+| 引用对象 | v3 协议 | **v4 协议** |
+|---|---|---|
+| X 平台内容（thread / long-form / Article）| @ + URL | **Quote tweet + my take** |
+| 外部 newsletter / Substack / Beehiiv / blog | @ + URL | @ + URL（不变）|
+| 别人的 X Article | @ + URL | **X 内嵌引用 + my take** |
+| 别人的截图内容 | （不建议）| **绝对禁止** |
+
+详见 [growth-mechanics-2026.md §六 Quote-as-Attribution](./growth-mechanics-2026.md)。
 
 **规则**：
 
 - ✅ 必须 @ 作者
 - ✅ 必须 1 句话 take（自己的视角，不是引用作者）
+- ✅ X 平台内容**用 Quote tweet** 不用纯 @ + URL
 - ✅ 链接到原文（不是其他人的转发）
 - ❌ 不要每周都引同一个人
 - ❌ 不要引用与你立场 100% 一致的（无信息量）
+- ❌ 绝对不截图别人的推 / Article（plagiarism + algorithm penalty）
 
 **频率**：每周 1-2 个 Tier B / C 的引用。
 
@@ -210,6 +225,66 @@ Phase 3 (Month 7+):
 ```
 
 **心法**：**反向不能要 / 不能等价交换**。给 5 次才有 1 次回报。**不计较的人才能积累网络资本**。
+
+---
+
+### 协议 7 · Quote-Tweet Engineering（让别人 quote 你）⭐ v4 新增
+
+**做法**：故意设计一些主推 / long-form 让其他创作者**愿意 quote tweet 你**（不是 reply / retweet）。被 quote = 进入对方关注者池 = 跨圈免费曝光。
+
+详见 [growth-mechanics-2026.md §五 Quote-Tweet Engineering](./growth-mechanics-2026.md) + [algorithm-2026-playbook.md §七](./algorithm-2026-playbook.md)。
+
+**为什么 quote 比 reply 更值**：
+
+```
+1 reply  → 受众停留在你的 thread（in-network）
+1 retweet → 受众看到你的内容（无对方背书）
+1 quote  → 受众看到你的内容 + 对方背书 + 跨圈（out-of-network）
+```
+
+Quote 算法权重 +6.4，介于 reply (+13.5) 和 retweet (+1) 之间，但**跨圈价值远超**两者。
+
+**4 种"高 quote 率"内容模式**：
+
+| 模式 | 为什么被 quote | 例 |
+|---|---|---|
+| Strong contrarian take | quoter 想加 "+1" 或 "-1" | "anthropic $965B is the floor not peak" |
+| Specific data point | quoter 想用作引用源 | "fsd subs hit 1.28M, +51% YoY" |
+| Framework / mental model | quoter 想推荐给 followers | "AI race in one sentence: compute scale × data flywheel" |
+| Concise prediction | quoter 想 6 个月后回头看 | "spacexai ipo prices at $1.85T median. revisiting 7/13." |
+
+**高 quote 率收尾句**（5 选 1）：
+
+```
+✅ "3 takes. all could be wrong. that's why i write them down."
+✅ "revisiting in 30 days."
+✅ "calling it. screenshot for accountability."
+✅ "the contrarian view. let me know where i'm wrong."
+✅ "unpopular but. quote me when i'm wrong."
+```
+
+**频率**：每周 1-2 条长推故意设计成"高 quote 率"。**不能每条都强 take**，否则人设畸形。
+
+**最佳放置**：
+
+- Monday Empire Map（周一开局，最大窗口）
+- Sunday Long Read 摘要（周日复盘，受众最有时间消化）
+
+**不放在**：
+
+- 每天 daily 5 humor（那些是 dwell + bookmark + reply 优化）
+- Friday Reading List（那是 give 别人 quote，不是 ask quote）
+
+**预期 ROI**：
+
+```
+Quote rate 基线（普通推）：0.05-0.2%
+Quote-engineered take：1-3%
+单条 quote 平均带来 30-100 个 OON impressions
+
+每周 1-2 条 × 1.5% × 5K imp = 75-150 quotes / 周
+×  60 OON imp / quote = 4.5K-9K 跨圈曝光 / 周
+```
 
 ---
 
@@ -443,5 +518,5 @@ collaborative → established → ⚪dormant（30 天无互动）
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[signature-series.md](./signature-series.md) · [spaces-and-community.md](./spaces-and-community.md) · [_self-operation-handbook.md](./_self-operation-handbook.md)
+**版本**：v2.0 · 2026-05-30（v4 升级：协议 2 Reading List 改 Quote-tweet attribution / 新增协议 7 Quote-Tweet Engineering 让别人 quote 你 / 全文同步 2026-05 X 反 aggregator 规则）
+**配套**：[signature-series.md](./signature-series.md) · [spaces-and-community.md](./spaces-and-community.md) · [_self-operation-handbook.md](./_self-operation-handbook.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)

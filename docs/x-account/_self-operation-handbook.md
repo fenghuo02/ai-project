@@ -1,20 +1,21 @@
 # X 英文账号 · 自助运营手册（Self-Operation Handbook）
 
-> 账号：@Skub0k · Observer & Investor（v3.0）
-> 状态：v3.0 · 2026-05-30 · big-V upgrade pack 部署阶段
+> 账号：@Skub0k · Observer & Investor（v4.0）
+> 状态：v4.0 · 2026-05-30 · 2026 算法现实升级 + Saturday Video + First 60-min SOP
 > 触发：Kiro 额度即将到期，本手册让账号在没有 AI 助手介入的情况下也可以稳跑 6+ 个月
-> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md)
+> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)
 
 ---
 
-## 一、4 件事就够了 v3.0
+## 一、5 件事就够了 v4.0
 
 | 频率 | 时间 | 做什么 | 用什么 |
 |---|---|---|---|
-| **每天** | 06:30-09:00（北京）| 1 main + 5 humor (13 池子选 5) + 1 expansion (E1-E5) = 7 推生成 + 时段排发 | [§14 Daily Humor Pool v2.0](./_prompts-pack.md#14--daily-humor-pool-generator-v20-replaces-1-use-daily-at-0630) |
+| **每天** | 06:30-09:00（北京）| 1 main + 5 humor (13 池子选 5) + 1 expansion (E1-E5) = 7 推生成 + 时段排发 + **首 60 分钟 SOP** | [§14 Daily Humor Pool v2.0](./_prompts-pack.md#14--daily-humor-pool-generator-v20-replaces-1-use-daily-at-0630) + [§23 First 60-min](./_prompts-pack.md) |
+| **每周六** 🆕 | 09:00-12:00（北京）| Vertical 9:16 video（4 格式 V1-V4）+ 11:30 BJ 发 X + YT Shorts | [§24 Video Script Generator](./_prompts-pack.md) + [vertical-video-pillar.md](./vertical-video-pillar.md) |
 | **每周五** | 20:30-21:30（北京）| 30 min Friday Spaces + 21:35 follow-up 推 | [spaces-and-community.md §二](./spaces-and-community.md) + [_prompts-pack.md §22](./_prompts-pack.md) |
 | **每周日** | 19:00-22:30（北京）| Sunday Long Read X Article + Newsletter + Cheat Sheet 刷新 + 周复盘 | [§19 Article](./_prompts-pack.md) + §2-5 |
-| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + Migration triggers 检查 + Last-Day Monthly Map thread | [§3 Monthly](./_prompts-pack.md#3-monthly-retro-generator) + [signature-series §六](./signature-series.md) |
+| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + Migration triggers 检查 + Last-Day Monthly Map (long-form) + **algo GitHub review** | [§3 Monthly](./_prompts-pack.md#3-monthly-retro-generator) + [signature-series §六](./signature-series.md) + [algorithm-2026-playbook §十一](./algorithm-2026-playbook.md) |
 
 > 💡 其他时间正常生活。**不要把账号当 24/7 工作**，会烧坏。
 >
@@ -44,7 +45,28 @@
 
 ### 07:15-07:30 发主推 + 立刻接 Reply 1
 
-主推（带数据 / 截图 / 4 图）→ 接 1 条**纯文字版 TL;DR Reply**（X 算法读不了图，必须有这条）。详见 [week-01-content-plan §7](./week-01-content-plan.md)。
+主推（带数据 / 截图 / 4 图，**v4：主推不带链接，链接放 reply 1**）→ 接 1 条**纯文字版 TL;DR Reply（含链接）**（X 算法读不了图，必须有这条；同时 v4 算法链接全在 reply）。
+
+详见 [algorithm-2026-playbook.md §三链接放主推 = 流量自杀](./algorithm-2026-playbook.md)。
+
+### 07:30-08:30 First 60-min Engagement SOP（v4 ⭐ 新）
+
+发完主推**60 分钟内**完成这 6 步，决定 95% 分发命运。详见 [growth-mechanics-2026.md §二](./growth-mechanics-2026.md)。
+
+```
+T+0       发主推
+T+15s     发 reply 1（text TL;DR + 链接）
+T+5min    发 reply 2（CTA + 钩子）
+T+10min   自我 reply 实质性补充（不是空 CTA）
+T+15min   3-5 个 Tier A reply 战场打 reply（吸虹流量）
+T+30min   检查 imp · 若 < 500 = 这条死了，move on
+T+60min   评估：
+            imp < 500   死了 · move on
+            imp 1K-5K   中等 · 等长尾
+            imp > 5K    起飞 · 加倍维护（接 quote / 接 reply）
+```
+
+跑这一套的 prompt：[_prompts-pack.md §23 First 60-min Engagement Scripts](./_prompts-pack.md)。
 
 ### 07:30-22:30 7 推按时段分发 v3.0
 
@@ -459,5 +481,5 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-**版本**：v3.0 · 2026-05-30（升级 4 件事节奏 / 加入 Friday Spaces / 加入 Sunday Long Read / 加入 visual header 周更）
-**配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [humor-pillars.md](./humor-pillars.md) · [traffic-expansion-pillars.md](./traffic-expansion-pillars.md)
+**版本**：v4.0 · 2026-05-30（v4 升级：4 件事 → 5 件事加 Saturday Video / Daily SOP 加首 60 分钟 engagement SOP / 主推无链接规则 / Long-form 单推优先 / Communities Day-1 加入 / 月度 X algo GitHub review）
+**配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [humor-pillars.md](./humor-pillars.md) · [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)

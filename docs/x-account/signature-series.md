@@ -51,48 +51,138 @@
 
 ---
 
-## 二、Monday Empire Map · 周一帝国大图
+## 二、Monday Empire Map · 周一帝国大图 · v4 long-form 升级
 
 ### Pitch
 
-> "周一早上看完它，我就知道这周 Musk 帝国发生了什么。"
+> "周一早上看完它，我就知道过去 7 天 tech / markets / empires 发生了什么。"
 
-每周一早 07:30 北京（= 美东周日晚 19:30 黄金时段）发一条 9-推 thread。Empire 主题，承接 v1 时期的 Decoder Thread #01 形态，**改名 + 视觉一致化**。
+每周一早 07:30 北京（= 美东周日晚 19:30 黄金时段）发一条 **long-form 单推**（Premium+ 4000 字符）。Empire / AI race / Markets 三主题集成，承接 v1 时期的 Decoder Thread #01 形态，**改名 + 视觉一致化 + v4 算法适配**。
+
+### 为什么 v4 改成 long-form 单推（而不是 9-tweet thread）
+
+[2026-05 算法事实，详见 [algorithm-2026-playbook.md §一.1](./algorithm-2026-playbook.md)]：
+
+```
+2026 年 X 算法对 long-form 单推 > thread：
+  · long-form 把 engagement 集中到 1 条
+  · thread 第 2 推之后 not_dwelled 信号高，拖累整 thread 排名
+  · bookmark 率：long-form 7-15% vs thread 3-5%
+  · 算法读懂 long-form 主题信号比读 thread 切片信号更准
+```
+
+仍可发的 thread 场景：
+
+- E3 Live event thread（实时连续报道）
+- 突发危机响应
+- ≥ 2,500 字符的内容（超过 long-form 上限）
 
 ### 为什么放周一
 
 - 美东周日晚 19:30 = 整周第一个高互动窗口（X 算法本周首推会被推荐池放大）
 - 受众心智："周一早上看 Empire Map" = 设置 ritual
-- 周日是新闻空档 → 我把过去 7 天聚合成一条 thread = 高密度信息
+- 周日是新闻空档 → 我把过去 7 天聚合成一篇 long-form = 高密度信息
 
-### 模板结构（9 推）
+### v4 模板结构（long-form 单推 ~3,500 字符）
 
 ```
-1/  钩子 + 视觉封面图（template-decoder-frame.html · "monday empire map · week N"）
-    where each musk company stands as of week N / 2026.
-    + observer take in 1 sentence.
-    + decoded weekly. follow if you want this monday morning instead of reading 200 elon tweets a day.
+封面图（template-decoder-frame.html · "monday empire map · week N"）
 
-2/  Tesla         · Q 数据 + 1 关键变化 + observer 视角
-3/  SpaceX        · 同上
-4/  Starlink      · 同上
-5/  xAI           · 同上
-6/  Neuralink     · 同上
-7/  Boring Co     · 同上（最短，1-2 行即可）
-8/  AI race state · 5-horse 当前快照（这是 Empire Map 与 v1 Decoder Thread 不同的地方：
-                    把 AI race 拉回来作为帝国背景）
-9/  下 7 天看点 + 钩子（newsletter / cheat sheet pdf / next week's release）
+────────────────────
+
+monday empire map · week N
+
+[反常识 hook：1 句话总结过去 7 天 + 1 个反常识 take]
+
+──
+
+what i tracked this week:
+
+· tesla:    [Q 数据 1 行 + 1 关键变化 1 行 + observer take 1 行]
+· spacex:   [同上结构]
+· starlink: [同上]
+· xai:      [同上]
+· neuralink:[同上]
+· boring:   [同上，最短]
+
+──
+
+AI race state:
+· anthropic [数字]
+· openai    [数字]
+· xai       [数字]
+· google    [数字]
+· meta      [数字]
+verdict: [一句话定胜负]
+
+──
+
+markets watch:
+· [1 个 IPO / 财报 / Fed observation]
+· [1 个 valuation observation]
+
+──
+
+watching next 7 days:
+· [event 1 + 日期]
+· [event 2 + 日期]
+· [event 3 + 日期]
+
+──
+
+3 takes. all could be wrong. that's why i write them down.
+
+bookmark this for the week. revisiting next monday.
 ```
 
-### 与 v1 Decoder Thread 的差异
+### Reply 链（必发，T+15s / T+5min / T+10min）
 
-| 维度 | v1 Decoder Thread | v2 Monday Empire Map |
-|---|---|---|
-| 名称 | "Decoder Thread #01 / #02..." | "Monday Empire Map · Week N" |
-| 频率 | 每周一发，无固定时段 | 每周一 07:30 BJ 固定 |
-| 封面 | 无 | template-decoder-frame.html |
-| AI race | 单独段落 | 第 8 推固定槽 |
-| 与 newsletter 关系 | 暧昧（newsletter 跟 thread 重叠 60%）| **明确分工**：thread = 5min 速读 / newsletter = 30min 深度 / Article = 50min 原创视角 |
+```
+Reply 1（T+15s · 链接 + 算法摘要）：
+this week's decoder weekly is now live: [Beehiiv link]
+
+5-bullet text version (algo + screen-readers):
+- [bullet 1 + 数字]
+- [bullet 2 + 数字]
+- [bullet 3 + 数字]
+- [bullet 4 + 数字]
+- [bullet 5 + 数字]
+
+──
+
+Reply 2（T+5min · 数据来源）：
+sources for the data above:
+- spacex s-1 filing
+- tesla 10-Q q1 2026
+- anthropic blog 5/29
+- nvidia q1 fy27 earnings call
+- [其他 1-2 个]
+
+──
+
+Reply 3（T+10min · 实质性补充自我 reply）：
+[一段实质性的额外视角 / 反共识 take，不是空洞 CTA]
+
+例：
+"the part i kept thinking about while writing this:
+fsd subs at 1.28M is now growing 6× faster than tesla's auto deliveries.
+that's the 1 chart that decides whether tsla becomes a software co or a car co."
+```
+
+### 与 v1 Decoder Thread / v3 thread 版本的差异
+
+| 维度 | v1 Decoder Thread | v3 9-tweet thread | **v4 long-form 单推** |
+|---|---|---|---|
+| 形式 | 9-tweet thread | 9-tweet thread | **long-form 4000 字符单推** |
+| 名称 | "Decoder Thread #N" | "Monday Empire Map · Week N" | "Monday Empire Map · Week N" |
+| 频率 | 每周一发，无固定时段 | 周一 07:30 BJ | 周一 07:30 BJ |
+| 封面 | 无 | template-decoder-frame.html | template-decoder-frame.html |
+| 算法适配 | thread 时代有效 | thread 时代仍可 | **2026 long-form 优先**，与算法对齐 |
+| Bookmark 率 | 3-5% | 4-6% | **7-15%** |
+| 主推链接 | 收尾接 PDF link | 第 9 推接 link | **主推无链接**，链接放 reply 1 |
+| AI race | 第 8 推 | 第 8 推 | long-form 内固定章节 |
+| Markets 章节 | 无 | 无 | **新增 markets watch** |
+| 与 newsletter 关系 | 重叠 60% | 重叠 50% | **明确分工**：long-form = 5min / newsletter = 30min / Article = 50min |
 
 ### 复合内容循环
 
@@ -187,17 +277,13 @@ sun long read drops next anthropic / xai head-to-head.
 
 ---
 
-## 四、Friday Reading List · 周五推荐阅读
+## 四、Friday Reading List · 周五推荐阅读 · v4 long-form + quote-attribution 升级
 
 ### Pitch
 
 > "本周我读到的 5 篇最值得花时间的东西。"
 
-每周五 19:30 北京（美东周五 07:30 上班路上）发一条 6-7 推 thread：
-
-- 1 推钩子
-- 5 推每条 1 篇推荐（来源 + 1 句话 take + 链接）
-- 1 推 CTA
+每周五 19:30 北京（美东周五 07:30 上班路上）发一条 **long-form 单推**（v4 升级，从 6-7 tweet thread 改为 long-form 单推）。
 
 **这是大 V 最高 ROI 栏目**：
 
@@ -206,54 +292,106 @@ sun long read drops next anthropic / xai head-to-head.
 3. Newsletter / Substack / Beehiiv 有"newsletter recommends"机制 → friday list 直接对接
 4. 推荐其他大 V 内容 → 自然形成 cross-promo 入口
 
-### 模板结构
+### v4 关键改动
 
-**Tweet 1（钩子）**：
+| 维度 | v3（thread）| **v4（long-form + quote）** |
+|---|---|---|
+| 形式 | 6-7 tweet thread | **long-form 单推 + reply 内 quote-tweet 链** |
+| X 平台内容引用 | @ + URL | **Quote tweet（合规 + algorithm 友好）** |
+| 外部 newsletter / Substack 引用 | @ + URL | @ + URL（不变）|
+| 链接 | 主推内 | **链接 / quote 全在 reply** |
 
-```
-friday reading list · week N.
+### 为什么 v4 改成 quote-tweet attribution
 
-5 things i read this week that changed how i'm thinking about
-[当周主题，例：anthropic at $965B / wwdc framing / starship v3 implications].
+[2026-05-23 起 X 严打 aggregator](https://www.forbes.com/sites/conormurray/2026/05/29/x-cracks-down-on-stolen-content-demonetizes-major-account-for-gaming-monetization-system/)：判定为内容窃取 = 减 60% 收入分成 + 下个周期再减 20%。
 
-each one ↓
-```
+**纯 @ + URL 形式可能被算法误判为"程序化重发"**。Quote-tweet 是 X 官方推荐的正确归因方式（[Nikita Bier 5/2026 公告](https://www.businessinsider.com/x-cracks-down-on-stolen-content-nikita-bier-2026-5)）：使用 "Share Video" 或 "Quote" 才是合规归因。
 
-**Tweet 2-6（每篇 1 推）**：
+详见 [growth-mechanics-2026.md §六 Quote-as-Attribution](./growth-mechanics-2026.md)。
 
-```
-[N/5] [来源 + 作者，handle 形式]
-
-[一句话总结 / 我的 take，最多 2 句]
-
-[链接（缩短版 URL）]
-
-why it matters: [1 句话]
-```
-
-**例**：
+### v4 模板结构（long-form 单推主体）
 
 ```
-2/5 @stratechery · ben thompson
+封面图（template-decoder-frame.html · "friday reading list · week N"）
 
-apple's WWDC framing is "AI is just another input" rather than 
-"AI is the operating system." that's a fundamentally different bet 
-than google or microsoft.
+────────────────────
 
-stratechery.com/2026/wwdc-...
+friday reading list · week N
 
-why it matters: this is the missing context for any apple AI 
-reaction post-keynote.
+5 things i read this week that changed how i'm thinking about [本周主题]:
+
+──
+
+1/ [@author] on [topic]
+   [一句话 take，自己的视角]
+   why it matters: [1 句话]
+
+2/ [@author] on [topic]
+   ... (same structure)
+
+3/ ...
+
+4/ ...
+
+5/ ...
+
+──
+
+(my contrarian pick: 5/5 disagrees with my monday take. healthy.)
+
+──
+
+sources + quote-tweets in reply ↓
+spaces tonight 21:00 BJ to discuss
+sun long read picks one to go deeper on.
+
+bookmark for the weekend. forward to anyone you read with.
 ```
 
-**Tweet 7（CTA）**：
+### Reply 链（v4 关键升级）
 
 ```
-that's the list.
+Reply 1（T+15s · 外部链接区）：
+sources (newsletters / blogs / filings):
+- 1/ [@author handle] · [URL]
+- 2/ [@author handle] · [URL]
+- 5/ [@author handle] · [URL]
+（仅外部内容 · X-platform 内容见 reply 2）
+
+──
+
+Reply 2（T+5min · X 平台 quote-tweet 链）⭐ v4 关键
+[逐条 quote-tweet 引用 X 平台内的 source]
+
+例（针对 thread）：
+"piece 3/5 above · @stratechery's analysis here:"
+[quote-tweet @stratechery 的原推]
+
+例（针对 X Article）：
+"piece 4/5 above · @lennysan's article:"
+[quote-tweet @lennysan 的 Article（X 内嵌）]
+
+──
+
+Reply 3（T+10min · CTA）：
+weekly digest covers all 5 in deeper detail: [Beehiiv link]
 spaces tonight 21:00 BJ to discuss → [link]
-sun long read picks one of these to go deeper on.
+```
 
-bookmark thread for the weekend. forward to anyone you read with.
+### Quote-tweet 操作步骤（合规归因）
+
+```
+对每个 X 平台 source：
+1. 找到原推
+2. 点 "..." → "Quote"（不是 "Reply" 也不是 "Repost"）
+3. 在 quote 内加 1-2 句你的 take（不是改写作者原话）
+4. 发出
+5. 这条 quote-tweet 现在出现在你的 timeline + 算法识别为正确归因
+
+绝对禁止：
+❌ 截图别人推 / Article 内容
+❌ 改写别人原话作为自己的 take
+❌ 大量 RT 别人内容不加自己视角
 ```
 
 ### 内容来源（每周固定 6 个池子选 5 个）
@@ -325,7 +463,7 @@ Wednesday AI Race Card   下次的对比数据 = 来自 Sunday 的研究
 
 ---
 
-## 六、Last-Day Monthly Map · 月末大图
+## 六、Last-Day Monthly Map · 月末大图 · v4 long-form 升级
 
 ### Pitch
 
@@ -333,29 +471,96 @@ Wednesday AI Race Card   下次的对比数据 = 来自 Sunday 的研究
 
 每月最后一天 19:00 北京（美东 07:00）发：
 
-1. 12-推 thread
+1. **long-form 单推**（v4 升级，从 12-推 thread 改为 4000-字符 long-form）
 2. 同时把 Empire Cheat Sheet PDF 升级到下个月版本
 3. 同时发 Newsletter 月度增刊（issue + .5）
 
-### 模板结构（12 推）
+### v4 关键改动
+
+| 维度 | v3（12-tweet thread）| **v4（long-form 单推）** |
+|---|---|---|
+| 形式 | 12 推 thread | **long-form 4000 字符单推** |
+| 算法适配 | thread 时代 | **2026 long-form 优先** |
+| Bookmark 率 | 5-8% | **10-18%**（月度 reference 价值高）|
+| 主推链接 | 第 12 推接 | **主推无链接**，链接放 reply 1 |
+
+### v4 模板结构（long-form 单推）
 
 ```
-1/  钩子 + 月度封面图（template-decoder-frame.html · "last-day monthly map · june 2026"）
-    + 一句话 month summary + 一个反常识 take
+封面图（template-decoder-frame.html · "last-day monthly map · [month] 2026"）
 
-2-3/  Tesla / SpaceX / xAI 月度 highlight（2 brand 1 推合并）
-4-5/  Neuralink / Boring / X / Starlink 月度（同上）
-6/    AI race · 月度 valuation / model 对比
+────────────────────
 
-7/    Markets · 本月最大 IPO / 财报 / Fed
-8/    Cultural · 本月最大文化事件（observer 视角）
+last-day monthly map · [month] 2026
 
-9-10/ 我个人 · build in public 月度（涨粉 / newsletter 数据 / 1:1 数据）
+[一句话 month summary + 反常识 take]
 
-11/   下个月看点 · 7-10 个具体事件 + 日期
+──
 
-12/   钩子 · cheat sheet pdf vNext + 1:1 booking + sub link
+what i tracked this month:
+
+· tesla:    [月度 highlight 1 行 + 1 关键变化]
+· spacex:   [同上]
+· starlink: [同上]
+· xai:      [同上]
+· neuralink:[同上]
+· boring:   [同上]
+· x:        [同上]
+
+──
+
+AI race · monthly state:
+· anthropic [monthly 数字 + delta]
+· openai    [同上]
+· xai       [同上]
+· google    [同上]
+· meta      [同上]
+
+──
+
+markets · [month] highlights:
+· [biggest IPO / 财报 / Fed event]
+· [valuation 重大变动 1-2 个]
+
+──
+
+cultural observation:
+· [当月最大文化事件，observer 视角，1-2 句]
+
+──
+
+build in public · my numbers:
+· followers: +N (delta from last month)
+· newsletter subs: +N
+· top post: [reach 数]
+· video: [if started, video views]
+· 1 thing i learned:
+
+──
+
+watching next 30 days:
+· [event 1 + 日期]
+· [event 2 + 日期]
+· [event 3 + 日期]
+· [event 4 + 日期]
+
+──
+
+3 takes for the month. revisiting next month-end.
+bookmark this for [month+1] retro.
 ```
+
+### 12-推 thread 仍可用的场景
+
+如果当月内容真的需要 > 4,000 字符（例：某个月发生 5+ 重大 IPO + 大事件），仍可发 12-tweet thread。但**默认使用 long-form**。
+
+### Reply 链
+
+同 §二 Monday Empire Map 的 3-reply 结构：
+
+- Reply 1：Beehiiv newsletter 月度增刊 link + 5-bullet text version
+- Reply 2：Cheat Sheet PDF vNext link + sources
+- Reply 3：自我补充 take（month-end retro 心得）
 
 ### 为什么放月末而不是月初
 
@@ -366,38 +571,41 @@ Wednesday AI Race Card   下次的对比数据 = 来自 Sunday 的研究
 
 ### 数据 anchor
 
-12 个推每个推都引用 1 个具体数字。**不引用模糊形容词**（"巨大"/"重要"/"前所未有"）。如果某个 brand 当月没有数字变化，那一推用 1 句话带过：
+每段都引用 1 个具体数字。**不引用模糊形容词**（"巨大"/"重要"/"前所未有"）。如果某个 brand 当月没有数字变化，那一行用 1 句话带过：
 
 ```
-4/12 Boring: nothing material this month. nashville BNA still pre-construction.
-     watch july for groundbreaking.
+boring: nothing material this month. nashville BNA still pre-construction.
+        watch july for groundbreaking.
 ```
 
 诚实 > 凑长度。
 
 ---
 
-## 七、整合周历 · 5 series + 日常的协同
+## 七、整合周历 · 5 series + 日常的协同 v4
 
-### 7.1 周一到周日的统一时间表
+### 7.1 周一到周日的统一时间表（v4 加 Saturday Video）
 
 ```
                 7am       9am       11am-12pm     2pm       5pm       7pm       9pm       10pm
     ─────────────────────────────────────────────────────────────────────────────────────────────
-    Mon         🟢 EMPIRE MAP thread          E1-5 expansion   humor4    humor5
-                + reply1 + reply2
+    Mon         🟢 EMPIRE MAP                  E1-5 expansion   humor4    humor5
+                long-form + reply1+2+3
+                + first 60-min SOP
 
     Tue         main     humor1   humor2/E     humor3    humor4    humor5
 
     Wed         main     humor1   🟢 AI RACE CARD                  humor3    humor4    humor5
-                                  (+ reply data sources)
+                                  (data viz + reply)
 
     Thu         main     humor1   humor2/E     humor3    humor4    humor5
 
     Fri         main     humor1   humor2/E     humor3    humor4   🟢 READING LIST
-                                                                  (~7 推 thread)
+                                                                  long-form + quote-attribution
+                                                                  + 🎙️ SPACES 21:00
 
-    Sat (轻量)  humor1            humor2                  humor3              humor4
+    Sat 🆕      humor1            🎬 VIDEO     humor3              humor4
+                                  (11:30 BJ · vertical 9:16)
 
     Sun (轻量)  humor1            humor2                            🟢 LONG READ Article
                                                                             + newsletter send
@@ -409,36 +617,36 @@ Wednesday AI Race Card   下次的对比数据 = 来自 Sunday 的研究
 不论周几，覆盖当天日常排期：
 
 ```
-Last day      light morning posts only         🟢 MONTHLY MAP thread (12 推)
+Last day      light morning posts only         🟢 MONTHLY MAP long-form
                                                 + cheat sheet pdf vNext
                                                 + newsletter issue +.5
 ```
 
-### 7.3 4 series 流量交叉
+### 7.3 5 series 流量交叉
 
 ```
 Monday Empire Map        ─┐
                           ├─→ 推荐到 ─→ Sunday Long Read
-Wednesday AI Race Card   ─┤
-                          │
+Wednesday AI Race Card   ─┤              ↑
+                          │              Saturday Video（视频化版本，可选）
 Friday Reading List      ─┘   ← 引用 ←  Sunday Long Read
 
-Last-Day Monthly Map      ─→ 引用过去 4 周的 ─→ Mon/Wed/Fri 4 series
+Last-Day Monthly Map      ─→ 引用过去 4 周的 ─→ Mon/Wed/Fri/Sat 4 series
 ```
 
-每个栏目至少要在 thread 内提到 2 个其他栏目（"see friday list for sources" / "next monday map will revisit"）。这是栏目化的最大价值：**把推流量串成 ecosystem**。
+每个栏目至少要在 long-form 内提到 2 个其他栏目（"see friday list for sources" / "next monday map will revisit" / "saturday video covers this in 60s"）。
 
-### 7.4 启动节奏（不要一次性全开）
+### 7.4 启动节奏 v4（更新启动顺序）
 
 | 周 | 启动栏目 | 累计栏目数 |
 |---|---|---|
-| Week 1 (6/1-6/7) | Monday Empire Map（升级现有 thread）| 1 |
-| Week 2 (6/8-6/14) | + Friday Reading List | 2 |
-| Week 3 (6/15-6/21) | + Wednesday AI Race Card | 3 |
-| Week 4 (6/22-6/30) | + Sunday Long Read（第一篇 X Article）| 4 |
-| Month-end (6/30) | + Last-Day Monthly Map | 5（全开）|
+| Week 1 (6/1-6/7) | Monday Empire Map（long-form 升级现有 thread）+ **Saturday Video** | 2 |
+| Week 2 (6/8-6/14) | + Friday Reading List（long-form + quote attribution）| 3 |
+| Week 3 (6/15-6/21) | + Wednesday AI Race Card | 4 |
+| Week 4 (6/22-6/30) | + Sunday Long Read（第一篇 X Article）| 5 |
+| Month-end (6/30) | + Last-Day Monthly Map | 6（全开）|
 
-**为什么不一次启动**：每个栏目第一期都需要"打磨期"。一次开 5 个 = 5 个都做不好。逐周开 = 每个都精雕细琢。
+**v4 与 v3 启动差异**：v4 把 Saturday Video 和 Monday Map 同时启动（Week 1），因为 Saturday video 是 small account boost window 期最高 ROI 内容形式（详见 [growth-mechanics-2026.md §七](./growth-mechanics-2026.md)）。
 
 ---
 
@@ -487,5 +695,5 @@ Last-Day Monthly Map      ─→ 引用过去 4 周的 ─→ Mon/Wed/Fri 4 seri
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [_self-operation-handbook.md](./_self-operation-handbook.md)
+**版本**：v2.0 · 2026-05-30（v4 升级：3 个栏目从 thread 改为 long-form 单推 / Friday Reading List 改 quote-tweet attribution / 加 Saturday Video 槽位 / 启动节奏 Week 1 同时启动 Empire Map + Saturday Video）
+**配套**：[brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [_self-operation-handbook.md](./_self-operation-handbook.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)

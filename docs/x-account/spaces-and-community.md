@@ -200,18 +200,69 @@ X Spaces 是音频形式，AI 味的危险点不一样：
 
 ---
 
-## 三、X Community · 关注者私聊圈
+## 三、X Community · 公开化后的双重角色（v4 关键升级）
 
-### 启动条件
+### 3.1 v4 关键改动 · Communities 公开化（2026-02）
 
-**满足全部才启动**：
+[2026-02 X Communities 公开化](https://posteverywhere.ai/blog/how-to-get-more-x-followers)：Community 内的帖子现在出现在 For You feed，**不再是封闭社群**。这彻底改变了 v3 把 Community 当作"5K+ 留存层"的策略。
+
+| 维度 | v3 设计 | **v4 现实** |
+|---|---|---|
+| Community 是什么 | 留存层 Tier 2 | **发现层 Tier 0.5 + 留存层 Tier 2** |
+| 何时启动**参与** | 5K+ 粉 | **M1 Day 1**（立刻加入 2-3 个 niche Community）|
+| 何时启动**创建** | 5K+ 粉 | 5K+ 粉（不变）|
+| 主战场 | 自己的 Community | **别人的 Community** |
+| 频率 | 每月 1 次 community-only post | **每周 1-2 次 cross-post 当周内容** |
+
+详见 [algorithm-2026-playbook.md §四 Communities 公开化升级](./algorithm-2026-playbook.md)。
+
+### 3.2 Phase 1 · M1 Day 1 起 · 加入 2-3 个 niche Community（发现层）
+
+**目标**：把 Community 当 X For You 之外的额外发现入口。
+
+**步骤**：
+
+1. 在 X 搜索栏输入关键词，切到 "Communities" 标签
+2. 看每个 Community 的 member 数 + 最近 7 天 post 频率（最少 50K members + 每天 5+ post）
+3. 加入 5-7 个候选，先 lurk 1 周看节奏
+4. 第 2 周开始 cross-post
+
+**5 个推荐加入的 Community 关键词**：
+
+| 关键词 | 估算成员 | 主题契合度 |
+|---|---|---|
+| `frontier AI` / `AI race` | 100K-500K | 极高（A 支柱） |
+| `tesla earnings` / `tsla bulls` | 200K-1M | 高（B 支柱） |
+| `IPO watch` / `markets analysis` | 50K-300K | 极高（C 支柱） |
+| `tech IPOs` / `stocks` | 200K-1M | 高（C 支柱） |
+| `build in public` | 100K-500K | 中（E 支柱） |
+
+### 3.3 Cross-post 节奏
+
+| 周几 | 主 timeline | Community A | Community B |
+|---|---|---|---|
+| Mon 07:30 | Empire Map | post 副本 09:00（错峰）| skip |
+| Wed 11:30 | AI Race Card | skip | post 副本 13:00 |
+| Fri 19:30 | Reading List | post 副本 21:30 | skip |
+| Sun 21:00 | Long Read | skip | post 副本 22:30 |
+
+**关键纪律**：
+
+- 同一篇内容只 post 到 **1 个** Community（不并发同步，会被算法判 spam）
+- Community post 时间错开主 timeline 1-2 小时
+- Community post 文案做轻度调整（针对该 Community 的关注点）
+- 不要每天都 post（每周 ≥ 2 次，≤ 4 次）
+
+### 3.4 Phase 2 · 5K+ 粉后 · 创建自己的 Community（留存层）
+
+启动条件（**满足全部**才创建）：
 
 - [ ] Followers ≥ 5,000
 - [ ] Friday Spaces 已稳定跑 8 周
 - [ ] 至少有 100 个真实"反复参与 Spaces"的 ID（不是 bot）
 - [ ] 个人有意愿每周 30 分钟看 Community feed
 
-### 设计
+设计（不变于 v3）：
 
 ```
 Community 名: Empire Decoder Lounge
@@ -220,7 +271,7 @@ Description: independent observers reading the same filings.
              discussion-grade, not headline-grade.
 ```
 
-### 加入门槛（防 bot + 提升信号噪音比）
+加入门槛（防 bot + 提升信号噪音比）：
 
 ```
 □ 必须关注 @Skub0k 30 天 +
@@ -231,7 +282,7 @@ Description: independent observers reading the same filings.
 
 每周 host 手动审 5-10 个新申请。**不要**全自动通过（社区死亡的开始）。
 
-### Posting rules（贴在 Community 描述里）
+### 3.5 Posting rules（贴在 Community 描述里）
 
 ```
 1. no politics / partisan content
@@ -241,7 +292,7 @@ Description: independent observers reading the same filings.
 5. disagree freely · with sources
 ```
 
-### Host 节奏
+### 3.6 Host 节奏（创建后）
 
 | 频率 | 动作 |
 |---|---|
@@ -249,7 +300,7 @@ Description: independent observers reading the same filings.
 | 每月 1 次 | host 1 次 community-only Space（30 min, members only） |
 | 每季度 1 次 | "what should observer cover next quarter" 调研 thread |
 
-### Community 不当 paid 用
+### 3.7 Community 不当 paid 用
 
 X Community 在 2026 年仍是 free 功能。**不要**把 Tier 2（Community）和 Tier 3（Paid Newsletter）混淆：
 
@@ -418,5 +469,5 @@ X Spaces / Community 是 bot 重灾区。每月做 3 件事防御：
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[signature-series.md](./signature-series.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [_self-operation-handbook.md](./_self-operation-handbook.md) · [_prompts-pack.md](./_prompts-pack.md) (§22 Spaces prep generator)
+**版本**：v2.0 · 2026-05-30（v4 升级：Community 翻转为发现层 Tier 0.5 + 留存层 Tier 2 / M1 Day 1 立刻加入 2-3 个 niche Community / Phase 1 参与 vs Phase 2 创建分离）
+**配套**：[signature-series.md](./signature-series.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [_self-operation-handbook.md](./_self-operation-handbook.md) · [_prompts-pack.md](./_prompts-pack.md) (§22 Spaces prep generator) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)
