@@ -69,6 +69,10 @@ H5 · Self-Aware Build/Confession
 
 ## §1 Daily Content Pack Generator
 
+> ⚠️ **v1.0 历史版本 · 已被 §14 v2.0 取代**
+> Observer 品牌升级（PR #55）后，每日 prompt 应使用 [§14 Daily Humor Pool Generator v2.0](#14-daily-humor-pool-generator-v20)
+> 此 §1 保留作为 Musk-only 时期的历史参考，新关注者可以直接跳到 §14
+
 > ⏰ **何时用**：每天早上 06:30-06:40
 > 📥 **输入**：今天日期
 > 📤 **输出**：1 主推 + 5 段子（含发布时段标注）
@@ -590,20 +594,330 @@ DM 数：___
 
 ---
 
+## §11 · E1 Frontier AI News Generator
+
+> ⏰ **何时用**：非 Musk 但相关的 AI race 大新闻发生时（Anthropic / Apple / Nvidia / Google / OpenAI 等）
+> 📥 **输入**：新闻原文 / 链接
+> 📤 **输出**：带"对 Musk 帝国意味着什么"视角的分析推 + 配套 reply
+> 🔗 **来源**：traffic-expansion-pillars.md §三 E1
+
+```
+（粘通用前缀）
+
+【任务】
+非 Musk 但相关的 AI race 大新闻刚发生，帮我写 1 条带"对 Musk 帝国意味着什么"视角的分析推。
+
+【新闻】
+[粘新闻原文 / Bloomberg/CNBC/TechCrunch 链接]
+
+【输出】
+1. 主推 (≤ 380 字符)：
+   - 新闻一句话总结（数字 + 时间锚）
+   - "what this means for [musk empire 某 brand]" 框架
+   - 收尾 hot take
+
+2. 配套 Reply 1 (≤ 280 字符)：
+   - 文字版 TL;DR + 引用具体数据来源
+
+3. 替代主推 thread 版（如新闻够大）：
+   5-7 条，第一条钩子 + 中间 3-4 条具体数据展开 + 末尾 link to my musk empire framework
+
+【硬规则】
+- 不破坏 musk empire decoder 品牌（一定要回到 musk 视角收尾，但 v2 后可以淡化）
+- 用具体数字（valuation / 时间 / 竞品对比）
+- 避开站队（不舔 anthropic 不黑 openai）
+- 全小写，无破折号，无 "Furthermore"
+
+输出 3 个版本（保守 / 推荐 / 激进）让我挑。
+```
+
+---
+
+## §12 · E2 Counterintuitive Analyst Take Generator
+
+> ⏰ **何时用**：每周 1-2 条，作为 expansion 推或主推
+> 📥 **输入**：当前 AI race / Musk empire / tech IPO 话题
+> 📤 **输出**：5 条反常识 takes（最高 viral 系数格式）
+> 🔗 **来源**：traffic-expansion-pillars.md §三 E2
+
+```
+（粘通用前缀）
+
+【任务】
+帮我写 5 条 counterintuitive 反常识 takes，针对当前 AI race / musk empire / tech IPO 话题。
+
+【格式公式】
+"common belief: '[听起来对的观点]'
+actually wrong: [反常识真相 + 具体数据/证据]"
+
+【话题池】
+- AI race 估值 / 竞争格局
+- musk 帝国某个被低估或高估的指标
+- tech IPO 的实际经济学
+- AI lab 之间的真正差异
+- xai vs anthropic vs openai 战略
+
+【硬规则】
+- 必须有具体数字 / 时间 / 公司名做支撑
+- 反常识点要"精准"（不是为反对而反对）
+- 适合做 thread 第一条
+- 每条 ≤ 280 字符
+- 一周内不重复同一话题
+
+输出 5 条 + 每条标 vibe（数据派 / 时间派 / 横向对比派 / 历史类比派 / 工程派）让我挑。
+```
+
+---
+
+## §13 · E3 Live Event Thread Generator
+
+> ⏰ **何时用**：大事件前 24h 准备（WWDC / IPO 当日 / 模型 release / Tesla 财报 / SpaceX 发射）
+> 📥 **输入**：事件信息（名称、时间、看点）
+> 📤 **输出**：T-24h 预热 + T-2h 倒数 + 实时 thread 模板 + 后备 plan B
+> 🔗 **来源**：traffic-expansion-pillars.md §三 E3
+
+```
+（粘通用前缀）
+
+【任务】
+[event name] 即将开始 / 正在进行，帮我准备 live thread 模板。
+
+【事件信息】
+- 事件名：___
+- 开始时间（北京）：___
+- 关键看点（3-5 个）：___
+- 上一次同类事件结果：___
+- 我的事前预测：___
+
+【输出】
+
+A. T-24h 预热推（≤ 280 字符）：
+   - 钩子 + 看点列表 + "i'll be live thread'ing tonight"
+
+B. T-2h 倒数推（≤ 280 字符）：
+   - 时间提醒 + 直播链接 + 1 个 prediction
+
+C. Live thread 模板（按时间点列）：
+   - T-30 / T-0 / 关键节点 1 / 节点 2 / 节点 3 / 收尾
+   - 每个时间点 1 条模板，留 <填观察> 给我现场填
+
+D. Post-event 总结推（事件结束后 30 分钟内发）：
+   - "live thread done. 3 takeaways:"
+   - 收尾接 newsletter 钩子
+
+E. 后备 plan B：如果事件失败 / 取消 / 推迟，怎么 pivot
+
+【硬规则】
+- 全小写 / 无破折号 / 无 "Furthermore"
+- 不要 hype 词（"unprecedented" / "groundbreaking"）
+- 用具体技术名词显示懂行
+- 每条独立可读 + 整体连贯
+- 每条 280 字符内（thread 体验最佳）
+```
+
+---
+
+## §14 · Daily Humor Pool Generator v2.0 ⭐（取代 §1，每日 06:30 用）
+
+> ⏰ **何时用**：每天早上 06:30-06:40（Observer 品牌时代的主力 prompt）
+> 📥 **输入**：今天日期 + 今天主推话题
+> 📤 **输出**：13 类段子池里选 5 条 + G1-G4 平衡分布
+> 🔗 **来源**：observer-brand-pivot.md §七 §A
+
+```
+（粘通用前缀）
+
+【账号定位升级 v2.0】
+an independent observer & investor watching tech, markets, and the world.
+musk empire is ONE topic, not the brand identity.
+
+【今天日期】[填]
+
+【今天的"主推"是什么内容】[填，比如 Anthropic 解读 / Tesla 周更 / 个股观察 / WWDC 预热]
+
+【任务】
+帮我从以下 13 个段子支柱里选 5 条（早 9:30 / 中午 12:30 / 下午 14:30 / 17:30 / 19:30 / 22:30 选 5 个时段发）：
+
+【13 支柱池】
+G1 Tech / AI / X：
+- H1 Tech Industry Observation
+- H2 X Meta Joke
+- H6 AI Lab Cross-Lab Humor
+- H7 Engineer Watching Drama
+- H10 Internet/Phone Era
+
+G2 Investor / Markets：
+- H8 Investor Life Observations
+
+G3 Adulting / Working：
+- H9 Working Life / Adulting
+- H11 Productivity Theater
+- H12 Reading / Learning Habits
+
+G4 Self-Aware / Cultural：
+- H3 Before/After Contrast (general)
+- H4 Numbered List Punchline (general)
+- H5 Self-Aware Build / Confession
+- H13 Generational / Cultural
+
+【硬规则】
+- 5 条不能重复同一支柱
+- G2 必有 1 条（投资者人设锁定）
+- G1 选 1-2 / G3 选 1 / G4 选 1-2
+- 周末 G3 比例提高 / 财报季 G2 提高 / AI 大事件 G1 提高
+- 每条 ≤ 280 字符
+- 全小写，无破折号，无 "Furthermore / Indeed / Absolutely"
+- punchline 在第 2 行落地
+- 1-2 条可以跟今天主推话题相关，3-4 条独立
+
+【输出格式】
+1. 段子 1（建议时段：xx:30）· 支柱 [Hx] · vibe [xxx]
+   [内容]
+... (5 条)
+```
+
+---
+
+## §15 · H8 Investor Life 专属 Generator
+
+> ⏰ **何时用**：财报季 / Fed 日 / IPO 日 / 大盘大跌大涨 / 周日盘前
+> 📥 **输入**：当前市场情绪
+> 📤 **输出**：5 条投资者日常段子
+> 🔗 **来源**：observer-brand-pivot.md §七 §B
+
+```
+（粘通用前缀）
+
+帮我写 5 条 H8 类型段子：投资者日常 / 组合焦虑 / 市场行为。
+
+【调性参考】
+- "checked my portfolio. it's red. checked my coffee. it's empty."
+- "earnings season is the only time engineers care about specific numbers."
+
+【话题池】
+- 看盘行为（红绿日不同情绪）
+- 财报季 / 美联储日 / IPO 浪潮
+- 个股错过（NVDA / TSLA / AAPL）
+- 401k / 退休账户
+- 散户 vs 机构 / Wall Street vs Main Street
+- "i should have bought" 后悔
+
+【硬规则】
+- 不卖惨 / 不灌鸡汤 / 不给投资建议
+- 数字要具体（"-3%" 比 "down a lot" 强）
+
+输出 5 条 + vibe 标注。
+```
+
+---
+
+## §16 · H9 Adulting 专属 Generator
+
+> ⏰ **何时用**：周一早 / 工作日下午 3-4 点 / 周五下午（共鸣最强时段）
+> 📥 **输入**：（无需输入，直接生成）
+> 📤 **输出**：5 条打工人日常段子
+> 🔗 **来源**：observer-brand-pivot.md §七 §C
+
+```
+（粘通用前缀）
+
+帮我写 5 条 H9 类型段子：打工人 / 成年人日常的温和疲惫。
+
+【话题池】
+- 订阅疲劳（streaming / SaaS / AI）
+- WFH / 远程办公 / 视频会议
+- 报税 / 房租 / 房贷 / 通勤
+- 老板 / 同事 / HR
+- 早起 / 周一恐惧 / 周五解放
+
+【硬规则】
+- 不卖惨，承认现实但不悲观
+- 共鸣点要"具体"
+- 自嘲温和，不刻薄
+
+输出 5 条 + vibe 标注。
+```
+
+---
+
+## §17 · H10/H11/H12 三合一 Generator
+
+> ⏰ **何时用**：晚间 / 周末（数字成瘾 / 生产力剧场 / 学习焦虑共鸣高发时段）
+> 📥 **输入**：（无需输入，直接生成）
+> 📤 **输出**：5 条段子分布在 3 类
+> 🔗 **来源**：observer-brand-pivot.md §七 §D
+
+```
+（粘通用前缀）
+
+帮我写 5 条段子，涵盖：
+- H10 Internet/Phone Era（屏幕 / 通知 / 注意力）
+- H11 Productivity Theater（咖啡店 / 工具 / 假装高效）
+- H12 Reading / Learning（买书不读 / 播客 / 知识焦虑）
+
+5 条要分布到 3 类，不能全部 H11。
+
+【硬规则】
+- 不说教 / 不批判 / 不卖工具
+- 自嘲承认现实
+- 数字要具体
+
+输出 5 条 + 标注 H10/H11/H12 + vibe。
+```
+
+---
+
+## §18 · H13 Generational/Cultural 专属 Generator
+
+> ⏰ **何时用**：周末 / 偶发文化热点对照时
+> 📥 **输入**：可选触发热点（无也可）
+> 📤 **输出**：5 条代际 / 文化观察段子
+> 🔗 **来源**：observer-brand-pivot.md §七 §E
+
+```
+（粘通用前缀）
+
+帮我写 5 条 H13 类型段子：代际 / 文化观察。
+
+【话题池】
+- boomer / millennial / gen z 三代差异
+- AI 对不同年龄层影响
+- 文化差异（SF / Midwest / Asia / Europe）
+- 城乡差异 / 远程办公文化差异
+
+【硬规则】
+- 不批判任何一代 / 一群体
+- 不卷入政治 / 中美话题
+- 找共性比找差异更有力（"all three correct"）
+- 平衡视角
+
+输出 5 条 + vibe 标注。
+```
+
+---
+
 ## 使用频率速查表
 
 | Prompt | 频率 | 何时用 |
 |---|---|---|
-| §1 Daily Content Pack | 每天 | 早 06:35 |
+| ~~§1 Daily Content Pack~~ | ~~每天~~ | **已被 §14 取代**（v1.0 历史版本）|
 | §2 Weekly Retro | 每周 | 周日 21:00 |
 | §3 Monthly Retro | 每月 | 最后一天 19:00 |
 | §4 Newsletter Issue N | 每周 | 周日 21:30 |
 | §5 Cheat Sheet Refresh | 每周 | 周日 22:15 |
 | §6 Crisis Response | 突发 | 危机发生时 |
-| §7 Major Event Pivot | 不定 | Musk 帝国大事件时 |
+| §7 Major Event Pivot | 不定 | 大事件时（不限 Musk）|
 | §8 6 推自检 | 按需 | 不放心稿子时 |
 | §9 Profile Refresh | 每月 | 月度复盘后 |
 | §10 变现接洽 | 阶段性 | 触发 M3/M4/M5 时 |
+| §11 E1 Frontier AI News | 每周 1-3 | 非 Musk AI 大新闻时 |
+| §12 E2 Counterintuitive Take | 每周 1-2 | 高 viral 内容窗口 |
+| §13 E3 Live Event Thread | 不定 | 大事件前 24h 准备 |
+| **§14 Daily Humor Pool v2.0** ⭐ | **每天** | **早 06:35（取代 §1）** |
+| §15 H8 Investor Life | 按需 | 财报季 / Fed / IPO 日 |
+| §16 H9 Adulting | 按需 | 周一 / 周五 / 工作日下午 |
+| §17 H10/H11/H12 三合一 | 按需 | 晚间 / 周末 |
+| §18 H13 Generational | 按需 | 周末 / 文化热点 |
 
 ---
 
@@ -619,5 +933,5 @@ DM 数：___
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [humor-pillars](./humor-pillars.md) · [x-strategy](./x-strategy.md)
+**版本**：v2.0 · 2026-05-30（整合 §11-§18 共 8 个新 prompts，包含 observer 品牌升级 + traffic expansion + humor v2 全套）
+**配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [humor-pillars](./humor-pillars.md) · [traffic-expansion-pillars](./traffic-expansion-pillars.md) · [observer-brand-pivot](./observer-brand-pivot.md) · [x-strategy](./x-strategy.md)
