@@ -48,6 +48,7 @@
 
 | 角色 | 文件 | 用途 |
 |---|------|------|
+| 📋 **每天用** ⭐ | [_DAILY_CHECKLIST.md](./_DAILY_CHECKLIST.md) | **早上 30 min 起床即用 · 1 页执行卡 · 28 doc 体系炼成的"今天怎么发推"** |
 | 🧠 大脑 | [_self-operation-handbook.md](./_self-operation-handbook.md) | 6 件事就够了：每日 / 每周六 / 每周五 / 每周日 / 每月 / 每季度 SOP + Idea capture + GEO audit + Crisis Playbook（含 Type K 公关危机）|
 | 🧰 工具箱 | [_prompts-pack.md](./_prompts-pack.md) | 30 个 paste-ready AI prompts |
 | 🔍 GEO v6 ⭐ | [geo-playbook.md](./geo-playbook.md) | Generative Engine Optimization · ChatGPT / Perplexity / Claude / Gemini citation 工程 + 月度 audit |
