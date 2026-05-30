@@ -1,22 +1,22 @@
 # X 英文账号 · 自助运营手册（Self-Operation Handbook）
 
-> 账号：@Skub0k · Observer & Investor（v5.0）
-> 状态：v5.0 · 2026-05-30 · 运营可持续性升级 + 业务基础 + 安全 + Newsjacking + Personal CRM + Revenue Stack + Research + Legal
+> 账号：@Skub0k · Observer & Investor（v6.0）
+> 状态：v6.0 · 2026-05-30 · 未来防御升级 + GEO + Reputation Crisis + Second Brain + Long-term Flywheel
 > 触发：Kiro 额度即将到期，本手册让账号在没有 AI 助手介入的情况下也可以稳跑 6+ 个月
-> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [sustainability-and-delegation.md](./sustainability-and-delegation.md) · [creator-business-foundation.md](./creator-business-foundation.md) · [account-security-playbook.md](./account-security-playbook.md) · [newsjacking-playbook.md](./newsjacking-playbook.md) · [personal-crm.md](./personal-crm.md) · [revenue-stack-2026.md](./revenue-stack-2026.md) · [audience-research.md](./audience-research.md) · [legal-compliance.md](./legal-compliance.md)
+> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [sustainability-and-delegation.md](./sustainability-and-delegation.md) · [creator-business-foundation.md](./creator-business-foundation.md) · [account-security-playbook.md](./account-security-playbook.md) · [newsjacking-playbook.md](./newsjacking-playbook.md) · [personal-crm.md](./personal-crm.md) · [revenue-stack-2026.md](./revenue-stack-2026.md) · [audience-research.md](./audience-research.md) · [legal-compliance.md](./legal-compliance.md) · [geo-playbook.md](./geo-playbook.md) · [reputation-crisis-playbook.md](./reputation-crisis-playbook.md) · [second-brain-system.md](./second-brain-system.md) · [long-term-flywheel-roadmap.md](./long-term-flywheel-roadmap.md)
 
 ---
 
-## 一、6 件事就够了 v5.0
+## 一、6 件事就够了 v6.0
 
 | 频率 | 时间 | 做什么 | 用什么 |
 |---|---|---|---|
-| **每天** | 06:30-09:00（北京）| 1 main + 5 humor + 1 expansion = 7 推 + **首 60 分钟 SOP** + **早晚 push 监控（newsjacking）** | [§14](./_prompts-pack.md) + [§23](./_prompts-pack.md) + [newsjacking-playbook §四](./newsjacking-playbook.md) |
+| **每天** | 06:30-09:00（北京）| 1 main + 5 humor + 1 expansion = 7 推 + **首 60 分钟 SOP** + 早晚 push 监控（newsjacking）+ **早晚 idea capture 各 5 min** | [§14](./_prompts-pack.md) + [§23](./_prompts-pack.md) + [newsjacking §四](./newsjacking-playbook.md) + [second-brain §三](./second-brain-system.md) |
 | **每周六** | 09:00-12:00（北京）| Vertical 9:16 video V1-V4 + 11:30 BJ 发 X + YT Shorts | [§24](./_prompts-pack.md) + [vertical-video-pillar.md](./vertical-video-pillar.md) |
 | **每周五** | 20:30-21:30（北京）| 30 min Friday Spaces + follow-up | [spaces-and-community §二](./spaces-and-community.md) + [§22](./_prompts-pack.md) |
-| **每周日** | 19:00-22:30（北京）| Sunday Long Read Article + Newsletter + Cheat Sheet + 周复盘 + **Personal CRM weekly** | [§19](./_prompts-pack.md) + §2-5 + [personal-crm §四](./personal-crm.md) |
-| **每月最后一天** 🆕 | 19:00-22:00（北京）| 月度复盘 + Migration triggers + Monthly Map + algo review + **Personal CRM monthly + Revenue review + Bookkeeping + Security review + Legal compliance + 5 个 1:1 interviews** | [§3](./_prompts-pack.md) + [全部 v5 docs] |
-| **每季度最后一天** 🆕 | 加 1-2 hr | **Reader Survey + Annual Audience Map（年度）+ Sustainability check** | [audience-research §三](./audience-research.md) + [sustainability-and-delegation §8.2](./sustainability-and-delegation.md) |
+| **每周日** | 19:00-22:30（北京）| Sunday Long Read Article + Newsletter + Cheat Sheet + 周复盘 + Personal CRM weekly + **Inbox organize 20 min + Atom distill 10 min** | [§19](./_prompts-pack.md) + §2-5 + [personal-crm §四](./personal-crm.md) + [second-brain §四§五](./second-brain-system.md) |
+| **每月最后一天** | 19:00-22:00（北京）| 月度复盘 + Migration triggers + Monthly Map + algo review + Personal CRM monthly + Revenue review + Bookkeeping + Security review + Legal compliance + 5 个 1:1 interviews + **GEO audit (10 min) + Atom pool clean** | [§3](./_prompts-pack.md) + [全部 v5+v6 docs] + [geo §四](./geo-playbook.md) + [second-brain §八.2](./second-brain-system.md) |
+| **每季度最后一天** 🆕 | 加 2-3 hr | Reader Survey + Annual Audience Map（年度）+ Sustainability check + **Long-term Flywheel review (1 hr)** | [audience-research §三](./audience-research.md) + [sustainability-and-delegation §8.2](./sustainability-and-delegation.md) + [long-term-flywheel §六](./long-term-flywheel-roadmap.md) |
 
 > 💡 其他时间正常生活。**不要把账号当 24/7 工作**，会烧坏。
 >
@@ -274,10 +274,11 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ## 八、Crisis Playbook · 突发情况怎么办
 
-> v5 加入 H / I / J 三类（账号被黑 / 突发新闻 / 法律事件），详见各自专属 playbook：
+> v5 加入 H / I / J 三类。v6 加入 K（公关危机）：
 > - Type H · 账号被 hack / 怀疑被 hack → [account-security-playbook.md §三](./account-security-playbook.md)
 > - Type I · 突发新闻反应（newsjacking）→ [newsjacking-playbook.md §三](./newsjacking-playbook.md)
 > - Type J · 法律事件（cease-and-desist / lawsuit / SEC inquiry）→ [legal-compliance.md §五](./legal-compliance.md)
+> - **Type K · 公关危机 / Cancel Culture（说错事实 / 错误预测打脸 / 大 V 撕逼 / ratio / 漏报 / cancel attempt）→ [reputation-crisis-playbook.md](./reputation-crisis-playbook.md)**
 
 
 
@@ -505,5 +506,5 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-**版本**：v5.0 · 2026-05-30（v5 升级：5 件事 → 6 件事加 quarterly · Crisis Playbook 加 H/I/J 三类 · monthly retro 加 Personal CRM + Revenue review + Bookkeeping + Security review + Legal compliance + 5 个 1:1 interviews · Daily SOP 加 newsjacking push 监控 · 工具栈加 password manager + 2FA + securities lawyer · 8 个新 v5 docs 引用）
+**版本**：v6.0 · 2026-05-30（v6 升级：Daily SOP 加 5 min × 2 idea capture · Sunday SOP 加 inbox organize + atom distill · monthly retro 加 GEO audit + atom pool clean · quarterly retro 加 long-term flywheel review · Crisis Playbook 加 Type K 公关危机 · 4 个新 v6 docs 引用）
 **配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [humor-pillars.md](./humor-pillars.md) · [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [cross-platform-funnel.md](./cross-platform-funnel.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md)

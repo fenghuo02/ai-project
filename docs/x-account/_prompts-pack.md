@@ -1665,38 +1665,198 @@ D. 检查清单（发布前）
 
 ---
 
-## 使用频率速查表 v5.0
+## §29 · GEO Citation Audit Generator ⭐ v6 新
+
+> ⏰ **何时用**：每月最后一天（10 min）
+> 📥 **输入**：5 standard test queries
+> 📤 **输出**：4 个 AI 引擎 score 表 + GA4 referral 报告 + 弱项 → 行动
+> 🔗 **来源**：[geo-playbook.md §四](./geo-playbook.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【GEO Citation Audit · 月度 10 min】
+
+5 个 standard test queries（与 [geo-playbook.md §4.1](./geo-playbook.md) 一致）：
+
+1. "What is the state of the AI race in 2026?"
+2. "Best independent observer accounts on X for tech analysis?"
+3. "Where can I get weekly tracking of Musk's six companies?"
+4. "Is anthropic's $965B valuation justified?"
+5. "Explain the Musk tweet decoder dictionary."
+
+【任务】
+模拟 4 个 AI 引擎对每个 query 的回答（你也可以真去 ChatGPT / Perplexity / Claude / Gemini 实测）：
+
+对每个 query × 每个 engine 打分 0-3：
+  0: 完全不出现
+  1: 出现 source 链 (X / Beehiiv) 但无 brand mention
+  2: brand mention "@Skub0k" 但无具体 quote
+  3: cite 具体 quote / data / framework
+
+【输出格式】
+
+A. Score 表（5 query × 4 engine = 20 cells）
+
+| Query | ChatGPT | Perplexity | Claude | Gemini |
+|---|---|---|---|---|
+| AI race 2026 | _ | _ | _ | _ |
+| Best observer | _ | _ | _ | _ |
+| Musk weekly | _ | _ | _ | _ |
+| Anthropic $965B | _ | _ | _ | _ |
+| Decoder dict | _ | _ | _ | _ |
+| **TOTAL** | _ | _ | _ | _ |
+
+B. Total score (max 60)
+当前: ___ / 60
+M[N] target: ___ (per [geo-playbook.md §4.2](./geo-playbook.md))
+状态: 起步 / above baseline / on target / above target
+
+C. GA4 referral check
+- chatgpt.com referrals: ___
+- claude.ai referrals: ___
+- perplexity.ai referrals: ___
+- gemini.google.com referrals: ___
+- Total AI referral / total traffic = ___%
+
+D. 弱项 → 下月行动
+连续 2 月某 engine 0 分:
+  □ 检查 robots.txt
+  □ 哪 §三策略 (G1-G6) 缺失最严重?
+  □ 1-2 个具体动作
+
+E. 优势主题 → 加倍创作
+持续高分的 topic:
+  · ___
+  · ___
+
+【硬规则】
+- 不为了 GEO 改变受众价值优先级
+- 不在主推 stuff "for AI engines" 类话术
+- 月度审视，不日审 (避免短期反应)
+```
+
+---
+
+## §30 · Reputation Crisis Response Generator ⭐ v6 新
+
+> ⏰ **何时用**：危机发生时（30 min - 24h 内）
+> 📥 **输入**：危机类型（A-F）+ 上下文 + 我的初步反应
+> 📤 **输出**：完整 60 min / 24h / 7 day 应对计划
+> 🔗 **来源**：[reputation-crisis-playbook.md](./reputation-crisis-playbook.md)
+
+```
+（粘 v4.0 通用前缀）
+
+【Reputation Crisis Response Generator】
+
+危机类型（6 选 1）:
+[ ] A · 说错事实（数字 / 日期 / 公司）
+[ ] B · 错误预测公开打脸
+[ ] C · 大 V 撕逼 / 公开 disagree
+[ ] D · 受众 ratio（reply > likes）
+[ ] E · 漏报 / 错过重大事件
+[ ] F · 持续骚扰 / pile-on / cancel attempt
+
+危机上下文（粘进来）:
+[填具体情况：哪条推 / 谁 / 多少 reply / 多少 quote / 多久前]
+
+我的初步反应（如有）:
+[一句话]
+
+是否应该道歉?（参考 [reputation-crisis-playbook §9.1](./reputation-crisis-playbook.md)）:
+[ ] 是 - 我说错事实
+[ ] 是 - 我违反 stated value
+[ ] 是 - 我的预测真的错且影响别人
+[ ] 否 - 受众 emotional 但我数据正确
+[ ] 否 - 大 V 先 ad hominem
+[ ] 否 - 我 stand 的 take 受 challenge
+[ ] 不确定（让 AI 帮判断）
+
+【任务】
+
+按 [reputation-crisis-playbook.md §三-§八](./reputation-crisis-playbook.md) 的 6 类应对模板生成完整应对包。
+
+【输出格式】
+
+A. 60 min 内动作（最关键）
+  · 不要做的（§五.4 / §六.5 / §七 等）
+  · 要做的（按 type-specific 应对）
+  · Holding statement（如需要）
+
+B. 24h response 草稿
+  · 主推 long-form 应对（如适用）
+  · Reply 1 / 2 / 3
+  · 是否 quote 自己旧推（type B 必须）
+  · 招牌句式选择
+
+C. 24h-7 day plan
+  · Sunday Long Read 复盘草稿（如适用）
+  · Newsletter 处理
+  · S Tier Personal CRM private DM 模板（如 type F）
+  · 监控 metrics
+
+D. Apology framework（如 §9.1 应该道歉）
+  · Step 1 acknowledge specific issue
+  · Step 2 take responsibility
+  · Step 3 explain what happened
+  · Step 4 commit to concrete steps
+
+E. 7 天 retention 评估 plan
+  · S Tier 流失阈值
+  · Total follower / newsletter unsub 阈值
+  · 进入 long-term recovery 触发线
+
+F. Lessons learned 模板
+  · 加进月度 retro corrections list
+  · 加进 second brain inbox（避免 future 重复）
+  · 加进 prevention 习惯（§十.1）
+
+【硬规则】
+- 不发 emotional / 公开 vent
+- 不删任何已发内容（Streisand）
+- 不公开 attack attackers
+- 不 24h 内多次反应（hold + plan）
+- Apology 不超过 1 次
+- 7 day 内不让 crisis 变 content marketing
+```
+
+---
+
+## 使用频率速查表 v6.0
 
 | Prompt | 频率 | 何时用 |
 |---|---|---|
-| ~~§1 Daily Content Pack~~ | ~~每天~~ | **已被 §14 取代**（v1.0 历史版本）|
+| ~~§1 Daily Content Pack~~ | ~~每天~~ | **已被 §14 取代** |
 | §2 Weekly Retro | 每周 | 周日 21:30 |
 | §3 Monthly Retro | 每月 | 最后一天 19:00 |
 | §4 Newsletter Issue N | 每周 | 周日 21:30 |
 | §5 Cheat Sheet Refresh | 每周 | 周日 22:00 |
 | §6 Crisis Response | 突发 | 危机发生时 |
-| §7 Major Event Pivot | 不定 | 大事件时（不限 Musk）|
+| §7 Major Event Pivot | 不定 | 大事件时 |
 | §8 6 推自检 | 按需 | 不放心稿子时 |
 | §9 Profile Refresh | 每月 | 月度复盘后 |
 | §10 变现接洽 | 阶段性 | 触发 M3/M4/M5 时 |
 | §11 E1 Frontier AI News | 每周 1-3 | 非 Musk AI 大新闻时 |
 | §12 E2 Counterintuitive Take | 每周 1-2 | 高 viral 内容窗口 |
 | §13 E3 Live Event Thread | 不定 | 大事件前 24h 准备 |
-| **§14 Daily Humor Pool v2.0** ⭐ | **每天** | **早 06:35（取代 §1）** |
+| §14 Daily Humor Pool v2.0 ⭐ | 每天 | 早 06:35 |
 | §15 H8 Investor Life | 按需 | 财报季 / Fed / IPO 日 |
 | §16 H9 Adulting | 按需 | 周一 / 周五 / 工作日下午 |
 | §17 H10/H11/H12 三合一 | 按需 | 晚间 / 周末 |
 | §18 H13 Generational | 按需 | 周末 / 文化热点 |
-| §19 Sunday Long Read X Article ⭐ v3 | 每周 | 周日 19:00-20:30 草稿 → 21:00 发 |
-| §20 Wednesday AI Race Card ⭐ v3 | 每周 | 周三 11:00（11:30 发前 30 min）|
-| §21 Friday Reading List ⭐ v3 | 每周 | 周五 18:00-19:00（19:30 发前 30 min）|
-| §22 Friday Spaces Prep ⭐ v3 | 每周 | 周五 20:30-20:55（21:00 开 Space 前）|
+| §19 Sunday Long Read X Article ⭐ v3 | 每周 | 周日 19:00-20:30 |
+| §20 Wednesday AI Race Card ⭐ v3 | 每周 | 周三 11:00 |
+| §21 Friday Reading List ⭐ v3 | 每周 | 周五 18:00-19:00 |
+| §22 Friday Spaces Prep ⭐ v3 | 每周 | 周五 20:30-20:55 |
 | §23 First 60-min Engagement Scripts ⭐ v4 | 每条主推后 | T+0 立刻 |
 | §24 Vertical Video Script Generator ⭐ v4 | 每周 | 周六 09:00-09:30 BJ |
-| **§25 Newsjacking Generator** ⭐ v5 | **突发新闻** | **30-60 min 内反应** |
-| **§26 Quarterly Reader Survey** ⭐ v5 | **每季度** | **季度第 1 周一** |
-| **§27 VA Brief Generator** ⭐ v5 | **M3+ 招聘 VA 时** | **触发后 1 次** |
-| **§28 Disclaimer Generator** ⭐ v5 | **markets 内容前** | **每次需要时** |
+| §25 Newsjacking Generator ⭐ v5 | 突发新闻 | 30-60 min 内 |
+| §26 Quarterly Reader Survey ⭐ v5 | 每季度 | 季度第 1 周一 |
+| §27 VA Brief Generator ⭐ v5 | M3+ 招聘时 | 触发后 1 次 |
+| §28 Disclaimer Generator ⭐ v5 | markets 内容前 | 每次需要时 |
+| **§29 GEO Citation Audit** ⭐ v6 | **每月** | **最后一天 10 min** |
+| **§30 Reputation Crisis Response** ⭐ v6 | **危机发生时** | **30 min-24h 内** |
 
 ---
 
@@ -1713,5 +1873,5 @@ D. 检查清单（发布前）
 
 ---
 
-**版本**：v5.0 · 2026-05-30（v5 新增 §25-§28：Newsjacking Generator / Quarterly Reader Survey / VA Brief Generator / Disclaimer Generator · 现 28 prompts 覆盖日常 / 长内容 / 数据图 / Spaces / 视频 / 首 60 分钟 / 突发新闻 / 受众研究 / 委托 / 法务 全场景）
+**版本**：v6.0 · 2026-05-30（v6 新增 §29 GEO Citation Audit + §30 Reputation Crisis Response · 现 30 prompts 覆盖日常 / 长内容 / 数据图 / Spaces / 视频 / 首 60 分钟 / 突发新闻 / 受众研究 / 委托 / 法务 / GEO / 公关危机 全场景）
 **配套**：[_self-operation-handbook.md](./_self-operation-handbook.md) · [README](./README.md) · [signature-voice.md](./signature-voice.md) · [signature-series.md](./signature-series.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [visual-identity.md](./visual-identity.md) · [humor-pillars](./humor-pillars.md) · [traffic-expansion-pillars](./traffic-expansion-pillars.md) · [x-strategy](./x-strategy.md) · [algorithm-2026-playbook.md](./algorithm-2026-playbook.md) · [vertical-video-pillar.md](./vertical-video-pillar.md) · [growth-mechanics-2026.md](./growth-mechanics-2026.md) · [cross-platform-funnel.md](./cross-platform-funnel.md)
