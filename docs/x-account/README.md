@@ -36,14 +36,29 @@
 
 ---
 
-## 文件索引（按使用顺序）
+## 文件索引
 
-| # | 文件 | 内容 | 何时用 |
-|---|------|------|------|
-| 0 | [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) ⭐ | **72 小时紧急行动清单**（profile 改写 / Pin / 锚帖 / Reply Guy 双倍下注 / Premium 升级 / meta 推 / 转化漏斗 / 复盘） | **现在！** Musk 点赞后 0-72h，最高优先级 |
-| 1 | [x-strategy.md](./x-strategy.md) | 4 大内容支柱 / 30 天日历 / M1-M6 变现路线 | 72h 行动后开始按这个排期 |
-| 2 | [x-prompts.md](./x-prompts.md) | AI 提示词工具包（10 个核心 Prompt，全部围绕 Musk 帝国选题） | 每天发推 / 回复 / 复盘前用 |
-| 3 | [x-reply-scripts.md](./x-reply-scripts.md) ⭐ | **无人机味回复话术库**（@elonmusk 8 大子话题 / @Tesla / @SpaceX / @xai / @neuralink / @sama / Tesla bull & bear 大 V） | 日常打开 X 时随手抄 |
+### 自助运营核心（每天 / 每周 / 每月用）
+
+| # | 文件 | 用途 |
+|---|------|------|
+| ⭐ | [_self-operation-handbook.md](./_self-operation-handbook.md) | **自助运营手册** · 3 件事就够了：每日 / 每周日 / 每月 SOP + 13 条自检 + Crisis Playbook + 6 个月路线图 |
+| ⭐ | [_prompts-pack.md](./_prompts-pack.md) | **AI 提示词工具包合集** · 10 个 paste-ready prompts（Daily / Weekly / Monthly / Newsletter / Cheat Sheet / Crisis / Major Event / 自检 / Profile / 变现）|
+| | [_handoff-prompt.md](./_handoff-prompt.md) | 跨 AI 万能接力提示词（Grok / DeepSeek / Kimi 通用）|
+| | [humor-pillars.md](./humor-pillars.md) | 5 大幽默支柱（H1-H5）+ 段子生成提示词 |
+
+### 战略 + 模板（参考性）
+
+| # | 文件 | 内容 |
+|---|------|------|
+| 0 | [x-musk-like-72h-window.md](./x-musk-like-72h-window.md) | 72h 算法红利窗口期紧急行动清单 |
+| 1 | [x-strategy.md](./x-strategy.md) | 4 大内容支柱 / 30 天日历 / M1-M6 变现路线 |
+| 2 | [x-prompts.md](./x-prompts.md) | 早期 10 个 Musk 主题 Prompt（已被 _prompts-pack.md 升级覆盖）|
+| 3 | [x-reply-scripts.md](./x-reply-scripts.md) | Reply 话术库（@elonmusk 8 大子话题 / @Tesla / @SpaceX / @xai / @neuralink / @sama / Tesla bulls）|
+| 4 | [week-01-content-plan.md](./week-01-content-plan.md) | 第 1 周内容计划 + 截图发布工作流（Tally 邮箱沉淀）|
+| 5 | [empire-cheat-sheet/cheat-sheet.html](./empire-cheat-sheet/cheat-sheet.html) | Lead Magnet PDF v0.2（每周日刷新）|
+| 6 | [newsletter/issue-01-2026-05-25.md](./newsletter/issue-01-2026-05-25.md) | Newsletter Issue 01 模板 |
+| 7 | [decoder-threads/](./decoder-threads/) | Decoder Thread 历史归档 |
 
 ---
 
