@@ -108,6 +108,23 @@ python3 build.py 主理人-19880808       # 生成 28 页（启用 ABC 档）/ 4
 
 ---
 
+## 🔧 辅助工具 · 主理人个人投资 · `xauusd-trading-system/`
+
+> 与东方美学主业**独立**的子目录，主理人个人交易系统，不参与任何对外内容 / 客户交付。
+> 收纳在此仓库仅为版本管理便利。
+
+[`xauusd-trading-system/`](./xauusd-trading-system/) — **XAUUSD（黄金）交易分析系统**
+
+| 模块 | 内容 |
+|------|------|
+| [`prompts/`](./xauusd-trading-system/prompts/) | 3 套 AI 提示词：主分析师（每日剧本）/ 日内信号确认器 / 趋势布局器 |
+| [`strategy/`](./xauusd-trading-system/strategy/) | 日内 / 趋势 / 资金风控三套策略文档（A-B-C 模型 · 三级熔断） |
+| [`pinescript/`](./xauusd-trading-system/pinescript/) | TradingView Pine v5 指标 ×3：日内信号 / 趋势信号 / 多周期共振仪表盘 |
+
+详见：[`xauusd-trading-system/README.md`](./xauusd-trading-system/README.md)
+
+---
+
 ## 🚀 快速开始（按角色）
 
 ### 我是**主理人 / 项目负责人**

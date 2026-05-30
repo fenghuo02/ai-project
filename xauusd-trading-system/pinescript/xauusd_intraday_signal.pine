@@ -1,0 +1,164 @@
+//@version=5
+// =============================================================================
+//  XAUUSD 日内信号指标 (Intraday Signal)
+//  与策略文档 strategy/intraday_strategy.md 对应
+//  核心：EMA 趋势 + VWAP 偏离 + RSI 极值反转 + ATR 止损 + 时段过滤 + 关键水平
+//  作者：xauusd-trading-system
+// =============================================================================
+indicator("XAUUSD Intraday Signal", shorttitle="XAU Intraday", overlay=true, max_lines_count=300, max_labels_count=300)
+
+// ---------- 1. 输入参数 ----------
+grpTrend = "趋势过滤 (Trend Filter)"
+emaFastLen   = input.int(9,   "EMA Fast",   minval=2, group=grpTrend)
+emaMidLen    = input.int(21,  "EMA Mid",    minval=5, group=grpTrend)
+emaSlowLen   = input.int(50,  "EMA Slow",   minval=10, group=grpTrend)
+useHTFFilter = input.bool(true, "启用 H1 趋势过滤（只顺 H1 EMA50 方向交易）", group=grpTrend)
+
+grpMomentum = "动量 (Momentum)"
+rsiLen   = input.int(14, "RSI 长度", group=grpMomentum)
+rsiOB    = input.int(65, "RSI 超买阈值（空头确认）", group=grpMomentum)
+rsiOS    = input.int(35, "RSI 超卖阈值（多头确认）", group=grpMomentum)
+
+grpATR = "ATR 与止损 (ATR & Stop)"
+atrLen   = input.int(14,  "ATR 长度", group=grpATR)
+atrSLMul = input.float(1.0, "止损 ATR 倍数", step=0.1, group=grpATR)
+atrTPMul = input.float(2.0, "止盈 ATR 倍数（盈亏比 1:2）", step=0.1, group=grpATR)
+
+grpSession = "时段过滤 (Session, 北京时间转 UTC)"
+useSession = input.bool(true, "只在欧盘+美盘前半段触发信号", group=grpSession)
+// 北京时间 15:00-18:00 = UTC 07:00-10:00
+// 北京时间 21:30-01:00 = UTC 13:30-17:00
+sessionEU  = input.session("0700-1000", "欧盘时段 (UTC)", group=grpSession)
+sessionUS  = input.session("1330-1700", "美盘时段 (UTC)", group=grpSession)
+
+grpLevels = "关键水平 (Key Levels)"
+showPDH    = input.bool(true, "显示前日高 / 低 (PDH/PDL)", group=grpLevels)
+showAsia   = input.bool(true, "显示亚盘高 / 低", group=grpLevels)
+asiaSession = input.session("2300-0700", "亚盘时段 (UTC, 含跨日)", group=grpLevels)
+
+grpAlert = "提醒 (Alerts)"
+alertOnGo = input.bool(true, "GO 信号触发提醒", group=grpAlert)
+
+// ---------- 2. 指标计算 ----------
+emaFast = ta.ema(close, emaFastLen)
+emaMid  = ta.ema(close, emaMidLen)
+emaSlow = ta.ema(close, emaSlowLen)
+
+// 高级别趋势：H1 EMA50
+htfEma50 = request.security(syminfo.tickerid, "60", ta.ema(close, 50), barmerge.gaps_off, barmerge.lookahead_off)
+htfBull  = close > htfEma50
+htfBear  = close < htfEma50
+
+// VWAP（每日重置）
+vwapVal = ta.vwap(hlc3)
+
+// RSI
+rsiVal = ta.rsi(close, rsiLen)
+
+// ATR
+atrVal = ta.atr(atrLen)
+
+// 时段判定（is in session）
+inEU = not na(time(timeframe.period, sessionEU))
+inUS = not na(time(timeframe.period, sessionUS))
+inSession = useSession ? (inEU or inUS) : true
+
+// ---------- 3. 关键水平：前日高低 ----------
+pdh = request.security(syminfo.tickerid, "D", high[1], barmerge.gaps_off, barmerge.lookahead_on)
+pdl = request.security(syminfo.tickerid, "D", low[1],  barmerge.gaps_off, barmerge.lookahead_on)
+
+if showPDH and not na(pdh)
+    line.new(bar_index-1, pdh, bar_index, pdh, extend=extend.right, color=color.new(color.orange, 0), width=1, style=line.style_dashed)
+    line.new(bar_index-1, pdl, bar_index, pdl, extend=extend.right, color=color.new(color.orange, 0), width=1, style=line.style_dashed)
+
+// 亚盘高 / 低（在亚盘时段内累积，结束后保留显示）
+var float asiaHigh = na
+var float asiaLow  = na
+inAsia = not na(time(timeframe.period, asiaSession))
+asiaJustStarted = inAsia and not inAsia[1]
+if asiaJustStarted
+    asiaHigh := high
+    asiaLow  := low
+else if inAsia
+    asiaHigh := math.max(nz(asiaHigh, high), high)
+    asiaLow  := math.min(nz(asiaLow,  low),  low)
+
+plot(showAsia ? asiaHigh : na, "亚盘高", color=color.new(color.aqua, 0), style=plot.style_linebr, linewidth=1)
+plot(showAsia ? asiaLow  : na, "亚盘低", color=color.new(color.aqua, 0), style=plot.style_linebr, linewidth=1)
+
+// ---------- 4. 入场条件 ----------
+// 趋势过滤
+trendBullLocal = emaFast > emaMid and emaMid > emaSlow
+trendBearLocal = emaFast < emaMid and emaMid < emaSlow
+trendBull = useHTFFilter ? (trendBullLocal and htfBull) : trendBullLocal
+trendBear = useHTFFilter ? (trendBearLocal and htfBear) : trendBearLocal
+
+// VWAP 同侧
+aboveVwap = close > vwapVal
+belowVwap = close < vwapVal
+
+// RSI 反转
+rsiBullCross = ta.crossover(rsiVal, rsiOS + 5)   // 从超卖区上穿
+rsiBearCross = ta.crossunder(rsiVal, rsiOB - 5)  // 从超买区下穿
+
+// 价格行为：简化吞没
+bullEngulf = close > open and close[1] < open[1] and close > open[1] and open <= close[1]
+bearEngulf = close < open and close[1] > open[1] and close < open[1] and open >= close[1]
+
+// 关键水平接近度（±0.3% 视为靠近，约等于 7-9 美元）
+nearLevel(price, lvl) =>
+    not na(lvl) and math.abs(price - lvl) <= price * 0.003
+
+nearSupport = nearLevel(low, pdl) or nearLevel(low, asiaLow)
+nearResist  = nearLevel(high, pdh) or nearLevel(high, asiaHigh)
+
+// 综合 GO 信号
+goLong  = inSession and trendBull and aboveVwap and (rsiBullCross or bullEngulf) and nearSupport
+goShort = inSession and trendBear and belowVwap and (rsiBearCross or bearEngulf) and nearResist
+
+// ---------- 5. 绘图 ----------
+plot(emaFast, "EMA Fast", color=color.new(color.yellow, 0), linewidth=1)
+plot(emaMid,  "EMA Mid",  color=color.new(color.orange, 0), linewidth=2)
+plot(emaSlow, "EMA Slow", color=color.new(color.red, 0),    linewidth=2)
+plot(vwapVal, "VWAP",     color=color.new(color.fuchsia, 0), linewidth=2)
+
+// 信号箭头 + 止损止盈线
+if goLong
+    label.new(bar_index, low - atrVal*0.3, "▲ LONG\nSL " + str.tostring(low - atrVal*atrSLMul, "#.##") + "\nTP " + str.tostring(close + atrVal*atrTPMul, "#.##"), style=label.style_label_up, color=color.new(color.green, 0), textcolor=color.white, size=size.small)
+if goShort
+    label.new(bar_index, high + atrVal*0.3, "▼ SHORT\nSL " + str.tostring(high + atrVal*atrSLMul, "#.##") + "\nTP " + str.tostring(close - atrVal*atrTPMul, "#.##"), style=label.style_label_down, color=color.new(color.red, 0), textcolor=color.white, size=size.small)
+
+// 时段背景
+bgcolor(inEU and useSession ? color.new(color.blue, 92) : na, title="欧盘背景")
+bgcolor(inUS and useSession ? color.new(color.purple, 92) : na, title="美盘背景")
+
+// ---------- 6. 信息面板 ----------
+var table info = table.new(position.top_right, 2, 8, border_width=1)
+if barstate.islast
+    table.cell(info, 0, 0, "XAUUSD 日内", text_color=color.white, bgcolor=color.new(color.black, 30))
+    table.cell(info, 1, 0, str.tostring(close, "#.##"), text_color=color.white, bgcolor=color.new(color.black, 30))
+
+    table.cell(info, 0, 1, "趋势", text_color=color.silver)
+    table.cell(info, 1, 1, trendBull ? "多头" : trendBear ? "空头" : "震荡", text_color=trendBull ? color.green : trendBear ? color.red : color.yellow)
+
+    table.cell(info, 0, 2, "H1 偏向", text_color=color.silver)
+    table.cell(info, 1, 2, htfBull ? "多" : htfBear ? "空" : "—", text_color=htfBull ? color.green : color.red)
+
+    table.cell(info, 0, 3, "VWAP", text_color=color.silver)
+    table.cell(info, 1, 3, aboveVwap ? "上方" : "下方", text_color=aboveVwap ? color.green : color.red)
+
+    table.cell(info, 0, 4, "RSI", text_color=color.silver)
+    table.cell(info, 1, 4, str.tostring(rsiVal, "#.#"), text_color=rsiVal > rsiOB ? color.red : rsiVal < rsiOS ? color.green : color.white)
+
+    table.cell(info, 0, 5, "ATR", text_color=color.silver)
+    table.cell(info, 1, 5, str.tostring(atrVal, "#.##"), text_color=color.white)
+
+    table.cell(info, 0, 6, "时段", text_color=color.silver)
+    table.cell(info, 1, 6, inEU ? "欧盘" : inUS ? "美盘" : "—", text_color=inSession ? color.green : color.gray)
+
+    table.cell(info, 0, 7, "信号", text_color=color.silver)
+    table.cell(info, 1, 7, goLong ? "GO 多" : goShort ? "GO 空" : "等待", text_color=goLong ? color.green : goShort ? color.red : color.yellow)
+
+// ---------- 7. 提醒 ----------
+alertcondition(goLong  and alertOnGo, title="XAU 多头 GO", message="XAUUSD 日内多头 GO 信号 {{ticker}} @ {{close}}")
+alertcondition(goShort and alertOnGo, title="XAU 空头 GO", message="XAUUSD 日内空头 GO 信号 {{ticker}} @ {{close}}")
