@@ -1,0 +1,392 @@
+# X 英文账号 · 自助运营手册（Self-Operation Handbook）
+
+> 账号：@Skub0k · Musk Empire Decoder
+> 状态：v1.0 · 2026-05-30
+> 触发：Kiro 额度即将到期，本手册让账号在没有 AI 助手介入的情况下也可以稳跑 6+ 个月
+> 配套：[_prompts-pack.md](./_prompts-pack.md) · [humor-pillars.md](./humor-pillars.md) · [x-strategy.md](./x-strategy.md)
+
+---
+
+## 一、3 件事就够了
+
+| 频率 | 时间 | 做什么 | 用什么 |
+|---|---|---|---|
+| **每天** | 06:30-09:00（北京）| 6 推生成 + 主推发送 + 段子定时 | [§1 Daily Prompt](./_prompts-pack.md#1-daily-content-pack-generator) |
+| **每周日** | 21:00-22:30（北京）| 7 天数据复盘 + 写 Newsletter + 刷新 Cheat Sheet | [§2-5 Weekly Prompts](./_prompts-pack.md) |
+| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + 迁移触发判断 | [§3 Monthly Prompt](./_prompts-pack.md#3-monthly-retro-generator) |
+
+> 💡 其他时间正常生活。**不要把账号当 24/7 工作**，会烧坏。
+
+---
+
+## 二、Daily SOP（每天 30-45 分钟主动 + 几次被动 reply）
+
+### 06:30 起床 → 开 Grok（X Premium+ 自带最佳，DeepSeek/Kimi 备选）
+
+### 06:35-06:40 跑 Daily Prompt
+
+把 [_prompts-pack.md §1](./_prompts-pack.md#1-daily-content-pack-generator) 整段复制到 Grok 对话开头。Grok 会先联网搜过去 24h Musk 帝国新闻，然后输出当日 1 主推 + 5 段子草稿。
+
+### 06:40-07:00 自检 + 微调
+
+对照本文档 §四 13 条自检表过一遍，改 2-3 个地方让它"更像你"，避免模板感。
+
+### 07:00-07:15 发主推 + 立刻接 Reply 1
+
+主推（带数据/截图/4 张图）→ 接 1 条**纯文字版 TL;DR Reply**（X 算法读不了图，必须有这条）。详见 [week-01-content-plan §7](./week-01-content-plan.md)。
+
+### 07:30-22:30 5 段子按时间分发
+
+| 北京时间 | 美东时间 | 发哪条 |
+|---|---|---|
+| 09:30 | Sun-Thu 21:30 | H3 反差对比 |
+| 12:30 | 0:30 凌晨 | H1 行业观察 |
+| 17:30 | 5:30 早上 | H4 列表荒诞 |
+| 19:30 | 7:30 早上 | H2 X 元梗 |
+| 22:30 | 10:30 上午 | H5 自嘲建造 |
+
+可以用 X Premium+ 内置定时（Web 版）或 TweetHunter / Hypefury 提前一次性排好。
+
+### 8-14am、18-22pm Reply Day（碎片时间）
+
+每段 30 分钟，按 [x-reply-scripts.md](./x-reply-scripts.md) 找模板。**同一大 V 一天不超过 2 条**。
+
+### 23:00 睡前 5 分钟
+
+把今天 6 推数据填进 §五数据跟踪表（手机记事本 / Notion / Google Sheets 都行）。
+
+---
+
+## 三、Weekly SOP（每周日 21:00-22:30）
+
+3 件事，建议按顺序：
+
+### 1. 跑 Weekly Retro（30 分钟）
+
+打开 [_prompts-pack.md §2](./_prompts-pack.md#2-weekly-retro-generator)，把过去 7 天的 6 推 × 7 天 = 42 条数据贴进去。
+
+Grok 输出：
+- 5 大幽默支柱（H1-H5）+ Musk 主推的 ROI 排序
+- 哪个时段表现最好
+- 下周排期建议（哪个支柱加倍 / 哪个减少 / 哪个尝试新角度）
+
+### 2. 写 Newsletter Issue N（45 分钟）
+
+打开 [_prompts-pack.md §4](./_prompts-pack.md#4-newsletter-issue-n-generator)，参考 [Issue 01 模板](./newsletter/issue-01-2026-05-25.md) + 当周新数据，让 Grok 生成。
+
+发布方式：参考 [week-01-content-plan §7.2 截图工作流](./week-01-content-plan.md)。
+
+### 3. 刷新 Cheat Sheet（15 分钟）
+
+打开 [_prompts-pack.md §5](./_prompts-pack.md#5-cheat-sheet-weekly-refresh)。Grok 给你本周需要更新的数据，手动改 [cheat-sheet-source.md](./empire-cheat-sheet/cheat-sheet-source.md)，浏览器重新打印 PDF v0.X。
+
+---
+
+## 四、6 推自检清单（每条发出前 10 秒）
+
+### 反 AI 味 8 条铁律
+
+- [ ] 全小写开头
+- [ ] 没有破折号或长划线
+- [ ] 没有 "Absolutely / Indeed / Furthermore / Moreover / In conclusion"
+- [ ] 没有三段式 / 三个 bullet 列表
+- [ ] 必须有具体名词（公司/产品/数字/日期）
+- [ ] 没有捧哏开头（"Great point!" "Thanks for sharing!"）
+- [ ] 感叹号 0 个是默认，最多 1 个
+- [ ] 偶尔留 typo / 语气词（lol / fwiw / ngl）
+
+### 幽默专属 5 条
+
+- [ ] 不要"自助式人生导师"调
+- [ ] punchline 必须在第 2 行落地
+- [ ] 一条段子最多 1 个 emoji
+- [ ] 不要强行 wordplay / 押韵
+- [ ] 反差点要"精准"，不要"为奇葩而奇葩"
+
+---
+
+## 五、数据跟踪表（每天填）
+
+存到 Google Sheets / Notion / Excel 都行。建议字段：
+
+| 日期 | 推类型 | 时段 | 内容简述 | Impression | Like | RT | Reply | Bookmark | 备注 |
+|---|---|---|---|---|---|---|---|---|---|
+
+每周日 §2 Weekly Retro 用这张表的数据。
+
+**关键指标计算**：
+```
+ROI = (likes + 2×RT + 3×bookmark) / impression
+```
+
+按 ROI 排序判断哪个支柱起量。
+
+---
+
+## 六、Migration Triggers · 何时升级到下个阶段
+
+按真实数字判断，不按时间表猜。
+
+### 触发 M2 · 邮件平台升级（Tally → Mailchimp / EmailOctopus）
+
+**触发条件**（满足任一）：
+- Tally 累计订阅 ≥ 100
+- DM "empire" 数累计 ≥ 50
+- 想发"付费订阅版" newsletter
+
+**操作步骤**：
+1. Tally 后台导出 CSV
+2. Mailchimp / EmailOctopus / Brevo 注册（国内可访问，免费）
+3. 导入 CSV
+4. 把 X bio 链接换成新平台订阅页
+5. 下期 Newsletter 用新平台群发
+
+预计耗时：30 分钟。
+
+### 触发 M2.5 · 1:1 Briefing 上架
+
+**触发条件**：粉丝 ≥ 5,000
+
+**操作**：
+1. Tally 建第 2 个表单：`Book a Musk Empire Briefing`
+2. 价格：$99 / 30min（试水）→ 后续看预约率调到 $199 / $299
+3. X bio 改成两个链接：免费订阅 + 付费 briefing
+
+### 触发 M3 · 数字产品上架
+
+**触发条件**：粉丝 ≥ 10,000 + Tally 订阅 ≥ 1,000
+
+**操作**：
+1. 把 cheat sheet 升级成 30 页 "Musk Empire Tracker Pro" PDF
+2. Gumroad / Lemon Squeezy 上架（国内可访问）
+3. 售价 $49 / 单次买断
+4. 在 weekly newsletter 给免费版用户发 1 次促销
+
+### 触发 M4 · Sponsorship 接洽
+
+**触发条件**：粉丝 ≥ 20,000 + 周 impression ≥ 500K
+
+**操作**：
+1. X bio 加一行 `dm for sponsor`
+2. 价格表：单条 $300-1,500（按 impression 估）
+3. 只接 EV / 投资 / AI 工具相关，拒绝赌博 / shitcoin / 政治
+
+### 触发 M5 · 全栈基础设施
+
+**触发条件**：月收入 ≥ $500
+
+**操作**：升级到付费 newsletter 平台 + 自建落地页 + 完整分析栈。具体看 [x-strategy §四](./x-strategy.md)。
+
+---
+
+## 七、Crisis Playbook · 突发情况怎么办
+
+### 类型 A：账号被限流警告 / 触发审核
+
+**症状**：突然某条推 impression 暴跌 / X 推送通知"内容受限"。
+
+**怎么做**：
+1. **不删那条推**（删了反而会 trigger 二次审核）
+2. 接下来 24h 不发原创推，只发 reply（reply 不受同样限流）
+3. 跑 [_prompts-pack.md §6 Crisis Response](./_prompts-pack.md#6-crisis-response-pivots) 让 AI 帮你判断哪条触发了限流
+4. 24h 后试着发一条**绝对安全的**内容（数据驱动 / 工程细节，不要任何 spicy take）测试
+
+### 类型 B：突发爆款（>100K impression 单条）
+
+**怎么做（72h 内）**：
+1. **立刻 Pin 那条**（替换原 Pin）
+2. 在那条下面 reply 一个钩子：`subscribe for next monday's edition: <tally-link>`
+3. 用 [_prompts-pack.md §7](./_prompts-pack.md#7-major-musk-event-pivot) 让 AI 帮你写 1 条 meta 推（"this thread did 100K impressions in 24h. here's what it tapped into:"）
+4. 24h 内**别发新原创**，让爆款持续吃流量
+5. 把所有涌入的新粉关注纳入数据表，下周末复盘他们最关心什么
+
+### 类型 C：被 Musk 圈大 V 转推 / 引用
+
+**怎么做（30 分钟内）**：
+1. 在自己 timeline 用引文转推方式 quote 那条 quote 一遍（"thanks for the sig boost @<name>"）
+2. 监控接下来 24h follow / DM 流量，决定要不要 pivot 当周 Newsletter 主题贴上他们的视角
+3. 看哪些他的关注者关注了你 → 下周 reply day 主战场就在那个圈子
+
+### 类型 D：账号被举报暂停
+
+**怎么做（立刻）**：
+1. 提交 X appeal（`Help / Report a problem / Account suspended`），明确写"this is a tech analyst account, not a parody / impersonation"
+2. **不要再注册新账号顶替**（会被 IP 关联连坐）
+3. 联系 X 客服走人工申诉（如果有 Premium+，优先级更高）
+4. 等待期间用 newsletter 维系受众
+5. 解封后 7 天内不发任何 spicy 内容
+
+### 类型 E：自己发了让自己后悔的推（醉酒推 / 情绪推）
+
+**24h 内**：
+- 不要删（删了别人会截图，反而 streisand）
+- 用一条幽默 follow-up 自嘲（"woke up to that tweet. hi everyone."）
+- 在数据跟踪表标 "regret post"，下次复盘看是什么触发的
+
+### 类型 F：被 ratio / 骂战
+
+**24h 内**：
+- 不要删原推（同上）
+- 不要逐条回喷
+- 一条 self-aware 收尾："well that aged poorly. correction noted."（如果你确实错了）
+- 或："interesting feedback. taking notes."（如果不想认错）
+- 然后该干嘛干嘛，**不要**因为这件事改变发推节奏
+
+### 类型 G：突然大量假关注 / Bot 涌入
+
+**怎么做**：
+1. 不主动 block（X 算法会反应）
+2. 看 Bot 来源是不是被某个高仿账号 amplify 了 → 如果是，去 report 那个高仿账号
+3. 数据表上单独标出 bot 增量，**不要算进真实增长**
+4. 7 天后 Bot 基本会被 X 自动清理
+
+---
+
+## 八、推荐工具栈
+
+### AI 助手（按场景选）
+
+| 场景 | 首选 | 备选 | 原因 |
+|---|---|---|---|
+| 每日 6 推生成 | **Grok**（X Premium+ 自带）| DeepSeek / Kimi | Grok 有 X 实时数据，能联网搜过去 24h 新闻 |
+| Newsletter 写作 | Kimi | DeepSeek | Kimi 长上下文 + 中文能力 |
+| 数据复盘 / 表格分析 | Kimi / DeepSeek | Grok | 处理结构化数据更稳 |
+| 截图 → PDF 排版 | 浏览器 Chrome 直接打印 | - | 别用第三方工具，没必要 |
+| 段子生成 | Grok（懂 X 文化）| DeepSeek | Grok 母语英文文化敏感度更高 |
+
+**注意**：除了 Grok（X Premium+ 内置），其他 AI 都需要单独账号。**不需要付任何 AI 订阅**，免费版够用。
+
+### 发布 + 排程工具
+
+| 工具 | 用途 | 价格 |
+|---|---|---|
+| X Premium+ | 蓝标 + 长推 + 内置定时 + 算法加权 + Grok | $16/月 |
+| TweetHunter | 高级排程 + 数据分析 | $49/月（粉丝<5K 不用上）|
+| Hypefury | 排程 + 自动 thread 转长推 | $19/月（粉丝<5K 不用上）|
+
+**初期推荐**：只用 X Premium+ 内置定时。
+
+### 邮箱沉淀
+
+| 工具 | 用途 | 阶段 |
+|---|---|---|
+| **Tally** | 邮箱表单 | M1（现在）|
+| **Mailchimp** | 邮件群发 | M2（100+ 订阅时）|
+| **EmailOctopus** | Mailchimp 平替 | M2 备选 |
+| **Beehiiv** | 一体化 newsletter | M3+（且能解决国内访问问题时）|
+
+### 数据跟踪
+
+| 工具 | 用途 |
+|---|---|
+| Google Sheets | 6 推 × 7 天数据表 |
+| Notion | 周报 / 月报存档 |
+| X 自带后台 | 每条推的 impression / engagement |
+
+---
+
+## 九、6 个月路线图（M2 6/2026 → M7 11/2026）
+
+### M2 · 2026-06（Week 23-26）
+
+**目标**：3K-8K 粉，Tally 订阅 ≥ 100，开始 M2 邮件平台迁移
+
+**关键事件**：
+- 6/8-15 Grok V9-Medium public release
+- 6/12 SpaceXAI IPO 定价
+- 6 月底 Starship Flight 13
+
+**主推内容侧重**：跟住 IPO + Grok V9 实测（每个事件 1 篇 decoder）
+
+**段子侧重**：H5 自嘲 + H3 反差 加倍（IPO 期间情绪 / 段子两极化最强）
+
+### M3 · 2026-07-08（Week 27-34）
+
+**目标**：8K-15K 粉，Newsletter 月活订阅 1K，1:1 Briefing 上架
+
+**关键事件**：Tesla Q2 deliveries 报告、Optimus 新进展
+
+**主推内容侧重**：build-in-public 数据展示
+
+### M4 · 2026-09-10（Week 35-43）
+
+**目标**：15K-30K 粉，月收入 ≥ $1,000
+
+**关键事件**：iPhone 17 + AI Apple 发布会冲击 / Tesla AI Day
+
+**主推内容侧重**：5-horse AI race 比较 / xAI 实战测评
+
+### M5 · 2026-11（Week 44-48）
+
+**目标**：30K-50K 粉，月收入 ≥ $5,000，开始招首批数字产品付费用户
+
+**关键事件**：年终预测季 + Grok 4.2 开源
+
+**主推内容侧重**：年度复盘 + 2027 预测
+
+### M6 · 2026-12（Week 49-53）
+
+**目标**：50K-100K 粉，月收入 ≥ $10,000
+
+**关键事件**：年度 Annual Outlook PDF 发布
+
+### M7 · 2027-01
+
+**目标**：开始考虑全职化决策
+
+---
+
+## 十、什么时候该叫 AI 助手回来
+
+**不需要叫的情况**（自己跑就够）：
+- 日常 6 推
+- 每周 Newsletter / Cheat Sheet 更新
+- 月度复盘
+- 普通 reply day
+- 数据跟踪
+
+**值得叫的情况**（每月最多 1-2 次，节约 Kiro 额度）：
+- 突发账号危机（参考 §七），需要快速响应策略
+- 第一次升级到 Mailchimp / 数字产品 / Sponsorship 阶段，需要一次性详细 SOP
+- 突然爆款（>1M impression）需要重新设计 profile / Pin / lead magnet 接住流量
+- Musk 帝国出现重大不可预测事件（IPO 失败 / 重大召回 / 大 V 撕逼）
+- 6 个月节点重新定方向
+
+**叫回来时怎么用最高效**：
+1. 先在 Grok 跑 [_prompts-pack.md §6 Crisis Response](./_prompts-pack.md#6-crisis-response-pivots) 拿初步答案
+2. 把 Grok 的答案 + 你的判断带过来给 AI 助手
+3. 让 AI 助手只做"决策审核 + 高度定制化交付"
+
+---
+
+## 十一、长期心态
+
+### 4 件事坚持做
+
+1. **每周日晚 30-45 分钟复盘**：这是账号不死的根
+2. **每条推自检**：哪怕只过 13 条清单的 1 遍
+3. **数据表别断**：断了等于盲飞
+4. **Newsletter 周更不断**：哪怕 50 个订阅，也是你的私域
+
+### 4 件事不要做
+
+1. 一周 0 内容（断更超过 7 天 X 算法会判定"沉睡账号"）
+2. 一天 > 10 条原创推（算法判 spam）
+3. 凡事先问 AI（自己先想，再问 AI 验证）
+4. 每天看后台超过 3 次（焦虑 ROI 极低）
+
+---
+
+## 十二、紧急联系（这套体系自己出问题时）
+
+如果手册有错 / 提示词跑不通 / 流程踩坑：
+
+1. 先去 [README.md](./README.md) 看核心规则有没有变
+2. 再去 [x-strategy.md](./x-strategy.md) 看战略层有没有改
+3. 再去 [humor-pillars.md](./humor-pillars.md) 看支柱定义
+4. 上面都没解决：召回 AI 助手（参考 §十规则）
+
+---
+
+**版本**：v1.0 · 2026-05-30
+**配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [x-strategy](./x-strategy.md) · [humor-pillars](./humor-pillars.md) · [week-01-content-plan](./week-01-content-plan.md)
