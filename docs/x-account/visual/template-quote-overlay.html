@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>E5-a · Quote Overlay Template · @Skub0k</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1600px; height: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      color: #111; background: #fff;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    .frame {
+      width: 1600px; height: 900px;
+      padding: 64px 88px;
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+
+    /* SOURCE LINE */
+    .source {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 13pt; color: #999; letter-spacing: 0.4pt;
+      text-transform: lowercase;
+      margin-bottom: 28pt;
+    }
+    .source strong {
+      color: #111; font-weight: 700;
+    }
+
+    /* QUOTE BLOCK · serif italic on light gray */
+    .quote {
+      font-family: Georgia, 'Charter', 'Iowan Old Style', serif;
+      font-style: italic;
+      font-size: 26pt; line-height: 1.45;
+      color: #222;
+      background: #f3f3f3;
+      border-left: 4pt solid #111;
+      padding: 28pt 36pt;
+      margin-bottom: 32pt;
+    }
+
+    /* DIVIDER */
+    .divider {
+      width: 64pt; height: 2pt; background: #111;
+      margin-bottom: 28pt;
+    }
+
+    /* INSIGHT */
+    .insight {
+      font-size: 18pt; line-height: 1.55; color: #111;
+      max-width: 1300px;
+    }
+    .insight .key {
+      color: #cc0000; font-weight: 700;
+    }
+    .insight p + p { margin-top: 14pt; }
+
+    /* BOTTOM ROW */
+    .bottom-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: auto; padding-top: 24pt;
+      border-top: 1px solid #eeeeee;
+    }
+    .label {
+      font-size: 9pt; color: #666; letter-spacing: 0.4pt;
+      text-transform: uppercase;
+    }
+    .handle {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 13pt; color: #666; letter-spacing: 0.3pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+
+    <div>
+      <div class="source">
+        <strong>[[SOURCE]]</strong> &nbsp;·&nbsp; [[DATE]]
+      </div>
+
+      <div class="quote">
+        "[[QUOTE]]"
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="insight">
+        <p>what nobody is highlighting:</p>
+        <p><span class="key">[[INSIGHT_KEY_NUMBER]]</span> &nbsp; [[INSIGHT_LINE_1]]</p>
+        <p>[[INSIGHT_LINE_2]]</p>
+      </div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="label">observer &amp; investor</div>
+      <div class="handle">@Skub0k</div>
+    </div>
+
+  </div>
+</body>
+</html>

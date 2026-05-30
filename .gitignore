@@ -16,3 +16,7 @@ venv/
 
 # Node (if any tooling is added later)
 node_modules/
+
+# Visual asset rendered outputs (regenerated from .html / .svg sources)
+docs/x-account/visual/output/
+docs/x-account/visual/output/**

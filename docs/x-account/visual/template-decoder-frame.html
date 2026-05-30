@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Decoder Frame · Series Cover Template · @Skub0k</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1600px; height: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      color: #111; background: #fff;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    .frame {
+      width: 1600px; height: 900px;
+      padding: 80px 96px;
+      display: flex; flex-direction: column; justify-content: space-between;
+      position: relative;
+    }
+
+    /* SERIES NAME */
+    .series-name {
+      font-size: 22pt; font-weight: 800; letter-spacing: -0.4pt;
+      text-transform: lowercase;
+      color: #111;
+    }
+    .series-rule {
+      width: 88pt; height: 2pt; background: #111;
+      margin: 12pt 0 24pt;
+    }
+
+    /* WEEK / DATE STAMP */
+    .stamp {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 12pt; color: #666; letter-spacing: 0.4pt;
+    }
+
+    /* HOOK */
+    .hook {
+      max-width: 1200px;
+      font-size: 30pt; line-height: 1.45;
+      font-weight: 600; color: #111;
+      letter-spacing: -0.3pt;
+    }
+    .hook p + p { margin-top: 14pt; }
+
+    /* BOTTOM DOUBLE-RULE */
+    .bottom {
+      display: flex; flex-direction: column; gap: 14pt;
+    }
+    .top-rule {
+      width: 100%; height: 1px; background: #111;
+    }
+    .bottom-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+    }
+    .footer-label {
+      font-size: 11pt; color: #666; letter-spacing: 0.5pt;
+      text-transform: lowercase;
+    }
+    .handle {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 12pt; color: #666; letter-spacing: 0.3pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+
+    <div>
+      <div class="series-name">[[SERIES_NAME]]</div>
+      <div class="series-rule"></div>
+      <div class="stamp">week [[WEEK]] · [[DATE]]</div>
+    </div>
+
+    <div class="hook">
+      <p>[[HOOK1]]</p>
+      <p>[[HOOK2]]</p>
+      <p>[[HOOK3]]</p>
+    </div>
+
+    <div class="bottom">
+      <div class="top-rule"></div>
+      <div class="bottom-row">
+        <div class="footer-label">observer &amp; investor</div>
+        <div class="handle">@Skub0k</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

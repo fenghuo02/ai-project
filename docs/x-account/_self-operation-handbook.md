@@ -1,21 +1,26 @@
 # X 英文账号 · 自助运营手册（Self-Operation Handbook）
 
-> 账号：@Skub0k · Musk Empire Decoder
-> 状态：v1.0 · 2026-05-30
+> 账号：@Skub0k · Observer & Investor（v3.0）
+> 状态：v3.0 · 2026-05-30 · big-V upgrade pack 部署阶段
 > 触发：Kiro 额度即将到期，本手册让账号在没有 AI 助手介入的情况下也可以稳跑 6+ 个月
-> 配套：[_prompts-pack.md](./_prompts-pack.md) · [humor-pillars.md](./humor-pillars.md) · [x-strategy.md](./x-strategy.md)
+> 配套：[_prompts-pack.md](./_prompts-pack.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md)
 
 ---
 
-## 一、3 件事就够了
+## 一、4 件事就够了 v3.0
 
 | 频率 | 时间 | 做什么 | 用什么 |
 |---|---|---|---|
-| **每天** | 06:30-09:00（北京）| 6 推生成 + 主推发送 + 段子定时 | [§1 Daily Prompt](./_prompts-pack.md#1-daily-content-pack-generator) |
-| **每周日** | 21:00-22:30（北京）| 7 天数据复盘 + 写 Newsletter + 刷新 Cheat Sheet | [§2-5 Weekly Prompts](./_prompts-pack.md) |
-| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + 迁移触发判断 | [§3 Monthly Prompt](./_prompts-pack.md#3-monthly-retro-generator) |
+| **每天** | 06:30-09:00（北京）| 1 main + 5 humor (13 池子选 5) + 1 expansion (E1-E5) = 7 推生成 + 时段排发 | [§14 Daily Humor Pool v2.0](./_prompts-pack.md#14--daily-humor-pool-generator-v20-replaces-1-use-daily-at-0630) |
+| **每周五** | 20:30-21:30（北京）| 30 min Friday Spaces + 21:35 follow-up 推 | [spaces-and-community.md §二](./spaces-and-community.md) + [_prompts-pack.md §22](./_prompts-pack.md) |
+| **每周日** | 19:00-22:30（北京）| Sunday Long Read X Article + Newsletter + Cheat Sheet 刷新 + 周复盘 | [§19 Article](./_prompts-pack.md) + §2-5 |
+| **每月最后一天** | 19:00-21:00（北京）| 月度复盘 + Migration triggers 检查 + Last-Day Monthly Map thread | [§3 Monthly](./_prompts-pack.md#3-monthly-retro-generator) + [signature-series §六](./signature-series.md) |
 
 > 💡 其他时间正常生活。**不要把账号当 24/7 工作**，会烧坏。
+>
+> 📅 5 个命名栏目（Mon Empire Map / Wed AI Race Card / Fri Reading List / Sun Long Read / 月末 Monthly Map）的完整周历见 [signature-series.md §七](./signature-series.md)。
+>
+> 🚨 **如果你刚 merge v3.0 PR，先做 [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) §二 Day 0 八件事**，再继续按本手册跑日常。
 
 ---
 
@@ -23,66 +28,131 @@
 
 ### 06:30 起床 → 开 Grok（X Premium+ 自带最佳，DeepSeek/Kimi 备选）
 
-### 06:35-06:40 跑 Daily Prompt
+### 06:35-06:45 跑 Daily Prompt
 
-把 [_prompts-pack.md §1](./_prompts-pack.md#1-daily-content-pack-generator) 整段复制到 Grok 对话开头。Grok 会先联网搜过去 24h Musk 帝国新闻，然后输出当日 1 主推 + 5 段子草稿。
+把 [_prompts-pack.md §14 Daily Humor Pool v2.0](./_prompts-pack.md#14--daily-humor-pool-generator-v20-replaces-1-use-daily-at-0630) 整段复制到 Grok 对话开头（**已包含 Voice DNA + observer 品牌 + 13 段子池**）。Grok 会先联网搜过去 24h tech / markets / AI race 新闻，然后输出当日：
 
-### 06:40-07:00 自检 + 微调
+- 1 main tweet（4 大支柱轮转，不再每天 Musk）
+- 5 humor jokes（从 13 段子池按 G1-G4 算法选 5 个不同支柱）
+- 1 expansion piece（E1-E5 之一，工作日发，周末跳过）
 
-对照本文档 §四 13 条自检表过一遍，改 2-3 个地方让它"更像你"，避免模板感。
+### 06:45-07:15 自检 + 微调
 
-### 07:00-07:15 发主推 + 立刻接 Reply 1
+对照本文档 §五 13 条自检表 + [signature-voice.md §三招牌句式 + §六词汇指纹](./signature-voice.md) 过一遍，改 2-3 个地方让它"更像你"，避免模板感。
 
-主推（带数据/截图/4 张图）→ 接 1 条**纯文字版 TL;DR Reply**（X 算法读不了图，必须有这条）。详见 [week-01-content-plan §7](./week-01-content-plan.md)。
+> ⚠️ 周一 / 周三 / 周五 / 周日 = signature series 日。Daily prompt 输出后**先决定主推是否替换为当日 series 内容**，详见 [signature-series.md §七](./signature-series.md)。
 
-### 07:30-22:30 5 段子按时间分发
+### 07:15-07:30 发主推 + 立刻接 Reply 1
 
-| 北京时间 | 美东时间 | 发哪条 |
-|---|---|---|
-| 09:30 | Sun-Thu 21:30 | H3 反差对比 |
-| 12:30 | 0:30 凌晨 | H1 行业观察 |
-| 17:30 | 5:30 早上 | H4 列表荒诞 |
-| 19:30 | 7:30 早上 | H2 X 元梗 |
-| 22:30 | 10:30 上午 | H5 自嘲建造 |
+主推（带数据 / 截图 / 4 图）→ 接 1 条**纯文字版 TL;DR Reply**（X 算法读不了图，必须有这条）。详见 [week-01-content-plan §7](./week-01-content-plan.md)。
+
+### 07:30-22:30 7 推按时段分发 v3.0
+
+| 北京 | 美东 | 内容（工作日）| 备注 |
+|---|---|---|---|
+| 07:15-07:30 | Sun-Thu 19:15 | **Main tweet**（A/B/C/D/E/F 6 支柱轮转 + 周一/三/五/日的 series 主推）| 黄金时段 |
+| 09:30 | 21:30 | Humor 1（G1 / G3 / G4 之一）| |
+| 11:30 | 23:30 | **Expansion E1-E5**（工作日发，周末跳过）| 美西科技圈深夜活跃 |
+| 12:30 | 00:30 | Humor 2 | 美西夜间 |
+| 14:30 | 02:30 | Humor 3 | |
+| 17:30 | 05:30 | Humor 4 | 美东早起 |
+| 19:30 | 07:30 | Humor 5（or 周五 Reading List 7 推 thread）| 美东早高峰 |
+| 22:30 | 10:30 | （Premium+ 内置定时排好的最后一条 humor）| 美东中午 |
+
+**周末（Sat / Sun）**：跳过 11:30 expansion 推，保持轻松节奏。Sun 21:00 槽位是 Sunday Long Read X Article（详见 [x-articles-playbook.md](./x-articles-playbook.md)）。
+
+5 humor 严格遵守 G1-G4 算法（[observer-brand-pivot.md §六](./observer-brand-pivot.md)）：
+
+```
+G1 Tech / AI / X         pick 1-2
+G2 Investor / Markets    必有 1 (锁定投资者人设)
+G3 Adulting / Working    pick 1
+G4 Self-Aware / Cultural pick 1-2
+```
 
 可以用 X Premium+ 内置定时（Web 版）或 TweetHunter / Hypefury 提前一次性排好。
 
 ### 8-14am、18-22pm Reply Day（碎片时间）
 
-每段 30 分钟，按 [x-reply-scripts.md](./x-reply-scripts.md) 找模板。**同一大 V 一天不超过 2 条**。
+每段 30 分钟，按 [x-reply-scripts.md](./x-reply-scripts.md) + [peer-collab-playbook.md §三协议 1](./peer-collab-playbook.md) 找模板 / 投 reply。**同一大 V 一天不超过 2 条**。
 
 ### 23:00 睡前 5 分钟
 
-把今天 6 推数据填进 §五数据跟踪表（手机记事本 / Notion / Google Sheets 都行）。
+把今天 7 推数据填进 §六数据跟踪表（手机记事本 / Notion / Google Sheets 都行）。
 
 ---
 
-## 三、Weekly SOP（每周日 21:00-22:30）
+## 三、Friday SOP（每周五 20:30-22:00）⭐ 新
 
-3 件事，建议按顺序：
+> 启动条件：满足 [spaces-and-community.md §二](./spaces-and-community.md) 启动门槛（≥ 1K 粉 + 30 天 2 条主推 > 10K imp + 5 个 5K+ 粉主动 reply）。**不满足前不开 Spaces**。
 
-### 1. 跑 Weekly Retro（30 分钟）
+按顺序：
 
-打开 [_prompts-pack.md §2](./_prompts-pack.md#2-weekly-retro-generator)，把过去 7 天的 6 推 × 7 天 = 42 条数据贴进去。
+### 20:30-20:55 准备（25 分钟）
+
+- 跑 [_prompts-pack.md §22](./_prompts-pack.md) Spaces prep generator → 拿到 5-7 个 talking points 草稿
+- 手机充电 + 网络测试 + 耳机检查
+- Spaces 标题：`empire map week N · open Q&A` 或当周主题
+
+### 20:55 开 Space 给 raised hands 5 分钟入场缓冲
+
+### 21:00-21:30 主持 Space（30 分钟硬纪律）
+
+详见 [spaces-and-community.md §二](./spaces-and-community.md) 标准 agenda：
+
+```
+21:00-21:03 入场 + 自我介绍
+21:03-21:18 主讲段（5-7 talking points）
+21:18-21:28 Q&A 段
+21:28-21:30 收尾
+```
+
+**31 分都不行**。准时结束 = 受众下周还来。
+
+### 21:35-21:45 follow-up 推 + 数据登记
+
+- 发一条 thank-you 推（录音 link + 3 个 takeaway bullets）
+- Spaces 数据填到本文档 §六数据跟踪表
+
+---
+
+## 四、Weekly SOP（每周日 19:00-22:30）⭐ 升级
+
+5 件事，建议按顺序：
+
+### 1. Sunday Long Read X Article（90 分钟，19:00-20:30）⭐ 新
+
+打开 [_prompts-pack.md §19 X Article generator](./_prompts-pack.md)，按 [x-articles-playbook.md §三](./x-articles-playbook.md) 选模板（Deep Dive / Predict / Review）生成草稿。人工编辑 60-90 分钟（修事实 / 加 anti-AI tone / 加内部链接）。
+
+### 2. 发布 Article + 推 + Newsletter（19:00-21:30）
+
+```
+21:00      Article 在 X 上发布（Premium+ 入口）
+21:05      主推（带 Article link）+ reply 1（5 bullets TL;DR）+ reply 2（CTA）
+21:30      Newsletter Issue N 发出（参考 [Issue 01](./newsletter/issue-01-2026-05-25.md)）
+```
+
+### 3. 跑 Weekly Retro（30 分钟，21:30-22:00）
+
+打开 [_prompts-pack.md §2](./_prompts-pack.md#2-weekly-retro-generator)，把过去 7 天的 7 推 × 7 天 = 49 条数据贴进去（含本周 Spaces / Reading List / Wednesday AI Race / Monday Empire Map 表现）。
 
 Grok 输出：
-- 5 大幽默支柱（H1-H5）+ Musk 主推的 ROI 排序
+- 13 段子支柱 + 4 大主推支柱的 ROI 排序
 - 哪个时段表现最好
-- 下周排期建议（哪个支柱加倍 / 哪个减少 / 哪个尝试新角度）
+- 5 series 哪个最该加倍 / 哪个调整
+- 下周排期建议
 
-### 2. 写 Newsletter Issue N（45 分钟）
-
-打开 [_prompts-pack.md §4](./_prompts-pack.md#4-newsletter-issue-n-generator)，参考 [Issue 01 模板](./newsletter/issue-01-2026-05-25.md) + 当周新数据，让 Grok 生成。
-
-发布方式：参考 [week-01-content-plan §7.2 截图工作流](./week-01-content-plan.md)。
-
-### 3. 刷新 Cheat Sheet（15 分钟）
+### 4. 刷新 Cheat Sheet（15 分钟，22:00-22:15）
 
 打开 [_prompts-pack.md §5](./_prompts-pack.md#5-cheat-sheet-weekly-refresh)。Grok 给你本周需要更新的数据，手动改 [cheat-sheet-source.md](./empire-cheat-sheet/cheat-sheet-source.md)，浏览器重新打印 PDF v0.X。
 
+### 5. 刷新 visual header（15 分钟，22:15-22:30）
+
+打开 [visual/header.html](./visual/header.html)，把右上角 `week N` 改成下周，Chrome F12 → DevTools 1500×500 → 截图导出 PNG → 上传到 X header。**只改这一个数字**，其他不动。
+
 ---
 
-## 四、6 推自检清单（每条发出前 10 秒）
+## 五、6 推自检清单（每条发出前 10 秒）
 
 ### 反 AI 味 8 条铁律
 
@@ -105,7 +175,7 @@ Grok 输出：
 
 ---
 
-## 五、数据跟踪表（每天填）
+## 六、数据跟踪表（每天填）
 
 存到 Google Sheets / Notion / Excel 都行。建议字段：
 
@@ -123,7 +193,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 六、Migration Triggers · 何时升级到下个阶段
+## 七、Migration Triggers · 何时升级到下个阶段
 
 按真实数字判断，不按时间表猜。
 
@@ -179,7 +249,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 七、Crisis Playbook · 突发情况怎么办
+## 八、Crisis Playbook · 突发情况怎么办
 
 ### 类型 A：账号被限流警告 / 触发审核
 
@@ -242,7 +312,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 八、推荐工具栈
+## 九、推荐工具栈
 
 ### AI 助手（按场景选）
 
@@ -285,7 +355,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 九、6 个月路线图（M2 6/2026 → M7 11/2026）
+## 十、6 个月路线图（M2 6/2026 → M7 11/2026）
 
 ### M2 · 2026-06（Week 23-26）
 
@@ -336,7 +406,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 十、什么时候该叫 AI 助手回来
+## 十一、什么时候该叫 AI 助手回来
 
 **不需要叫的情况**（自己跑就够）：
 - 日常 6 推
@@ -346,7 +416,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 - 数据跟踪
 
 **值得叫的情况**（每月最多 1-2 次，节约 Kiro 额度）：
-- 突发账号危机（参考 §七），需要快速响应策略
+- 突发账号危机（参考 §八），需要快速响应策略
 - 第一次升级到 Mailchimp / 数字产品 / Sponsorship 阶段，需要一次性详细 SOP
 - 突然爆款（>1M impression）需要重新设计 profile / Pin / lead magnet 接住流量
 - Musk 帝国出现重大不可预测事件（IPO 失败 / 重大召回 / 大 V 撕逼）
@@ -359,7 +429,7 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 十一、长期心态
+## 十二、长期心态
 
 ### 4 件事坚持做
 
@@ -377,16 +447,17 @@ ROI = (likes + 2×RT + 3×bookmark) / impression
 
 ---
 
-## 十二、紧急联系（这套体系自己出问题时）
+## 十三、紧急联系（这套体系自己出问题时）
 
 如果手册有错 / 提示词跑不通 / 流程踩坑：
 
 1. 先去 [README.md](./README.md) 看核心规则有没有变
-2. 再去 [x-strategy.md](./x-strategy.md) 看战略层有没有改
-3. 再去 [humor-pillars.md](./humor-pillars.md) 看支柱定义
-4. 上面都没解决：召回 AI 助手（参考 §十规则）
+2. 再去 [observer-brand-pivot.md](./observer-brand-pivot.md) + [signature-series.md](./signature-series.md) 看战略 / 栏目层有没有改
+3. 再去 [signature-voice.md](./signature-voice.md) 看 voice DNA 是否需要校准
+4. 再去 [humor-pillars.md](./humor-pillars.md) + [traffic-expansion-pillars.md](./traffic-expansion-pillars.md) 看支柱定义
+5. 上面都没解决：召回 AI 助手（参考 §十一规则）
 
 ---
 
-**版本**：v1.0 · 2026-05-30
-**配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [x-strategy](./x-strategy.md) · [humor-pillars](./humor-pillars.md) · [week-01-content-plan](./week-01-content-plan.md)
+**版本**：v3.0 · 2026-05-30（升级 4 件事节奏 / 加入 Friday Spaces / 加入 Sunday Long Read / 加入 visual header 周更）
+**配套**：[_prompts-pack.md](./_prompts-pack.md) · [README](./README.md) · [observer-brand-pivot.md](./observer-brand-pivot.md) · [brand-v2-activation-checklist.md](./brand-v2-activation-checklist.md) · [signature-series.md](./signature-series.md) · [signature-voice.md](./signature-voice.md) · [visual-identity.md](./visual-identity.md) · [x-articles-playbook.md](./x-articles-playbook.md) · [spaces-and-community.md](./spaces-and-community.md) · [peer-collab-playbook.md](./peer-collab-playbook.md) · [humor-pillars.md](./humor-pillars.md) · [traffic-expansion-pillars.md](./traffic-expansion-pillars.md)

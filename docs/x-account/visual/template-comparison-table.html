@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>E5-b · Comparison Table Template · @Skub0k</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1200px; height: 900px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', 'Helvetica Neue', sans-serif;
+      color: #111; background: #fff;
+      -webkit-font-smoothing: antialiased;
+      overflow: hidden;
+    }
+    .frame {
+      width: 1200px; height: 900px;
+      padding: 56px 64px;
+      display: flex; flex-direction: column;
+    }
+
+    /* HEADER */
+    h1 {
+      font-size: 24pt; font-weight: 800; letter-spacing: -0.5pt;
+      line-height: 1.2;
+    }
+    .subtitle {
+      font-size: 12pt; color: #666; margin-top: 6pt;
+      letter-spacing: 0.2pt;
+    }
+
+    /* TABLE */
+    table {
+      width: 100%; border-collapse: collapse;
+      margin: 36pt 0 24pt;
+      font-size: 14pt;
+    }
+    th {
+      background: #111; color: #fff;
+      text-align: left; padding: 12pt 14pt;
+      font-weight: 600; letter-spacing: 0.5pt;
+      font-size: 9pt; text-transform: uppercase;
+    }
+    th:nth-child(n+3) { text-align: right; }
+
+    td {
+      padding: 14pt; border-bottom: 1px solid #eeeeee;
+      vertical-align: middle;
+    }
+    td:first-child {
+      font-weight: 700; width: 24%;
+    }
+    td:nth-child(n+3) {
+      text-align: right;
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+    }
+    tr:last-child td { border-bottom: none; }
+
+    .highlight {
+      color: #cc0000; font-weight: 700;
+    }
+
+    /* VERDICT */
+    .verdict {
+      background: #fff8e1;
+      border-left: 4pt solid #f0a000;
+      padding: 18pt 24pt;
+      margin: 16pt 0 0;
+      font-size: 13pt;
+      line-height: 1.55;
+    }
+    .verdict strong {
+      font-weight: 800;
+      text-transform: lowercase;
+      letter-spacing: 0.3pt;
+    }
+
+    /* BOTTOM */
+    .bottom-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      margin-top: auto; padding-top: 20pt;
+      border-top: 1px solid #eeeeee;
+    }
+    .label {
+      font-size: 9pt; color: #666; letter-spacing: 0.4pt;
+      text-transform: uppercase;
+    }
+    .handle {
+      font-family: 'SF Mono', Menlo, Monaco, Consolas, monospace;
+      font-size: 12pt; color: #666; letter-spacing: 0.3pt;
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+
+    <div>
+      <h1>[[TITLE]]</h1>
+      <div class="subtitle">[[SUBTITLE]]</div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>[[COL1]]</th>
+          <th>[[COL2]]</th>
+          <th>[[COL3]]</th>
+          <th>[[COL4]]</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[[ROW1_C1]]</td><td>[[ROW1_C2]]</td><td>[[ROW1_C3]]</td><td>[[ROW1_C4]]</td>
+        </tr>
+        <tr>
+          <td>[[ROW2_C1]]</td><td>[[ROW2_C2]]</td><td>[[ROW2_C3]]</td><td class="highlight">[[ROW2_C4]]</td>
+        </tr>
+        <tr>
+          <td>[[ROW3_C1]]</td><td>[[ROW3_C2]]</td><td>[[ROW3_C3]]</td><td>[[ROW3_C4]]</td>
+        </tr>
+        <tr>
+          <td>[[ROW4_C1]]</td><td>[[ROW4_C2]]</td><td>[[ROW4_C3]]</td><td>[[ROW4_C4]]</td>
+        </tr>
+        <tr>
+          <td>[[ROW5_C1]]</td><td>[[ROW5_C2]]</td><td>[[ROW5_C3]]</td><td>[[ROW5_C4]]</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="verdict">
+      <strong>verdict:</strong> [[VERDICT]]
+    </div>
+
+    <div class="bottom-row">
+      <div class="label">observer &amp; investor</div>
+      <div class="handle">@Skub0k</div>
+    </div>
+
+  </div>
+</body>
+</html>
