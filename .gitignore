@@ -18,5 +18,5 @@ venv/
 node_modules/
 
 # Visual asset rendered outputs (regenerated from .html / .svg sources)
-docs/x-account/visual/output/
-docs/x-account/visual/output/**
+x-account/visual/output/
+x-account/visual/output/**
