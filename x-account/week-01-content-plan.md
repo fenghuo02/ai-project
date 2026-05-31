@@ -291,7 +291,7 @@ genuine question: which of the 6 companies are you most underweight on the watch
 
 ## 第 1 周末复盘模板（周日晚 9pm 跑）
 
-填入下面表格，提交为 `docs/x-account/_week-01-retro-2026-05-31.md`：
+填入下面表格，提交为 `x-account/_week-01-retro-2026-05-31.md`：
 
 ```
 日期：2026-05-25 → 2026-05-31
@@ -344,7 +344,7 @@ genuine question: which of the 6 companies are you most underweight on the watch
 
 3 选 1：
 
-- **A. GitHub 页面**（最快）：直接在 GitHub 打开 `docs/x-account/newsletter/issue-XX.md`，浏览器自带的 markdown 渲染就行
+- **A. GitHub 页面**（最快）：直接在 GitHub 打开 `x-account/newsletter/issue-XX.md`，浏览器自带的 markdown 渲染就行
 - **B. Notion 粘贴**：新建 page，粘 markdown，自动渲染
 - **C. 自建 HTML**（最美）：照 [cheat-sheet.html](./empire-cheat-sheet/cheat-sheet.html) 的风格搭一个 newsletter.html
 

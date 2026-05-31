@@ -244,7 +244,7 @@ dm 'empire' for the free pdf cheat sheet.
 - 周六（明天）: 发 meta 推 + 5-8 条 reply guy
 - 周日: 互动 / 反问 / "what would you want to see from a musk-watcher account?" 投票推
 - 周一: **第一篇正式 Decoder Thread 发布**（"musk's 6 companies, decoded as of week 21 / 2026"）
-- 之后按 [x-strategy.md §三 30 天日历](https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/x-strategy.md) 跑
+- 之后按 [x-strategy.md §三 30 天日历](https://github.com/fenghuo02/ai-project/blob/main/x-account/x-strategy.md) 跑
 
 ---
 

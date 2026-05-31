@@ -70,11 +70,11 @@ D · AI Race Watch 10%（xAI vs OpenAI vs Anthropic）
 - M4-M6（30K → 150K）：$12K-60K/月（全矩阵）
 
 【完整文档（如果你能联网，可以读）】
-- 总览：https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/README.md
-- 策略：https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/x-strategy.md
-- 提示词：https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/x-prompts.md
-- 回复话术：https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/x-reply-scripts.md
-- 72h 窗口期：https://github.com/fenghuo02/ai-project/blob/main/docs/x-account/x-musk-like-72h-window.md
+- 总览：https://github.com/fenghuo02/ai-project/blob/main/x-account/README.md
+- 策略：https://github.com/fenghuo02/ai-project/blob/main/x-account/x-strategy.md
+- 提示词：https://github.com/fenghuo02/ai-project/blob/main/x-account/x-prompts.md
+- 回复话术：https://github.com/fenghuo02/ai-project/blob/main/x-account/x-reply-scripts.md
+- 72h 窗口期：https://github.com/fenghuo02/ai-project/blob/main/x-account/x-musk-like-72h-window.md
 
 【你的任务】
 按上面所有规则帮我生成内容。每次产出后，自检一遍 8 条反 AI 味铁律，命中任何一条就重写。
