@@ -1,0 +1,27 @@
+{
+  "_说明": "复制本文件为 jiniance.config.json（与 generate-jiniance.js 同目录），填好后运行 node generate-jiniance.js 即生成该客户专属 PDF。photos 中任一槽位给出本地图片路径即自动嵌入并裁切适配；留空则该位显示金线照片占位框。",
+  "name": "示例·林清和",
+  "year": "二〇二六",
+  "edition": "008",
+  "total": "099",
+  "subject": "节气·秋日江畔",
+  "designer": "渝山东方美学造型组",
+  "photos": {
+    "portrait-main": "C:/path/to/命主画像.jpg",
+    "zhenzhao-main": "C:/path/to/专属写真主图.jpg",
+    "palette-photo": "C:/path/to/色彩写真.jpg",
+    "spring-1": "C:/path/to/春1.jpg",
+    "spring-2": "C:/path/to/春2.jpg",
+    "summer-1": "C:/path/to/夏1.jpg",
+    "summer-2": "C:/path/to/夏2.jpg",
+    "autumn-1": "C:/path/to/秋1.jpg",
+    "autumn-2": "C:/path/to/秋2.jpg",
+    "winter-1": "C:/path/to/冬1.jpg",
+    "winter-2": "C:/path/to/冬2.jpg",
+    "gallery-1": "C:/path/to/精选1.jpg",
+    "gallery-2": "C:/path/to/精选2.jpg",
+    "gallery-3": "C:/path/to/精选3.jpg",
+    "gallery-4": "C:/path/to/精选4.jpg",
+    "gallery-5": "C:/path/to/精选5.jpg"
+  }
+}
